@@ -13,4 +13,13 @@ function dismissButton() {
 
 function TestLogin() {
   console.log("Login Button Active.");
+  location.href = "index.html";
 }
+
+window.onclick = function(event) {
+  var modal = document.getElementById("myModal");
+      if (event.target == modal) {
+        console.log("Dismiss Modal");
+        modal.style.display = "none";
+      }
+    }

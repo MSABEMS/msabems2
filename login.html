@@ -19,48 +19,46 @@
 
 </head>
 
-<body class="bodyCSS">
-  <div class="">
-    <div class="loginHeaderButton">
-      <!-- Trigger/Open The Modal -->
-      <button id="myBtn" style="background: rgb(108,153,255);
-                                background: linear-gradient(135deg, rgba(108,153,255,1) 0%, rgba(213,163,255,1) 100%);
-                                width: 120px; height: 40px; border-radius: 5px; border: 2px; font-family: 'Roboto', sans-serif;"
-              onclick="loginButton()"
-              class="modal-login-button">
-        Login
-      </button>
+<body>
+  <div class="" style="">
+    <!-- Trigger/Open The Modal -->
+    <button id="myBtn" onclick="loginButton()" class="modal-login-button"
+            style="background: rgb(108,153,255); background: linear-gradient(135deg, rgba(108,153,255,1) 0%, rgba(213,163,255,1) 100%);
+                  width: 120px; height: 40px; border-radius: 5px; border: 2px; font-family: 'Roboto', sans-serif; z-index:1;">
+      Login
+    </button>
 
+    <div class="backgroundImage">
+      <img src="https://www.viatech.com/wp-content/uploads/2019/02/smart_building_management_system_1170x600.jpg" alt="">
     </div>
+  </div>
 
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
 
-      <!-- Modal content -->
-      <div class="modal-content">
-        <div class="modal-header">
-          <param name="" value="">
-          <span class="close" onclick="dismissButton()">&times;</span>
-        </div>
-        <div class="modal-body">
-          <p style="header-modal-content">Login to Your Account</p>
-          <form style="text-align: center; align-items: center;">
-            <input style="username_text_input" type="text" name="user" placeholder="Username"><br>
-            <input style="password_text_input" type="password" name="pass" placeholder="Password"><br>
-            <button style="margin-top: 20px; background: rgb(108,153,255); background: linear-gradient(135deg, rgba(108,153,255,1) 0%, rgba(213,163,255,1) 100%);
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <param name="" value="">
+        <span class="close" onclick="dismissButton()">&times;</span>
+      </div>
+      <div class="modal-body">
+        <p class="header-modal-content">Please insert your account to login:</p>
+        <form style="text-align: center; align-items: center;">
+          <input class="username_text_input" type="text" name="user" placeholder="Username"><br>
+          <input class="password_text_input" type="password" name="pass" placeholder="Password"><br>
+          <button style="margin-top: 20px; background: rgb(108,153,255); background: linear-gradient(135deg, rgba(108,153,255,1) 0%, rgba(213,163,255,1) 100%);
                            width: 120px; height: 40px; border-radius: 5px; border: 2px; font-family: 'Roboto', sans-serif;"
-                    type="submit" name="login" value="Login" onclick="TestLogin()" class="modal-login-button-2">
-              Login
-            </button>
-          </form>
-          <div class="">
-            <h1></h1>
-          </div>
+                  type="submit" name="login" value="Login" onclick="TestLogin()" class="modal-login-button-2" href="/index.html">
+            Login
+          </button>
+        </form>
+        <div class="">
+          <h1></h1>
         </div>
       </div>
     </div>
   </div>
-
 
 </body>
 
