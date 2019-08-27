@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>MSA Building Dashboard</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="MSA Building Dashboard">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.2/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="styles/loginstyle.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+  <script src="js/login.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+</head>
+
+<body class="bodyCSS">
+  <div class="">
+    <div class="loginHeaderButton">
+      <!-- Trigger/Open The Modal -->
+      <button id="myBtn" style="background: rgb(108,153,255);
+                                background: linear-gradient(135deg, rgba(108,153,255,1) 0%, rgba(213,163,255,1) 100%);
+                                width: 120px; height: 40px; border-radius: 5px; border: 2px; font-family: 'Roboto', sans-serif;"
+              onclick="loginButton()"
+              class="modal-login-button">
+        Login
+      </button>
+
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <param name="" value="">
+          <span class="close" onclick="dismissButton()">&times;</span>
+        </div>
+        <div class="modal-body">
+          <p style="header-modal-content">Login to Your Account</p>
+          <form style="text-align: center; align-items: center;">
+            <input style="username_text_input" type="text" name="user" placeholder="Username"><br>
+            <input style="password_text_input" type="password" name="pass" placeholder="Password"><br>
+            <button style="margin-top: 20px; background: rgb(108,153,255); background: linear-gradient(135deg, rgba(108,153,255,1) 0%, rgba(213,163,255,1) 100%);
+                           width: 120px; height: 40px; border-radius: 5px; border: 2px; font-family: 'Roboto', sans-serif;"
+                    type="submit" name="login" value="Login" onclick="TestLogin()" class="modal-login-button-2">
+              Login
+            </button>
+          </form>
+          <div class="">
+            <h1></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
