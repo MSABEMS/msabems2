@@ -3,7 +3,7 @@
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  padding-top: 200px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -22,7 +22,7 @@
   padding: 0;
   border: 1px solid #888;
   width: 30%;
-  height: 50%;
+  height: 40%;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
@@ -49,7 +49,10 @@
   float: right;
   font-size: 28px;
   font-weight: bold;
+  
+ 
 }
+
 
 .close:hover,
 .close:focus {
@@ -59,36 +62,33 @@
 }
 
 .modal-header {
-  padding: 2px 16px;
+  padding: 2px 15px;
   background-color: #5cb85c;
   color: white;
 }
 
-.modal-body {padding: 2px 16px;}
+.modal-body {
 
-.modal-footer {
-  padding: 2px 16px;
-  background-color: #5cb85c;
-  color: white;
-}
-.menu_2ndfloor{
-  margin-top: 50px;
+    padding: 2px 16px;
+    
 }
 .menu_2ndfloor li{
-  margin: px;
-}
-
-.meeting_2ndfloor,.batery_2ndfloor,.goodbye_2ndfloor{
   padding-top: 20px;
 }
 
-.control_2nd_floor{
-  margin-top: 20px;
+  
+
+.modal-footer {
+  padding:0 ;
+  background-color: #5cb85c;
+  color: white;
 }
 
 .control_2nd_floor ul{
-  margin-top: 10px;
+  margin-top: 15px;
 }
+
+
 
 
 /*switch*/
@@ -97,7 +97,8 @@
   display: inline-block;
   width: 55px;
   height: 29px;
-  float: right;
+  float:right;
+  
 }
 
 .switch input { 
