@@ -153,46 +153,62 @@
 									<h3>Control</h3>
 								</div>
 								<div class="sidebar_list_control">
-									<ul>
-										<!-- Trigger/Open The Modal -->
-										<button id="myBtn_1">Open Modal</button>
+									<div class="control_2nd_floor">
+										<ul>
+											<!-- Trigger/Open The Modal -->
+											<button id="myBtn_1">Office1 Room</button>
 
-										<!-- The Modal -->
-										<div id="myModal" class="modal">
+											<!-- The Modal -->
+											<div id="myModal_1" class="modal">
 
-											<!-- Modal content -->
-											<div class="modal-content">
-												<div class="modal-header">
-													<span class="close">&times;</span>
-													<ul class="Conference">
-														<h2>Conference Room</h2>
+												<!-- Modal content -->
+												<div class="modal-content">
+													<div class="modal-header">
+														<ul class="Conference">
+															<h3>Office1 Room
+																<span class="close">&times;</span>
+															</h3>
+														</ul>
+													</div>
+													<div class="modal-body">
+														<div class="menu_2ndfloor">
+															<li class="welcom_2ndfloor">
+																<h4>Welcom
+																	<label class="switch">
+																		<input type="checkbox" checked>
+																		<span class="slider round"></span>
+																	</label>
 
-																								
-													
-												</div>
-												<div class="modal-body">
-													<div class="menu_2ndfloor">
-														<li class="welcom_2ndfloor"><h3>Welcom</h3></li>
-														<li class="meeting_2ndfloor"><h3>Meeting</h3></li>
-														<li class="batery_2ndfloor"><h3>Batery</h3></li>
-														<li class="goodbye_2ndfloor"><h3>Goodbye</h3></li>
+																</h4>
+															</li>
+
+															<li class="meeting_2ndfloor">
+																<h4>Goodbye
+																	<label class="switch">
+																		<input type="checkbox" checked>
+																		<span class="slider round"></span>
+																	</label>
+																</h4>
+
+															</li>
+
+														</div>
+													</div>
+													<div class="modal-footer">
 														
 													</div>
-																									
-												</div>
-												<div class="modal-footer">
-													<h3>Modal Footer</h3>
 												</div>
 											</div>
 
-										</div>
+										</ul>
 
 
-									</ul>
 
+
+
+									</div>
 								</div>
 							</div>
-
 						</div>
 					</div>
 
@@ -384,7 +400,7 @@
 	<!--open_modal_1-->
 	<script>
 		// Get the modal
-		var modal = document.getElementById("myModal");
+		var modal = document.getElementById("myModal_1");
 
 		// Get the button that opens the modal
 		var btn = document.getElementById("myBtn_1");
@@ -409,6 +425,8 @@
 			}
 		}
 	</script>
+
+
 
 
 
