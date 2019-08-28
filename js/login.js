@@ -19,8 +19,7 @@ function TestLogin() {
   console.log("POST method by jQuery");
   jQuery.ajax({
 
-      // url: "https://peahub21.azurewebsites.net/api/login/",
-      url: "https://hookb.in/VGV2yLrM7dFkmkbNBqZr",
+      url: "https://hookb.in/ggBPqWd3rxCB0B1yRLjJ",
       type: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -35,10 +34,10 @@ function TestLogin() {
       console.log("HTTP Request Succeeded: " + jqXHR.status);
       console.log(data);
       if (jqXHR.status == 200) {
-        console.log(data['type'])
-        console.log("gggggggg")
-        localStorage.setItem("token", data['token']);
-        window.location.replace("index.html")
+        // console.log(data['type']);
+        console.log("Login successful.");
+        // localStorage.setItem("token", data['token']);
+        window.location.replace("index.html");
       }
     })
     .fail(function(jqXHR, textStatus, errorThrown) {
