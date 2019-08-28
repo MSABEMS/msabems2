@@ -687,7 +687,7 @@ section
 .blog
 {
 	background: #ffffff;
-	padding-top: 92px;
+	padding-top: 50px;
 	padding-bottom: 85px;
 }
 .blog_post:not(:last-child)
