@@ -34,13 +34,11 @@
 }
 
 .SummaryEnergyReport {
-  background-color: red;
   width: 20%;
   height: 100%;
 }
 
 .BuidingFloorPlan {
-  background-color: yellow;
   width: 60%;
   height: 100%;
 }

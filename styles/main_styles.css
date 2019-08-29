@@ -117,7 +117,7 @@ p a:hover::after
 }
 ::selection
 {
-	background: #adc867;
+	background: rgba(215,192,17,1);
 	color: #ffffff;
 }
 p::selection
@@ -376,7 +376,7 @@ section
 	width: 32px;
 	height: 32px;
 	border-radius: 50%;
-	background: #adc867;
+	background: rgba(215,192,17,1);
 	text-align: center;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
@@ -440,7 +440,7 @@ section
 }
 .log_reg ul li a:hover
 {
-	color: #adc867;
+	color: rgba(215,192,17,1);
 }
 .header_content
 {
@@ -490,7 +490,7 @@ section
 .main_nav ul li.active,
 .main_nav ul li:hover
 {
-	background: #adc867;
+	background: rgba(215,192,17,1);
 }
 .main_nav ul li a
 {
@@ -514,7 +514,7 @@ section
 .submit
 {
 	width: 247px;
-	background: #adc867;
+	background: rgba(215,192,17,1);
 	height: 100%;
 	text-align: center;
 }
@@ -545,7 +545,7 @@ section
 }
 .hamburger:hover i
 {
-	color: #adc867;
+	color: rgba(215,192,17,1);
 }
 
 /*********************************
@@ -593,7 +593,7 @@ section
 }
 .menu_close:hover i
 {
-	color: #adc867;
+	color: rgba(215,192,17,1);
 }
 .menu_log_reg
 {
@@ -610,7 +610,7 @@ section
 }
 .menu .log_reg ul li a:hover
 {
-	color: #adc867;
+	color: rgba(215,192,17,1);
 }
 .menu .log_reg ul li:not(:last-of-type)::after
 {
@@ -633,7 +633,7 @@ section
 }
 .menu_nav ul li a:hover
 {
-	color: #adc867;
+	color: rgba(215,192,17,1);
 }
 
 /*********************************
@@ -676,7 +676,7 @@ section
 {
 	display: inline-block;
 	height: 30px;
-	background: #adc867;
+	background: rgba(215,192,17,1);
 	text-align: center;
 	line-height: 30px;
 	font-size: 18px;
@@ -696,7 +696,7 @@ section
 	width: 57px;
 	height: 57px;
 	border-radius: 50%;
-	background: #adc867;
+	background: rgba(215,192,17,1);
 	text-align: center;
 	cursor: pointer;
 	-webkit-transition: all 200ms ease;
@@ -733,7 +733,7 @@ section
 {
 	display: inline-block;
 	height: 70px;
-	background: #adc867;
+	background: rgba(215,192,17,1);
 	font-size: 48px;
 	font-weight: 500;
 	color: #ffffff;
@@ -758,7 +758,7 @@ section
 {
 	width: 247px;
 	height: 51px;
-	background: #adc867;
+	background: rgba(215,192,17,1);
 	color: #ffffff;
 	border: none;
 	outline: none;
@@ -897,7 +897,7 @@ section
 }
 .tag_house
 {
-	background: #adc867;
+	background: rgba(215,192,17,1);
 }
 .tag_sale
 {
@@ -949,7 +949,7 @@ section
 }
 .listing_location a:hover
 {
-	color: #adc867;
+	color: rgba(215,192,17,1);
 }
 .listing_info
 {
@@ -1087,7 +1087,7 @@ section
 	left: 0;
 	width: 14px;
 	height: 14px;
-	border: solid 2px #adc867;
+	border: solid 2px rgba(215,192,17,1);
 	border-radius: 50%;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
@@ -1097,11 +1097,11 @@ section
 }
 .location_contaner > input:checked ~ span
 {
-	background: #adc867;
+	background: rgba(215,192,17,1);
 }
 .location_contaner > input:not(:checked):hover ~ span
 {
-	background: #adc867;
+	background: rgba(215,192,17,1);
 	opacity: 0.5;
 }
 
@@ -1155,7 +1155,7 @@ section
 }
 .hot_title a:hover
 {
-	color: #adc867;
+	color: rgba(215,192,17,1);
 }
 .prop_location
 {
@@ -1198,7 +1198,7 @@ section
 {
 	font-size: 14px;
 	font-weight: 600;
-	color: #adc867;
+	color: rgba(215,192,17,1);
 }
 .prop_info
 {
@@ -1309,7 +1309,7 @@ section
 }
 .test_author a:hover
 {
-	color: #adc867;
+	color: rgba(215,192,17,1);
 }
 .owl-theme .owl-dots
 {
@@ -1339,7 +1339,7 @@ section
 }
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span
 {
-	background: #adc867;
+	background: rgba(215,192,17,1);
 }
 
 /*********************************
@@ -1395,7 +1395,7 @@ section
 }
 .footer_submit:hover
 {
-	background: #adc867;
+	background: rgba(215,192,17,1);
 }
 .footer_submit a
 {
@@ -1462,7 +1462,7 @@ section
 }
 .footer_links ul li a:hover
 {
-	color: #adc867;
+	color: rgba(215,192,17,1);
 }
 .listing_small
 {
@@ -1524,7 +1524,7 @@ section
 }
 .tag_house
 {
-	background: #adc867;
+	background: rgba(215,192,17,1);
 }
 .tag_sale
 {
@@ -1573,7 +1573,7 @@ section
 }
 .listing_small_location a:hover
 {
-	color: #adc867;
+	color: rgba(215,192,17,1);
 }
 .listing_small_info
 {
@@ -1625,5 +1625,5 @@ section
 }
 .footer_nav ul li a:hover
 {
-	color: #adc867;
+	color: rgba(215,192,17,1);
 }
