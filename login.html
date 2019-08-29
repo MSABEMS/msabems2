@@ -19,59 +19,83 @@
 </head>
 
 <body>
-  <div class="" style="">
-    <!-- Trigger/Open The Modal -->
-    <div class="" style="float:right; margin-right: 10%;">
-      <button id="myBtn" onclick="loginButton()" class="modal-login-button"
-              style="background: rgb(108,153,255); background: linear-gradient(135deg, rgba(108,153,255,1) 0%, rgba(213,163,255,1) 100%);
-                    width: 120px; height: 40px; border-radius: 5px; border: 2px; font-family: 'Roboto', sans-serif; z-index:1;">
-        Login
-      </button>
+  <div id="all">
+    <div id="header">
+      <h6>MSA Building control center is located at Maesareang District, Maehongson Province</h6>
 
-    </div>
-
-    <div class="backgroundImage">
-      <img src="images/MSA Building.png" alt="">
-
-    </div>
-  </div>
-
-<div class="bodyContent">
-  <h6>MSA Building control center is located at Maesareang District, Maehongson Province</h3>
-</div>
-
-
-  <!-- The Modal -->
-  <div id="myModal" class="modal">
-
-    <!-- Modal content -->
-    <div class="modal-content">
-      <div class="modal-header">
-        <param name="" value="">
-        <span class="close" onclick="dismissButton()">&times;</span>
+      <!-- Trigger/Open The Modal -->
+      <div class="" style="float:right; margin-right: 10%;">
+        <button id="myBtn" onclick="loginButton()" class="modal-login-button" style="background: rgb(108,153,255);
+        background: linear-gradient(135deg, rgba(108,153,255,1) 0%, rgba(213,163,255,1) 100%);
+        width: 120px; height: 40px; border-radius: 5px; border: 2px; font-family: 'Roboto', sans-serif; z-index:1;">
+          Login
+        </button>
       </div>
-      <div class="modal-body">
-        <p class="header-modal-content">Please insert your account to login:</p>
-        <form style="text-align: center; align-items: center;">
-          <input class="username_text_input" type="text" name="user" placeholder="Username" id="username"><br>
-          <input class="password_text_input" type="password" name="pass" placeholder="Password" id="password"><br>
-          <button style="margin-top: 20px; background: rgb(108,153,255); background: linear-gradient(135deg, rgba(108,153,255,1) 0%, rgba(213,163,255,1) 100%);
-                           width: 120px; height: 40px; border-radius: 5px; border: 2px; font-family: 'Roboto', sans-serif;"
-                  type="submit" name="login" value="Login" onclick="TestLogin()" class="modal-login-button-2" href="/index.html">
-            Login
-          </button>
-        </form>
-        <div class="">
-          <h1></h1>
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <param name="" value="">
+            <span class="close" onclick="dismissButton()">&times;</span>
+          </div>
+          <div class="modal-body">
+            <p class="header-modal-content">Please insert your account to login:</p>
+            <form style="text-align: center; align-items: center;">
+              <input class="username_text_input" type="text" name="user" placeholder="Username" id="username"><br>
+              <input class="password_text_input" type="password" name="pass" placeholder="Password" id="password"><br>
+              <button style="margin-top: 20px; background: rgb(108,153,255); background: linear-gradient(135deg, rgba(108,153,255,1) 0%, rgba(213,163,255,1) 100%);
+                            width: 120px; height: 40px; border-radius: 5px; border: 2px; font-family: 'Roboto', sans-serif;" type="submit" name="login" value="Login" onclick="TestLogin()" class="modal-login-button-2" href="/index.html">
+                Login
+              </button>
+            </form>
+            <div class="">
+              <h1></h1>
+            </div>
+          </div>
         </div>
       </div>
+
+      <!-- </div> -->
+
+    </div>
+
+  </div>
+
+  <!-- Letf Part -->
+  <div id="left"><b>This is left side.</b>
+  </div>
+
+  <div id="content">
+    <p> โครงการ คพล. </p>
+    <p>รายละเอียดโครงการ </p>
+
+
+    <!-- <div class="bodyContent"> -->
+
+    <div class="backgroundImage">
+      <img src="images/MSA Building.png" alt="" height=100% width=100%>
+
     </div>
   </div>
 
+  <!-- Right Part -->
+  <div id="right"><b>This is right side.</b>
+
+    <!-- <div class="" style=""> -->
+
+  </div>
 
 
+  <!-- Footer -->
+
+  <div id="footer">
+    <div class="container-fluid">
       <p>© Copyright 2019 Provincial Electricity Authority</p>
-
+    </div>
+  </div>
 
 </body>
 
