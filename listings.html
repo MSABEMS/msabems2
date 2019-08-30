@@ -9,12 +9,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.2/bootstrap.min.css">
 	<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.3.4/owl.carousel.css">
-	<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.3.4/owl.theme.default.css">
-	<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.3.4/animate.css">
 	<link rel="stylesheet" type="text/css" href="styles/listings.css">
-	<link rel="stylesheet" type="text/css" href="styles/listings_responsive.css">
 	<link rel="stylesheet" href="styles/controlbt1st.css">
+	<link rel="stylesheet" type="text/css" href="styles/mainhomepage.css">
+
 </head>
 
 <body>
@@ -50,12 +48,12 @@
 		<div class="menu text-right">
 			<div class="menu_close"><i class="fa fa-times" aria-hidden="true"></i></div>
 			<div class="menu_log_reg">
-				<div class="log_reg d-flex flex-row align-items-center justify-content-end">
+				<!--<div class="log_reg d-flex flex-row align-items-center justify-content-end">
 					<ul class="d-flex flex-row align-items-start justify-content-start">
 						<li><a href="#">Login</a></li>
 						<li><a href="#">Register</a></li>
 					</ul>
-				</div>
+				</div>-->
 				<nav class="menu_nav">
 					<ul>
 						<li><a href="index.html">Home</a></li>
@@ -70,432 +68,405 @@
 
 		<!-- Home -->
 
-		<div class="home">
-			
-			<div class="container">
-				<div class="row">
-					<div class="col">
-						<div class="home_content text-center">
-							<div class="home_title">1st Floor</div>
+		<div class="homeContent">
+			<!-- Cover Header -->
+			<div class="namepage">1st Floor</div>
+			<div class="blog">
+				<div class="container">
+					<div class="row">
+						<!--Sidebar-->
+						<div class="col-lg-4">
+							<div class="sidebar">
+								<!--Categories-->
+								<div class="categories">
+									<div class="sidebar_title">
+										<h3>1st Floor: Energy Report</h3>
+									</div>
+									<div class="sidebar_list">
+										<div class="ContentReport">Total Load: <span class="a"
+												style="margin-left: 105px;"> xxx </span> <span class="a"
+												style="margin-left: 30px;">kW</span></div>
+										<div class="ContentReport">Officer Room 1 Load: <span class="a"
+												style="margin-left: 36px;"> xxx </span> <span class="a"
+												style="margin-left: 30px;">kW</span></div>
+										<div class="ContentReport">Officer Room 2 Load: <span class="a"
+												style="margin-left: 34px;"> xxx </span> <span class="a"
+												style="margin-left: 30px;">kW</span></div>
+										<div class="ContentReport">Main Control Load: <span class="a"
+												style="margin-left: 49px;"> xxx </span> <span class="a"
+												style="margin-left: 30px;">kW</span></div>
+										<div class="ContentReport">Critical Load: <span class="a"
+												style="margin-left: 90px;"> xxx </span> <span class="a"
+												style="margin-left: 30px;">kW</span></div>
+									</div>
+								</div>
+
+								<!--Archive-->
+								<div class="archive">
+									<div class="sidebar_title">
+										<h3>1st Floor: Scene Control</h3>
+									</div>
+									<div class="sidebar_list_control">
+										<div class="control_1st_floor">
+											<!--Bedroom-->
+											<ul>
+												<!-- Trigger/Open The Modal -->
+												<button id="myBtn_bedroom" class="SceneStyle">Bedroom</button>
+
+												<!-- The Modal -->
+												<div id="myModal_bedroom" class="modal">
+
+													<!-- Modal content -->
+													<div class="modal-content-bedroom">
+														<div class="modal-header">
+															<h3 style="margin-left: 10px">Bedroom</h3>
+															<span class="close" style="margin-right: 2px"
+																onclick="bedroom()">&times;</span>
+														</div>
+														<div class="modal-body">
+															<div class="menu_1stfloor">
+																<li>
+																	<h4>Welcom
+																		<label class="switch">
+																			<input type="checkbox" checked>
+																			<span class="slider round"></span>
+																		</label>
+
+																	</h4>
+																</li>
+																<li>
+																	<h4>Day
+																		<label class="switch">
+																			<input type="checkbox" checked>
+																			<span class="slider round"></span>
+																		</label>
+																	</h4>
+																</li>
+																<li>
+																	<h4>Night
+																		<label class="switch">
+																			<input type="checkbox" checked>
+																			<span class="slider round"></span>
+																		</label>
+																	</h4>
+																</li>
+																<li>
+																	<h4>Goodnight
+																		<label class="switch">
+																			<input type="checkbox" checked>
+																			<span class="slider round"></span>
+																		</label>
+																	</h4>
+																</li>
+
+
+															</div>
+														</div>
+
+													</div>
+												</div>
+											</ul>
+											<!--Conferenceroom-->
+											<ul>
+												<!-- Trigger/Open The Modal -->
+												<button id="myBtn_conferenceroom" class="SceneStyle">Conferenceroom</button>
+
+												<!-- The Modal -->
+												<div id="myModal_conferenceroom" class="modal">
+
+													<!-- Modal content -->
+													<div class="modal-content-conferenceroom">
+														<div class="modal-header">
+															<h3 style="margin-left: 10px">Conferenceroom</h3>
+															<span class="close" style="margin-right: 7px"
+																onclick="conferenceroom()">&times;</span>
+														</div>
+														<div class="modal-body">
+															<div class="menu_1stfloor">
+																<li>
+																	<h4>Welcom
+																		<label class="switch">
+																			<input type="checkbox" checked>
+																			<span class="slider round"></span>
+																		</label>
+
+																	</h4>
+																</li>
+																<li>
+																	<h4>Day
+																		<label class="switch">
+																			<input type="checkbox" checked>
+																			<span class="slider round"></span>
+																		</label>
+																	</h4>
+																</li>
+																<li>
+																	<h4>Night
+																		<label class="switch">
+																			<input type="checkbox" checked>
+																			<span class="slider round"></span>
+																		</label>
+																	</h4>
+																</li>
+																<li>
+																	<h4>Goodnight
+																		<label class="switch">
+																			<input type="checkbox" checked>
+																			<span class="slider round"></span>
+																		</label>
+																	</h4>
+																</li>
+															</div>
+														</div>
+
+													</div>
+												</div>
+
+											</ul>
+											<!--EO Room-->
+											<ul>
+												<!-- Trigger/Open The Modal -->
+												<button id="myBtn_eoroom" class="SceneStyle">EO Room</button>
+
+												<!-- The Modal -->
+												<div id="myModal_eoroom" class="modal">
+
+													<!-- Modal content -->
+													<div class="modal-content-eoroom">
+														<div class="modal-header">
+															<h3 style="margin-left: 10px">EO Room</h3>
+															<span class="close" style="margin-right: 7px"
+																onclick="eoroom()">&times;</span>
+														</div>
+														<div class="modal-body">
+															<div class="menu_1stfloor">
+																<li>
+																	<h4>Welcom
+																		<label class="switch">
+																			<input type="checkbox" checked>
+																			<span class="slider round"></span>
+																		</label>
+
+																	</h4>
+																</li>
+																<li>
+																	<h4>Goodbye
+																		<label class="switch">
+																			<input type="checkbox" checked>
+																			<span class="slider round"></span>
+																		</label>
+																	</h4>
+																</li>
+															</div>
+														</div>
+													</div>
+												</div>
+
+											</ul>
+											<!--Hallway-->
+											<ul>
+												<!-- Trigger/Open The Modal -->
+												<button id="myBtn_hallway"class="SceneStyle">Hallway</button>
+
+												<!-- The Modal -->
+												<div id="myModal_hallway" class="modal">
+
+													<!-- Modal content -->
+													<div class="modal-content-hallway">
+														<div class="modal-header">
+															<h3 style="margin-left: 10px">Hallway</h3>
+															<span class="close" style="margin-right: 7px"
+																onclick="hallway()">&times;</span>
+														</div>
+														<div class="modal-body">
+															<div class="menu_1stfloor">
+																<li>
+																	<h4>Automatic
+																		<label class="switch">
+																			<input type="checkbox" checked>
+																			<span class="slider round"></span>
+																		</label>
+
+																	</h4>
+																</li>
+
+																<li>
+																	<h4>Welcome
+																		<label class="switch">
+																			<input type="checkbox" checked>
+																			<span class="slider round"></span>
+																		</label>
+																	</h4>
+
+																</li>
+																<li>
+																	<h4>Close
+																		<label class="switch">
+																			<input type="checkbox" checked>
+																			<span class="slider round"></span>
+																		</label>
+																	</h4>
+
+																</li>
+
+
+															</div>
+														</div>
+													</div>
+												</div>
+
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+												<!-- Blog Posts -->
+						<div class="col-lg-8">
+							<div class="blog_posts">
+
+								<!-- Blog Post -->
+								<div class="blog_post">
+									<div class="blog_post_image">
+										<img src="images/img21.jpg" class="rounded float-left" alt="">
+										<div
+											class="blog_post_date d-flex flex-column align-items-center justify-content-center">
+											<div>1st</div>
+											<div>Floor</div>
+										</div>
+										<div class="dashboard_2nd">
+										</div>
+									</div>
+								</div>						
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>	
 
-		<!-- Blog -->
+		<!--open_modal_bedroom-->
+		<script>
+			// Get the modal
+			var modal_bedroom = document.getElementById("myModal_bedroom");
 
-		<div class="blog">
-			<div class="container">
-				<div class="row">
+			// Get the button that opens the modal
+			var btn_bedroom = document.getElementById("myBtn_bedroom");
 
+			// Get the <span> element that closes the modal
+			var span_bedroom = document.getElementsByClassName("close")[0];
 
-					<!-- Sidebar -->
-					<div class="col-lg-4">
-						<div class="sidebar">
-							<!-- Categories -->
-							<div class="categories">
-								<div class="sidebar_title">
-									<h3>Title</h3>
-								</div>
-								<div class="sidebar_list">
-									<ul>
-										<li><a href="#">Main Control kW</a></li>
-										<li><a href="#">Office Room kW</a></li>
-										<li><a href="#">Conference Room kW</a></li>
-										<li><a href="#">Office Room II kW</a></li>
-										<li><a href="#">Hallway kW</a></li>
-										<li><a href="#">Total Load kW</a></li>
-									</ul>
-								</div>
-							</div>
+			// When the user clicks the button, open the modal
+			btn_bedroom.onclick = function () {
+				console.log("myModal_bedroom");
+				modal_bedroom.style.display = "block";
+			}
 
-							<!-- Archive -->
-							<div class="archive">
-								<div class="sidebar_title">
-									<h3>1st Floor</h3>
-								</div>
-								<div class="sidebar_list_control">
-									<div class="control_1st_floor">
-										<!--Bedroom-->
-										<ul>
-											<!-- Trigger/Open The Modal -->
-											<button id="myBtn_bedroom">Bedroom</button>
-
-											<!-- The Modal -->
-											<div id="myModal_bedroom" class="modal">
-
-												<!-- Modal content -->
-												<div class="modal-content-bedroom">
-													<div class="modal-header">
-														<h3 style="margin-left: 10px">Bedroom</h3>
-														<span class="close" style="margin-right: 2px"
-															onclick="bedroom()">&times;</span>
-													</div>
-													<div class="modal-body">
-														<div class="menu_1stfloor">
-															<li>
-																<h4>Welcom
-																	<label class="switch">
-																		<input type="checkbox" checked>
-																		<span class="slider round"></span>
-																	</label>
-
-																</h4>
-															</li>
-															<li>
-																<h4>Day
-																	<label class="switch">
-																		<input type="checkbox" checked>
-																		<span class="slider round"></span>
-																	</label>
-																</h4>
-															</li>
-															<li>
-																<h4>Night
-																	<label class="switch">
-																		<input type="checkbox" checked>
-																		<span class="slider round"></span>
-																	</label>
-																</h4>
-															</li>
-															<li>
-																<h4>Goodnight
-																	<label class="switch">
-																		<input type="checkbox" checked>
-																		<span class="slider round"></span>
-																	</label>
-																</h4>
-															</li>
-
-
-														</div>
-													</div>
-
-												</div>
-											</div>
-										</ul>
-										<!--Conferenceroom-->
-										<ul>
-											<!-- Trigger/Open The Modal -->
-											<button id="myBtn_conferenceroom">Conferenceroom</button>
-
-											<!-- The Modal -->
-											<div id="myModal_conferenceroom" class="modal">
-
-												<!-- Modal content -->
-												<div class="modal-content-conferenceroom">
-													<div class="modal-header">
-														<h3 style="margin-left: 10px">Conferenceroom</h3>
-														<span class="close" style="margin-right: 7px"
-															onclick="conferenceroom()">&times;</span>
-													</div>
-													<div class="modal-body">
-														<div class="menu_1stfloor">
-															<li>
-																<h4>Welcom
-																	<label class="switch">
-																		<input type="checkbox" checked>
-																		<span class="slider round"></span>
-																	</label>
-
-																</h4>
-															</li>
-															<li>
-																<h4>Day
-																	<label class="switch">
-																		<input type="checkbox" checked>
-																		<span class="slider round"></span>
-																	</label>
-																</h4>
-															</li>
-															<li>
-																<h4>Night
-																	<label class="switch">
-																		<input type="checkbox" checked>
-																		<span class="slider round"></span>
-																	</label>
-																</h4>
-															</li>
-															<li>
-																<h4>Goodnight
-																	<label class="switch">
-																		<input type="checkbox" checked>
-																		<span class="slider round"></span>
-																	</label>
-																</h4>
-															</li>
-														</div>
-													</div>
-
-												</div>
-											</div>
-
-										</ul>
-										<!--EO Room-->
-										<ul>
-											<!-- Trigger/Open The Modal -->
-											<button id="myBtn_eoroom">EO Room</button>
-
-											<!-- The Modal -->
-											<div id="myModal_eoroom" class="modal">
-
-												<!-- Modal content -->
-												<div class="modal-content-eoroom">
-													<div class="modal-header">
-														<h3 style="margin-left: 10px">EO Room</h3>
-														<span class="close" style="margin-right: 7px"
-															onclick="eoroom()">&times;</span>
-													</div>
-													<div class="modal-body">
-														<div class="menu_1stfloor">
-															<li>
-																<h4>Welcom
-																	<label class="switch">
-																		<input type="checkbox" checked>
-																		<span class="slider round"></span>
-																	</label>
-
-																</h4>
-															</li>
-															<li>
-																<h4>Goodbye
-																	<label class="switch">
-																		<input type="checkbox" checked>
-																		<span class="slider round"></span>
-																	</label>
-																</h4>
-															</li>
-														</div>
-													</div>
-												</div>
-											</div>
-
-										</ul>
-										<!--Hallway-->
-										<ul>
-											<!-- Trigger/Open The Modal -->
-											<button id="myBtn_hallway">Hallway</button>
-
-											<!-- The Modal -->
-											<div id="myModal_hallway" class="modal">
-
-												<!-- Modal content -->
-												<div class="modal-content-hallway">
-													<div class="modal-header">
-														<h3 style="margin-left: 10px">Hallway</h3>
-														<span class="close" style="margin-right: 7px"
-															onclick="hallway()">&times;</span>
-													</div>
-													<div class="modal-body">
-														<div class="menu_1stfloor">
-															<li>
-																<h4>Automatic
-																	<label class="switch">
-																		<input type="checkbox" checked>
-																		<span class="slider round"></span>
-																	</label>
-
-																</h4>
-															</li>
-
-															<li>
-																<h4>Welcome
-																	<label class="switch">
-																		<input type="checkbox" checked>
-																		<span class="slider round"></span>
-																	</label>
-																</h4>
-
-															</li>
-															<li>
-																<h4>Close
-																	<label class="switch">
-																		<input type="checkbox" checked>
-																		<span class="slider round"></span>
-																	</label>
-																</h4>
-
-															</li>
-
-
-														</div>
-													</div>
-												</div>
-											</div>
-
-										</ul>
-									</div>
-								</div>
-
-							</div>
-
-						</div>
-					</div>
-
-					<!-- Blog Posts -->
-					<div class="col-lg-8">
-						<div class="blog_posts">
-
-							<!-- Blog Post -->
-							<div class="blog_post">
-								<div class="blog_post_image">
-									<img src="images/img21.jpg" class="rounded float-left" alt="">
-									<div
-										class="blog_post_date d-flex flex-column align-items-center justify-content-center">
-										<div>1st</div>
-										<div>Floor</div>
-									</div>
-									<div class="dashboard_2nd">
-									</div>
-								</div>
-							</div>
-							<!-- Blog Post -->
-							<!-- Blog Post -->
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-
-
-
-
-
-
-
-
-
-		<!-- Footer -->
-
-
-	</div>
-
-
-
-
-	<!--open_modal_bedroom-->
-	<script>
-		// Get the modal
-		var modal_bedroom = document.getElementById("myModal_bedroom");
-
-		// Get the button that opens the modal
-		var btn_bedroom = document.getElementById("myBtn_bedroom");
-
-		// Get the <span> element that closes the modal
-		var span_bedroom = document.getElementsByClassName("close")[0];
-
-		// When the user clicks the button, open the modal
-		btn_bedroom.onclick = function () {
-			console.log("myModal_bedroom");
-			modal_bedroom.style.display = "block";
-		}
-
-		// When the user clicks on <span> (x), close the modal
-		function bedroom() {
-			console.log("rfgfhgcfchxedhgbhjbmhbhjbh");
-			modal_bedroom.style.display = "none";
-		}
+			// When the user clicks on <span> (x), close the modal
+			function bedroom() {
+				console.log("rfgfhgcfchxedhgbhjbmhbhjbh");
+				modal_bedroom.style.display = "none";
+			}
 
 
 			// When the user clicks anywhere outside of the modal, close it
 
 
-	</script>
+		</script>
 
 
-	<!--open_modal_conferenceroom-->
-	<script>
-		// Get the modal
-		var modal_conferenceroom = document.getElementById("myModal_conferenceroom");
+		<!--open_modal_conferenceroom-->
+		<script>
+			// Get the modal
+			var modal_conferenceroom = document.getElementById("myModal_conferenceroom");
 
-		// Get the button that opens the modal
-		var btn_conferenceroom = document.getElementById("myBtn_conferenceroom");
+			// Get the button that opens the modal
+			var btn_conferenceroom = document.getElementById("myBtn_conferenceroom");
 
-		// Get the <span> element that closes the modal
-		var span_conferenceroom = document.getElementsByClassName("close")[0];
+			// Get the <span> element that closes the modal
+			var span_conferenceroom = document.getElementsByClassName("close")[0];
 
-		// When the user clicks the button, open the modal
-		btn_conferenceroom.onclick = function () {
-			console.log("myModal_conferenceroom");
-			modal_conferenceroom.style.display = "block";
-		}
+			// When the user clicks the button, open the modal
+			btn_conferenceroom.onclick = function () {
+				console.log("myModal_conferenceroom");
+				modal_conferenceroom.style.display = "block";
+			}
 
-		// When the user clicks on <span> (x), close the modal
-		function conferenceroom() {
-			console.log("rfgfhgcfchxedhgbhjbmhbhjbh");
-			modal_conferenceroom.style.display = "none";
-		}
-
-		// When the user clicks anywhere outside of the modal, close it
-		window_conferenceroom.onclick = function (event_conferenceroom) {
-			if (event_conferenceroom.target == modal_conferenceroom) {
+			// When the user clicks on <span> (x), close the modal
+			function conferenceroom() {
+				console.log("rfgfhgcfchxedhgbhjbmhbhjbh");
 				modal_conferenceroom.style.display = "none";
 			}
-		}
-	</script>
 
-	<!--open_modal_eoroom-->
-	<script>
-		// Get the modal
-		var modal_eoroom = document.getElementById("myModal_eoroom");
+			// When the user clicks anywhere outside of the modal, close it
+			window_conferenceroom.onclick = function (event_conferenceroom) {
+				if (event_conferenceroom.target == modal_conferenceroom) {
+					modal_conferenceroom.style.display = "none";
+				}
+			}
+		</script>
 
-		// Get the button that opens the modal
-		var btn_eoroom = document.getElementById("myBtn_eoroom");
+		<!--open_modal_eoroom-->
+		<script>
+			// Get the modal
+			var modal_eoroom = document.getElementById("myModal_eoroom");
 
-		// Get the <span> element that closes the modal
-		var span_eoroom = document.getElementsByClassName("close")[0];
+			// Get the button that opens the modal
+			var btn_eoroom = document.getElementById("myBtn_eoroom");
 
-		// When the user clicks the button, open the modal
-		btn_eoroom.onclick = function () {
-			modal_eoroom.style.display = "block";
-		}
+			// Get the <span> element that closes the modal
+			var span_eoroom = document.getElementsByClassName("close")[0];
 
-		// When the user clicks on <span> (x), close the modal
-		function eoroom() {
-			console.log("rfgfhgcfchxedhgbhjbmhbhjbh");
-			modal_eoroom.style.display = "none";
-		}
+			// When the user clicks the button, open the modal
+			btn_eoroom.onclick = function () {
+				modal_eoroom.style.display = "block";
+			}
 
-		// When the user clicks anywhere outside of the modal, close it
-		window.onclick = function (event_eoroom) {
-			if (event_eoroom.target == modal) {
+			// When the user clicks on <span> (x), close the modal
+			function eoroom() {
+				console.log("rfgfhgcfchxedhgbhjbmhbhjbh");
 				modal_eoroom.style.display = "none";
 			}
-		}
-	</script>
 
-	<!-- open_modal_hallway-->
-	<script>
-		// Get the modal
-		var modal_hallway = document.getElementById("myModal_hallway");
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function (event_eoroom) {
+				if (event_eoroom.target == modal) {
+					modal_eoroom.style.display = "none";
+				}
+			}
+		</script>
 
-		// Get the button that opens the modal
-		var btn_hallway = document.getElementById("myBtn_hallway");
+		<!-- open_modal_hallway-->
+		<script>
+			// Get the modal
+			var modal_hallway = document.getElementById("myModal_hallway");
 
-		// Get the <span> element that closes the modal
-		var span_hallway = document.getElementsByClassName("close")[0];
+			// Get the button that opens the modal
+			var btn_hallway = document.getElementById("myBtn_hallway");
 
-		// When the user clicks the button, open the modal
-		btn_hallway.onclick = function () {
-			modal_hallway.style.display = "block";
-		}
+			// Get the <span> element that closes the modal
+			var span_hallway = document.getElementsByClassName("close")[0];
 
-		// When the user clicks on <span> (x), close the modal
+			// When the user clicks the button, open the modal
+			btn_hallway.onclick = function () {
+				modal_hallway.style.display = "block";
+			}
 
-		function hallway() {
-			console.log("rfgfhgcfchxedhgbhjbmhbhjbh");
-			modal_hallway.style.display = "none";
-		}
+			// When the user clicks on <span> (x), close the modal
 
-		// When the user clicks anywhere outside of the modal, close it
-		window.onclick = function (event) {
-			if (event.target == modal_hallway) {
+			function hallway() {
+				console.log("rfgfhgcfchxedhgbhjbmhbhjbh");
 				modal_hallway.style.display = "none";
 			}
-		}
-	</script>
+
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function (event) {
+				if (event.target == modal_hallway) {
+					modal_hallway.style.display = "none";
+				}
+			}
+		</script>
 
 
 
@@ -507,20 +478,20 @@
 
 
 
-	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="styles/bootstrap-4.1.2/popper.js"></script>
-	<script src="styles/bootstrap-4.1.2/bootstrap.min.js"></script>
-	<script src="plugins/greensock/TweenMax.min.js"></script>
-	<script src="plugins/greensock/TimelineMax.min.js"></script>
-	<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
-	<script src="plugins/greensock/animation.gsap.min.js"></script>
-	<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
-	<script src="plugins/OwlCarousel2-2.3.4/owl.carousel.js"></script>
-	<script src="plugins/easing/easing.js"></script>
-	<script src="plugins/progressbar/progressbar.min.js"></script>
-	<script src="plugins/parallax-js-master/parallax.min.js"></script>
-	<script src="plugins/Isotope/isotope.pkgd.min.js"></script>
-	<script src="js/listings.js"></script>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="styles/bootstrap-4.1.2/popper.js"></script>
+		<script src="styles/bootstrap-4.1.2/bootstrap.min.js"></script>
+		<script src="plugins/greensock/TweenMax.min.js"></script>
+		<script src="plugins/greensock/TimelineMax.min.js"></script>
+		<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
+		<script src="plugins/greensock/animation.gsap.min.js"></script>
+		<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
+		<script src="plugins/OwlCarousel2-2.3.4/owl.carousel.js"></script>
+		<script src="plugins/easing/easing.js"></script>
+		<script src="plugins/progressbar/progressbar.min.js"></script>
+		<script src="plugins/parallax-js-master/parallax.min.js"></script>
+		<script src="plugins/Isotope/isotope.pkgd.min.js"></script>
+		<script src="js/listings.js"></script>
 </body>
 
 </html>

@@ -1,17 +1,27 @@
 /* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 200px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-left: 9px;
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 200px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  padding-left: 9px;
+  margin-left: 0%;
   }
   
   /* Modal Content */
@@ -98,15 +108,13 @@
   }
   
   /* The Close Button */
-  .close {
+.close {
     color: white;
     float: right;
     font-size: 28px;
     font-weight: bold;
-    margin-right: 50px;
-    
-   
-  }
+    margin-right: 50px;    
+}
   
   
   .close:hover,
@@ -116,59 +124,48 @@
     cursor: pointer;
   }
   
-  .modal-header {
-    margin: 0;
-    padding: 10px;
-    background-color: #5cb85c;
-    color: white
+.modal-header {
+  margin: 0;
+  padding: 10px;
+  background: rgb(154, 36, 252);
+  background: linear-gradient(135deg, rgba(154, 36, 252, 1) 0%, rgba(168, 195, 255, 1) 100%);
+  color: white
     
-  }
+}
   
   
   
-  .modal-body {
+.modal-body {
   
-      padding: 2px 16px;
+  padding: 2px 16px;
       
   }
-  .menu_1stfloor li{
+.menu_1stfloor li{
     padding-top: 20px;
     padding-left: 6px;
-  }
-  
+}
+
+
     
   
-  .modal-footer {
-    padding:0 ;
-    background-color: #5cb85c;
-    color: white;
-  }
   
-  .control_1st_floor ul{
+.control_1st_floor ul{
     margin-top: 15px;
   }
   
-  .pong{
+.pong{
     float: left;
   }
   
-  .close_officeroom{
+.close_officeroom{
     float:right;
   }
-
-.home{
-  padding: 0;
-  margin: 0;
-  background-color: ;
-
-}
-
 
   
   
   
   /*switch*/
-  .switch {
+.switch {
     position: relative;
     display: inline-block;
     width: 55px;
@@ -176,15 +173,15 @@
     float:right;
     margin-right: 18px;
     
-  }
+}
   
-  .switch input { 
+.switch input { 
     opacity: 0;
     width: 0;
     height: 0;
-  }
-  
-  .slider {
+}
+
+.slider {
     position: absolute;
     cursor: pointer;
     top: 0;

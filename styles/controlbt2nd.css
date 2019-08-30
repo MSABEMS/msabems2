@@ -1,51 +1,31 @@
 /* The Modal (background) */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 200px; /* Location of the box */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 200px;
+  /* Location of the box */
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
   padding-left: 9px;
+  margin-left: 0%;
 }
 
 /* Modal Content */
-.modal-content-bedroom{
-  position: relative;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  border: 1px solid #888;
-  width: 30%;
-  height: 245px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-  -webkit-animation-name: animatetop;
-  -webkit-animation-duration: 0.4s;
-  animation-name: animatetop;
-  animation-duration: 0.4s;
-  float: left;
-}
-.modal-content-conferenceroom{
-  position: relative;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  border: 1px solid #888;
-  width: 30%;
-  height: 300px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-  -webkit-animation-name: animatetop;
-  -webkit-animation-duration: 0.4s;
-  animation-name: animatetop;
-  animation-duration: 0.4s;
-  float: left;
-}
-.modal-content-eoroom{
+.modal-content-officeroom1, .modal-content-officeroom2, .modal-content-maincontrol {
   position: relative;
   background-color: #fefefe;
   margin: auto;
@@ -53,15 +33,15 @@
   border: 1px solid #888;
   width: 30%;
   height: 170px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
   animation-duration: 0.4s;
   float: left;
-
 }
-.modal-content-hallway{
+
+.modal-content-hallway {
   position: relative;
   background-color: #fefefe;
   margin: auto;
@@ -69,7 +49,7 @@
   border: 1px solid #888;
   width: 30%;
   height: 200px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
@@ -77,20 +57,29 @@
   float: left;
 }
 
-
-
-
-
-
 /* Add Animation */
 @-webkit-keyframes animatetop {
-  from {top:-300px; opacity:0} 
-  to {top:0; opacity:1}
+  from {
+    top: -300px;
+    opacity: 0
+  }
+
+  to {
+    top: 0;
+    opacity: 1
+  }
 }
 
 @keyframes animatetop {
-  from {top:-300px; opacity:0}
-  to {top:0; opacity:1}
+  from {
+    top: -300px;
+    opacity: 0
+  }
+
+  to {
+    top: 0;
+    opacity: 1
+  }
 }
 
 /* The Close Button */
@@ -100,10 +89,7 @@
   font-size: 28px;
   font-weight: bold;
   margin-right: 50px;
-  
- 
 }
-
 
 .close:hover,
 .close:focus {
@@ -115,44 +101,33 @@
 .modal-header {
   margin: 0;
   padding: 10px;
-  background-color: #5cb85c;
+  background: rgb(154, 36, 252);
+  background: linear-gradient(135deg, rgba(154, 36, 252, 1) 0%, rgba(168, 195, 255, 1) 100%);
   color: white
-  
 }
-
-
 
 .modal-body {
-
-    padding: 2px 16px;
-    
+  padding: 2px 16px;
 }
-.menu_1stfloor li{
+
+.menu_2ndfloor li {
   padding-top: 20px;
   padding-left: 6px;
 }
 
-  
 
-.modal-footer {
-  padding:0 ;
-  background-color: #5cb85c;
-  color: white;
-}
 
-.control_1st_floor ul{
+.control_2nd_floor ul {
   margin-top: 15px;
 }
 
-.pong{
+.pong {
   float: left;
 }
 
-.close_officeroom{
-  float:right;
+.close_officeroom {
+  float: right;
 }
-
-
 
 /*switch*/
 .switch {
@@ -160,12 +135,11 @@
   display: inline-block;
   width: 55px;
   height: 29px;
-  float:right;
+  float: right;
   margin-right: 18px;
-  
 }
 
-.switch input { 
+.switch input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -195,15 +169,15 @@
   transition: .4s;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: #2196F3;
 }
 
-input:focus + .slider {
+input:focus+.slider {
   box-shadow: 0 0 1px #2196F3;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
@@ -218,208 +192,6 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-.container_switch{
+.container_switch {
   float: right;
 }
-
-
-
-
-
-
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 200px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-left: 9px;
-  }
-  
-  /* Modal Content */
-  .modal-content-officeroom1,.modal-content-officeroom2,.modal-content-maincontrol{
-    position: relative;
-    background-color: #fefefe;
-    margin: auto;
-    padding: 0;
-    border: 1px solid #888;
-    width: 30%;
-    height: 170px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s;
-    float: left;
-  }
-  .modal-content-hallway{
-    position: relative;
-    background-color: #fefefe;
-    margin: auto;
-    padding: 0;
-    border: 1px solid #888;
-    width: 30%;
-    height: 200px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s;
-    float: left;
-  }
-  
-  
-  
-  
-  
-  
-  /* Add Animation */
-  @-webkit-keyframes animatetop {
-    from {top:-300px; opacity:0} 
-    to {top:0; opacity:1}
-  }
-  
-  @keyframes animatetop {
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
-  }
-  
-  /* The Close Button */
-  .close {
-    color: white;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    margin-right: 50px;
-    
-   
-  }
-  
-  
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  .modal-header {
-    margin: 0;
-    padding: 10px;
-    background-color: #5cb85c;
-    color: white
-    
-  }
-  
-  
-  
-  .modal-body {
-  
-      padding: 2px 16px;
-      
-  }
-  .menu_2ndfloor li{
-    padding-top: 20px;
-    padding-left: 6px;
-  }
-  
-    
-  
-  .modal-footer {
-    padding:0 ;
-    background-color: #5cb85c;
-    color: white;
-  }
-  
-  .control_2nd_floor ul{
-    margin-top: 15px;
-  }
-  
-  .pong{
-    float: left;
-  }
-  
-  .close_officeroom{
-    float:right;
-  }
-  
-  
-  
-  /*switch*/
-  .switch {
-    position: relative;
-    display: inline-block;
-    width: 55px;
-    height: 29px;
-    float:right;
-    margin-right: 18px;
-    
-  }
-  
-  .switch input { 
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 21px;
-    width: 21px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: #2196F3;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 29px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
-  
-  .container_switch{
-    float: right;
-  }
-
-  ////////////////////////////////////////////////
-  

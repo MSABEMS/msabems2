@@ -19,13 +19,12 @@
 <body>
 
 	<div class="super_container">
-		<div class="super_overlay"></div>
+		
 
 		<!-- Header -->
 
 		<header class="header">
-
-			<!-- Header Bar -->
+			
 
 			<!-- Header Content -->
 			<div class="header_content d-flex flex-row align-items-center justify-content-start">
@@ -51,14 +50,15 @@
 		<div class="menu text-right">
 			<div class="menu_close"><i class="fa fa-times" aria-hidden="true"></i></div>
 			<div class="menu_log_reg">
-				<div class="log_reg d-flex flex-row align-items-center justify-content-end">
+				<!-- <div class="log_reg d-flex flex-row align-items-center justify-content-end">
 					<ul class="d-flex flex-row align-items-start justify-content-start">
 						<li><a href="#">Login</a></li>
 						<li><a href="#">Register</a></li>
 					</ul>
-				</div>
+				</div> -->
 				<nav class="menu_nav">
 					<ul>
+						<li><a href="index.html">Home</a></li>
 						<li><a href="listings.html">1st Floor</a></li>
 						<li><a href="blog.html">2nd Floor</a></li>
 						<li><a href="contact.html">Conference Room</a></li>
@@ -83,31 +83,28 @@
 								<!-- Categories -->
 								<div class="categories">
 									<div class="sidebar_title">
-										<h3>Title</h3>
+										<h3>2nd Floor: Energy Report</h3>
 									</div>
 									<div class="sidebar_list">
-										<ul>
-											<li><a href="#">Main Control kW</a></li>
-											<li><a href="#">Office Room kW</a></li>
-											<li><a href="#">Conference Room kW</a></li>
-											<li><a href="#">Office Room II kW</a></li>
-											<li><a href="#">Hallway kW</a></li>
-											<li><a href="#">Total Load kW</a></li>
-										</ul>
+										<div class="ContentReport">Total Load: <span class="a" style="margin-left: 105px;"> xxx </span> <span class="a" style="margin-left: 30px;">kW</span></div>
+										<div class="ContentReport">Officer Room 1 Load: <span class="a" style="margin-left: 36px;"> xxx </span> <span class="a" style="margin-left: 30px;">kW</span></div>
+										<div class="ContentReport">Officer Room 2 Load: <span class="a" style="margin-left: 34px;"> xxx </span> <span class="a" style="margin-left: 30px;">kW</span></div>
+										<div class="ContentReport">Main Control Load: <span class="a" style="margin-left: 49px;"> xxx </span> <span class="a" style="margin-left: 30px;">kW</span></div>
+										<div class="ContentReport">Critical Load: <span class="a" style="margin-left: 90px;"> xxx </span> <span class="a" style="margin-left: 30px;">kW</span></div>
 									</div>
 								</div>
 
 								<!-- Archive -->
 								<div class="archive">
 									<div class="sidebar_title">
-										<h3>Control</h3>
+										<h3>2nd Floor: Scene Control</h3>
 									</div>
 									<div class="sidebar_list_control">
 										<div class="control_2nd_floor">
 											<!--Office Room 1-->
 											<ul>
 												<!-- Trigger/Open The Modal -->
-												<button id="myBtn_officeroom1">Office Room 1</button>
+												<button id="myBtn_officeroom1" class="SceneStyle">Office Room 1</button>
 
 												<!-- The Modal -->
 												<div id="myModal_officeroom1" class="modal">
@@ -116,8 +113,7 @@
 													<div class="modal-content-officeroom1">
 														<div class="modal-header">
 															<h3 style="margin-left: 10px">Office Room 1</h3>
-															<span class="close" style="margin-right: 2px"
-																onclick="officeroom1()">&times;</span>
+															<span class="close" style="margin-right: 2px" onclick="officeroom1()">&times;</span>
 														</div>
 														<div class="modal-body">
 															<div class="menu_2ndfloor">
@@ -148,7 +144,7 @@
 											<!--Office Room 2-->
 											<ul>
 												<!-- Trigger/Open The Modal -->
-												<button id="myBtn_officeroom2">Office Room 2</button>
+												<button id="myBtn_officeroom2" class="SceneStyle">Office Room 2</button>
 
 												<!-- The Modal -->
 												<div id="myModal_officeroom2" class="modal">
@@ -157,8 +153,7 @@
 													<div class="modal-content-officeroom2">
 														<div class="modal-header">
 															<h3 style="margin-left: 10px">Office Room 2</h3>
-															<span class="close" style="margin-right: 7px"
-																onclick="officeroom2()">&times;</span>
+															<span class="close" style="margin-right: 7px" onclick="officeroom2()">&times;</span>
 														</div>
 														<div class="modal-body">
 															<div class="menu_2ndfloor">
@@ -189,7 +184,7 @@
 											<!--Main Control-->
 											<ul>
 												<!-- Trigger/Open The Modal -->
-												<button id="myBtn_maincontrol">Main Control</button>
+												<button id="myBtn_maincontrol" class="SceneStyle">Main Control</button>
 
 												<!-- The Modal -->
 												<div id="myModal_maincontrol" class="modal">
@@ -198,8 +193,7 @@
 													<div class="modal-content-maincontrol">
 														<div class="modal-header">
 															<h3 style="margin-left: 10px">Main Control</h3>
-															<span class="close" style="margin-right: 7px"
-																onclick="maincontrol()">&times;</span>
+															<span class="close" style="margin-right: 7px" onclick="maincontrol()">&times;</span>
 														</div>
 														<div class="modal-body">
 															<div class="menu_2ndfloor">
@@ -229,7 +223,7 @@
 											<!--Hallway-->
 											<ul>
 												<!-- Trigger/Open The Modal -->
-												<button id="myBtn_hallway">Hallway</button>
+												<button id="myBtn_hallway" class="SceneStyle">Hallway</button>
 
 												<!-- The Modal -->
 												<div id="myModal_hallway" class="modal">
@@ -238,8 +232,7 @@
 													<div class="modal-content-hallway">
 														<div class="modal-header">
 															<h3 style="margin-left: 10px">Hallway</h3>
-															<span class="close" style="margin-right: 7px"
-																onclick="hallway()">&times;</span>
+															<span class="close" style="margin-right: 7px" onclick="hallway()">&times;</span>
 														</div>
 														<div class="modal-body">
 															<div class="menu_2ndfloor">
@@ -291,25 +284,21 @@
 								<!-- Blog Post -->
 								<div class="blog_post">
 									<div class="blog_post_image">
-										<img src="images/img21.jpg" class="rounded float-left" alt="">
-										<div
-											class="blog_post_date d-flex flex-column align-items-center justify-content-center">
+										<img src="images/img21.jpg" class="rounded float-left" style="width: 86%" alt="">
+										<div class="blog_post_date d-flex flex-column align-items-center justify-content-center">
 											<div>2nd</div>
 											<div>Floor</div>
 										</div>
 										<div class="dashboard_2nd">
 										</div>
 									</div>
-								</div>
-								<!-- Blog Post -->
-								<!-- Blog Post -->
+								</div>								
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
 	</div>
 
 	<!--open_modal_officeroom1-->
@@ -324,7 +313,7 @@
 		var span_officeroom1 = document.getElementsByClassName("close")[0];
 
 		// When the user clicks the button, open the modal
-		btn_officeroom1.onclick = function () {
+		btn_officeroom1.onclick = function() {
 			console.log("myModal_officeroom1");
 			modal_officeroom1.style.display = "block";
 		}
@@ -335,12 +324,8 @@
 			modal_officeroom1.style.display = "none";
 		}
 
-
 		// When the user clicks anywhere outside of the modal, close it
-
-
 	</script>
-
 
 	<!--open_modal_officeroom2-->
 	<script>
@@ -354,7 +339,7 @@
 		var span_officeroom2 = document.getElementsByClassName("close")[0];
 
 		// When the user clicks the button, open the modal
-		btn_officeroom2.onclick = function () {
+		btn_officeroom2.onclick = function() {
 			console.log("myModal_officeroom1");
 			modal_officeroom2.style.display = "block";
 		}
@@ -366,7 +351,7 @@
 		}
 
 		// When the user clicks anywhere outside of the modal, close it
-		window_officeroom2.onclick = function (event_officeroom2) {
+		window_officeroom2.onclick = function(event_officeroom2) {
 			if (event_officeroom2.target == modal_officeroom2) {
 				modal_officeroom2.style.display = "none";
 			}
@@ -385,7 +370,7 @@
 		var span_maincontrol = document.getElementsByClassName("close")[0];
 
 		// When the user clicks the button, open the modal
-		btn_maincontrol.onclick = function () {
+		btn_maincontrol.onclick = function() {
 			modal_maincontrol.style.display = "block";
 		}
 
@@ -396,7 +381,7 @@
 		}
 
 		// When the user clicks anywhere outside of the modal, close it
-		window.onclick = function (event_maincontrol) {
+		window.onclick = function(event_maincontrol) {
 			if (event_maincontrol.target == modal) {
 				modal_maincontrol.style.display = "none";
 			}
@@ -415,7 +400,7 @@
 		var span_hallway = document.getElementsByClassName("close")[0];
 
 		// When the user clicks the button, open the modal
-		btn_hallway.onclick = function () {
+		btn_hallway.onclick = function() {
 			modal_hallway.style.display = "block";
 		}
 
@@ -427,7 +412,7 @@
 		}
 
 		// When the user clicks anywhere outside of the modal, close it
-		window.onclick = function (event) {
+		window.onclick = function(event) {
 			if (event.target == modal_hallway) {
 				modal_hallway.style.display = "none";
 			}
