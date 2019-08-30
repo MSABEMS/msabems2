@@ -115,12 +115,7 @@
   padding-left: 6px;
 }
 
-.modal-footer {
-  padding: 0;
-  background-color: background: rgb(154, 36, 252);
-  background: linear-gradient(135deg, rgba(154, 36, 252, 1) 0%, rgba(168, 195, 255, 1) 100%);
-  color: white;
-}
+
 
 .control_2nd_floor ul {
   margin-top: 15px;
