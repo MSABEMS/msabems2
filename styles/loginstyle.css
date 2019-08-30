@@ -7,6 +7,7 @@
    position:relative; }
 #header{
   background-color:#ec8000;
+
   background: linear-gradient(135deg, rgba(154,36,252,1) 0%, rgba(168,195,255,1) 100%);
   height:100px;
   padding:8px;
@@ -14,6 +15,7 @@
 }
 #left{
   background-color:#ffff;
+
   height:80%;
   width:200px;
   position:absolute;}
@@ -23,7 +25,9 @@
   margin:0 400px 0 200px;
   padding:50px; }
 #right{
+
   background-color:#ffff;
+
   height:80%;
   width:400px;
   position:absolute;
@@ -31,18 +35,22 @@
 #footer{
   position:absolute;
   background-color:#808080;
+
   height:13%;
   text-align:left;
   border: 0px 0px 0px 0px;
   padding:0px 0px 0px 0px;
+
   bottom:0px;
   width:100%;
   background: linear-gradient(135deg, rgba(154,36,252,1) 0%, rgba(168,195,255,1) 100%);
  }
 
+
  .social-icon {
    margin: 0px 10px;
  }
+
 
 .backgroundImage {
   opacity: 1;
@@ -59,7 +67,9 @@
 
 .container-fluid{
   padding: 7% 15%;
+
   text-align: Left;
+
   font-size: 16px;
   color: white;
   padding: 3% 3%;

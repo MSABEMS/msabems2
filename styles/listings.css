@@ -511,7 +511,7 @@ section
 .main_nav ul li.active,
 .main_nav ul li:hover
 {
-	background: #adc867;
+	background: rgba(215,192,17,1);
 }
 .main_nav ul li a
 {
