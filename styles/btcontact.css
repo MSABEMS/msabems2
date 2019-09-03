@@ -1,30 +1,88 @@
-*{
-  margin: 0px;
-  padding: 0px;
-}
-
-
-
-
-
-.switch {
+.switch_one_left,.switch_three_left,.switch_one_right,.switch_two_right {
   position: relative;
   display: inline-block;
-  width: 55px;
-  height: 29px;
+  width: 52px;
+  height: 26px;
+  float: right;
+  margin-bottom: px;
+}
+.switch_three_right_screen{
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 26px;
+}
+.switch_four_right{
+  position: relative;
+  display: inline-block;
+  width: 52px;
+  height: 26px;
+  float: right;
   
 }
 
-.switch input { 
+
+
+
+
+.switch_one_left input{
   opacity: 0;
   width: 0;
   height: 0;
-  float: right;
-  margin-bottom: 
-  
-  
-  
 }
+.switch_three_left input{
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switch_one_right input{
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switch_two_right input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switch_three_right_screen input{
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.switch_four_right input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+
+.one_left,.three_left,.one_right_kvm_input,.two_right_projector_input,.four_right{
+  background: ;
+  margin-top:14px;
+  margin-bottom: 14px;
+}
+
+
+li{
+  list-style: none;
+}
+.three_right_screen_open{
+  padding-right: 52px;
+  float: left;
+  padding-top: 4px;
+}
+.three_right_screen_close{
+  padding-top: 4px;
+}
+
+.three_right_screen{
+  padding-top: 10px;
+}
+
+
+
+
 
 .slider {
   position: absolute;
@@ -41,8 +99,8 @@
 .slider:before {
   position: absolute;
   content: "";
-  height: 21px;
-  width: 21px;
+  height: 18px;
+  width: 18px;
   left: 4px;
   bottom: 4px;
   background-color: white;
@@ -66,32 +124,174 @@ input:checked + .slider:before {
 
 /* Rounded sliders */
 .slider.round {
-  border-radius: 29px;
+  border-radius: 26px;
 }
 
 .slider.round:before {
   border-radius: 50%;
 }
-li{
-  list-style: none;
+
+/*SceneStyle*/
+
+.SceneStyle {
+  width: 80%;
+  height: 40px;
+  margin-top: -6px;
+  background: rgb(154,36,252);
+  background: linear-gradient(135deg, rgba(154,36,252,1) 0%, rgba(168,195,255,1) 100%);
+  border-width: thin;
+  border: 1.5px;
+  border-radius: 16px;
+  border-color: rgba(91, 91, 91, 1) align-items: center;
+  text-align: center;
+  margin-left: 0px;
+	cursor: pointer;
+}
+
+.col-lg-6 ul{
+  margin-top: 10px
 }
 
 
 
-.one_left li{
-  padding-top: 20px;
-  padding-left: 6px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Remode Control*/
+.ACremoteControl {
+  width: 320px;
+  height: auto;
+  border: 1px;
+  border-radius: 12px;
+  border-color: #999999;
+  border-style: solid;
+  margin-left: 33%;
 }
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
-  text-shadow: rgba(0,0,0,.01) 0 0 1px;
-  line-height: 1.2;
-  color: #2b2e35;
-  font-weight: 600;
-  margin-bottom: 0;
+
+.onoffACbutton {
+  width: 100%;
+  display: flex;
+  margin-top: 6px;
 }
-h4 {
-  font-size: 18px;
+
+.OffACbutton {
+  width: 50%;
+  text-align: center;
+  align-items: center;
+}
+
+.OnACbutton {
+  width: 50%;
+  text-align: center;
+  align-items: center;
+}
+
+.ACTempControl {
+  width: 100%;
+  display: flex;
+  margin-top: -8px;
+  border-color: rgba(116, 122, 132, 1);
+}
+
+.decreaseTemp {
+  width: 35%;
+  text-align: center;
+  align-items: center;
+}
+
+.increaseTemp {
+  width: 35%;
+  text-align: center;
+  align-items: center;
+}
+
+.TempDisplay {
+  width: 35%;
+  /* text-align: center; */
+  align-items: center;
+  display: flex;
+}
+
+.TempMonitoring {
+  margin-top: 0px;
+  width: 50%;
+  font-size: 36px;
+  color: rgba(67, 66, 93, 1);
+  text-align: right;
+}
+
+.degreeC {
+  width: 50%;
+  font-size: 30px;
+  color: rgba(67, 66, 93, 1);
+  left: auto;
+  text-align: left;
+}
+
+.ACModeControl {
+  width: 100%;
+  display: flex;
+  margin-top: 14px;
+}
+
+.CoolMode {
+  width: 33.33%;
+  text-align: center;
+  align-items: center;
+}
+
+.DryMode {
+  width: 33.33%;
+  text-align: center;
+  align-items: center;
+}
+
+.FanMode {
+  width: 33.33%;
+  text-align: center;
+  align-items: center;
+}
+
+hr {
+    display: block;
+    margin-before: 0.5em;
+    margin-after: 0.5em;
+    margin-start: auto;
+    margin-end: auto;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+}
+
+.FanSpeedControl {
+  width: 100%;
+  display: flex;
+  margin-top: 14px;
+}
+
+.FanSpeedIcon {
+  width: 20%;
+  text-align: center;
+  align-items: bottom;
+}
+
+.FanSpeedNumber {
+  width: 12%;
+  text-align: center;
+  align-items: center;
 }
