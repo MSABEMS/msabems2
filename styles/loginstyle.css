@@ -10,34 +10,36 @@
 
   background: linear-gradient(135deg, rgba(154,36,252,1) 0%, rgba(168,195,255,1) 100%);
   height:100px;
-  padding:8px;
+  padding:15px;
   /* text-decoration-color: #ffff; */
 }
 #left{
   background-color:#ffff;
-
+  color: red;
   height:80%;
-  width:200px;
+  padding:10px;
+  width:100px;
   position:absolute;}
 #content{
   background-color:#ffff;
   position:absolute;
-  margin:0 400px 0 200px;
-  padding:50px; }
+  margin:0 100px 0 200px;
+  padding:00px; }
 #right{
 
   background-color:#ffff;
-
+  color: red;
   height:80%;
   width:400px;
   position:absolute;
   right:0; }
 #footer{
   position:absolute;
-  background-color:#808080;
+  /* background-color:#808080; */
 
   height:13%;
-  text-align:left;
+  text-align:center;
+
   border: 0px 0px 0px 0px;
   padding:0px 0px 0px 0px;
 
@@ -54,6 +56,11 @@
 
 .backgroundImage {
   opacity: 1;
+  background-image: url('images/MSA Building.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  /* height: 100; */
+
 }
 
 .white-section {
@@ -65,26 +72,22 @@
   color: #990099;
 }
 
+
+/* Footer Part */
 .container-fluid{
   padding: 7% 15%;
 
-  text-align: Left;
+  text-align: center;
 
-  font-size: 16px;
+  font-size: 14px;
   color: white;
   padding: 3% 3%;
   align-items: center;
-  vertical-align: middle;
+  vertical-align: top;
   background: linear-gradient(135deg, rgba(154,36,252,1) 0%, rgba(168,195,255,1) 100%);
   width: 100%;
   height: 20px;
 }
-
-/* .footer {
-  background-color: #ff4c68;
-  color: #fff;
-  text-align: center;
-} */
 
 
 /* The Modal (background) */
