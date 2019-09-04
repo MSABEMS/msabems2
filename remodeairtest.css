@@ -1,0 +1,122 @@
+.ACremoteControl {
+    width: 320px;
+    height: auto;
+    border: 1px;
+    border-radius: 12px;
+    border-color: #999999;
+    border-style: solid;
+    margin-left: 33%;
+  }
+  
+  .onoffACbutton {
+    width: 100%;
+    display: flex;
+    margin-top: 6px;
+  }
+  
+  .OffACbutton {
+    width: 50%;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .OnACbutton {
+    width: 50%;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .ACTempControl {
+    width: 100%;
+    display: flex;
+    margin-top: -8px;
+    border-color: rgba(116, 122, 132, 1);
+  }
+  
+  .decreaseTemp {
+    width: 35%;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .increaseTemp {
+    width: 35%;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .TempDisplay {
+    width: 35%;
+    /* text-align: center; */
+    align-items: center;
+    display: flex;
+  }
+  
+  .TempMonitoring {
+    margin-top: 0px;
+    width: 50%;
+    font-size: 36px;
+    color: rgba(67, 66, 93, 1);
+    text-align: right;
+  }
+  
+  .degreeC {
+    width: 50%;
+    font-size: 30px;
+    color: rgba(67, 66, 93, 1);
+    left: auto;
+    text-align: left;
+  }
+  
+  .ACModeControl {
+    width: 100%;
+    display: flex;
+    margin-top: 14px;
+  }
+  
+  .CoolMode {
+    width: 33.33%;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .DryMode {
+    width: 33.33%;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .FanMode {
+    width: 33.33%;
+    text-align: center;
+    align-items: center;
+  }
+  
+  hr {
+      display: block;
+      margin-before: 0.5em;
+      margin-after: 0.5em;
+      margin-start: auto;
+      margin-end: auto;
+      overflow: hidden;
+      border-style: inset;
+      border-width: 1px;
+  }
+  
+  .FanSpeedControl {
+    width: 100%;
+    display: flex;
+    margin-top: 14px;
+  }
+  
+  .FanSpeedIcon {
+    width: 20%;
+    text-align: center;
+    align-items: bottom;
+  }
+  
+  .FanSpeedNumber {
+    width: 12%;
+    text-align: center;
+    align-items: center;
+  }

@@ -69,30 +69,9 @@ p
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
 }
-p a
-{
-	display: inline;
-	position: relative;
-	color: inherit;
-	border-bottom: solid 1px #ffa07f;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
-}
-p:last-of-type
-{
-	margin-bottom: 0;
-}
-a
-{
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
-}
+
+
+
 a, a:hover, a:visited, a:active, a:link
 {
 	text-decoration: none;
@@ -100,16 +79,8 @@ a, a:hover, a:visited, a:active, a:link
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
 }
-p a:active
-{
-	position: relative;
-	color: #FF6347;
-}
-p a:hover
-{
-	color: #FFFFFF;
-	background: #ffa07f;
-}
+
+
 p a:hover::after
 {
 	opacity: 0.2;
@@ -379,6 +350,7 @@ section
 .main_nav ul li:hover
 {
 	background: rgba(215,192,17,1);
+	6
 }
 .main_nav ul li a
 {
@@ -517,16 +489,8 @@ section
 {
 	height: 261px;
 }
-.home_content
-{
-	padding-top: 173px;
-}
-.home_title
-{
-	font-size: 30px;
-	font-weight: 500;
-	color: #ffffff;
-}
+
+
 
 /*********************************
 6. Blog
@@ -543,30 +507,9 @@ section
 {
 	margin-bottom: 66px;
 }
-.blog_post_date
-{
-	position: absolute;
-	top: 16px;
-	left: -36px;
-	width: 73px;
-	height: 95px;
-	background: rgba(215,192,17,1);
-}
-.blog_post_date > div:first-of-type
-{
-	font-size: 36px;
-	font-weight: 500;
-	color: #ffffff;
-	line-height: 0.75;
-}
-.blog_post_date > div:last-of-type
-{
-	font-size: 14px;
-	font-weight: 500;
-	color: #ffffff;
-	line-height: 0.75;
-	margin-top: 13px;
-}
+
+
+
 .blog_post_content
 {
 	padding-top: 45px;
@@ -616,29 +559,8 @@ section
 {
 	color: rgba(215,192,17,1);
 }
-.blog_post_text
-{
-	margin-top: 42px;
-}
-.page_nav
-{
-	margin-top: 77px;
-}
-.page_nav ul li:not(:last-of-type)
-{
-	margin-right: 16px;
-}
-.page_nav ul li a
-{
-	font-size: 14px;
-	font-weight: 600;
-	color: #2b2e35;
-}
-.page_nav ul li.active a,
-.page_nav ul li a:hover
-{
-	color: rgba(215,192,17,1);
-}
+
+
 
 /*********************************
 7. Sidebar
@@ -685,64 +607,10 @@ margin-top: -60px;
 	width: calc(100% + 10px);
 	margin-top: 48px;
 }
-.sidebar_tags ul li
-{
-	height: 32px;
-	background: #dbe7f1;
-	text-align: center;
-	margin-bottom: 10px;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
-}
-.sidebar_tags ul li:not(:last-of-type)
-{
-	margin-right: 10px;
-}
-.sidebar_tags ul li:hover
-{
-	background: rgba(215,192,17,1);
-}
-.sidebar_tags ul li a
-{
-	display: block;
-	height: 100%;
-	padding-left: 17px;
-	padding-right: 17px;
-	line-height: 32px;
-	font-size: 14px;
-	font-weight: 600;
-	color: #6c7079;
-}
-.sidebar_tags ul li:hover a
-{
-	color: #ffffff;
-}
-
-.sidebar_listing
-{
-	margin-top: 64px;
-}
 
 /*********************************
 8. Footer
 *********************************/
-
-.span.a {
-  display: inline; /* the default for span */
-  width: 100px;
-  height: 100px;
-  padding: 5px;
-  border: 1px solid blue;
-  background-color: yellow;
-}
-
-.ContentReport {
-	font-size: 14px;
-}
-
 .SceneStyle {
   width: 50%;
   height: 55px;
