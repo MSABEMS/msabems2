@@ -12,7 +12,7 @@
   width: 52px;
   height: 26px;
 }
-.switch_four_right{
+.switch_four_left{
   position: relative;
   display: inline-block;
   width: 52px;
@@ -50,14 +50,14 @@
   width: 0;
   height: 0;
 }
-.switch_four_right input {
+.switch_four_left input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
 
-.one_left,.three_left,.one_right_kvm_input,.two_right_projector_input,.four_right{
+.one_left,.three_left,.one_right_kvm_input,.two_right_projector_input,.four_left{
   background: ;
   margin-top:14px;
   margin-bottom: 14px;
