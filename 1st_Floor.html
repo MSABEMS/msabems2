@@ -18,13 +18,14 @@
 <body>
 
 	<div class="super_container">
-		
+
 		<!-- Header -->
 
 		<header class="header">
 
 			<!-- Header Content  b-->
-			<div class="header_content d-flex flex-row align-items-center justify-content-start" style="background: linear-gradient(135deg, rgba(154,36,252,1) 0%, rgba(168,195,255,1) 100%)">
+			<div class="header_content d-flex flex-row align-items-center justify-content-start"
+				style="background: linear-gradient(135deg, rgba(154,36,252,1) 0%, rgba(168,195,255,1) 100%)">
 				<div class="logo"><a href="#" style="color: aliceblue;">MSA Building Dashboard</a></div>
 				<nav class="main_nav">
 					<ul class="d-flex flex-row align-items-start justify-content-start">
@@ -69,7 +70,7 @@
 
 		<div class="homeContent">
 			<!-- Cover Header -->
-			
+
 			<div class="blog">
 				<div class="container">
 					<div class="row">
@@ -168,7 +169,8 @@
 											<!--Conferenceroom-->
 											<ul>
 												<!-- Trigger/Open The Modal -->
-												<button id="myBtn_conferenceroom" class="SceneStyle">Conference oom</button>
+												<button id="myBtn_conferenceroom" class="SceneStyle">Conference
+													oom</button>
 
 												<!-- The Modal -->
 												<div id="myModal_conferenceroom" class="modal">
@@ -265,7 +267,7 @@
 											<!--Hallway-->
 											<ul>
 												<!-- Trigger/Open The Modal -->
-												<button id="myBtn_hallway"class="SceneStyle">Hallway</button>
+												<button id="myBtn_hallway" class="SceneStyle">Hallway</button>
 
 												<!-- The Modal -->
 												<div id="myModal_hallway" class="modal">
@@ -320,7 +322,7 @@
 								</div>
 							</div>
 						</div>
-												<!-- Blog Posts -->
+						<!-- Blog Posts -->
 						<div class="col-lg-8">
 							<div class="blog_posts">
 
@@ -328,155 +330,155 @@
 								<div class="blog_post">
 									<div class="blog_post_image">
 										<img src="images/img21.jpg" class="rounded float-left" alt="">
-										
+
 										<div class="dashboard_2nd">
 										</div>
 									</div>
-								</div>						
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>	
+	</div>
 
-		<!--open_modal_bedroom-->
-		<script>
-			// Get the modal
-			var modal_bedroom = document.getElementById("myModal_bedroom");
+	<!--open_modal_bedroom-->
+	<script>
+		// Get the modal
+		var modal_bedroom = document.getElementById("myModal_bedroom");
 
-			// Get the button that opens the modal
-			var btn_bedroom = document.getElementById("myBtn_bedroom");
+		// Get the button that opens the modal
+		var btn_bedroom = document.getElementById("myBtn_bedroom");
 
-			// Get the <span> element that closes the modal
-			var span_bedroom = document.getElementsByClassName("close")[0];
+		// Get the <span> element that closes the modal
+		var span_bedroom = document.getElementsByClassName("close")[0];
 
-			// When the user clicks the button, open the modal
-			btn_bedroom.onclick = function () {
-				console.log("myModal_bedroom");
-				modal_bedroom.style.display = "block";
-			}
+		// When the user clicks the button, open the modal
+		btn_bedroom.onclick = function () {
+			console.log("myModal_bedroom");
+			modal_bedroom.style.display = "block";
+		}
 
-			// When the user clicks on <span> (x), close the modal
-			function bedroom() {
-				console.log("rfgfhgcfchxedhgbhjbmhbhjbh");
-				modal_bedroom.style.display = "none";
-			}
+		// When the user clicks on <span> (x), close the modal
+		function bedroom() {
+			console.log("rfgfhgcfchxedhgbhjbmhbhjbh");
+			modal_bedroom.style.display = "none";
+		}
 
 
 			// When the user clicks anywhere outside of the modal, close it
 
 
-		</script>
+	</script>
 
 
-		<!--open_modal_conferenceroom-->
-		<script>
-			// Get the modal
-			var modal_conferenceroom = document.getElementById("myModal_conferenceroom");
+	<!--open_modal_conferenceroom-->
+	<script>
+		// Get the modal
+		var modal_conferenceroom = document.getElementById("myModal_conferenceroom");
 
-			// Get the button that opens the modal
-			var btn_conferenceroom = document.getElementById("myBtn_conferenceroom");
+		// Get the button that opens the modal
+		var btn_conferenceroom = document.getElementById("myBtn_conferenceroom");
 
-			// Get the <span> element that closes the modal
-			var span_conferenceroom = document.getElementsByClassName("close")[0];
+		// Get the <span> element that closes the modal
+		var span_conferenceroom = document.getElementsByClassName("close")[0];
 
-			// When the user clicks the button, open the modal
-			btn_conferenceroom.onclick = function () {
-				console.log("myModal_conferenceroom");
-				modal_conferenceroom.style.display = "block";
-			}
+		// When the user clicks the button, open the modal
+		btn_conferenceroom.onclick = function () {
+			console.log("myModal_conferenceroom");
+			modal_conferenceroom.style.display = "block";
+		}
 
-			// When the user clicks on <span> (x), close the modal
-			function conferenceroom() {
-				console.log("rfgfhgcfchxedhgbhjbmhbhjbh");
+		// When the user clicks on <span> (x), close the modal
+		function conferenceroom() {
+			console.log("rfgfhgcfchxedhgbhjbmhbhjbh");
+			modal_conferenceroom.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window_conferenceroom.onclick = function (event_conferenceroom) {
+			if (event_conferenceroom.target == modal_conferenceroom) {
 				modal_conferenceroom.style.display = "none";
 			}
+		}
+	</script>
 
-			// When the user clicks anywhere outside of the modal, close it
-			window_conferenceroom.onclick = function (event_conferenceroom) {
-				if (event_conferenceroom.target == modal_conferenceroom) {
-					modal_conferenceroom.style.display = "none";
-				}
-			}
-		</script>
+	<!--open_modal_eoroom-->
+	<script>
+		// Get the modal
+		var modal_eoroom = document.getElementById("myModal_eoroom");
 
-		<!--open_modal_eoroom-->
-		<script>
-			// Get the modal
-			var modal_eoroom = document.getElementById("myModal_eoroom");
+		// Get the button that opens the modal
+		var btn_eoroom = document.getElementById("myBtn_eoroom");
 
-			// Get the button that opens the modal
-			var btn_eoroom = document.getElementById("myBtn_eoroom");
+		// Get the <span> element that closes the modal
+		var span_eoroom = document.getElementsByClassName("close")[0];
 
-			// Get the <span> element that closes the modal
-			var span_eoroom = document.getElementsByClassName("close")[0];
+		// When the user clicks the button, open the modal
+		btn_eoroom.onclick = function () {
+			modal_eoroom.style.display = "block";
+		}
 
-			// When the user clicks the button, open the modal
-			btn_eoroom.onclick = function () {
-				modal_eoroom.style.display = "block";
-			}
+		// When the user clicks on <span> (x), close the modal
+		function eoroom() {
+			console.log("rfgfhgcfchxedhgbhjbmhbhjbh");
+			modal_eoroom.style.display = "none";
+		}
 
-			// When the user clicks on <span> (x), close the modal
-			function eoroom() {
-				console.log("rfgfhgcfchxedhgbhjbmhbhjbh");
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function (event_eoroom) {
+			if (event_eoroom.target == modal) {
 				modal_eoroom.style.display = "none";
 			}
+		}
+	</script>
 
-			// When the user clicks anywhere outside of the modal, close it
-			window.onclick = function (event_eoroom) {
-				if (event_eoroom.target == modal) {
-					modal_eoroom.style.display = "none";
-				}
-			}
-		</script>
+	<!-- open_modal_hallway-->
+	<script>
+		// Get the modal
+		var modal_hallway = document.getElementById("myModal_hallway");
 
-		<!-- open_modal_hallway-->
-		<script>
-			// Get the modal
-			var modal_hallway = document.getElementById("myModal_hallway");
+		// Get the button that opens the modal
+		var btn_hallway = document.getElementById("myBtn_hallway");
 
-			// Get the button that opens the modal
-			var btn_hallway = document.getElementById("myBtn_hallway");
+		// Get the <span> element that closes the modal
+		var span_hallway = document.getElementsByClassName("close")[0];
 
-			// Get the <span> element that closes the modal
-			var span_hallway = document.getElementsByClassName("close")[0];
+		// When the user clicks the button, open the modal
+		btn_hallway.onclick = function () {
+			modal_hallway.style.display = "block";
+		}
 
-			// When the user clicks the button, open the modal
-			btn_hallway.onclick = function () {
-				modal_hallway.style.display = "block";
-			}
+		// When the user clicks on <span> (x), close the modal
 
-			// When the user clicks on <span> (x), close the modal
+		function hallway() {
+			console.log("rfgfhgcfchxedhgbhjbmhbhjbh");
+			modal_hallway.style.display = "none";
+		}
 
-			function hallway() {
-				console.log("rfgfhgcfchxedhgbhjbmhbhjbh");
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function (event) {
+			if (event.target == modal_hallway) {
 				modal_hallway.style.display = "none";
 			}
+		}
+	</script>
 
-			// When the user clicks anywhere outside of the modal, close it
-			window.onclick = function (event) {
-				if (event.target == modal_hallway) {
-					modal_hallway.style.display = "none";
-				}
-			}
-		</script>
-
-		<script src="js/jquery-3.3.1.min.js"></script>
-		<script src="styles/bootstrap-4.1.2/popper.js"></script>
-		<script src="styles/bootstrap-4.1.2/bootstrap.min.js"></script>
-		<script src="plugins/greensock/TweenMax.min.js"></script>
-		<script src="plugins/greensock/TimelineMax.min.js"></script>
-		<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
-		<script src="plugins/greensock/animation.gsap.min.js"></script>
-		<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
-		<script src="plugins/OwlCarousel2-2.3.4/owl.carousel.js"></script>
-		<script src="plugins/easing/easing.js"></script>
-		<script src="plugins/progressbar/progressbar.min.js"></script>
-		<script src="plugins/parallax-js-master/parallax.min.js"></script>
-		<script src="plugins/Isotope/isotope.pkgd.min.js"></script>
-		<script src="js/listings.js"></script>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="styles/bootstrap-4.1.2/popper.js"></script>
+	<script src="styles/bootstrap-4.1.2/bootstrap.min.js"></script>
+	<script src="plugins/greensock/TweenMax.min.js"></script>
+	<script src="plugins/greensock/TimelineMax.min.js"></script>
+	<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
+	<script src="plugins/greensock/animation.gsap.min.js"></script>
+	<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
+	<script src="plugins/OwlCarousel2-2.3.4/owl.carousel.js"></script>
+	<script src="plugins/easing/easing.js"></script>
+	<script src="plugins/progressbar/progressbar.min.js"></script>
+	<script src="plugins/parallax-js-master/parallax.min.js"></script>
+	<script src="plugins/Isotope/isotope.pkgd.min.js"></script>
+	<script src="js/listings.js"></script>
 </body>
 
 </html>
