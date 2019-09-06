@@ -350,7 +350,7 @@ section
 .main_nav ul li:hover
 {
 	background: rgba(215,192,17,1);
-	6
+	
 }
 .main_nav ul li a
 {
@@ -372,7 +372,6 @@ section
 	color: #ffffff;
 }
 
-
 .hamburger
 {
 	display: none;
@@ -392,6 +391,7 @@ section
 {
 	color: rgba(215,192,17,1);
 }
+
 
 /*********************************
 4. Menu
@@ -480,16 +480,6 @@ section
 {
 	color: rgba(215,192,17,1);
 }
-
-/*********************************
-5. Home
-*********************************/
-
-.home
-{
-	height: 261px;
-}
-
 
 
 /*********************************
