@@ -1,11 +1,15 @@
-.switch_one_left,.switch_three_left,.switch_one_right,.switch_two_right {
+
+.switch_one_left{
   position: relative;
   display: inline-block;
   width: 52px;
   height: 26px;
-  float: right;
-  margin-bottom: px;
 }
+
+
+
+
+
 .switch_three_right_screen{
   position: relative;
   display: inline-block;
@@ -148,8 +152,11 @@ input:checked + .slider:before {
 	cursor: pointer;
 }
 
-.col-lg-6 ul{
-  margin-top: 10px
+#yuuop{
+  background-color: yellow;
+  margin: 0;
+  padding: 0px;
+  width: 300px;
 }
 
 
