@@ -6,10 +6,6 @@
   height: 26px;
 }
 
-
-
-
-
 .switch_three_right_screen{
   position: relative;
   display: inline-block;
@@ -24,10 +20,6 @@
   float: right;
   
 }
-
-
-
-
 
 .switch_one_left input{
   opacity: 0;
@@ -60,13 +52,11 @@
   height: 0;
 }
 
-
 .one_left,.three_left,.one_right_kvm_input,.two_right_projector_input,.four_left{
   background: ;
   margin-top:14px;
   margin-bottom: 14px;
 }
-
 
 li{
   list-style: none;
@@ -83,10 +73,6 @@ li{
 .three_right_screen{
   padding-top: 10px;
 }
-
-
-
-
 
 .slider {
   position: absolute;
@@ -152,12 +138,6 @@ input:checked + .slider:before {
 	cursor: pointer;
 }
 
-#yuuop{
-  background-color: yellow;
-  margin: 0;
-  padding: 0px;
-  width: 300px;
-}
 
 
 
