@@ -19,6 +19,9 @@
     width: 50%;
     text-align: center;
     align-items: center;
+    background: none;
+    background-color: none;
+    background-image: none;
   }
   
   .OnACbutton {
@@ -150,6 +153,9 @@
 .device_control_status {
     width: 48;
     height: 48;
+    background-color: none;
+    background: none;
+    background-image: none;
     padding-left: 0px;
     padding-right: 0px;
     padding-top: 0px;
