@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Contact</title>
+	<title>Conference Room</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="myHOME - real estate template project">
@@ -69,586 +69,596 @@
 			<div class="blog">
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-3" style="border: 1px solid blue;">
-							<div class="container_one_left">
-								<div class="one_left">
+						<div class="col-lg-3" style="border: 1px solid blue ;padding:0px;">
+							<div class="left_container_top">
+								<div class="one_left" style="margin-top: 0px;text-align: center;">
 									<h3>Scene Control</h3>
-									<li>
-										<div class="one_left">
-											<h4>Welcome
-												<label class="switch_one_left">
-													<input type="checkbox" checked>
-													<span class="slider round"></span>
-												</label>
-											</h4>
+									<div class="row_container">
+										<div class="row">
+											<div class="col-lg-8">
+												<h4>Wecome</h4>
+												<h4>Meeting</h4>
+												<h4>Shoe Meeting</h4>
+												<h4>Goodbye</h4>
+											</div>
+											<div class="col-lg-4">
+												<li>
+													<label class="switch_one_left">
+														<input type="checkbox" checked>
+														<span class="slider round"></span>
+													</label>
+												</li>
+												<li>
+													<label class="switch_one_left">
+														<input type="checkbox" checked>
+														<span class="slider round"></span>
+													</label>
+												</li>
+												<li>
+													<label class="switch_one_left">
+														<input type="checkbox" checked>
+														<span class="slider round"></span>
+													</label>
+												</li>
+												<li>
+													<label class="switch_one_left">
+														<input type="checkbox" checked>
+														<span class="slider round"></span>
+													</label>
+												</li>
+											</div>
 										</div>
-									</li>
-									<li>
-										<div class="one_left">
-											<h4>Meeting
-												<label class="switch_one_left">
-													<input type="checkbox" checked>
-													<span class="slider round"></span>
-												</label>
-											</h4>
-										</div>
-									</li>
-									<li>
-										<div class="one_left">
-											<h4>Show Meeing
-												<label class="switch_one_left">
-													<input type="checkbox" checked>
-													<span class="slider round"></span>
-												</label>
-											</h4>
-										</div>
-									</li>
-									<li>
-										<div class="one_left">
-											<h4>Goodbye
-												<label class="switch_one_left">
-													<input type="checkbox" checked>
-													<span class="slider round"></span>
-												</label>
-											</h4>
-										</div>
-									</li>
-
+									</div>
 								</div>
 							</div>
-
-							<div class="two_left">
-								<div class="aircontrol">
+							<div class="left_container">
+								<div class="two_left">
 									<h3>Air Control</h3>
-								</div>
-								<div class="row" style="padding-top: px;">
-									<div class="col-lg-6">
-										<ul>
-											<!-- Trigger/Open The Modal -->
-											<button id="myBtn_officeroom1" class="SceneStyle">Remote 1</button>
+									<div class="row_container">
+										<div class="row" >
+											<div class="col-lg-6">
+												<ul>
+													<!-- Trigger/Open The Modal -->
+													<button id="myBtn_officeroom1" class="SceneStyle">Remote 1</button>
 
-											<!-- The Modal -->
-											<div id="myModal_officeroom1" class="modal">
+													<!-- The Modal -->
+													<div id="myModal_officeroom1" class="modal">
 
-												<!-- Modal content -->
-												<div class="modal-content">
-													<div class="modal-header">
-														<h2>Remote 1</h2>
-														<span class="close" onclick="dismissACModal()">&times;</span>
+														<!-- Modal content -->
+														<div class="modal-content">
+															<div class="modal-header">
+																<h2>Remote 1</h2>
+																<span class="close"
+																	onclick="dismissACModal()">&times;</span>
+															</div>
+															<div class="modal-body"
+																style="text-align: center; align-items: center;">
+																<p id="AC_device_name"></p>
+																<p> Press or Tab the device control button:</p>
+																<div class="ACremoteControl"
+																	style="text-align: center; ">
+																	<div class="onoffACbutton">
+																		<div class="OffACbutton">
+																			<button id="" onclick="turn_off_ac()"
+																				type="button" name=""
+																				class="device_control_status"
+																				style="border: 0px;">
+																				<img src="images/remodeair/switchoff.png"
+																					alt=""
+																					style="width: 48px; height: 48px;">
+																				<!-- <p>Power Off</p> -->
+																			</button>
+																		</div>
+																		<div class="OnACbutton">
+																			<button id="" onclick="turn_on_ac()"
+																				type="button" name=""
+																				class="device_control_status"
+																				style="display: inline; border: 0px;">
+																				<img src="images/remodeair/switchon.png"
+																					alt=""
+																					style="width: 48px; height: 48px;">
+																				<!-- <p>Power On</p> -->
+																			</button>
+																		</div>
+																	</div>
+
+																	<hr style="margin-top: 10px;">
+
+																	<div class="ACTempControl">
+																		<div class="decreaseTemp">
+																			<button id="" onclick="ControlACTemp(-1)"
+																				type="button" name=""
+																				class="device_control_status"
+																				style="border: 0px;">
+																				<img src="images/remodeair/iconreduce.png"
+																					alt=""
+																					style="width: 48px; height: 48px;">
+																			</button>
+																		</div>
+																		<div class="TempDisplay">
+																			<div id="showTemp" class="TempMonitoring">25
+																			</div>
+																			<div class="degreeC" style=""> &#8451;
+																			</div>
+																		</div>
+																		<div class="increaseTemp">
+																			<button id="" onclick="ControlACTemp(1)"
+																				type="button" name=""
+																				class="device_control_status"
+																				style="border: 0px;">
+																				<img src="images/remodeair/iconincrease.png"
+																					alt=""
+																					style="width: 48px; height: 48px;">
+																			</button>
+																		</div>
+																	</div>
+
+																	<hr style="margin-top: 0px;">
+
+																	<div class="ACModeControl">
+																		<div class="CoolMode">
+																			<button id="" onclick="CoolModeControl()"
+																				type="button" name=""
+																				class="device_control_status"
+																				style="border: 0px;">
+																				<img src="images/remodeair/coolon.png"
+																					alt=""
+																					style="width: 32px; height: 32px;">
+																			</button>
+																		</div>
+																		<div class="DryMode">
+																			<button id="" onclick="DryModeControl()"
+																				type="button" name=""
+																				class="device_control_status"
+																				style="border: 0px;">
+																				<img src="images/remodeair/dryon.png"
+																					alt=""
+																					style="width: 32px; height: 32px;">
+																			</button>
+																		</div>
+																		<div class="FanMode">
+																			<button id="" onclick="FenModeControl()"
+																				type="button" name=""
+																				class="device_control_status"
+																				style="border: 0px;">
+																				<img src="images/remodeair/fanon.png"
+																					alt=""
+																					style="width: 32px; height: 32px;">
+																			</button>
+																		</div>
+																	</div>
+
+																	<hr>
+																	<p style="margin-top: -10px;">Fan Speed:</p>
+																	<div class="FanSpeedControl"
+																		style="margin-top: 0px;">
+																		<div class="FanSpeedIcon"
+																			style="margin-top: -6px;">
+																			<button class="device_control_status">
+																				<img src="images/remodeair/fanoff.png"
+																					alt=""
+																					style="width: 18px; height: 18px; margin-top: 8px;">
+																			</button>
+																		</div>
+																		<div class="FanSpeedIcon"
+																			style="margin-top: -6px;">
+																			<button class="device_control_status">
+																				<img src="images/remodeair/fanoff.png"
+																					alt=""
+																					style="width: 24px; height: 24px; margin-top: 6px;">
+																			</button>
+																		</div>
+																		<div class="FanSpeedIcon"
+																			style="margin-top: -6px;">
+																			<button class="device_control_status">
+																				<img src="images/remodeair/fanoff.png"
+																					alt=""
+																					style="width: 30px; height: 30px; margin-top: 4px;">
+																			</button>
+																		</div>
+																		<div class="FanSpeedIcon"
+																			style="margin-top: -6px;">
+																			<button class="device_control_status">
+																				<img src="images/remodeair/fanoff.png"
+																					alt=""
+																					style="width: 36px; height: 36px; margin-top: 0px;">
+																			</button>
+																		</div>
+																		<div class="FanSpeedIcon"
+																			style="margin-top: -6px;">
+																			<button class="device_control_status">
+																				<img src="images/remodeair/fanon.png"
+																					alt=""
+																					style="width: 36px; height: 36px; margin-top: 0px;">
+																			</button>
+																		</div>
+																	</div>
+
+																	<hr style="margin-top: 6px;">
+
+																	<div class="onoffACbutton"
+																		style="margin-top: -5px; margin-bottom: 5px;">
+																		<div class="OffACbutton">
+																			<button id="" onclick="turn_off_ac()"
+																				type="button" name=""
+																				class="device_control_status"
+																				style="border: 0px;">
+																				<img src="images/remodeair/swingoff.png"
+																					alt=""
+																					style="width: 48px; height: 48px;">
+																				<!-- <p>Power Off</p> -->
+																			</button>
+																		</div>
+																		<div class="OnACbutton">
+																			<button id="" onclick="turn_on_ac()"
+																				type="button" name=""
+																				class="device_control_status"
+																				style="display: inline; border: 0px;">
+																				<img src="images/remodeair/swingon.png"
+																					alt=""
+																					style="width: 48px; height: 48px;">
+																				<!-- <p>Power On</p> -->
+																			</button>
+																		</div>
+																	</div>
+
+																</div>
+															</div>
+															<!-- <div class="modal-footer">
+																		  <h3>Modal Footer</h3>
+																		</div> -->
+														</div>
+
 													</div>
-													<div class="modal-body"
-														style="text-align: center; align-items: center;">
-														<p id="AC_device_name"></p>
-														<p> Press or Tab the device control button:</p>
-														<div class="ACremoteControl" style="text-align: center; ">
-															<div class="onoffACbutton">
-																<div class="OffACbutton">
-																	<button id="" onclick="turn_off_ac()" type="button"
-																		name="" class="device_control_status"
-																		style="border: 0px;">
-																		<img src="images/remodeair/switchoff.png" alt=""
-																			style="width: 48px; height: 48px;">
-																		<!-- <p>Power Off</p> -->
-																	</button>
-																</div>
-																<div class="OnACbutton">
-																	<button id="" onclick="turn_on_ac()" type="button"
-																		name="" class="device_control_status"
-																		style="display: inline; border: 0px;">
-																		<img src="images/remodeair/switchon.png" alt=""
-																			style="width: 48px; height: 48px;">
-																		<!-- <p>Power On</p> -->
-																	</button>
-																</div>
+												</ul>
+												<ul style="padding-top:10px;">
+													<!-- Trigger/Open The Modal -->
+													<button id="myBtn_officeroom2" class="SceneStyle">Remote 2</button>
+
+													<!-- The Modal -->
+													<div id="myModal_officeroom2" class="modal">
+
+														<!-- Modal content -->
+														<div class="modal-content-officeroom2">
+															<div class="modal-header">
+																<h3 style="margin-left: 10px">Office Room 2</h3>
+																<span class="close" style="margin-right: 7px"
+																	onclick="officeroom2()">&times;</span>
 															</div>
+															<div class="modal-body">
+																<div class="menu_2ndfloor">
+																	<li>
+																		<h4>Welcom
+																			<label class="switch">
+																				<input type="checkbox" checked>
+																				<span class="slider round"></span>
+																			</label>
 
-															<hr style="margin-top: 10px;">
-
-															<div class="ACTempControl">
-																<div class="decreaseTemp">
-																	<button id="" onclick="ControlACTemp(-1)"
-																		type="button" name=""
-																		class="device_control_status"
-																		style="border: 0px;">
-																		<img src="images/remodeair/iconreduce.png"
-																			alt="" style="width: 48px; height: 48px;">
-																	</button>
-																</div>
-																<div class="TempDisplay">
-																	<div id="showTemp" class="TempMonitoring">25 </div>
-																	<div class="degreeC" style=""> &#8451; </div>
-																</div>
-																<div class="increaseTemp">
-																	<button id="" onclick="ControlACTemp(1)"
-																		type="button" name=""
-																		class="device_control_status"
-																		style="border: 0px;">
-																		<img src="images/remodeair/iconincrease.png"
-																			alt="" style="width: 48px; height: 48px;">
-																	</button>
-																</div>
-															</div>
-
-															<hr style="margin-top: 0px;">
-
-															<div class="ACModeControl">
-																<div class="CoolMode">
-																	<button id="" onclick="CoolModeControl()"
-																		type="button" name=""
-																		class="device_control_status"
-																		style="border: 0px;">
-																		<img src="images/remodeair/coolon.png" alt=""
-																			style="width: 32px; height: 32px;">
-																	</button>
-																</div>
-																<div class="DryMode">
-																	<button id="" onclick="DryModeControl()"
-																		type="button" name=""
-																		class="device_control_status"
-																		style="border: 0px;">
-																		<img src="images/remodeair/dryon.png" alt=""
-																			style="width: 32px; height: 32px;">
-																	</button>
-																</div>
-																<div class="FanMode">
-																	<button id="" onclick="FenModeControl()"
-																		type="button" name=""
-																		class="device_control_status"
-																		style="border: 0px;">
-																		<img src="images/remodeair/fanon.png" alt=""
-																			style="width: 32px; height: 32px;">
-																	</button>
-																</div>
-															</div>
-
-															<hr>
-															<p style="margin-top: -10px;">Fan Speed:</p>
-															<div class="FanSpeedControl" style="margin-top: 0px;">
-																<div class="FanSpeedIcon" style="margin-top: -6px;">
-																	<button class="device_control_status">
-																		<img src="images/remodeair/fanoff.png" alt=""
-																			style="width: 18px; height: 18px; margin-top: 8px;">
-																	</button>
-																</div>
-																<div class="FanSpeedIcon" style="margin-top: -6px;">
-																	<button class="device_control_status">
-																		<img src="images/remodeair/fanoff.png" alt=""
-																			style="width: 24px; height: 24px; margin-top: 6px;">
-																	</button>
-																</div>
-																<div class="FanSpeedIcon" style="margin-top: -6px;">
-																	<button class="device_control_status">
-																		<img src="images/remodeair/fanoff.png" alt=""
-																			style="width: 30px; height: 30px; margin-top: 4px;">
-																	</button>
-																</div>
-																<div class="FanSpeedIcon" style="margin-top: -6px;">
-																	<button class="device_control_status">
-																		<img src="images/remodeair/fanoff.png" alt=""
-																			style="width: 36px; height: 36px; margin-top: 0px;">
-																	</button>
-																</div>
-																<div class="FanSpeedIcon" style="margin-top: -6px;">
-																	<button class="device_control_status">
-																		<img src="images/remodeair/fanon.png" alt=""
-																			style="width: 36px; height: 36px; margin-top: 0px;">
-																	</button>
-																</div>
-															</div>
-
-															<hr style="margin-top: 6px;">
-
-															<div class="onoffACbutton"
-																style="margin-top: -5px; margin-bottom: 5px;">
-																<div class="OffACbutton">
-																	<button id="" onclick="turn_off_ac()" type="button"
-																		name="" class="device_control_status"
-																		style="border: 0px;">
-																		<img src="images/remodeair/swingoff.png" alt=""
-																			style="width: 48px; height: 48px;">
-																		<!-- <p>Power Off</p> -->
-																	</button>
-																</div>
-																<div class="OnACbutton">
-																	<button id="" onclick="turn_on_ac()" type="button"
-																		name="" class="device_control_status"
-																		style="display: inline; border: 0px;">
-																		<img src="images/remodeair/swingon.png" alt=""
-																			style="width: 48px; height: 48px;">
-																		<!-- <p>Power On</p> -->
-																	</button>
+																		</h4>
+																	</li>
+																	<li>
+																		<h4>Goodbye
+																			<label class="switch">
+																				<input type="checkbox" checked>
+																				<span class="slider round"></span>
+																			</label>
+																		</h4>
+																	</li>
 																</div>
 															</div>
 
 														</div>
 													</div>
-													<!-- <div class="modal-footer">
-															  <h3>Modal Footer</h3>
-															</div> -->
-												</div>
 
+												</ul>
 											</div>
-										</ul>
-										<ul>
-											<!-- Trigger/Open The Modal -->
-											<button id="myBtn_officeroom2" class="SceneStyle">Remote 2</button>
+											<div class="col-lg-6">
+												<ul>
+													<!-- Trigger/Open The Modal -->
+													<button id="myBtn_maincontrol" class="SceneStyle">Remote 3</button>
 
-											<!-- The Modal -->
-											<div id="myModal_officeroom2" class="modal">
+													<!-- The Modal -->
+													<div id="myModal_maincontrol" class="modal">
 
-												<!-- Modal content -->
-												<div class="modal-content-officeroom2">
-													<div class="modal-header">
-														<h3 style="margin-left: 10px">Office Room 2</h3>
-														<span class="close" style="margin-right: 7px"
-															onclick="officeroom2()">&times;</span>
-													</div>
-													<div class="modal-body">
-														<div class="menu_2ndfloor">
-															<li>
-																<h4>Welcom
-																	<label class="switch">
-																		<input type="checkbox" checked>
-																		<span class="slider round"></span>
-																	</label>
+														<!-- Modal content -->
+														<div class="modal-content-maincontrol">
+															<div class="modal-header">
+																<h3 style="margin-left: 10px">Main Control</h3>
+																<span class="close" style="margin-right: 7px"
+																	onclick="maincontrol()">&times;</span>
+															</div>
+															<div class="modal-body">
+																<div class="menu_2ndfloor">
+																	<li>
+																		<h4>Welcom
+																			<label class="switch">
+																				<input type="checkbox" checked>
+																				<span class="slider round"></span>
+																			</label>
 
-																</h4>
-															</li>
-															<li>
-																<h4>Goodbye
-																	<label class="switch">
-																		<input type="checkbox" checked>
-																		<span class="slider round"></span>
-																	</label>
-																</h4>
-															</li>
+																		</h4>
+																	</li>
+																	<li>
+																		<h4>Goodbye
+																			<label class="switch">
+																				<input type="checkbox" checked>
+																				<span class="slider round"></span>
+																			</label>
+																		</h4>
+																	</li>
+																</div>
+															</div>
 														</div>
 													</div>
 
-												</div>
-											</div>
+												</ul>
+												<ul style="padding-top:10px">
+													<!-- Trigger/Open The Modal -->
+													<button id="myBtn_hallway" class="SceneStyle">Remote 4</button>
 
-										</ul>
-									</div>
-									<div class="col-lg-6">
-										<ul>
-											<!-- Trigger/Open The Modal -->
-											<button id="myBtn_maincontrol" class="SceneStyle">Remote 3</button>
+													<!-- The Modal -->
+													<div id="myModal_hallway" class="modal">
 
-											<!-- The Modal -->
-											<div id="myModal_maincontrol" class="modal">
+														<!-- Modal content -->
+														<div class="modal-content-hallway">
+															<div class="modal-header">
+																<h3 style="margin-left: 10px">Hallway</h3>
+																<span class="close" style="margin-right: 7px"
+																	onclick="hallway()">&times;</span>
+															</div>
+															<div class="modal-body">
+																<div class="menu_2ndfloor">
+																	<li>
+																		<h4>Automatic
+																			<label class="switch">
+																				<input type="checkbox" checked>
+																				<span class="slider round"></span>
+																			</label>
 
-												<!-- Modal content -->
-												<div class="modal-content-maincontrol">
-													<div class="modal-header">
-														<h3 style="margin-left: 10px">Main Control</h3>
-														<span class="close" style="margin-right: 7px"
-															onclick="maincontrol()">&times;</span>
-													</div>
-													<div class="modal-body">
-														<div class="menu_2ndfloor">
-															<li>
-																<h4>Welcom
-																	<label class="switch">
-																		<input type="checkbox" checked>
-																		<span class="slider round"></span>
-																	</label>
+																		</h4>
+																	</li>
 
-																</h4>
-															</li>
-															<li>
-																<h4>Goodbye
-																	<label class="switch">
-																		<input type="checkbox" checked>
-																		<span class="slider round"></span>
-																	</label>
-																</h4>
-															</li>
+																	<li>
+																		<h4>Welcome
+																			<label class="switch">
+																				<input type="checkbox" checked>
+																				<span class="slider round"></span>
+																			</label>
+																		</h4>
+
+																	</li>
+																	<li>
+																		<h4>Close
+																			<label class="switch">
+																				<input type="checkbox" checked>
+																				<span class="slider round"></span>
+																			</label>
+																		</h4>
+
+																	</li>
+
+
+																</div>
+															</div>
 														</div>
 													</div>
-												</div>
+
+												</ul>
 											</div>
-
-										</ul>
-										<ul style="padding-top: px">
-											<!-- Trigger/Open The Modal -->
-											<button id="myBtn_hallway" class="SceneStyle">Remote 4</button>
-
-											<!-- The Modal -->
-											<div id="myModal_hallway" class="modal">
-
-												<!-- Modal content -->
-												<div class="modal-content-hallway">
-													<div class="modal-header">
-														<h3 style="margin-left: 10px">Hallway</h3>
-														<span class="close" style="margin-right: 7px"
-															onclick="hallway()">&times;</span>
-													</div>
-													<div class="modal-body">
-														<div class="menu_2ndfloor">
-															<li>
-																<h4>Automatic
-																	<label class="switch">
-																		<input type="checkbox" checked>
-																		<span class="slider round"></span>
-																	</label>
-
-																</h4>
-															</li>
-
-															<li>
-																<h4>Welcome
-																	<label class="switch">
-																		<input type="checkbox" checked>
-																		<span class="slider round"></span>
-																	</label>
-																</h4>
-
-															</li>
-															<li>
-																<h4>Close
-																	<label class="switch">
-																		<input type="checkbox" checked>
-																		<span class="slider round"></span>
-																	</label>
-																</h4>
-
-															</li>
-
-
-														</div>
-													</div>
-												</div>
-											</div>
-
-										</ul>
+										</div>
 									</div>
 								</div>
 							</div>
-							<div class="three_left">
-								<div class="curtain">
+							<div class="left_container">
+								<div class="three_left">
 									<h3>Curtain</h3>
-								</div>
-								<div class="three_left_curtain">
-									<li>
-										<div class="three_left">
-											<h4>All Close
-												<label class="switch_three_left">
-													<input type="checkbox" checked>
-													<span class="slider round"></span>
-												</label>
-											</h4>
+									<div class="row_container">
+										<div class="row">
+											<div class="col-lg-8">
+												<h4>All Close</h4>
+												<h4>All Open</h4>
+											</div>
+											<div class="col-lg-4">
+												<li>
+													<label class="switch_one_left">
+														<input type="checkbox" checked>
+														<span class="slider round"></span>
+													</label>
+												</li>
+												<li>
+													<label class="switch_one_left">
+														<input type="checkbox" checked>
+														<span class="slider round"></span>
+													</label>
+												</li>
+											</div>
 										</div>
-									</li>
-									<li>
-										<div class="three_left">
-											<h4>All Open
-												<label class="switch_three_left">
-													<input type="checkbox" checked>
-													<span class="slider round"></span>
-												</label>
-											</h4>
-										</div>
-									</li>
+									</div>
 								</div>
 							</div>
-							<div class="four_left">
-								<div class="lighting">
+							<div class="left_container">
+								<div class="four_left">
 									<h3>Lighting</h3>
-								</div>
-								<div class="row">
-									<div class="col-lg-6">
-										<div class="four_left_listone">
-											<li style="margin-top: 5px">
-												<div class="four_left">
-													<h4>Row 1
-														<label class="switch_four_left">
-															<input type="checkbox" checked>
-															<span class="slider round"></span>
-														</label>
-													</h4>
-												</div>
-											</li>
-											<li>
-												<div class="four_left">
-													<h4>Row 2
-														<label class="switch_four_left">
-															<input type="checkbox" checked>
-															<span class="slider round"></span>
-														</label>
-													</h4>
-												</div>
-											</li>
+									<div class="row_container">
+										<div class="row">
+											<div class="col-lg-3" style="border: 1px solid blue;padding: 0px">
+												<h4>Row 1</h4>
+												<h4>Row 2</h4>
+											</div>
+											<div class="col-lg-3" style="border: 1px solid blue;padding-left: 0px;">
+												<li>
+													<label class="switch_one_left" >
+														<input type="checkbox" checked>
+														<span class="slider round"></span>
+													</label>
+												</li>
+												<li>
+													<label class="switch_one_left">
+														<input type="checkbox" checked>
+														<span class="slider round"></span>
+													</label>
+												</li>
+											</div>
+											<div class="col-lg-3" style="border: 1px solid blue;padding: 0">
+												<h4>Row 3</h4>
+												<h4>Row 4</h4>
+											</div>
+											<div class="col-lg-3" style="border: 1px solid blue;padding-left: 0px;">
+												<li>
+													<label class="switch_one_left">
+														<input type="checkbox" checked>
+														<span class="slider round"></span>
+													</label>
+												</li>
+												<li>
+													<label class="switch_one_left">
+														<input type="checkbox" checked>
+														<span class="slider round"></span>
+													</label>
+												</li>
+											</div>
 										</div>
 									</div>
-									<div class="col-lg-6">
-										<div class="four_left_listone">
-											<li style="margin-top: 5px">
-												<div class="four_left">
-													<h4>Row 3
-														<label class="switch_four_left">
-															<input type="checkbox" checked>
-															<span class="slider round"></span>
-														</label>
-													</h4>
-												</div>
-											</li>
-											<li>
-												<div class="four_left">
-													<h4>Row 4
-														<label class="switch_four_left">
-															<input type="checkbox" checked>
-															<span class="slider round"></span>
-														</label>
-													</h4>
-												</div>
-											</li>
-										</div>
-									</div>
-
 								</div>
-
 							</div>
 						</div>
-						<div class="col-lg-6" style="border: 1px solid blue;">
+
+						<div class="col-lg-6" >
 							<img src="https://i1.wp.com/www.25ncoworking.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-25-at-1.46.54-PM.png?fit=2414%2C1356&ssl=1"
 								alt="">
 						</div>
-						<div class="col-lg-3" style="border: 1px solid blue;">
-							<div class="one_right">
-								<div class="KVM">
+						<div class="col-lg-3" style="border: 1px solid blue;padding: 0px" >
+							<div class="right_container_1">
+								<div class="one_right">
 									<h3>KVM</h3>
-								</div>
-								<div class="one_right_kvm_list">
-									<li>
-										<div class="one_right_kvm_input">
-											<h4>Input 1
-												<label class="switch_one_right">
-													<input type="checkbox" checked>
-													<span class="slider round"></span>
-												</label>
-											</h4>
-										</div>
-									</li>
-									<li>
-										<div class="one_right_kvm_input">
-											<h4>Input 2
-												<label class="switch_one_right">
-													<input type="checkbox" checked>
-													<span class="slider round"></span>
-												</label>
-											</h4>
-										</div>
-									</li>
-									<li>
-										<div class="one_right_kvm_input">
-											<h4>Input 3
-												<label class="switch_one_right">
-													<input type="checkbox" checked>
-													<span class="slider round"></span>
-												</label>
-											</h4>
-										</div>
-									</li>
-									<li>
-										<div class="one_right_kvm_input">
-											<h4>Input 4
-												<label class="switch_one_right">
-													<input type="checkbox" checked>
-													<span class="slider round"></span>
-												</label>
-											</h4>
-										</div>
-									</li>
+									<div class="row_container">
+										<div class="row">
+											<div class="col-lg-8">
+												<h4>Input 1</h4>
+												<h4>Input 2</h4>
+												<h4>Input 3</h4>
+												<h4>Input 4</h4>
+											</div>
+											<div class="col-lg-4">
+												<li>
+													<label class="switch_one_left">
+														<input type="checkbox" checked>
+														<span class="slider round"></span>
+													</label>
+												</li>
+												<li>
+													<label class="switch_one_left">
+														<input type="checkbox" checked>
+														<span class="slider round"></span>
+													</label>
+												</li>
+												<li>
+													<label class="switch_one_left">
+														<input type="checkbox" checked>
+														<span class="slider round"></span>
+													</label>
+												</li>
+												<li>
+													<label class="switch_one_left">
+														<input type="checkbox" checked>
+														<span class="slider round"></span>
+													</label>
+												</li>
 
-								</div>
-
-							</div>
-							<div class="two_right">
-								<div class="projecter">
-									<h3>Projecter</o3>
-								</div>
-								<div class="two_right_projector_list">
-									<li>
-										<div class="two_right_projector_input">
-											<h4>Power
-												<label class="switch_two_right">
-													<input type="checkbox" checked>
-													<span class="slider round"></span>
-												</label>
-											</h4>
+											</div>
 										</div>
-									</li>
-									<li>
-										<div class="two_right_projector_input">
-											<h4>Source
-												<label class="switch_two_right">
-													<input type="checkbox" checked>
-													<span class="slider round"></span>
-												</label>
-											</h4>
-										</div>
-									</li>
-								</div>
-							</div>
-							<div class="three_right">
-								<div class="screen">
-									<h3>Screen</h3>
-								</div>
-								<div class="three_right_list">
-									<div class="three_right_screen">
-										<div class="three_right_screen_open">
-											<li class="screen_list" >
-												<h4>UP</h4>
-											</li>
-											<li class="screen_list" style="margin-top: 10px">
-												<h4>Pause</h4>
-											</li>
-											<li class="screen_list" style="margin-top: 10px">
-												<h4>Down</h4>
-											</li>
-
-
-										</div>
-
-
 									</div>
 								</div>
 							</div>
+							<div class="right_container">
+								<div class="two_right">
+									<h3>Projecter</h3>
+									<div class="row_container">
+										<div class="row">
+											<div class="col-lg-8">
+												<h4>Power</h4>
+												<h4>Source</h4>
+											</div>
+											<div class="col-lg-4">
+												<li>
+													<label class="switch_one_left">
+														<input type="checkbox" checked>
+														<span class="slider round"></span>
+													</label>
+												</li>
+												<li>
 
 
-
-
-
-
+												</li>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="right_container">
+								<div class="three_right">
+									<h3>Screen</h3>
+									<div class="row_container">
+										<div class="row">
+											<div class="col-lg-8">
+												<h4>Up</h4>
+												<h4>Pause</h4>
+												<h4>Down</h4>
+											</div>
+											<div class="col-lg-4">
+												<button id="" onclick="turn_on_ac()" type="button" name=""
+													class="device_control_status" style="display: inline; border: 0px;">
+													<img src="images/screen/up.JPG" alt=""
+														style="width: 48px; height: 48px;">
+													<!-- <p>Power On</p> -->
+												</button>
+												<button id="" onclick="turn_on_ac()" type="button" name=""
+													class="device_control_status" style="display: inline; border: 0px;">
+													<img src="images/screen/pause.JPG" alt=""
+														style="width: 48px; height: 48px;">
+													<!-- <p>Power On</p> -->
+												</button>
+												<button id="" onclick="turn_on_ac()" type="button" name=""
+													class="device_control_status" style="display: inline; border: 0px;">
+													<img src="images/screen/down.JPG" alt=""
+														style="width: 48px; height: 48px;">
+													<!-- <p>Power On</p> -->
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
-
 				</div>
 			</div>
-
-
 
 		</div>
 	</div>
 
 
 
-	<script>
-		// Get the modal
-		var modal_officeroom1 = document.getElementById("myModal_officeroom1");
+	</div>
+	</div>
 
-		// Get the button that opens the modal
-		var btn_officeroom1 = document.getElementById("myBtn_officeroom1");
 
-		// Get the <span> element that closes the modal
-		var span_officeroom1 = document.getElementsByClassName("close")[0];
 
-		// When the user clicks the button, open the modal
-		btn_officeroom1.onclick = function () {
-			console.log("myModal_officeroom1");
-			modal_officeroom1.style.display = "block";
-		}
+<script>
+	// Get the modal
+	var modal_officeroom1 = document.getElementById("myModal_officeroom1");
+
+	// Get the button that opens the modal
+	var btn_officeroom1 = document.getElementById("myBtn_officeroom1");
+
+	// Get the <span> element that closes the modal
+	var span_officeroom1 = document.getElementsByClassName("close")[0];
+
+	// When the user clicks the button, open the modal
+	btn_officeroom1.onclick = function () {
+	 	console.log("myModal_officeroom1");
+		modal_officeroom1.style.display = "block";
+	}
 
 		// When the user clicks on <span> (x), close the modal
 		function officeroom1() {
@@ -657,7 +667,7 @@
 		}
 
 			// When the user clicks anywhere outside of the modal, close it
-	</script>
+</script>
 
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="styles/bootstrap-4.1.2/popper.js"></script>

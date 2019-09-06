@@ -1,3 +1,17 @@
+.row_container{
+  padding-top: 10px;
+}
+.one_left_scene_control .row_container .row .col-lg-8 h4{
+  margin-top: 4px;
+  margin-bottom: 12px;
+}
+.two_left .row_container .row .col-lg-8 h4 {
+  margin-top: 4px;
+  margin-bottom: 12px;
+
+}
+
+
 
 
 
