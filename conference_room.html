@@ -169,7 +169,7 @@
 																			<button id="" onclick="ControlACTemp(-1)"
 																				type="button" name=""
 																				class="device_control_status"
-																				style="border: 0px;">
+																				style="border: 0px;" value="ControlACTemp(-1)">
 																				<img src="images/remodeair/iconreduce.png"
 																					alt=""
 																					style="width: 48px; height: 48px;">
@@ -185,7 +185,7 @@
 																			<button id="" onclick="ControlACTemp(1)"
 																				type="button" name=""
 																				class="device_control_status"
-																				style="border: 0px;">
+																				style="border: 0px;"  rolACTemp(1)"> 
 																				<img src="images/remodeair/iconincrease.png"
 																					alt=""
 																					style="width: 48px; height: 48px;">
@@ -350,7 +350,7 @@
 
 												</ul>
 											</div>
-											<div class="col-lg-6"  style="padding-top:3px;">
+											<div class="col-lg-6" style="padding-top:3px;">
 												<ul>
 													<!-- Trigger/Open The Modal -->
 													<button id="myBtn_maincontrol" class="SceneStyle">Remote 3</button>
@@ -526,7 +526,7 @@
 								alt="">
 						</div>
 						<div class="col-lg-3">
-							<div class="right_container" style="margin-top: 0px;" >
+							<div class="right_container" style="margin-top: 0px;">
 								<div class="one_right" style="height:174px;">
 									<h3 style="padding-top:3px;">KVM</h3>
 									<div class="row_container">
@@ -606,19 +606,19 @@
 											<div class="col-lg-4">
 												<button id="" onclick="turn_on_ac()" type="button" name=""
 													class="device_control_status" style="display: inline; border: 0px;">
-													<img src="images/screen/up.JPG" alt=""
+													<img src="images/screen/up-chevron.png" alt=""
 														style="width: 48px; height: 48px;">
 													<!-- <p>Power On</p> -->
 												</button>
 												<button id="" onclick="turn_on_ac()" type="button" name=""
 													class="device_control_status" style="display: inline; border: 0px;">
-													<img src="images/screen/pause.JPG" alt=""
+													<img src="images/screen/pause (1).png" alt=""
 														style="width: 48px; height: 48px;">
 													<!-- <p>Power On</p> -->
 												</button>
 												<button id="" onclick="turn_on_ac()" type="button" name=""
 													class="device_control_status" style="display: inline; border: 0px;">
-													<img src="images/screen/down.JPG" alt=""
+													<img src="images/screen/down-chevron.png" alt=""
 														style="width: 48px; height: 48px;">
 													<!-- <p>Power On</p> -->
 												</button>
@@ -641,7 +641,27 @@
 	</div>
 
 
+	<!-- Air -->
+	<!-- ShoeTeemp -->
+	<script>
+		var g = 25;
+		function ControlACTemp(-1) {
+			if (g > 18) {
+				g--;
+				document.getElementById('showTemp').innerHTML = g;
+			}
+		}
+		function ControlACTemp(1) {
+			if (g < 30) {
+				g++;
+				document.getElementById('showTemp').innerHTML = g;
+			}
+		}
 
+	</script>
+
+
+	<!-- modal -->
 	<script>
 		// Get the modal
 		var modal_officeroom1 = document.getElementById("myModal_officeroom1");
