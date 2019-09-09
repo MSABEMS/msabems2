@@ -58,7 +58,7 @@
   }
   
   .TempDisplay {
-    width: 35%;
+    width: 100%;
     /* text-align: center; */
     align-items: center;
     display: flex;
