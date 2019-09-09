@@ -110,6 +110,7 @@
 												</li>
 											</div>
 										</div>
+
 									</div>
 								</div>
 							</div>
@@ -124,18 +125,18 @@
 													<button id="myBtn_officeroom1" class="SceneStyle">Remote 1</button>
 
 													<!-- The Modal -->
-													<div id="myModal_officeroom1" class="modal">
+													<div id="myModal_officeroom1" class="modal" >
 
 														<!-- Modal content -->
 														<div class="modal-content">
 															<div class="modal-header">
-																<h2>Remote 1</h2>
+																<h3>Remote 1</h3>
 																<span class="close"
 																	onclick="dismissACModal()">&times;</span>
 															</div>
 															<div class="modal-body"
 																style="text-align: center; align-items: center;">
-																<p id="AC_device_name"></p>
+																<!-- <p id="AC_device_name"></p> -->
 																<p> Press or Tab the device control button:</p>
 																<div class="ACremoteControl"
 																	style="text-align: center; ">
@@ -165,11 +166,12 @@
 																	<hr style="margin-top: 10px;">
 
 																	<div class="ACTempControl">
-																		<div class="decreaseTemp">
+																		<!-- <div class="decreaseTemp">																			
+																			
 																			<button id="" onclick="ControlACTemp(-1)"
 																				type="button" name=""
 																				class="device_control_status"
-																				style="border: 0px;" value="ControlACTemp(-1)">
+																				style="border: 0px;" >
 																				<img src="images/remodeair/iconreduce.png"
 																					alt=""
 																					style="width: 48px; height: 48px;">
@@ -185,15 +187,31 @@
 																			<button id="" onclick="ControlACTemp(1)"
 																				type="button" name=""
 																				class="device_control_status"
-																				style="border: 0px;"  rolACTemp(1)"> 
+																				style="border: 0px;" > 
 																				<img src="images/remodeair/iconincrease.png"
 																					alt=""
+																					style="width: 48px; height: 48px;">
+																			</button>
+																		</div> -->																		
+																		<div class="decreaseTemp" >
+																			<button onclick="down_remote1()" type="button" class="device_control_status" style="border: 0px;">
+																				<img src="images/remodeair/iconreduce.png"alt=""
+																					style="width: 48px; height: 48px;">
+																			</button>
+																		</div>
+																		<div class="TempDisplay" >
+																			<div id="result" class="TempMonitoring">25</div>
+																			<div class="degreeC" style=""> &#8451;</div>
+																		</div>
+																		<div class="increaseTemp">
+																			<button id="" onclick="up_remote1()" type="button" class="device_control_status" style="border: 0px;" >
+																				<img src="images/remodeair/iconincrease.png"alt=""
 																					style="width: 48px; height: 48px;">
 																			</button>
 																		</div>
 																	</div>
 
-																	<hr style="margin-top: 0px;">
+																	<hr style="margin-top: 5px">
 
 																	<div class="ACModeControl">
 																		<div class="CoolMode">
@@ -227,9 +245,8 @@
 																			</button>
 																		</div>
 																	</div>
-
-																	<hr>
-																	<p style="margin-top: -10px;">Fan Speed:</p>
+																	<hr style="margin-top: 5px">
+																	<p style="margin-top:0px;">Fan Speed:</p>
 																	<div class="FanSpeedControl"
 																		style="margin-top: 0px;">
 																		<div class="FanSpeedIcon"
@@ -274,7 +291,7 @@
 																		</div>
 																	</div>
 
-																	<hr style="margin-top: 6px;">
+																	<hr style="margin-top: 5px;">
 
 																	<div class="onoffACbutton"
 																		style="margin-top: -5px; margin-bottom: 5px;">
@@ -606,19 +623,19 @@
 											<div class="col-lg-4">
 												<button id="" onclick="turn_on_ac()" type="button" name=""
 													class="device_control_status" style="display: inline; border: 0px;">
-													<img src="images/screen/up-chevron.png" alt=""
+													<img src="images/screen/up-button.png" alt=""
 														style="width: 48px; height: 48px;">
 													<!-- <p>Power On</p> -->
 												</button>
 												<button id="" onclick="turn_on_ac()" type="button" name=""
 													class="device_control_status" style="display: inline; border: 0px;">
-													<img src="images/screen/pause (1).png" alt=""
+													<img src="images/screen/pause (2).png" alt=""
 														style="width: 48px; height: 48px;">
 													<!-- <p>Power On</p> -->
 												</button>
 												<button id="" onclick="turn_on_ac()" type="button" name=""
 													class="device_control_status" style="display: inline; border: 0px;">
-													<img src="images/screen/down-chevron.png" alt=""
+													<img src="images/screen/down-button.png" alt=""
 														style="width: 48px; height: 48px;">
 													<!-- <p>Power On</p> -->
 												</button>
@@ -643,21 +660,36 @@
 
 	<!-- Air -->
 	<!-- ShoeTeemp -->
-	<script>
-		var g = 25;
-		function ControlACTemp(-1) {
-			if (g > 18) {
-				g--;
-				document.getElementById('showTemp').innerHTML = g;
+	<!-- <script>
+		var tem = 25
+		function ControlACTemp(-1){
+			if(tem < 30){
+				tem ++ ;
 			}
+			document.getElementById("showTemp").innerHTML = tem;
 		}
-		function ControlACTemp(1) {
-			if (g < 30) {
-				g++;
-				document.getElementById('showTemp').innerHTML = g;
+		function ControlACTemp(1){
+			if(tem > 17){
+				tem -- ;
 			}
+			document.getElementById("showTemp").innerHTML =tem;
+		}
+	</script> -->
+	<script>
+		var score = 25
+		function up_remote1() {
+			if (score < 30) {
+				score++;
+			}
+			document.getElementById("result").innerHTML = score;
 		}
 
+		function down_remote1() {
+			if (score > 17) {
+				score--;
+			}
+			document.getElementById("result").innerHTML = score;
+		}
 	</script>
 
 
@@ -685,6 +717,7 @@
 		}
 
 			// When the user clicks anywhere outside of the modal, close it
+
 	</script>
 
 	<script src="js/jquery-3.3.1.min.js"></script>

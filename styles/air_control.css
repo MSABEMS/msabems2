@@ -19,7 +19,8 @@
   .onoffACbutton {
     width: 100%;
     display: flex;
-    margin-top: 6px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   
   .OffACbutton {
@@ -38,28 +39,32 @@
   }
   
   .ACTempControl {
-    
     width: 100%;
     display: flex;
     margin-top: -8px;
+    margin-bottom: 8px;
     border-color: rgba(116, 122, 132, 1);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* text-align: center; */
+   
   }
   
   .decreaseTemp {
-    width: 100%;
+    width: 95%;
     text-align: center;
     align-items: center;
   }
   
   .increaseTemp {
-    width: 100%;
+    width: 95%;
     text-align: center;
     align-items: center;
   }
   
   .TempDisplay {
-    width: 35%;
-    /* text-align: center; */
+    width: 100%;
+    text-align: center;
     align-items: center;
     display: flex;
   }
@@ -83,7 +88,8 @@
   .ACModeControl {
     width: 100%;
     display: flex;
-    margin-top: 14px;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
   
   .CoolMode {
@@ -118,7 +124,8 @@
   .FanSpeedControl {
     width: 100%;
     display: flex;
-    margin-top: 14px;
+    margin-top: 15px;
+    margin-bottom: 15px;
   }
   
   .FanSpeedIcon {
@@ -147,9 +154,9 @@
     margin: auto;
     padding: 0;
     border: 1px solid #888;
-    width: 28%;
-    height: 170px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 100%;
+    height: 490px;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
@@ -161,6 +168,9 @@
 .modal-body{
     background-color: #fff;
     border-radius: 12px;
+    
+    
+
     
     
 }
