@@ -17,7 +17,7 @@
   }
   
   .onoffACbutton {
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     margin-top: 6px;
   }
@@ -39,22 +39,25 @@
   
   .ACTempControl {
     
-    width: 100%;
+    /* width: 100%; */
     display: flex;
-    margin-top: -8px;
+    /* margin-top: -8px; */
     border-color: rgba(116, 122, 132, 1);
+    
   }
   
   .decreaseTemp {
-    width: 100%;
+    width: 150px;;
     text-align: center;
     align-items: center;
+    /* float: left; */
   }
   
   .increaseTemp {
-    width: 100%;
+    width: 150px;
     text-align: center;
     align-items: center;
+    /* float: right; */
   }
   
   .TempDisplay {
@@ -81,7 +84,7 @@
   }
   
   .ACModeControl {
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     margin-top: 14px;
   }
@@ -116,7 +119,7 @@
   }
   
   .FanSpeedControl {
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     margin-top: 14px;
   }
@@ -147,8 +150,8 @@
     margin: auto;
     padding: 0;
     border: 1px solid #888;
-    width: 28%;
-    height: 170px;
+    width: 25%;
+    height: 500px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
@@ -156,6 +159,7 @@
     animation-duration: 0.4s;
     float: left;
     border-radius: 12px;
+    margin-left: 10px;
     
 }
 .modal-body{
