@@ -229,7 +229,3 @@ input:checked+.slider:before {
   float: right;
 }
 
-.menu_one .row .col-lg-8 h4 {
-  margin-top: 6px;
-  margin-bottom: 17px;
-}
