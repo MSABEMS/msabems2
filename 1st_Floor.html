@@ -73,10 +73,10 @@
 			<!-- Cover Header -->
 
 			<div class="blog">
-				<div class="container">
+				<div class="container" style="padding: 0px">
 					<div class="row">
 						<!--Sidebar-->
-						<div class="col-lg-4">
+						<div class="col-lg-4" >
 							<div class="sidebar">
 								<!--Categories-->
 								<div class="categories">
@@ -172,13 +172,15 @@
 											<!--Conferenceroom-->
 											<ul>
 												<!-- Trigger/Open The Modal -->
-												<button id="myBtn_conferenceroom" class="SceneStyle">Conference Room</button>
+												<button id="myBtn_conferenceroom" class="SceneStyle">Conference
+													Room</button>
 
 												<!-- The Modal -->
-												<div id="myModal_conferenceroom" class="modal" >
+												<div id="myModal_conferenceroom" class="modal">
 
 													<!-- Modal content -->
-													<div class="modal-content-conferenceroom" style="border-radius:12px;">
+													<div class="modal-content-conferenceroom"
+														style="border-radius:12px;">
 														<div class="modal-header">
 															<h3 style="margin-left: 10px">Conferenceroom</h3>
 															<span class="close" style="margin-right: 7px"
@@ -237,18 +239,30 @@
 															<div class="menu_1stfloor">
 																<div class="row" style="margin-top: 10px">
 																	<div class="col-lg-8">
-																		<h4 style="padding-top: 5px;">Wecome</h4>
-																		<h4 style="padding-top: 15px;">Goodbye</h4>
+																		<div class="row">
+																			<div class="col-lg-6">
+																				<button type="button"
+																					class="btn btn-outline-success">Wecome</button>
+																				<!-- <h4 style="padding-top: 15px;">Wecome</h4> -->
+																			</div>
+																			<div class="col-lg-6">
+																				<button type="button"
+																					class="btn btn-outline-danger">Goodbye</button>
+																				<!-- <h4 style="padding-top: 15px;">Goodbye</h4> -->
+																			</div>
+																		</div>
+
+
 																	</div>
 																	<div class="col-lg-4">
-																		<label class="switch">
+																		<!-- <label class="switch">
 																			<input type="checkbox" checked>
 																			<span class="slider round"></span>
 																		</label>
 																		<label class="switch">
 																			<input type="checkbox" checked>
 																			<span class="slider round"></span>
-																		</label>
+																		</label> -->
 																	</div>
 																</div>
 															</div>
@@ -294,7 +308,7 @@
 																		</label>
 
 																	</div>
-																</div>														
+																</div>
 															</div>
 														</div>
 													</div>
