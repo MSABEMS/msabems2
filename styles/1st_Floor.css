@@ -1,3 +1,20 @@
+#back{
+	background-image: url(./S__29351956.jpg) ;
+	/* transform: rotate(20deg); */
+	background-repeat: no-repeat;
+	/* background-size: 50%; */
+	height: 550px;
+	width: 700px;
+	position: relative;
+	background-size:80%;
+	
+}
+
+
+
+
+
+
 @charset "utf-8";
 /* CSS Document */
 
@@ -490,7 +507,7 @@ section
 {
 	background: #ffffff;
 	padding-top: 40px;
-	padding-bottom: 40px; 
+	padding-bottom: 0px; 
 	height: 100%;
 }
 .blog_post:not(:last-child)

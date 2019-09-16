@@ -1,11 +1,12 @@
 #back{
-	background-image: url(msr\ bems\ floor2.jpg) ;
+	background-image: url(./S__29351955.jpg) ;
+	/* transform: rotate(20deg); */
 	background-repeat: no-repeat;
 	/* background-size: 50%; */
-	height: 500px;
+	height: 550px;
 	width: 700px;
 	position: relative;
-	background-size:85%;
+	background-size:80%;
 	
 }
 
@@ -514,7 +515,7 @@ section
 {
 	background: #ffffff;
 	padding-top: 40px;
-	padding-bottom: 40px; 
+	padding-bottom: 0px; 
 	height: 100%;
 }
 .blog_post:not(:last-child)
