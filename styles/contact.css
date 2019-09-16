@@ -4,12 +4,19 @@
 	margin-right: 100;
 }
 
-.one_left, .three_left, .four_left, .one_right, .two_right, .three_right {
+.three_left, .four_left, .one_right, .two_right, .three_right {
 	background: rgb(231, 245, 119);
 	background: linear-gradient(34deg, rgba(231, 245, 119, 1) 0%, rgba(227, 189, 99, 1) 49%, rgba(177, 142, 231, 1) 100%);
 	border-radius: 12px;
 	padding-left: 10px;
 	width: 105%;
+}
+
+.one_left{
+	border:1px solid rgb(231, 245, 119);
+	border-radius: 12px;
+	width: 105%;
+	padding-left: 10px;
 }
 
 .two_left {
