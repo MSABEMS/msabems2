@@ -74,9 +74,9 @@
 
 			<div class="blog">
 				<div class="container" style="padding: 0px">
-					<div class="row">
+					<div	 class="row">
 						<!--Sidebar-->
-						<div class="col-lg-4" >
+						<div class="col-lg-4">
 							<div class="sidebar">
 								<!--Categories-->
 								<div class="categories">
@@ -188,8 +188,42 @@
 														</div>
 														<div class="modal-body">
 															<div class="menu_one">
-																<div class="row" style="margin-top: 10px">
-																	<div class="col-lg-8">
+																<div class="row" style="margin-top: 15px">
+																	<div class="col-lg-6" style="">
+																		<div class="col-lg-6" style="">
+																			<button onclick="con_welcome()"
+																				type="button"
+																				class="btn btn-outline-warning">Welcome
+
+																			</button>
+																		</div>
+																		<div class="col-lg-6"
+																			style="padding-top: 10px;">
+																			<button onclick="con_goodnight()"
+																				type="button"
+																				class="btn btn-outline-dark">Goodnight
+																			</button>
+
+
+																		</div>
+																	</div>
+																	<div class="col-lg-6" style="">
+																		<div class="col-lg-6">
+																			<button onclick="con_day()" type="button"
+																				class="btn btn-outline-primary">Day
+																			</button>
+																		</div>
+																		<div class="col-lg-6" style="padding-top: 10px">
+																			<button onclick="con_night()" type="button"
+																				class="btn btn-outline-danger">Night</button>
+
+																		</div>
+
+																	</div>
+
+
+
+																	<!-- <div class="col-lg-8">
 																		<h4 style="padding-top: 5px">Welcome</h4>
 																		<h4 style="padding-top:15px;">Day</h4>
 																		<h4 style="padding-top: 15px">Night</h4>
@@ -212,7 +246,7 @@
 																			<input type="checkbox" checked>
 																			<span class="slider round"></span>
 																		</label>
-																	</div>
+																	</div> -->
 																</div>
 															</div>
 														</div>
@@ -237,32 +271,14 @@
 														</div>
 														<div class="modal-body">
 															<div class="menu_1stfloor">
-																<div class="row" style="margin-top: 10px">
-																	<div class="col-lg-8">
-																		<div class="row">
-																			<div class="col-lg-6">
-																				<button type="button"
-																					class="btn btn-outline-success">Wecome</button>
-																				<!-- <h4 style="padding-top: 15px;">Wecome</h4> -->
-																			</div>
-																			<div class="col-lg-6">
-																				<button type="button"
-																					class="btn btn-outline-danger">Goodbye</button>
-																				<!-- <h4 style="padding-top: 15px;">Goodbye</h4> -->
-																			</div>
-																		</div>
-
-
+																<div class="row" style="margin-top: 30px">
+																	<div class="col-lg-6" style="text-align: center;">
+																		<button onclick="eo_welcome()" type="button"
+																			class="btn btn-outline-warning">"Welcome"</button>
 																	</div>
-																	<div class="col-lg-4">
-																		<!-- <label class="switch">
-																			<input type="checkbox" checked>
-																			<span class="slider round"></span>
-																		</label>
-																		<label class="switch">
-																			<input type="checkbox" checked>
-																			<span class="slider round"></span>
-																		</label> -->
+																	<div class="col-lg-6" style="text-align: center">
+																		<button onclick="eo_goodbye()" type="button"
+																			class="btn btn-outline-dark">Goodbye</button>
 																	</div>
 																</div>
 															</div>
@@ -287,26 +303,21 @@
 														</div>
 														<div class="modal-body">
 															<div class="menu_1stfloor">
-																<div class="row" style="margin-top: 10px">
-																	<div class="col-lg-8">
-																		<h4 style="padding-top: 5px;">Automatic</h4>
-																		<h4 style="padding-top: 15px;">Welcome</h4>
-																		<h4 style="padding-top: 15px">Close</h4>
+																<div class="row" style="margin-top: 30px">
+																	<div class="col-lg-4" style="text-align: center;">
+																		<button active onclick="hy_automatic()"
+																			type="button"
+																			class="btn btn-outline-success">Automatic</button>
 																	</div>
-																	<div class="col-lg-4">
-																		<label class="switch">
-																			<input type="checkbox" checked>
-																			<span class="slider round"></span>
-																		</label>
-																		<label class="switch">
-																			<input type="checkbox" checked>
-																			<span class="slider round"></span>
-																		</label>
-																		<label class="switch">
-																			<input type="checkbox" checked>
-																			<span class="slider round"></span>
-																		</label>
+																	<div class="col-lg-4" style="text-align: center;">
 
+																		<button onclick="hy_welcome()" type="button"
+																			class="btn btn-outline-warning">"Welcome"</button>
+																	</div>
+
+																	<div class="col-lg-4" style="text-align: center">
+																		<button onclick="hy_goodbye()" type="button"
+																			class="btn btn-outline-dark">Close</button>
 																	</div>
 																</div>
 															</div>
@@ -321,25 +332,126 @@
 							</div>
 						</div>
 						<!-- Blog Posts -->
-						<div class="col-lg-8">
+						<div class="col-lg-8" id="back" style="border: 1px solid blue">
 							<div class="blog_posts">
-
-								<!-- Blog Post -->
-								<div class="blog_post">
-									<div class="blog_post_image">
-										<img src="images/img21.jpg" class="rounded float-left" alt="">
-
-										<div class="dashboard_2nd">
+								<div class="row">
+									<div class="col-5" style="border: 1px solid blue">
+										<!-- EO Room -->
+										<div class="eo_pic">
+											<div class="row">
+												<div class="col-12">
+													<div class="eo_pic" style="padding-top: 120px;">
+														<div class="row">
+															<div class="col-6"
+																style="border: 1px solid blue;padding: 0px;padding-left: 125px;">
+																<img id="eo" src="images/goodbye.jpg" alt=""
+																	style="border-radius: 50%; width: 30px;height: 30px;">
+															</div>
+															<div class="col-6"
+																style="padding:0px; border: 1px solid blue;margin-top: 9px">
+																<h5>EO Room </h5>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- HallWay -->
+										<div class="hy_pic">
+											<div class="row">
+												<div class="col-12">
+													<div class="eo_pic" style="padding-top: 220px;padding-left: ">
+														<div class="row">
+															<div class="col-8"
+																style="border: 1px solid blue;padding: 0px;padding-left: 180px;">
+																<img id="hy" src="images/goodbye.jpg" alt=""
+																	style="border-radius: 50%; width: 30px;height: 30px;">
+															</div>
+															<div class="col-4"
+																style="padding:0px; border: 1px solid blue;margin-top: 9px">
+																<h5>Hallway </h5>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
 										</div>
 									</div>
-								</div>
+									<div class="col-7" style="border: 1px solid blue">
+										<!-- Conference Room -->
+										<div class="con_pic" style="padding-top:340px;padding-left: 20px;">
+											<div class="row">
+												<div class="col-1" style="border: 1px solid blue;padding: 0px">
+													<img id="con" src="images/goodbye.jpg" alt=""
+														style="border-radius: 50%; width: 30px;height: 30px;">
+												</div>
+												<div class="col-11"
+													style="padding:0px; border: 1px solid blue;margin-top: 9px">
+													<h5>Conference Room </h5>
+												</div>
+											</div>
+										</div>
+
+									</div>
+
+
+
+								</div> -->
 							</div>
+
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	</div>
+	<!-- Hallway -->
+
+	<script>
+		function hy_automatic() {
+			document.getElementById('hy').src = 'https://www.fotoaparatas.lt/images/thumbs/thumb-3-55x30m-green-screen-349177-640-448.png'
+		}
+
+		function hy_welcome() {
+			document.getElementById('hy').src = 'https://www.agricar.co.uk/uploads/images/products/large/agricar-new-holland-bright-yellow-87295405-1539606274yy.png'
+		}
+		function hy_goodbye() {
+			document.getElementById('hy').src = 'images/goodbye.jpg'
+		}
+
+	</script>
+	<!-- EO Room -->
+	<script>
+		function eo_welcome() {
+			document.getElementById('eo').src = 'https://www.agricar.co.uk/uploads/images/products/large/agricar-new-holland-bright-yellow-87295405-1539606274yy.png'
+		}
+
+		function eo_goodbye() {
+			document.getElementById('eo').src = 'images/goodbye.jpg'
+		}
+	</script>
+
+	<!-- Conference Room -->
+	<script>
+		function con_welcome() {
+			document.getElementById('con').src = 'https://www.agricar.co.uk/uploads/images/products/large/agricar-new-holland-bright-yellow-87295405-1539606274yy.png'
+		}
+
+		function con_goodnight() {
+			document.getElementById('con').src = 'images/goodbye.jpg'
+		}
+
+		function con_day() {
+			document.getElementById('con').src = 'https://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/blue0517.jpg?itok=V3825voJ'
+		}
+		function con_night() {
+			document.getElementById('con').src = 'https://colourlex.com/wp-content/uploads/2015/02/Red_lead_painted_swatch_Lipscher_225q-opt.jpg'
+		}
+
+
+
+	</script>
 
 	<!--open_modal_bedroom-->
 	<script>

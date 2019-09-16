@@ -74,11 +74,11 @@
 		<div class="homeContent">
 			<!-- Cover Header -->
 
-			<div class="blog" style="height: 600px;">
+			<div class="blog" >
 				<div class="container" style="padding: 0px;">
 					<div class="row">
 						<!-- Sidebar -->
-						<div class="col-lg-4" style="padding: 0px">
+						<div class="col-lg-4" >
 							<div class="sidebar">
 								<!-- Categories -->
 								<div class="categories">
@@ -130,14 +130,14 @@
 															<div class="menu_2ndfloor">
 																<div class="row" style="margin-top: 30px">
 																	<div class="col-lg-6" style="text-align: center;">
-
 																		<button onclick="or1_welcome()" type="button"
 																			class="btn btn-outline-warning">"Welcome"</button>
 																	</div>
 																	<div class="col-lg-6" style="text-align: center">
 																		<button onclick="or1_goodbye()" type="button"
-																			class="btn btn-outline-danger">Goodbye</button>
+																			class="btn btn-outline-dark">Goodbye</button>
 																	</div>
+
 																	<!-- <div class="col-lg-8">
 																		<div class="row">
 																			<div class="col-6">
@@ -191,8 +191,9 @@
 																	</div>
 																	<div class="col-lg-6" style="text-align: center">
 																		<button onclick="or2_goodbye()" type="button"
-																			class="btn btn-outline-danger">Goodbye</button>
+																			class="btn btn-outline-dark">Goodbye</button>
 																	</div>
+
 																	<!-- <div class="col-lg-8">
 																		<h4 style="padding-top: 5px">Welcome</h4>
 																		<h4 style="padding-top: 15px;">Goodbye</h4>
@@ -237,8 +238,9 @@
 																	</div>
 																	<div class="col-lg-6" style="text-align: center">
 																		<button onclick="mc_goodbye()" type="button"
-																			class="btn btn-outline-danger">Goodbye</button>
+																			class="btn btn-outline-dark">Goodbye</button>
 																	</div>
+
 																	<!-- <div class="col-lg-8">
 																		<h4 style="padding-top:5px;">Welcome</h4>
 																		<h4 style="padding-top: 15px;">Goodbye</h4>
@@ -279,20 +281,21 @@
 															<div class="menu_2ndfloor">
 																<div class="row" style="margin-top: 30px;">
 																	<div class="col-lg-4" style="text-align: center;">
-																		<button active onclick="mc_welcome()"
+																		<button active onclick="hy_automatic()"
 																			type="button"
 																			class="btn btn-outline-success">Automatic</button>
 																	</div>
 																	<div class="col-lg-4" style="text-align: center;">
 
-																		<button onclick="mc_welcome()" type="button"
+																		<button onclick="hy_welcome()" type="button"
 																			class="btn btn-outline-warning">"Welcome"</button>
 																	</div>
 
 																	<div class="col-lg-4" style="text-align: center">
-																		<button onclick="mc_goodbye()" type="button"
-																			class="btn btn-outline-danger">Close</button>
+																		<button onclick="hy_goodbye()" type="button"
+																			class="btn btn-outline-dark">Close</button>
 																	</div>
+
 																	<!-- <div class="col-lg-8">
 																		<h4 style="padding-top: 5px;">Automatic</h4>
 																		<h4 style="padding-top: 15px;">Welcome</h4>
@@ -328,31 +331,45 @@
 							<div class="blog_posts">
 								<div class="row" style="height: 500px;">
 									<div class="col-5" style="border: 1px solid blue;">
-
-										<!-- Office Room 1 -->
-										<div class="or1_pic" style="margin-top: 100px; margin-left: 180px;">
+										<!-- HallWay -->
+										<div class="h_pic" style="margin-top: 260px;margin-left: 70px">
 											<div class="row">
-
-												<div class="col-3" style="padding: 0px ;border: 1px solid blue">
+												<div class="col-9"
+													style="padding: 0px ;border: 1px solid blue ;padding-left: 155px;">
+													<img id="hy" src="images/goodbye.jpg" alt=""
+														style="border-radius: 50%; width: 30px;height: 30px;">
+												</div>
+												<div class="col-3"
+													style="padding:0px; border: 1px solid blue;margin-top: 9px">
+													<h5>Hallway</h5>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-7" style="border: 1px solid blue;padding: 0px">
+										<!-- Office Room 1 -->
+										<div class="or1_pic" style="margin-top: 100px; margin-left: 20px;">
+											<div class="row">
+												<div class="col-1" style="padding: 0px ;border: 1px solid blue">
 													<img id="or1" src="images/goodbye.jpg" alt=""
 														style="border-radius: 50%; width: 30px;height: 30px;">
 												</div>
-												<div class="col-9"
+												<div class="col-11"
 													style="padding:0px; border: 1px solid blue;margin-top: 9px">
 													<h5>Office Room 1</h5>
 												</div>
 											</div>
-
 										</div>
 
+
 										<!-- Main Control -->
-										<div class="mc_pic" style="margin-top: 108px;margin-left: 150px;">
+										<div class="mc_pic" style="margin-top: 80px;margin-left: 50px;">
 											<div class="row">
-												<div class="col-3" style="padding: 0px ;border: 1px solid blue">
+												<div class="col-1" style="padding: 0px ;border: 1px solid blue">
 													<img id="mc" src="images/goodbye.jpg" alt=""
 														style="border-radius: 50%; width: 30px;height: 30px;">
 												</div>
-												<div class="col-9"
+												<div class="col-11"
 													style="padding:0px; border: 1px solid blue;margin-top: 9px">
 													<h5>Main Control</h5>
 												</div>
@@ -360,45 +377,75 @@
 										</div>
 
 										<!-- Office Room 2 -->
-										<div class="or2_pic" style="margin-top: 135px; margin-left:180px;">
+										<div class="or2_pic" style="margin-top: 140px; margin-left:20px;">
 											<div class="row">
-												<div class="col-3" style="padding: 0px ;border: 1px solid blue">
+												<div class="col-1" style="padding: 0px ;border: 1px solid blue">
 													<img id="or2" src="images/goodbye.jpg" alt=""
 														style="border-radius: 50%; width: 30px;height: 30px;">
 												</div>
-												<div class="col-9"
+												<div class="col-11"
 													style="padding:0px; border: 1px solid blue;margin-top: 9px">
 													<h5>Office Room 2</h5>
 												</div>
 											</div>
 										</div>
 									</div>
-
-									<!-- Hallway -->
-									<div class="col-7" style="border: 1px solid blue;padding: 0px">
-										<div class="h_pic" style="margin-top: 155px;margin-left: 70px">
-											<div class="row">
-												<div class="col-2" style="padding: 0px ;border: 1px solid blue ;padding-left: 32px;">
-													<img id="or2" src="images/goodbye.jpg" alt=""
-														style="border-radius: 50%; width: 30px;height: 30px;">
-												</div>
-												<div class="col-10" style="padding:0px; border: 1px solid blue;margin-top: 9px">
-													<h5>Hallway</h5>
-												</div>
-											</div>
-										</div>
-									</div>
 								</div>
-
-
 							</div>
-
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	<!-- Office Room 1 -->
+	<script>
+		function or1_welcome() {
+			document.getElementById('or1').src = 'https://www.agricar.co.uk/uploads/images/products/large/agricar-new-holland-bright-yellow-87295405-1539606274yy.png'
+		}
+
+		function or1_goodbye() {
+			document.getElementById('or1').src = 'images/goodbye.jpg'
+		}
+	</script>
+
+	<!-- Office Room 2 -->
+	<script>
+		function or2_welcome() {
+			document.getElementById('or2').src = 'https://www.agricar.co.uk/uploads/images/products/large/agricar-new-holland-bright-yellow-87295405-1539606274yy.png'
+		}
+
+		function or2_goodbye() {
+			document.getElementById('or2').src = 'images/goodbye.jpg'
+		}
+	</script>
+
+
+	<!-- Main Control -->
+	<script>
+		function mc_welcome() {
+			document.getElementById('mc').src = 'https://www.agricar.co.uk/uploads/images/products/large/agricar-new-holland-bright-yellow-87295405-1539606274yy.png'
+		}
+
+		function mc_goodbye() {
+			document.getElementById('mc').src = 'images/goodbye.jpg'
+		}
+	</script>
+	<!-- Hallway -->
+
+	<script>
+		function hy_automatic() {
+			document.getElementById('hy').src = 'https://www.fotoaparatas.lt/images/thumbs/thumb-3-55x30m-green-screen-349177-640-448.png'
+		}
+
+		function hy_welcome() {
+			document.getElementById('hy').src = 'https://www.agricar.co.uk/uploads/images/products/large/agricar-new-holland-bright-yellow-87295405-1539606274yy.png'
+		}
+		function hy_goodbye() {
+			document.getElementById('hy').src = 'images/goodbye.jpg'
+		}
+
+	</script>
 
 
 
