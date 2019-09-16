@@ -1,76 +1,111 @@
+/* Style the buttons */
 
-.switch_one_left{
+.scbtn {
+  border: none;
+  outline: none;
+  
+  background-color:transparent;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0px;
+  border: 1px solid blueviolet;
+  border-radius: 10px;
+  
+}
+.scbtn:focus {
+  background-color: #666;
+  color: white;
+  border: 1px solid blueviolet;
+  
+}
+
+
+
+
+
+
+
+
+
+.switch_one_left {
   position: relative;
   display: inline-block;
   width: 52px;
   height: 26px;
 }
 
-.switch_three_right_screen{
+.switch_three_right_screen {
   position: relative;
   display: inline-block;
   width: 52px;
   height: 26px;
 }
-.switch_four_left{
+
+.switch_four_left {
   position: relative;
   display: inline-block;
   width: 52px;
   height: 26px;
   float: right;
-  
 }
 
-.switch_one_left input{
+.switch_one_left input {
   opacity: 0;
   width: 0;
   height: 0;
 }
-.switch_three_left input{
+
+.switch_three_left input {
   opacity: 0;
   width: 0;
   height: 0;
 }
-.switch_one_right input{
+
+.switch_one_right input {
   opacity: 0;
   width: 0;
   height: 0;
 }
+
 .switch_two_right input {
   opacity: 0;
   width: 0;
   height: 0;
 }
-.switch_three_right_screen input{
+
+.switch_three_right_screen input {
   opacity: 0;
   width: 0;
   height: 0;
 }
+
 .switch_four_left input {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-.one_left,.three_left,.one_right_kvm_input,.two_right_projector_input,.four_left{
+.one_left, .three_left, .one_right_kvm_input, .two_right_projector_input, .four_left {
   background: ;
-  margin-top:14px;
+  margin-top: 14px;
   margin-bottom: 14px;
 }
 
-li{
+li {
   list-style: none;
 }
-.three_right_screen_open{
+
+.three_right_screen_open {
   padding-right: 52px;
   float: left;
   padding-top: 4px;
 }
-.three_right_screen_close{
+
+.three_right_screen_close {
   padding-top: 4px;
 }
 
-.three_right_screen{
+.three_right_screen {
   padding-top: 10px;
 }
 
@@ -98,21 +133,22 @@ li{
   transition: .4s;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: #2196F3;
 }
 
-input:focus + .slider {
+input:focus+.slider {
   box-shadow: 0 0 1px #2196F3;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
 
 /* Rounded sliders */
+
 .slider.round {
   border-radius: 26px;
 }
@@ -127,35 +163,13 @@ input:checked + .slider:before {
   width: 80%;
   height: 40px;
   margin-top: -6px;
-  background: rgb(154,36,252);
-  background: linear-gradient(135deg, rgba(154,36,252,1) 0%, rgba(168,195,255,1) 100%);
+  background: rgb(154, 36, 252);
+  background: linear-gradient(135deg, rgba(154, 36, 252, 1) 0%, rgba(168, 195, 255, 1) 100%);
   border-width: thin;
   border: 1.5px;
   border-radius: 16px;
   border-color: rgba(91, 91, 91, 1) align-items: center;
   text-align: center;
   margin-left: 0px;
-	cursor: pointer;
+  cursor: pointer;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

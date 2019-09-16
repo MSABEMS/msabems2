@@ -15,6 +15,7 @@
 	<link rel="stylesheet" href="styles/remoteair.css">
 
 
+
 </head>
 
 <body>
@@ -73,61 +74,47 @@
 					<div class="row">
 						<div class="col-lg-3">
 							<div class="left_container">
-								<div class="one_left" style="margin-top: 0px; height: 176px;">
-									<h3 style="padding-top:3px;">Scene Control</h3>
+								<div class="one_left" style="margin-top: 0px; height: 140px;">
+									<h3 style="padding-top:5px;">Scene Control</h3>
 									<div class="row_container">
-										<div class="row">
-											<div class="col-lg-8">
-												<h4>Wecome</h4>
-												<h4>Meeting</h4>
-												<h4>Shoe Meeting</h4>
-												<h4>Goodbye</h4>
-											</div>
-											<div class="col-lg-4">
-												<li>
-													<label class="switch_one_left">
-														<input type="checkbox" checked>
-														<span class="slider round"></span>
-													</label>
-												</li>
-												<li>
-													<label class="switch_one_left">
-														<input type="checkbox" checked>
-														<span class="slider round"></span>
-													</label>
-												</li>
-												<li>
-													<label class="switch_one_left">
-														<input type="checkbox" checked>
-														<span class="slider round"></span>
-													</label>
-												</li>
-												<li>
-													<label class="switch_one_left">
-														<input type="checkbox" checked>
-														<span class="slider round"></span>
-													</label>
-												</li>
+										<div class="scene">
+											<div class="row" style="padding-top: 7px;">
+												<div class="col-5">
+													<div>
+														<button class="scbtn" style="width: 105%;">Welcome</button>
+													</div>
+													<div style="padding-top:10px;padding-left: 3px;">
+														<button class="scbtn" style="width: 105%;">Meeting</button>
+													</div>
+												</div>
+												<div class="col-7" style="padding-left: 0px;">
+													<div>
+														<button class="scbtn" style="width: 90%">Show Meeting</button>
+													</div>
+													<div style="padding-top:10px;padding-left:20px;">
+														<button class="scbtn" style="width: 70%">Goodbye</button>
+													</div>
+												</div>
 											</div>
 										</div>
-
 									</div>
 								</div>
 							</div>
 
 							<!-- Air Control -->
 							<div class="left_container">
-								<div class="two_left" style="height: 127px;">
-									<h3 style="padding-top:3px;">Air Control</h3>
+								<div class="two_left" style="height: 135px;">
+									<h3 style="padding-top:5px;">Air Control</h3>
 									<div class="row_container">
 										<div class="row">
-											<div class="col-lg-6" style="padding-top:3px;">
+											<div class="col-lg-6"
+												style="padding:0px;padding-top:3px; padding-left: 20px;border: 1px solid blue;">
 												<ul>
 													<!-- Trigger/Open The Modal -->
 													<button id="myBtn_officeroom1" class="SceneStyle">Remote 1</button>
 
 													<!-- The Modal -->
-													<div id="myModal_officeroom1" class="modal" >
+													<div id="myModal_officeroom1" class="modal">
 
 														<!-- Modal content -->
 														<div class="modal-content">
@@ -167,7 +154,7 @@
 
 																	<hr style="margin: 5px;">
 
-																	<div class="ACTempControl" style="margin: 10px"> 
+																	<div class="ACTempControl" style="margin: 10px">
 																		<!-- <div class="decreaseTemp">																			
 																			
 																			<button id="" onclick="ControlACTemp(-1)"
@@ -194,20 +181,29 @@
 																					alt=""
 																					style="width: 48px; height: 48px;">
 																			</button>
-																		</div> -->																		
-																		<div class="decreaseTemp" >
-																			<button onclick="down_remote1()" type="button" class="device_control_status" style="border: 0px;">
-																				<img src="images/remodeair/iconreduce.png"alt=""
+																		</div> -->
+																		<div class="decreaseTemp">
+																			<button onclick="down_remote1()"
+																				type="button"
+																				class="device_control_status"
+																				style="border: 0px;">
+																				<img src="images/remodeair/iconreduce.png"
+																					alt=""
 																					style="width: 48px; height: 48px;">
 																			</button>
 																		</div>
-																		<div class="TempDisplay" >
-																			<div id="result" class="TempMonitoring">25</div>
+																		<div class="TempDisplay">
+																			<div id="result" class="TempMonitoring">25
+																			</div>
 																			<div class="degreeC" style=""> &#8451;</div>
 																		</div>
 																		<div class="increaseTemp">
-																			<button id="" onclick="up_remote1()" type="button" class="device_control_status" style="border: 0px;" >
-																				<img src="images/remodeair/iconincrease.png"alt=""
+																			<button id="" onclick="up_remote1()"
+																				type="button"
+																				class="device_control_status"
+																				style="border: 0px;">
+																				<img src="images/remodeair/iconincrease.png"
+																					alt=""
 																					style="width: 48px; height: 48px;">
 																			</button>
 																		</div>
@@ -327,7 +323,7 @@
 
 													</div>
 												</ul>
-												<ul style="padding-top:10px;">
+												<ul style="padding-top:12px;">
 													<!-- Trigger/Open The Modal -->
 													<button id="myBtn_officeroom2" class="SceneStyle">Remote 2</button>
 
@@ -408,7 +404,7 @@
 													</div>
 
 												</ul>
-												<ul style="padding-top:10px">
+												<ul style="padding-top:12px">
 													<!-- Trigger/Open The Modal -->
 													<button id="myBtn_hallway" class="SceneStyle">Remote 4</button>
 
@@ -466,8 +462,8 @@
 								</div>
 							</div>
 							<div class="left_container">
-								<div class="three_left" style="height: 107px;">
-									<h3 style="padding-top:3px;">Curtain</h3>
+								<div class="three_left" style="height: 113px;">
+									<h3 style="padding-top:5px;">Curtain</h3>
 									<div class="row_container">
 										<div class="row">
 											<div class="col-lg-8">
@@ -493,8 +489,8 @@
 								</div>
 							</div>
 							<div class="left_container">
-								<div class="four_left" style="height: 107px;">
-									<h3 style="padding-top:3px;">Lighting</h3>
+								<div class="four_left" style="height: 113px;">
+									<h3 style="padding-top:5px;">Lighting</h3>
 									<div class="row_container">
 										<div class="row">
 											<div class="col-lg-3" style="padding: 0px">
@@ -539,14 +535,14 @@
 							</div>
 						</div>
 
-						<div class="col-lg-6" >
+						<div class="col-lg-6">
 							<img src="https://i1.wp.com/www.25ncoworking.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-25-at-1.46.54-PM.png?fit=2414%2C1356&ssl=1"
 								alt="">
 						</div>
-						<div class="col-lg-3"  style="padding-left:0px;padding-right:30px;">
+						<div class="col-lg-3" style="padding-left:0px;padding-right:30px;">
 							<div class="right_container" style="margin-top: 0px;">
 								<div class="one_right" style="height:174px;">
-									<h3 style="padding-top:3px;">KVM</h3>
+									<h3 style="padding-top:5px;">KVM</h3>
 									<div class="row_container">
 										<div class="row">
 											<div class="col-lg-8">
@@ -557,8 +553,10 @@
 											</div>
 											<div class="col-lg-4">
 												<li>
-													<label class="switch_one_left">
-														<input type="checkbox" checked>
+														
+													
+													<label class="switch_one_left ">
+														<input type="checkbox">
 														<span class="slider round"></span>
 													</label>
 												</li>
@@ -588,7 +586,7 @@
 							</div>
 							<div class="right_container">
 								<div class="two_right">
-									<h3 style="padding-top:3px;">Projecter</h3>
+									<h3 style="padding-top:5px;">Projecter</h3>
 									<div class="row_container">
 										<div class="row">
 											<div class="col-lg-8">
@@ -613,7 +611,7 @@
 							</div>
 							<div class="right_container">
 								<div class="three_right">
-									<h3 style="padding-top:3px;">Screen</h3>
+									<h3 style="padding-top:5px;">Screen</h3>
 									<div class="row_container">
 										<div class="row">
 											<div class="col-lg-8">
@@ -658,24 +656,14 @@
 	</div>
 	</div>
 
+	
 
-	<!-- Air -->
-	<!-- ShoeTeemp -->
-	<!-- <script>
-		var tem = 25
-		function ControlACTemp(-1){
-			if(tem < 30){
-				tem ++ ;
-			}
-			document.getElementById("showTemp").innerHTML = tem;
-		}
-		function ControlACTemp(1){
-			if(tem > 17){
-				tem -- ;
-			}
-			document.getElementById("showTemp").innerHTML =tem;
-		}
-	</script> -->
+
+
+
+
+	
+	<!-- show Temp -->
 	<script>
 		var score = 25
 		function up_remote1() {
@@ -694,7 +682,7 @@
 	</script>
 
 
-	<!-- modal -->
+	<!-- Air -->
 	<script>
 		// Get the modal
 		var modal_officeroom1 = document.getElementById("myModal_officeroom1");
@@ -720,6 +708,7 @@
 			// When the user clicks anywhere outside of the modal, close it
 
 	</script>
+
 
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="styles/bootstrap-4.1.2/popper.js"></script>
