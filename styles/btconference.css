@@ -2,44 +2,75 @@
 
 .scbtn {
   border: none;
-  outline: none;  
-  background-color:transparent;
+  outline: none;
+  background-color: transparent;
   cursor: pointer;
   font-size: 18px;
   padding: 0px;
   border: 1px solid blueviolet;
   border-radius: 10px;
+
+  /* width: 48; */
+  /* height: 48; */
+  /* background-color: none; */
+  /* background: none; */
+  /* background-image: none; */
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  /* border: 1px; */
+  -webkit-transition-duration: 0.3s;
+  /* Safari */
+  transition-duration: 0.3s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
 }
+
 .scbtn:focus {
   background-color: #666;
   color: white;
   border: 1px solid blueviolet;
-  
 }
 
 /* menu Curtain */
-.curbtn{
+
+.curbtn {
   border: none;
-  outline: none;  
-  background-color:transparent;
+  outline: none;
+  background-color: transparent;
   cursor: pointer;
   font-size: 18px;
   padding: 0px;
   border: 1px solid blueviolet;
   border-radius: 10px;
   width: 85%;
+
+
+   /* width: 48; */
+  /* height: 48; */
+  /* background-color: none; */
+  /* background: none; */
+  /* background-image: none; */
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  /* border: 1px; */
+  -webkit-transition-duration: 0.3s;
+  /* Safari */
+  transition-duration: 0.3s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
 }
-.curbtn:focus{
+
+.curbtn:focus {
   background-color: #666;
   color: white;
   border: 1px solid blueviolet;
-  
 }
-
-
-
-
-
 
 .switch_one_left {
   position: relative;
