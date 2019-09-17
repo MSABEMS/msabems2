@@ -1,16 +1,14 @@
-/* Style the buttons */
+/* menu Scene Control */
 
 .scbtn {
   border: none;
-  outline: none;
-  
+  outline: none;  
   background-color:transparent;
   cursor: pointer;
   font-size: 18px;
   padding: 0px;
   border: 1px solid blueviolet;
   border-radius: 10px;
-  
 }
 .scbtn:focus {
   background-color: #666;
@@ -19,8 +17,24 @@
   
 }
 
-
-
+/* menu Curtain */
+.curbtn{
+  border: none;
+  outline: none;  
+  background-color:transparent;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0px;
+  border: 1px solid blueviolet;
+  border-radius: 10px;
+  width: 85%;
+}
+.curbtn:focus{
+  background-color: #666;
+  color: white;
+  border: 1px solid blueviolet;
+  
+}
 
 
 
@@ -160,7 +174,7 @@ input:checked+.slider:before {
 /*SceneStyle*/
 
 .SceneStyle {
-  width: 80%;
+  width: 90px;
   height: 40px;
   margin-top: -6px;
   background: rgb(154, 36, 252);
