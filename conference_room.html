@@ -78,7 +78,7 @@
 									<h3 style="padding-top:10px;">Scene Control</h3>
 									<div class="row_container">
 										<div class="scene">
-											<div class="row" style="padding-top: 7px;">
+											<div class="row" style="padding-top: 7px;padding-left: 5px;">
 												<div class="col-5">
 													<div>
 														<button class="scbtn" style="width: 105%;">Welcome</button>
@@ -112,7 +112,7 @@
 												<!-- Remote Air 1 -->
 												<ul>
 													<!-- Trigger/Open The Modal -->
-													<button id="myBtn_remote1" class="SceneStyle" >Remote 1</button>
+													<button id="myBtn_remote1" class="SceneStyle">Remote 1</button>
 
 													<!-- The Modal -->
 													<div id="myModal_remote1" class="modal">
@@ -326,7 +326,7 @@
 												<!-- Remote Air 2 -->
 												<ul style="padding-top:12px;">
 													<!-- Trigger/Open The Modal -->
-													<button id="myBtn_remote2" class="SceneStyle" >Remote 2</button>
+													<button id="myBtn_remote2" class="SceneStyle">Remote 2</button>
 
 													<!-- The Modal -->
 													<div id="myModal_remote2" class="modal">
@@ -541,7 +541,7 @@
 												<!-- Remote Air 3 -->
 												<ul>
 													<!-- Trigger/Open The Modal -->
-													<button id="myBtn_remote3" class="SceneStyle" >Remote 3</button>
+													<button id="myBtn_remote3" class="SceneStyle">Remote 3</button>
 
 													<!-- The Modal -->
 													<div id="myModal_remote3" class="modal">
@@ -755,7 +755,7 @@
 												<!-- Remote Air 4 -->
 												<ul style="padding-top:12px">
 													<!-- Trigger/Open The Modal -->
-													<button id="myBtn_remote4" class="SceneStyle" >Remote 4</button>
+													<button id="myBtn_remote4" class="SceneStyle">Remote 4</button>
 
 													<!-- The Modal -->
 													<div id="myModal_remote4" class="modal">
@@ -979,7 +979,7 @@
 										<div class="row" style="padding-top: 5px;padding-left: 7px;">
 											<div class="col-lg-6">
 												<div>
-													<button class="curbtn" >All Close</button>
+													<button class="curbtn">All Close</button>
 												</div>
 
 												<!-- <h4>All Close</h4>
@@ -1025,7 +1025,8 @@
 													</label>
 												</li>
 												<li>
-													<label class="switch_one_left" style="margin-left: 5px;margin-top: 3px;">
+													<label class="switch_one_left"
+														style="margin-left: 5px;margin-top: 3px;">
 														<input type="checkbox" checked>
 														<span class="slider round"></span>
 													</label>
@@ -1105,32 +1106,49 @@
 								</div>
 							</div>
 							<div class="right_container">
-								<div class="two_right" style="height:100px;">
+								<div class="two_right" style="height:160px;">
 									<h3 style="padding-top:10px;">Projecter</h3>
 									<div class="row_container">
 										<div class="row">
-											<div class="col-lg-8">
-												<h4>Power</h4>
-												<h4>Source</h4>
+											<div class="col-lg-6">
+												<h4 style="margin-top: 15px">Power</h4>
+												<h4 style="margin-top: 25px;">Source</h4>
 											</div>
-											<div class="col-lg-4">
-												<li>
-													<label class="switch_one_left">
-														<input type="checkbox" checked>
-														<span class="slider round"></span>
-													</label>
-												</li>
-												<li>
+											<div class="col-lg-6">
+												<div class="menuof" style="margin-left: 55px">
+													<!-- <img id="myImage" onclick="changeImage()" src="images/remodeair/switchoff.png" style="width: 48px; height: 48px;"> -->
+													<!-- Power -->
+													<li>
+														<button id="" type="button" name=""
+															class="device_control_status" style="border: 0px;">
+															<img src="images/remodeair/switchoff.png" alt=""
+																id="myImage" onclick="changeImage()"
+																style="width: 48px; height: 48px;">
+														</button>
+													</li>
+													<!-- Sourse -->
+													<li style="margin-top:5px;">
+														<button id="" type="button" name=""
+															class="device_control_status" style="border: 0px;">
+															<img src="./images/left-arrow.png" alt="" id="mImage"
+																onclick="()" style="width: 48px; height: 48px;">
+														</button>
+													</li>
 
 
-												</li>
+
+
+
+
+												</div>
+
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 							<div class="right_container">
-								<div class="three_right">
+								<div class="three_right" style="height: 195px;">
 									<h3 style="padding-top:10px;">Screen</h3>
 									<div class="row_container">
 										<div class="row">
@@ -1178,8 +1196,19 @@
 
 
 
+	<!--Power Projecter -->
+	<script>
+		function changeImage() {
+			var image = document.getElementById('myImage');
+			if (image.src.match("images/remodeair/switchon")) {
+				image.src = "images/remodeair/switchoff.png";
+			} else {
+				image.src = "images/remodeair/switchon.png";
+			}
+		}
+	</script>
 
-
+	<!-- Source  Projecter -->
 
 
 
