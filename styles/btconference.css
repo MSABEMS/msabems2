@@ -1,3 +1,49 @@
+/* Projecter */
+.two_right .row_container .row .col-lg-5,.two_right .row_container .row .col-lg-7,.three_right .row_container .row .col-lg-5,.three_right .row_container .row .col-lg-7   {
+  padding-left: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.four_left .row_container .row .col-lg-3 {
+  padding: 0px;
+
+}
+
+
+
+/* Lighting */
+.lr1,.lr2 {
+  margin-left: 11px;
+}
+
+.lr2,.lr4 {
+  margin-top: 20px;
+}
+
+.lr1,.lr3 {
+  margin-top: 5px;
+}
+
+.lr3,.lr4{
+  margin-left: 5px;
+}
+
+
+
+
+
 /*SceneStyle*/
 
 .SceneStyle {
@@ -15,45 +61,51 @@
   cursor: pointer;
 }
 
+.SceneStyle h5 {
+  font-weight: 200;
+}
 
+h3 {
+  color: white;
+  font-weight: initial
+}
+h4 {
+  color: white;
+  font-weight: initial;
+}
 
-
-h3,h5 {
-  color: aliceblue;
-  font
+h5{
+  color: white;
+  font-weight: normal;
 }
 
 /* menu Scene Control */
 
-
-.scbtn h5 {
+.scbtn h5,.curbtn h5 {
   color: white;
   height: 35px;
-  width: 103%;
-  font-weight: 200;
+  font-weight: normal;
   text-align: center;
-  padding-top: 5px;
+  padding-top: 9px;
 }
 
 
 
-
-.scbtn {
-  
-  /* border: none;
-  outline: none; */
+.scbtn, .curbtn {
   background-color: transparent;
   cursor: pointer;
   font-size: 18px;
   padding: 0px;
   border: 1px solid whitesmoke;
-  border-radius: 10px; 
+  border-radius: 10px;
   -webkit-transition-duration: 0.3s;
   /* Safari */
   transition-duration: 0.3s;
   text-decoration: none;
   overflow: hidden;
   cursor: pointer;
+  width: 110px;
+  
 }
 
 .scbtn:focus {
@@ -63,36 +115,6 @@ h3,h5 {
 }
 
 /* menu Curtain */
-
-.curbtn {
-  border: none;
-  outline: none;
-  background-color: transparent;
-  cursor: pointer;
-  font-size: 18px;
-  padding: 0px;
-  border: 1px solid blueviolet;
-  border-radius: 10px;
-  width: 85%;
-
-
-   /* width: 48; */
-  /* height: 48; */
-  /* background-color: none; */
-  /* background: none; */
-  /* background-image: none; */
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  /* border: 1px; */
-  -webkit-transition-duration: 0.3s;
-  /* Safari */
-  transition-duration: 0.3s;
-  text-decoration: none;
-  overflow: hidden;
-  cursor: pointer;
-}
 
 .curbtn:focus {
   background-color: #666;
@@ -229,4 +251,3 @@ input:checked+.slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-
