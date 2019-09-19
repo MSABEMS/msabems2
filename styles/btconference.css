@@ -1,25 +1,53 @@
+/*SceneStyle*/
+
+.SceneStyle {
+  width: 90px;
+  height: 35px;
+  margin-top: -6px;
+  background: rgb(154, 36, 252);
+  background: linear-gradient(135deg, rgba(154, 36, 252, 1) 0%, rgba(168, 195, 255, 1) 100%);
+  border-width: thin;
+  border: 1.5px;
+  border-radius: 16px;
+  border-color: rgba(91, 91, 91, 1) align-items: center;
+  text-align: center;
+  margin-left: 0px;
+  cursor: pointer;
+}
+
+
+
+
+h3,h5 {
+  color: aliceblue;
+  font
+}
+
 /* menu Scene Control */
 
+
+.scbtn h5 {
+  color: white;
+  height: 35px;
+  width: 103%;
+  font-weight: 200;
+  text-align: center;
+  padding-top: 5px;
+}
+
+
+
+
 .scbtn {
-  border: none;
-  outline: none;
+  
+  /* border: none;
+  outline: none; */
   background-color: transparent;
   cursor: pointer;
   font-size: 18px;
   padding: 0px;
-  border: 1px solid blueviolet;
-  border-radius: 10px;
-
-  /* width: 48; */
-  /* height: 48; */
-  /* background-color: none; */
-  /* background: none; */
-  /* background-image: none; */
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  /* border: 1px; */
+  border: 1px solid whitesmoke;
+  border-radius: 10px; 
   -webkit-transition-duration: 0.3s;
   /* Safari */
   transition-duration: 0.3s;
@@ -202,19 +230,3 @@ input:checked+.slider:before {
   border-radius: 50%;
 }
 
-/*SceneStyle*/
-
-.SceneStyle {
-  width: 90px;
-  height: 40px;
-  margin-top: -6px;
-  background: rgb(154, 36, 252);
-  background: linear-gradient(135deg, rgba(154, 36, 252, 1) 0%, rgba(168, 195, 255, 1) 100%);
-  border-width: thin;
-  border: 1.5px;
-  border-radius: 16px;
-  border-color: rgba(91, 91, 91, 1) align-items: center;
-  text-align: center;
-  margin-left: 0px;
-  cursor: pointer;
-}
