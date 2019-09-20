@@ -74,7 +74,7 @@
 				<div class="container">
 					<div class="row">
 						<!--Left Side -->
-						<div class="col-lg-3">
+						<div class="col-lg-3" style="padding-right: 30px;">
 
 							<!-- Scene Control -->
 							<div class="left_container">
@@ -1020,18 +1020,45 @@
 
 							<!-- Ligting -->
 							<div class="left_container">
-								<div class="four_left" style="height: 125px;">
+								<div class="four_left" style="height: 140px;">
 									<h3 style="padding-top:10px;">Lighting</h3>
 									<div class="row_container">
-										<div class="row" style="padding-top: 5px;">
-											<!-- Row1,Row2 -->
-											<div class="col-lg-3">
+										<div class="row" style="padding-top: 1px;padding-left: 5px;">
+											<div class="col-5">
+												<div>
+													<button class="lightbtn" onclick="lightingrow1">
+														<h5>Row 1</h5>
+													</button>
+												</div>
+												<div style="padding-top: 7px;">
+													<button class="lightbtn" onclick="lightingrow1">
+														<h5>Row 2</h5>
+													</button>
+												</div>
+											</div>
+											<div class="col-7" style="padding-left: 25px;">
+												<div>
+													<button class="lightbtn" onclick="lightingrow1">
+														<h5>Row 3</h5>
+													</button>
+												</div>
+												<div style="padding-top: 7px;">
+													<button class="lightbtn" onclick="lightingrow1">
+														<h5>Row 4</h5>
+													</button>
+												</div>
+											</div>
+										</div>
+
+										<!-- <div class="row" style="padding-top: 5px;"> -->
+										<!-- Row1,Row2 -->
+										<!-- <div class="col-lg-3">
 												<h5 class="lr1">Row 1</h5>
 												<h5 class="lr2">Row 2</h5>
-											</div>
+											</div> -->
 
-											<!-- toggle -->
-											<div class="col-lg-3">
+										<!-- toggle -->
+										<!-- <div class="col-lg-3">
 												<li>
 													<label class="switch_one_left" style="margin-left: 0px;">
 														<input type="checkbox" checked>
@@ -1045,16 +1072,16 @@
 														<span class="slider round"></span>
 													</label>
 												</li>
-											</div>
+											</div> -->
 
-											<!-- Row3,Row4 -->
-											<div class="col-lg-3">
+										<!-- Row3,Row4 -->
+										<!-- <div class="col-lg-3">
 												<h5 class="lr3">Row 3</h5>
 												<h5 class="lr4">Row 4</h5>
-											</div>
+											</div> -->
 
-											<!-- toggle -->
-											<div class="col-lg-3">
+										<!-- toggle -->
+										<!-- <div class="col-lg-3">
 												<li>
 													<label class="switch_one_left">
 														<input type="checkbox" checked>
@@ -1067,20 +1094,169 @@
 														<span class="slider round"></span>
 													</label>
 												</li>
-											</div>
-										</div>
+											</div> -->
+										<!-- </div> -->
 									</div>
 								</div>
 							</div>
 						</div>
 						<!-- Middle Side -->
-						<div class="col-lg-6">
-							<img src="https://i1.wp.com/www.25ncoworking.com/wp-content/uploads/2017/08/Screen-Shot-2017-08-25-at-1.46.54-PM.png?fit=2414%2C1356&ssl=1"
-								alt="">
+						<div class="col-lg-6" id="pic" style="">
+							<div>
+								<div class="row">
+									<div class="col-lg-10">
+										<div class="row">
+
+											<div style="border: 1px solid blueviolet">
+												<img id="eo" src="images/goodbye.jpg" alt="" class="Row1"
+													style=" width: 30px;height: 30px;margin-top:80px;margin-left: 170px ">
+											</div>
+											<div style="border: 1px solid blueviolet">
+												<img id="eo" src="images/goodbye.jpg" alt="" class="Row1"
+													style=" width: 30px;height: 30px;margin-top:30px;margin-left: 66px ">
+											</div>
+											<div style="border: 1px solid blueviolet">
+												<img id="eo" src="images/goodbye.jpg" alt="" class="Row1"
+													style=" width: 30px;height: 30px;margin-top:30px;margin-left: 96px ">
+											</div>
+										</div>
+										<div class="row" style="border: 1px solid blue">
+											<div class="col-2" style="border: 1px solid red">
+												<li>
+													<img id="eo" src="images/goodbye.jpg" alt="" class="Row1"
+														style=" width: 30px;height: 30px;margin-top:83px;margin-left: 27px ">
+												</li>
+												<li>
+													<img id="eo" src="images/goodbye.jpg" alt="" class="Row1"
+														style=" width: 30px;height: 30px;margin-top:105px;margin-left: 27px ">
+												</li>
+												<li>
+													<img id="eo" src="images/goodbye.jpg" alt="" class="Row1"
+														style=" width: 30px;height: 30px;margin-top:102px;margin-left: 27px ">
+												</li>
+											</div>
+											<div class="col-10" style="border: 1px solid blue">
+												<div class="row">
+													<div class="col-4" style="border: 1px solid yellow">
+														<li>
+															<div>
+																<img id="eo" src="images/goodbye.jpg" alt="" class="Row4"
+																style=" width: 30px;height: 30px;margin-top:100px;margin-left: 40px ">
+																<h6 style="margin-left: 30px">
+																	Row 1
+																</h6>
+															</div>
+															
+															
+														</li>
+														<li>
+															<img id="eo" src="images/goodbye.jpg" alt="" class="Row4"
+																style=" width: 30px;height: 30px;margin-top:70px;margin-left: 40px ">
+														</li>
+														<li>
+															<img id="eo" src="images/goodbye.jpg" alt="" class="Row4"
+																style=" width: 30px;height: 30px;margin-top:70px;margin-left: 40px ">
+														</li>
+
+													</div>
+													<div class="col-4" style="border: 1px solid green">
+														<li>
+															<img id="eo" src="images/goodbye.jpg" alt="" class="Row4"
+																style=" width: 30px;height: 30px;margin-top:10px;margin-left: 40px ">
+														</li>
+														<!-- Row 3 -->
+														<li>
+															<img id="eo" src="images/goodbye.jpg" alt="" class="Row3"
+																style=" width: 30px;height: 30px;margin-top:70px;margin-left: 40px ">
+														</li>
+														<li>
+															<img id="eo" src="images/goodbye.jpg" alt="" class="Row3"
+																style=" width: 30px;height: 30px;margin-top:70px;margin-left: 40px ">
+														</li>
+														<!--  -->
+														<li>
+															<img id="eo" src="images/goodbye.jpg" alt="" class="Row4"
+																style=" width: 30px;height: 30px;margin-top:70px;margin-left: 40px ">
+														</li>
+
+													</div>
+													<div class="col4" style="border: 1px solid blue">
+														<li>
+															<img id="eo" src="images/goodbye.jpg" alt="" class="Row4"
+																style=" width: 30px;height: 30px;margin-top:10px;margin-left: 40px ">
+														</li>
+
+														<li>
+															<img id="eo" src="images/goodbye.jpg" alt="" class="Row4"
+																style=" width: 30px;height: 30px;margin-top:70px;margin-left: 40px ">
+														</li>
+														<li>
+															<img id="eo" src="images/goodbye.jpg" alt="" class="Row4"
+																style=" width: 30px;height: 30px;margin-top:70px;margin-left: 40px ">
+														</li>
+
+														<li>
+															<img id="eo" src="images/goodbye.jpg" alt="" class="Row4"
+																style=" width: 30px;height: 30px;margin-top:70px;margin-left: 40px ">
+														</li>
+
+													</div>
+												</div>
+
+											</div>
+										</div>
+										<div class="row" style="border: 1px solid blue">
+											<div>
+												<img id="eo" src="images/goodbye.jpg" alt="" class="Row1"
+													style=" width: 30px;height: 30px;margin-top:1px;margin-left: 142px ">
+
+											</div>
+											<div>
+												<img id="eo" src="images/goodbye.jpg" alt="" class="Row1"
+													style=" width: 30px;height: 30px;margin-top:1px;margin-left: 98px ">
+
+											</div>
+											<div>
+												<img id="eo" src="images/goodbye.jpg" alt="" class="Row1"
+													style=" width: 30px;height: 30px;margin-top:1px;margin-left: 96px ">
+
+											</div>
+
+										</div>
+
+
+
+
+									</div>
+									<div class="col-lg-2" style="border: 1px solid red;padding: 0px;">
+										<!-- Row 2 -->
+										<li>
+											<img id="" src="images/goodbye.jpg" alt="" class="Row2"
+												style=" width: 30px;height: 30px;margin-top:64px;margin-left: 10px ">
+										</li>
+										<li>
+											<img id="" src="images/goodbye.jpg" alt="" class="Row2"
+												style=" width: 30px;height: 30px;margin-top:102px;margin-left: 10px ">
+										</li>
+										<li>
+											<img id="" src="images/goodbye.jpg" alt="" class="Row2"
+												style=" width: 30px;height: 30px;margin-top:105px;margin-left: 10px ">
+										</li>
+										<li>
+											<img id="" src="images/goodbye.jpg" alt="" class="Row2"
+												style=" width: 30px;height: 30px;margin-top:103px;margin-left: 10px ">
+										</li>
+									</div>
+									<!-- <div class="col-lg-6" style="border: 1px solid red; padding: 0px">
+
+									</div> -->
+								</div>
+							</div>
+
 						</div>
 
 						<!-- Right Side -->
-						<div class="col-lg-3" style="padding-left:0px;padding-right:30px;">
+						<div class="col-lg-3" style="padding-right:30px;">
 
 							<!-- KVM -->
 							<div class="right_container" style="margin-top: 0px;">
@@ -1210,21 +1386,24 @@
 	</div>
 	</div>
 	</div>
-	<!-- KVM Switch -->
 	<script>
-		$("input[name='VIEW']:checkbox").change(function () {
-			if ($(this).is(':checked')) {
-				$("input[name='VIEW']:checkbox").prop("checked", false);
-				$("input[name='VIEW']:checkbox").parent('.normal').removeClass("checked");
-				$(this).prop("checked", true);
-				$(this).parent('.normal').addClass('checked');
-			}
-			else {
-				$("input[name='VIEW']").prop("checked", false);
-				$("input[name='VIEW']").parent('.normal').removeClass('checked');
-			}
-		});
+		function con_welcome() {
+			document.getElementById('con').src = 'https://www.agricar.co.uk/uploads/images/products/large/agricar-new-holland-bright-yellow-87295405-1539606274yy.png'
+		}
+
+		function con_goodnight() {
+			document.getElementById('con').src = 'images/goodbye.jpg'
+		}
+
+		function con_day() {
+			document.getElementById('con').src = 'https://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/blue0517.jpg?itok=V3825voJ'
+		}
+
+		function con_night() {
+			document.getElementById('con').src = 'https://colourlex.com/wp-content/uploads/2015/02/Red_lead_painted_swatch_Lipscher_225q-opt.jpg'
+		}
 	</script>
+
 
 
 	<!--Power Projecter -->
