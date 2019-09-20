@@ -1,3 +1,18 @@
+#pic {
+	background-image: url(./conderence.jpg) ;
+	/* transform: rotate(20deg); */
+	background-repeat: no-repeat;
+	/* background-size: 50%; */
+	height: 550px;
+	width: 700px; 700
+	position: relative;
+	background-size:95%;
+	border: 1px solid blue;
+	
+}
+
+
+
 .container {
 	padding: 0px;
 	margin-left: 100;
@@ -10,6 +25,7 @@
 	background: linear-gradient(135deg, rgba(154,36,252,1) 0%, rgba(168,195,255,1) 100%);
   	border-radius: 12px;
 	padding-left: 10px;
+	
 	width: 105%;
 }
 
