@@ -173,27 +173,27 @@
 											<div class="col-12" style="text-align: center;padding-left: 0px;">
 												<li>
 													<div>
-														<button class="scbtn">
+														<button class="scbtn" onclick="lighting_row1()">
 															<h5>Low 1</h5>
 														</button>
 													</div>
 												</li>
 												<li style="margin-top: 5px;">
 													<div>
-														<button class="scbtn">
+														<button class="scbtn" onclick="lighting_row2()">
 															<h5>Low 2</h5>
 														</button>
 													</div>
 												</li>
 												<li style="margin-top: 5px;">
 													<div>
-														<button class="scbtn">
+														<button class="scbtn" onclick="lighting_row3()">
 															<h5> Low 3</h5>
 														</button>
 													</div>
 												</li>
 											</div>
-										</div>								
+										</div>
 									</div>
 								</div>
 							</div>
@@ -207,19 +207,19 @@
 									<div class="row">
 										<div class="col-4" style="border: 1px solid blue">
 
-											<img id="eo" src="images/goodbye.jpg" alt="" class="Row1"
+											<img id="eorow1_1" src="images/goodbye.jpg" alt=""
 												style=" width: 20px;height: 20px;margin-top:60px;margin-left: 15px;border-radius: 50% ">
 											<h5 style="color:black;margin-top:5px;margin-left: 17px;font-size: 12px;">
 												L.1</h5>
 										</div>
 										<div class="col-4" style="border: 1px solid blue">
-											<img id="eo" src="images/goodbye.jpg" alt="" class="Row1"
+											<img id="eorow1_2" src="images/goodbye.jpg" alt=""
 												style=" width: 20px;height: 20px;margin-top:60px;margin-left: 20px;border-radius: 50% ">
 											<h5 style="color:black;margin-top:5px;margin-left: 24px;font-size: 12px;">
 												L.1</h5>
 										</div>
 										<div class="col-4" style="border: 1px solid blue">
-											<img id="eo" src="images/goodbye.jpg" alt="" class="Row1"
+											<img id="eorow1_3" src="images/goodbye.jpg" alt=""
 												style=" width: 20px;height: 20px;margin-top:60px;margin-left: 24px;border-radius: 50% ">
 											<h5 style="color:black;margin-top:5px;margin-left: 26px;font-size: 12px;">
 												L.1</h5>
@@ -233,19 +233,19 @@
 								<div class="col-4" style="border: 1px solid blue;padding: 0px">
 									<div class="row">
 										<div class="col-4" style="border: 1px solid blue">
-											<img id="eo" src="images/goodbye.jpg" alt="" class="Row1"
+											<img id="eorow2_1" src="images/goodbye.jpg" alt="" class="Row2"
 												style=" width: 20px;height: 20px;margin-top:80px;margin-left: 15px;border-radius: 50% ">
 											<h5 style="color:black;margin-top:5px;margin-left: 17px;font-size: 12px;">
 												L.2</h5>
 										</div>
 										<div class="col-4" style="border: 1px solid blue">
-											<img id="eo" src="images/goodbye.jpg" alt="" class="Row1"
+											<img id="eorow2_2" src="images/goodbye.jpg" alt="" class="Row2"
 												style=" width: 20px;height: 20px;margin-top:80px;margin-left: 20px;border-radius: 50% ">
 											<h5 style="color:black;margin-top:5px;margin-left: 24px;font-size: 12px;">
 												L.2</h5>
 										</div>
 										<div class="col-4" style="border: 1px solid blue">
-											<img id="eo" src="images/goodbye.jpg" alt="" class="Row1"
+											<img id="eorow2_3" src="images/goodbye.jpg" alt="" class="Row2"
 												style=" width: 20px;height: 20px;margin-top:80px;margin-left: 24px;border-radius: 50% ">
 											<h5 style="color:black;margin-top:5px;margin-left: 26px;font-size: 12px;">
 												L.2</h5>
@@ -259,19 +259,19 @@
 								<div class="col-4" style="border: 1px solid blue;padding: 0px">
 									<div class="row">
 										<div class="col-4" style="border: 1px solid blue">
-											<img id="eo" src="images/goodbye.jpg" alt="" class="Row1"
+											<img id="eorow3_1" src="images/goodbye.jpg" alt="" class="Row3"
 												style=" width: 20px;height: 20px;margin-top:80px;margin-left: 15px;border-radius: 50% ">
 											<h5 style="color:black;margin-top:5px;margin-left: 17px;font-size: 12px;">
 												L.3</h5>
 										</div>
 										<div class="col-4" style="border: 1px solid blue">
-											<img id="eo" src="images/goodbye.jpg" alt="" class="Row1"
+											<img id="eorow3_2" src="images/goodbye.jpg" alt="" class="Row3"
 												style=" width: 20px;height: 20px;margin-top:80px;margin-left: 20px;border-radius: 50% ">
 											<h5 style="color:black;margin-top:5px;margin-left: 24px;font-size: 12px;">
 												L.3</h5>
 										</div>
 										<div class="col-4" style="border: 1px solid blue">
-											<img id="eo" src="images/goodbye.jpg" alt="" class="Row1"
+											<img id="eorow3_3" src="images/goodbye.jpg" alt="" class="Row3"
 												style=" width: 20px;height: 20px;margin-top:80px;margin-left: 24px;border-radius: 50% ">
 											<h5 style="color:black;margin-top:5px;margin-left: 26px;font-size: 12px;">
 												L.3</h5>
@@ -458,6 +458,65 @@
 	</script>
 
 
+	<!-- Lighting Low 1 Onpic -->
+	<script>
+		function lighting_row1() {
+			var image1_1 = document.getElementById('eorow1_1');
+			var image1_2 = document.getElementById('eorow1_2');
+			var image1_3 = document.getElementById('eorow1_3');
+
+			if (image1_1.src.match("https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg")) {
+				image1_1.src = "images/goodbye.jpg";
+				image1_2.src = "images/goodbye.jpg";
+				image1_3.src = "images/goodbye.jpg";
+
+			} else {
+				image1_1.src = "https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg";
+				image1_2.src = "https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg";
+				image1_3.src = "https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg";
+			}
+		}
+	</script>
+
+	<!-- Lighting Low 2 Onpic -->
+	<script>
+		function lighting_row2() {
+			var image1_1 = document.getElementById('eorow2_1');
+			var image1_2 = document.getElementById('eorow2_2');
+			var image1_3 = document.getElementById('eorow2_3');
+
+			if (image1_1.src.match("https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg")) {
+				image1_1.src = "images/goodbye.jpg";
+				image1_2.src = "images/goodbye.jpg";
+				image1_3.src = "images/goodbye.jpg";
+
+			} else {
+				image1_1.src = "https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg";
+				image1_2.src = "https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg";
+				image1_3.src = "https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg";
+			}
+		}
+	</script>
+
+	<!-- Lighting Low 3 Onpic -->
+	<script>
+		function lighting_row3() {
+			var image1_1 = document.getElementById('eorow3_1');
+			var image1_2 = document.getElementById('eorow3_2');
+			var image1_3 = document.getElementById('eorow3_3');
+
+			if (image1_1.src.match("https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg")) {
+				image1_1.src = "images/goodbye.jpg";
+				image1_2.src = "images/goodbye.jpg";
+				image1_3.src = "images/goodbye.jpg";
+
+			} else {
+				image1_1.src = "https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg";
+				image1_2.src = "https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg";
+				image1_3.src = "https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg";
+			}
+		}
+	</script>
 
 
 
