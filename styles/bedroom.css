@@ -3,11 +3,13 @@
 	/* transform: rotate(20deg); */
 	background-repeat: no-repeat;
 	/* background-size: 50%; */
-	height: 550px;
+	height: 560px;
 	width: 700px; 700
 	position: relative;
-	background-size:95%;
+	background-size:47%;  
 	border: 1px solid blue;
+	background-position:50%;
+	
 	
 }
 
