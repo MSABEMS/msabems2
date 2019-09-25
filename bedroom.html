@@ -17,6 +17,11 @@
 	<link rel="stylesheet" href="styles/btbedroom.css">
 	<link rel="stylesheet" href="styles/air_control.css">
 
+	<script src="./js/bedroom.js/scene_control.js"></script>
+	<script src="./js/bedroom.js/lighting.js"></script>
+	<script src="./js/bedroom.js/air_comtrol.js"></script>
+
+
 </head>
 
 <body>
@@ -80,21 +85,21 @@
 												<div class="col-12" style="text-align: center;padding-left: 0px;">
 													<li>
 														<div>
-															<button class="scbtn">
+															<button class="scbtn" onclick="scene_welcome()">
 																<h5>Welcome</h5>
 															</button>
 														</div>
 													</li>
 													<li style="margin-top: 5px;">
 														<div>
-															<button class="scbtn">
+															<button class="scbtn" onclick="scene_goodnight()">
 																<h5>Good Night</h5>
 															</button>
 														</div>
 													</li>
 													<li style="margin-top: 5px;">
 														<div>
-															<button class="scbtn">
+															<button class="scbtn" onclick="scene_goodbye()">
 																<h5>Goodbye</h5>
 															</button>
 														</div>
@@ -239,10 +244,21 @@
 												L.2</h5>
 										</div>
 										<div class="col-4" style="border: 1px solid blue">
-											<img id="eorow2_2" src="images/goodbye.jpg" alt="" class="Row2"
-												style=" width: 20px;height: 20px;margin-top:80px;margin-left: 20px;border-radius: 50% ">
-											<h5 style="color:black;margin-top:5px;margin-left: 24px;font-size: 12px;">
-												L.2</h5>
+											<li>
+												<h5
+													style="color:black;margin-top:5px;margin-left: 5px;font-size: 12px;">
+													A/C</h5>
+
+												<img id="ac" src="images/goodbye.jpg" alt="" class="Row4"
+													style=" width: 30px;height: 30px;margin-top:9px;margin-left: 15px;border-radius: 10px;">
+											</li>
+											<li>
+												<img id="eorow2_2" src="images/goodbye.jpg" alt="" class="Row2"
+													style=" width: 20px;height: 20px;margin-top:20px;margin-left: 20px;border-radius: 50% ">
+												<h5
+													style="color:black;margin-top:5px;margin-left: 24px;font-size: 12px;">
+													L.2</h5>
+											</li>
 										</div>
 										<div class="col-4" style="border: 1px solid blue">
 											<img id="eorow2_3" src="images/goodbye.jpg" alt="" class="Row2"
@@ -459,8 +475,8 @@
 
 
 	<!-- Lighting Low 1 Onpic -->
-	<script>
-		function lighting_row1() {
+	<!-- <script>
+		function lighting_row1_changeImage() {
 			var image1_1 = document.getElementById('eorow1_1');
 			var image1_2 = document.getElementById('eorow1_2');
 			var image1_3 = document.getElementById('eorow1_3');
@@ -476,10 +492,10 @@
 				image1_3.src = "https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg";
 			}
 		}
-	</script>
+	</script> -->
 
 	<!-- Lighting Low 2 Onpic -->
-	<script>
+	<!-- <script>
 		function lighting_row2() {
 			var image1_1 = document.getElementById('eorow2_1');
 			var image1_2 = document.getElementById('eorow2_2');
@@ -496,7 +512,7 @@
 				image1_3.src = "https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg";
 			}
 		}
-	</script>
+	</script> -->
 
 	<!-- Lighting Low 3 Onpic -->
 	<script>
@@ -517,6 +533,18 @@
 			}
 		}
 	</script>
+
+
+
+	<!-- <script>
+		function turn_on_ac() {
+			document.getElementById('ac').src = 'https://www.fotoaparatas.lt/images/thumbs/thumb-3-55x30m-green-screen-349177-640-448.png'
+		}
+
+		function turn_off_ac() {
+			document.getElementById('ac').src = 'images/goodbye.jpg'
+		}
+	</script> -->
 
 
 
