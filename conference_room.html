@@ -9,10 +9,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.2/bootstrap.min.css">
 	<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" type="text/css" href="styles/contact.css">
+	<link rel="stylesheet" type="text/css" href="./styles/conference.css">
 	<link rel="stylesheet" href="styles/mainhomepage.css">
 	<link rel="stylesheet" href="styles/btconference.css">
 	<link rel="stylesheet" href="styles/remoteair.css">
+	<link rel="stylesheet" href="./styles/responsive.css">
 	<script src="./js/Conference_Room/conference_lighting_control.js"></script>
 	<script src="./js/Conference_Room/conference_curtain_control.js"></script>
 	<script src="./js/Conference_Room/conference_scene_control.js"></script>
@@ -36,6 +37,7 @@
 				<div class="logo"><a href="#" style="color: aliceblue;">MSA Building Dashboard</a></div>
 				<nav class="main_nav">
 					<ul class="d-flex flex-row align-items-start justify-content-start">
+
 						<li><a href="index.html">Home</a></li>
 						<li><a href="1st_Floor.html">1st Floor</a></li>
 						<li><a href="2nd_Floor.html">2nd Floor</a></li>
@@ -45,6 +47,7 @@
 						<li><a href="./smartplug.html">Smart Plug</a></li>
 					</ul>
 				</nav>
+				<!-- <div class="submit ml-auto"><a href="#">Hello admin</a></div> -->
 				<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
 			</div>
 
@@ -80,7 +83,7 @@
 				<div class="container">
 					<div class="row">
 						<!--Left Side -->
-						<div class="col-lg-3" style="padding-right: 30px;">
+						<div class="col-3" style="padding-right: 30px;">
 
 							<!-- Scene Control -->
 							<div class="left_container">
@@ -125,7 +128,7 @@
 									<h3 style="padding-top:10px;">Air Control</h3>
 									<div class="row_container">
 										<div class="row">
-											<div class="col-lg-6"
+											<div class="col-lg-5"
 												style="padding:0px;padding-top:3px; padding-left: 20px;">
 
 												<!-- Remote Air 1 -->
@@ -582,7 +585,7 @@
 													</div>
 												</ul>
 											</div>
-											<div class="col-lg-6" style="padding-top:3px;padding-left: 15px;">
+											<div class="col-lg-7" style="padding-top:3px;padding-left: 30px;">
 
 												<!-- Remote Air 3 -->
 												<ul>
@@ -1149,14 +1152,14 @@
 							</div>
 						</div>
 						<!-- Middle Side -->
-						<div class="col-lg-6" id="pic" style="">
+						<div class="col-6" id="pic" style="">
 							<div>
 								<div class="row">
 									<div class="col-10">
 										<div class="row">
-											<div class="col-5" style="border: 1px solid blue">
+											<div class="col-5" style="border: 1px solid transparent;">
 												<div class="row">
-													<div class="col-8" style="border: 1px solid blue">
+													<div class="col-8" style="border: 1px solid transparent">
 														<!-- <img id="eo" src="images/goodbye.jpg" alt="" class="Row1"
 															style=" width: 30px;height: 30px;margin-top:80px;margin-left: 155px "> -->
 													</div>
@@ -1170,14 +1173,14 @@
 													</div>
 												</div>
 											</div>
-											<div class="col-3" style="border: 1px solid blue;">
+											<div class="col-3" style="border: 1px solid transparent;">
 												<div class="row">
-													<div class="col-6" style="border: 1px solid blue">
+													<div class="col-6" style="border: 1px solid transparent">
 														<h5
 															style="color:black;margin-top:25px;margin-left:25px;font-size: 12px;">
 															L.1</h5>
 													</div>
-													<div class="col-6" style="border: 1px solid blue;padding: 0px">
+													<div class="col-6" style="border: 1px solid transparent;padding: 0px">
 														<img id="row1_2" src="images/goodbye.jpg" alt="" class="Row1"
 															style=" width: 30px;height: 30px;margin-top:29px;margin-left: 7px ">
 														<h5
@@ -1186,9 +1189,9 @@
 													</div>
 												</div>
 											</div>
-											<div class="col-4" style="border: 1px solid blue;">
+											<div class="col-4" style="border: 1px solid transparent;">
 												<div class="row">
-													<div class="col-5" style="border: 1px solid black">
+													<div class="col-5" style="border: 1px solid transparent">
 														<h5
 															style="color:black;margin-top:25px;margin-left:35px;font-size: 12px;">
 															L.1</h5>
@@ -1204,8 +1207,8 @@
 
 											</div>
 										</div>
-										<div class="row" style="border: 1px solid blue">
-											<div class="col-2" style="border: 1px solid red">
+										<div class="row" style="border: 1px solid transparent">
+											<div class="col-2" style="border: 1px solid transparent">
 												<li>
 													<h5
 														style="color:black;margin-top:64px;margin-left: 45px;font-size: 12px;">
@@ -1228,9 +1231,9 @@
 														style=" width: 30px;height: 30px;margin-top:5px;margin-left: 27px ">
 												</li>
 											</div>
-											<div class="col-10" style="border: 1px solid blue">
+											<div class="col-10" style="border: 1px solid transparent)">
 												<div class="row">
-													<div class="col-3" style="border: 1px solid yellow">
+													<div class="col-3" style="border: 1px solid transparent">
 														<li>
 															<div>
 																<h5
@@ -1262,17 +1265,17 @@
 														</li>
 														<li>
 															<h5
-																style="color:black;margin-top:25px;margin-left: 54px;font-size: 12px;">
+																style="color:black;margin-top:27px;margin-left: 56px;font-size: 12px;">
 																L.1</h5>
 
 															<img id="row1_7" src="images/goodbye.jpg" alt=""
 																class="Row4"
-																style=" width: 30px;height: 30px;margin-top:5px;margin-left: 45px ">
+																style=" width: 30px;height: 30px;margin-top:5px;margin-left: 46px ">
 														</li>
 
 													</div>
 													<!-- Air -->
-													<div class="col-2" style="border: 1px solid yellow">
+													<div class="col-2" style="border: 1px solid transparent">
 														<li>
 															<h5
 																style="color:black;margin-top:78px;margin-left:5px;font-size: 12px;">
@@ -1290,7 +1293,7 @@
 																style=" width: 30px;height: 30px;margin-top:7px;margin-left: 10px;border-radius: 10px; ">
 														</li>
 													</div>
-													<div class="col-2" style="border: 1px solid green">
+													<div class="col-2" style="border: 1px solid transparent">
 														<li>
 															<!-- <h5
 																style="color:black;margin-top:0px;margin-left:5px;font-size: 12px;">
@@ -1329,7 +1332,7 @@
 														</li>
 														<li>
 															<h5
-																style="color:black;margin-top:27px;margin-left:12px;font-size: 12px;">
+																style="color:black;margin-top:29px;margin-left:12px;font-size: 12px;">
 																L.1</h5>
 
 															<img id="row1_8" src="images/goodbye.jpg" alt=""
@@ -1338,7 +1341,7 @@
 														</li>
 													</div>
 													<!-- Air -->
-													<div class="col-2" style="border: 1px solid yellow">
+													<div class="col-2" style="border: 1px solid transparent">
 														<li>
 															<h5
 																style="color:black;margin-top:29px;margin-left:3px;font-size: 12px;">
@@ -1358,7 +1361,7 @@
 
 														</li>
 													</div>
-													<div class="col-2" style="border: 1px solid green;padding: 0px">
+													<div class="col-2" style="border: 1px solid transparent;padding: 0px">
 														<li>
 															<!-- <h5
 																		style="color:black;margin-top:0px;margin-left:5px;font-size: 12px;">
@@ -1397,7 +1400,7 @@
 														</li>
 														<li>
 															<h5
-																style="color:black;margin-top:27px;margin-left:20px;font-size: 12px;">
+																style="color:black;margin-top:29px;margin-left:20px;font-size: 12px;">
 																L.1</h5>
 
 															<img id="row1_9" src="images/goodbye.jpg" alt=""
@@ -1409,7 +1412,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="col-2" style="border: 1px solid blue;padding: 0px;">
+									<div class="col-2" style="border: 1px solid transparent;padding: 0px;">
 										<!-- Row 2 -->
 										<li>
 											<h5 style="color:black;margin-top:45px;margin-left:17px;font-size: 12px;">
@@ -1445,7 +1448,7 @@
 						</div>
 
 						<!-- Right Side -->
-						<div class="col-lg-3" style="padding-right:30px;">
+						<div class="col-3" style="padding-right:30px;">
 
 							<!-- KVM -->
 							<div class="right_container" style="margin-top: 0px;">

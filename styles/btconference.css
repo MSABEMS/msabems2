@@ -3,25 +3,10 @@
   padding-left: 50px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .four_left .row_container .row .col-lg-3 {
   padding: 0px;
 
 }
-
-
 
 /* Lighting */
 .lr1,.lr2 {
@@ -40,31 +25,33 @@
   margin-left: 5px;
 }
 
-
-
-
-
 /*SceneStyle*/
 
 .SceneStyle {
-  width: 90px;
+  width: 110px;
   height: 35px;
   margin-top: -6px;
-  background: rgb(154, 36, 252);
-  background: linear-gradient(135deg, rgba(154, 36, 252, 1) 0%, rgba(168, 195, 255, 1) 100%);
+  background: transparent;
+  /* background: rgb(154, 36, 252);
+  background: linear-gradient(135deg, rgba(154, 36, 252, 1) 0%, rgba(168, 195, 255, 1) 100%); */
   border-width: thin;
   border: 1.5px;
   border-radius: 16px;
-  border-color: rgba(91, 91, 91, 1) align-items: center;
+  /* border-color: rgba(91, 91, 91, 1) align-items: center; */
   text-align: center;
   margin-left: 0px;
   cursor: pointer;
+  border: 1px solid wheat;
+  transition-duration: 0.4s;
 }
 
 .SceneStyle h5 {
   font-weight: 200;
 }
 
+.SceneStyle:hover {
+  background-color: #FF9999;
+}
 h3 {
   color: white;
   font-weight: initial
