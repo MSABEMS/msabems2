@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.2/bootstrap.min.css">
     <link rel="stylesheet" href="./styles/smartplug.css">
     <link rel="stylesheet" href="./styles/responsive.css">
+    <link rel="stylesheet" href="./styles/btsmartplug.css">
 
 
     <!-- ChartJS -->
@@ -32,7 +33,7 @@
                 <nav class="main_nav">
                     <ul class="d-flex flex-row align-items-start justify-content-start">
 
-                        <li ><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="1st_Floor.html">1st Floor</a></li>
                         <li><a href="2nd_Floor.html">2nd Floor</a></li>
                         <li><a href="conference_room.html">Conference Room</a></li>
@@ -71,65 +72,98 @@
 
         <!-- Home -->
         <div class="homeContent">
-            <div class="blog">
-                <div class="container">
-                    <div class="row" style="margin-top: 50px;">
-
-                        <div class="col-5" style="border: 1px solid blue;">
-                            <div class="row">
-                                <div class="col-5" style="border: 1px solid blue;padding: 0px;">
-                                    <div class="on-off">
-                                        <div class="row">
-                                            <div class="col-sm-3"
-                                                style=" border: 1px solid blue;padding: 0px;padding-left: 10px;">
-                                                <button id="" type="button" name="" class="device_control_status"
-                                                    style="border: 0px;">
-                                                    <img src="images/remodeair/switchoff.png" alt="" id="myImage"
-                                                        onclick="changeImage()" style="width: 45px; height: 45px;">
-                                                </button>
-                                            </div>
-                                            <div class="col-sm-9" style="padding: 0px;border: 1px solid blue;">
-                                                <h3>Smart Plug</h3>
-                                            </div>
+            <div class="container">
+                <div class="blog">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="row">
+                            <div class="col-5" style="border: 1px solid blue;">
+                                <div class="div">
+                                    <li>
+                                        <div class="switch" style="float: left">
+                                            <button id="" type="button" name="" class="device_control_status"
+                                                style="border: 0px;">
+                                                <img src="images/remodeair/switchoff.png" alt="" id="myImage"
+                                                    onclick="changeImage()" style="width: 45px; height: 45px;">
+                                            </button>
                                         </div>
-                                    </div>
-                                    <!-- <div class="show">
-                                        <li>
-                                            <h5>P</h5>
-                                        </li>
-                                        <li>
-                                            <h5>V</h5>
-                                        </li>
-                                        <li>
-                                            <h5>I</h5>
-                                        </li>
-                                    </div> -->
+                                        <div class="sp" style="padding-top: 10px;padding-left: 5px;">
+                                            <h3>Smart Plug 1</h3>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ContentReport">
+                                            <div style="float: left">
+                                                <h5>P: </h5>
+                                            </div>
+                                            <span class="a" style="margin-left: 50px;">
+                                                xxx
+                                            </span>
+                                            <span class="a" style="margin-left: 30px;">kW</span>
 
-                                </div>
-                                <div class="col-7" style="border: 1px solid blue;text-align: center;">
-                                    <h5>Charge</h5>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ContentReport">
+                                            <div style="float: left">
+                                                <h5>V:</h5>
+                                            </div>
+                                            <span class="a" style="margin-left: 50px;">
+                                                xxx
+                                            </span>
+                                            <span class="a" style="margin-left: 30px;">V</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="ContentReport">
+                                            <div style="float: left; margin-left: 5px;">
+                                                <h5>I:</h5>
+                                            </div>
+                                            <span class="a" style="margin-left: 50px;">
+                                                xxx
+                                            </span>
+                                            <span class="a" style="margin-left: 30px;">A</span>
+                                        </div>
+                                    </li>
+                                </div>                              
+                            </div>
+                            <div class="col-7" style="border: 1px solid blue;text-align: center;">
+                                <div class="conchart">
                                     <div>
-                                        <canvas id="myChart" width="400" height="400"></canvas>
+                                        <h5>Power</h5>
                                     </div>
 
+                                    <div>
+                                        <canvas id="myChart" width="400" height="300"></canvas>
+                                    </div>
                                 </div>
                             </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="container">
 
                         </div>
-                        <div class="col-2">
+
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="container">
 
                         </div>
-                        <div class="col-4" style="border:1px solid blue">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam et eum blanditiis
-                            deleniti consequuntur molestiae, aliquam quibusdam explicabo at expedita. Ad illum eveniet
-                            veniam ab mollitia aliquam doloribus quas aliquid?
 
-                        </div>
-                        <div class="col-1">
-                        </div>
                     </div>
                 </div>
+                <div class="row">
+
+                </div>
+
+
+
+
             </div>
+            </div>
+            
         </div>
     </div>
     <script>
@@ -163,6 +197,20 @@
             // 	circumference: 1 * Math.PI,
             // }
         });
+    </script>
+
+
+
+    <!-- Power Plug  -->
+    <script>
+        function changeImage() {
+            var image = document.getElementById('myImage');
+            if (image.src.match("images/remodeair/switchon")) {
+                image.src = "images/remodeair/switchoff.png";
+            } else {
+                image.src = "images/remodeair/switchon.png";
+            }
+        }
     </script>
 
 </body>
