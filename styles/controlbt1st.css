@@ -1,3 +1,155 @@
+/* Button in Modal Conference>Welcome */
+input.conference_welcome {
+  visibility: hidden;
+}
+
+input.conference_welcome::before {
+  text-align: center;
+  content: attr(value);
+  display: inline-block;
+  padding: 5px;
+  background: transparent;
+  font-size: 10pt;
+  color: black;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  visibility: visible;
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  font-weight: normal;
+}
+
+input.conference_welcome:checked::before {
+  background:yellow;
+  color: black;
+  /* border-color: #eee; */
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+}
+
+/* Button in Modal Conference>Goodnight */
+input.conference_goodnight {
+  visibility: hidden;
+}
+
+input.conference_goodnight::before {
+  text-align: center;
+  content: attr(value);
+  display: inline-block;
+  padding: 5px;
+  background: transparent;
+  font-size: 10pt;
+  color: black;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  visibility: visible;
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  font-weight: normal;
+}
+
+input.conference_goodnight:checked::before {
+  background:#666;
+  color: #eee;
+  /* border-color: #eee; */
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+}
+
+
+/* Button in Modal Conference>Day */
+input.conference_day {
+  visibility: hidden;
+}
+
+input.conference_day::before {
+  text-align: center;
+  content: attr(value);
+  display: inline-block;
+  padding: 5px;
+  background: transparent;
+  font-size: 10pt;
+  color: black;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  visibility: visible;
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  font-weight: normal;
+}
+
+input.conference_day:checked::before {
+  background:rgb(2, 73, 167);
+  color: #eee;
+  /* border-color: #eee; */
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+}
+
+/* Button in Modal Conference>Night */
+input.conference_night {
+  visibility: hidden;
+}
+
+input.conference_night::before {
+  text-align: center;
+  content: attr(value);
+  display: inline-block;
+  padding: 5px;
+  background: transparent;
+  font-size: 10pt;
+  color: black;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  visibility: visible;
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  font-weight: normal;
+}
+
+input.conference_night:checked::before {
+  background:rgb(204, 0, 0);
+  color: #eee;
+  /* border-color: #eee; */
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* The Modal (background) */
 
 .modal {

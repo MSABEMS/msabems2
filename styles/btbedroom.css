@@ -1,4 +1,36 @@
-.scbtn h5,.curbtn h5,.lightbtn h5 {
+input.toggle-btn {
+  visibility: hidden;
+}
+
+input.toggle-btn::before {
+  text-align: center;
+  content: attr(value);
+  display: inline-block;
+  padding: 5px;
+  background: transparent;
+  font-size: 10pt;
+  color: white;
+  border-radius: 10px;
+  border: 1px solid white;
+  visibility: visible;
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  font-weight: normal;
+}
+
+input.toggle-btn:checked::before {
+  background:#666;
+  color: #eee;
+  /* border-color: #eee; */
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+}
+
+.scbtn h5, .curbtn h5, .lightbtn h5 {
   color: white;
   height: 35px;
   font-weight: normal;
@@ -6,11 +38,7 @@
   padding-top: 9px;
 }
 
-
-
-
-
-.scbtn,.curbtn,.lightbtn {
+.scbtn, .curbtn, .lightbtn {
   background-color: transparent;
   cursor: pointer;
   font-size: 18px;
@@ -24,15 +52,13 @@
   overflow: hidden;
   cursor: pointer;
   width: 110px;
-  
 }
 
-.scbtn:focus,.curbtn:focus,.lightbtn:focus {
+.scbtn:focus, .curbtn:focus, .lightbtn:focus {
   background-color: #666;
   color: white;
   border: 1px solid blueviolet;
 }
-
 
 .switch_one_left {
   position: relative;
@@ -61,24 +87,24 @@ h3 {
   color: white;
   font-weight: initial
 }
+
 h4 {
   color: white;
   font-weight: initial;
 }
 
-h5{
+h5 {
   color: white;
   font-weight: normal;
 }
-.scbtn h5,.curbtn h5,.lightbtn h5 {
+
+.scbtn h5, .curbtn h5, .lightbtn h5 {
   color: white;
   height: 35px;
   font-weight: normal;
   text-align: center;
   padding-top: 9px;
 }
-
-
 
 .slider {
   position: absolute;

@@ -37,7 +37,7 @@
 				<div class="logo"><a href="#" style="color: aliceblue;">MSA Building Dashboard</a></div>
 				<nav class="main_nav">
 					<ul class="d-flex flex-row align-items-start justify-content-start">
-						<li ><a href="index.html">Home</a></li>
+						<li><a href="index.html">Home</a></li>
 						<li class="active"><a href="1st_Floor.html">1st Floor</a></li>
 						<li><a href="2nd_Floor.html">2nd Floor</a></li>
 						<li><a href="conference_room.html">Conference Room</a></li>
@@ -202,30 +202,59 @@
 																<div class="row" style="margin-top: 15px">
 																	<div class="col-lg-6" style="">
 																		<div class="col-lg-6" style="">
-																			<button onclick="con_welcome()"
+																			<div style="padding-left: 0px;">
+																				<input class="conference_welcome" type="radio"
+																					value="Wecome"
+																					onclick="con_welcome()"
+																					style="padding-right: 10px;"
+																					name="scene_control">
+																			</div>
+																			<!-- <button onclick="con_welcome()"
 																				type="button"
 																				class="btn btn-outline-warning">Welcome
 
-																			</button>
+																			</button> -->
 																		</div>
 																		<div class="col-lg-6"
 																			style="padding-top: 10px;">
-																			<button onclick="con_goodnight()"
+																			<div
+																				style="padding-left: 0px;padding-top: 15px;">
+																				<input class="conference_goodnight" type="radio"
+																					value="Goodnight"
+																					onclick="con_goodnight()"
+																					style="padding-right: 10px;"
+																					name="scene_control">
+																			</div>
+																			<!-- <button onclick="con_goodnight()"
 																				type="button"
 																				class="btn btn-outline-dark">Goodnight
-																			</button>
+																			</button> -->
 
 																		</div>
 																	</div>
 																	<div class="col-lg-6" style="">
-																		<div class="col-lg-6">
-																			<button onclick="con_day()" type="button"
+																		<div class="col-lg-6" style="padding-top:0px;">
+																			<div
+																				style="padding-left: 0px;">
+																				<input class="conference_day" type="radio"
+																					value="Day" onclick="con_day()"
+																					style="padding-right: 10px;"
+																					name="scene_control">
+																			</div>
+																			<!-- <button onclick="con_day()" type="button"
 																				class="btn btn-outline-primary">Day
-																			</button>
+																			</button> -->
 																		</div>
 																		<div class="col-lg-6" style="padding-top: 10px">
-																			<button onclick="con_night()" type="button"
-																				class="btn btn-outline-danger">Night</button>
+																			<div
+																				style="padding-left: 0px;padding-top: 15px;">
+																				<input class="conference_night" type="radio"
+																					value="Night" onclick="con_night()"
+																					style="padding-right: 10px;"
+																					name="scene_control">
+																			</div>
+																			<!-- <button onclick="con_night()" type="button"
+																				class="btn btn-outline-danger">Night</button> -->
 
 																		</div>
 																	</div>

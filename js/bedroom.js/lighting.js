@@ -153,6 +153,7 @@ function lighting_row3() {
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
+            lighting_row3_changeImage()
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -162,4 +163,21 @@ function lighting_row3() {
         });
     //
 
+}
+
+function lighting_row3_changeImage() {
+    var image1_1 = document.getElementById('eorow3_1');
+    var image1_2 = document.getElementById('eorow3_2');
+    var image1_3 = document.getElementById('eorow3_3');
+
+    if (image1_1.src.match("https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg")) {
+        image1_1.src = "images/goodbye.jpg";
+        image1_2.src = "images/goodbye.jpg";
+        image1_3.src = "images/goodbye.jpg";
+
+    } else {
+        image1_1.src = "https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg";
+        image1_2.src = "https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg";
+        image1_3.src = "https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg";
+    }
 }

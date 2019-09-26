@@ -94,26 +94,47 @@
 											<div class="row" style="padding-top: 1px;padding-left: 5px;">
 												<div class="col-5">
 													<div>
-														<button class="scbtn" onclick="sc_welcome()">
+														<div style="padding-left: 0px;">
+															<input class="toggle-btn" type="radio" value="Welcome"
+																onclick="sc_welcome()" style="padding-right: 10px;"
+																name="scene_control">
+														</div>
+														<!-- <button class="scbtn" onclick="sc_welcome()">
 															<h5>Welcome</h5>
-														</button>
+														</button> -->
 													</div>
-													<div style="padding-top: 7px;">
-														<button class="scbtn" onclick="sc_meeting()">
+													<div style="padding-top: 20px;">
+														<div style="padding-left: 0px;">
+															<input class="toggle-btn" type="radio" value="Meeting"
+																onclick="sc_meeting()" style="padding-right: 10px;"
+																name="scene_control">
+														</div>
+														<!-- <button class="scbtn" onclick="sc_meeting()">
 															<h5>Meeting</h5>
-														</button>
+														</button> -->
 													</div>
 												</div>
 												<div class="col-7" style="padding-left: 25px;">
 													<div>
-														<button class="scbtn" onclick="sc_sbattery()">
+														<div style="padding-left: 0px;">
+															<input class="toggle-btn" type="radio" value="Show Battery"
+																onclick="sc_sbattery()" style="padding-right: 10px;"
+																name="scene_control">
+														</div>
+														<!-- <button class="scbtn" onclick="sc_sbattery()">
 															<h5>Show Battery</h5>
-														</button>
+														</button> -->
 													</div>
-													<div style="padding-top: 7px;">
-														<button class="scbtn" onclick="sc_goodbye()">
+													<div style="padding-top: 20px;">
+														<div style="padding-left: 0px;">
+															<input class="toggle-btn" type="radio" value="Goodbye"
+																onclick="sc_goodbye()" style="padding-right: 10px;"
+																name="scene_control">
+														</div>
+
+														<!-- <button class="scbtn" onclick="sc_goodbye()">
 															<h5>Goodbye</h5>
-														</button>
+														</button> -->
 													</div>
 												</div>
 											</div>
@@ -1049,21 +1070,48 @@
 							<!-- Curtain -->
 							<div class="left_container">
 								<div class="three_left" style="height: 99px;">
-									<h3 style="padding-top:10px;">Curtain</h3>
+									<div class="row">
+										<div class="col-lg-6">
+											<h3 style="padding-top:10px;">Curtain</h3>
+										</div>
+										<div class="col-lg-6">
+											<!-- Pause -->
+											<div style="padding-top: 5px;padding-left:55px;">		
+												<button id="" onclick="curtain_pause()" type="radio" name="curtain"
+												class="device_control_status_curtain" style="display: inline; border: 0px;">
+												<img src="./images/pause-thin-rounded-button.png" alt=""
+													style="width: 35px; height: 35px;">
+											</button>
+											</div>									
+										</div>
+									</div>
+
 									<div class="row_container">
 										<div class="row" style="padding-top: 1px;padding-left: 5px;">
 											<div class="col-lg-5">
 												<div>
-													<button class="curbtn" onclick="curtain_close()">
+													<div style="padding-left: 0px;">
+														<input class="toggle-btn" type="radio" value="All Close"
+															onclick="curtain_close()" style="padding-right: 10px;"
+															name="curtain">
+													</div>
+													<!-- <button class="curbtn" onclick="curtain_close()" type="radio"
+														name="radio">
 														<h5>All Close</h5>
-													</button>
+													</button> -->
 												</div>
 											</div>
 											<div class="col-lg-7" style="padding-left:25px;">
 												<div>
-													<button class="curbtn" onclick="curtain_open()">
+													<div style="padding-left: 0px;">
+														<input class="toggle-btn" type="radio" value="All Open"
+															onclick="curtain_open()" style="padding-right: 10px;"
+															name="curtain">
+													</div>
+													<!-- <button class="curbtn" onclick="curtain_open()" type="radio"
+														name="radio">
 														<h5>All Open</h5>
-													</button>
+													</button> -->
 												</div>
 											</div>
 										</div>
@@ -1078,7 +1126,15 @@
 									<div class="row_container">
 										<div class="row" style="padding-top: 1px;padding-left: 5px;">
 											<div class="col-5">
-												<div>
+												<div style="padding-left: 0px;">
+													<input class="toggle-btn" type="checkbox" value="Low 1"
+														onclick="lightingrow1()" style="padding-right: 10px;" name="">
+												</div>
+												<div style="padding-left: 0px;padding-top: 20px;">
+													<input class="toggle-btn" type="checkbox" value="Low 2"
+														onclick="lightingrow2()" style="padding-right: 10px;" name="">
+												</div>
+												<!-- <div>
 													<button class="lightbtn" onclick="lightingrow1()">
 														<h5>Row 1</h5>
 													</button>
@@ -1087,10 +1143,18 @@
 													<button class="lightbtn" onclick="lightingrow2()">
 														<h5>Row 2</h5>
 													</button>
-												</div>
+												</div> -->
 											</div>
 											<div class="col-7" style="padding-left: 25px;">
-												<div>
+												<div style="padding-left: 0px;">
+													<input class="toggle-btn" type="checkbox" value="Low 3"
+														onclick="lightingrow3()" style="padding-right: 10px;" name="">
+												</div>
+												<div style="padding-left: 0px;padding-top: 20px">
+													<input class="toggle-btn" type="checkbox" value="Low 4"
+														onclick="lightingrow4()" style="padding-right: 10px;" name="">
+												</div>
+												<!-- <div>
 													<button class="lightbtn" onclick="lightingrow3()">
 														<h5>Row 3</h5>
 													</button>
@@ -1099,7 +1163,7 @@
 													<button class="lightbtn" onclick="lightingrow4()">
 														<h5>Row 4</h5>
 													</button>
-												</div>
+												</div> -->
 											</div>
 										</div>
 										<!-- <div class="row" style="padding-top: 5px;"> -->
@@ -1180,7 +1244,8 @@
 															style="color:black;margin-top:25px;margin-left:25px;font-size: 12px;">
 															L.1</h5>
 													</div>
-													<div class="col-6" style="border: 1px solid transparent;padding: 0px">
+													<div class="col-6"
+														style="border: 1px solid transparent;padding: 0px">
 														<img id="row1_2" src="images/goodbye.jpg" alt="" class="Row1"
 															style=" width: 30px;height: 30px;margin-top:29px;margin-left: 7px ">
 														<h5
@@ -1361,7 +1426,8 @@
 
 														</li>
 													</div>
-													<div class="col-2" style="border: 1px solid transparent;padding: 0px">
+													<div class="col-2"
+														style="border: 1px solid transparent;padding: 0px">
 														<li>
 															<!-- <h5
 																		style="color:black;margin-top:0px;margin-left:5px;font-size: 12px;">
@@ -1458,26 +1524,46 @@
 										<div class="row" style="padding-left: 5px;padding-top:1px">
 											<div class="col-lg-5">
 												<div>
-													<button class="scbtn" onclick="kvm_input1()">
+													<div style="padding-left: 0px;">
+														<input class="toggle-btn" type="radio" value="Input 1"
+															onclick="kvm_input1()" style="padding-right: 10px;"
+															name="kvm">
+													</div>
+													<!-- <button class="scbtn" onclick="kvm_input1()">
 														<h5>Input 1</h5>
-													</button>
+													</button> -->
 												</div>
-												<div style="padding-top: 7px;">
-													<button class="scbtn" onclick="kvm_input2()">
+												<div style="padding-top: 20px;">
+													<div style="padding-left: 0px;">
+														<input class="toggle-btn" type="radio" value="Input 2"
+															onclick="kvm_input2()" style="padding-right: 10px;"
+															name="kvm">
+													</div>
+													<!-- <button class="scbtn" onclick="kvm_input2()">
 														<h5>Input 2</h5>
-													</button>
+													</button> -->
 												</div>
 											</div>
 											<div class="col-lg-7" style="padding-left: 22px;">
 												<div>
-													<button class="scbtn" onclick="kvm_input3()">
+													<div style="padding-left: 0px;">
+														<input class="toggle-btn" type="radio" value="Input 3"
+															onclick="kvm_input3()" style="padding-right: 10px;"
+															name="kvm">
+													</div>
+													<!-- <button class="scbtn" onclick="kvm_input3()">
 														<h5>Input 3</h5>
-													</button>
+													</button> -->
 												</div>
-												<div style="padding-top: 7px;">
-													<button class="scbtn" onclick="kvm_input4()">
+												<div style="padding-top: 20px;">
+													<div style="padding-left: 0px;">
+														<input class="toggle-btn" type="radio" value="Input 4"
+															onclick="kvm_input4()" style="padding-right: 10px;"
+															name="kvm">
+													</div>
+													<!-- <button class="scbtn" onclick="kvm_input4()">
 														<h5>Input 4</h5>
-													</button>
+													</button> -->
 												</div>
 											</div>
 										</div>
@@ -1545,12 +1631,15 @@
 												</li>
 												<li>
 													<!-- Pause -->
-													<button id="" onclick="screen_pause()" type="button" name=""
-														class="device_control_status"
-														style="display: inline; border: 0px;">
-														<img src="images/screen/pause (2).png" alt=""
-															style="width: 48px; height: 48px;">
-													</button>
+													<div style="padding-left: 3px">
+														<button id="" onclick="screen_pause()" type="button" name=""
+															class="device_control_status"
+															style="display: inline; border: 0px;">
+															<img src="./images/pause-thin-rounded-button.png" alt=""
+																style="width: 40px; height: 40px;">
+														</button>
+													</div>
+
 												</li>
 												<li>
 													<!-- Down -->
