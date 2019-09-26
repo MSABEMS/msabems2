@@ -86,26 +86,41 @@
 									<div class="row_container">
 										<div class="scene">
 											<div class="row" style="padding-top: 1px;padding-left: 0px;">
-												<div class="col-12" style="text-align: center;padding-left: 0px;">
+												<div class="col-12" style="padding-left: 80px;">
 													<li>
 														<div>
-															<button class="scbtn" onclick="scene_welcome()">
+															<div style="padding-left: 0px;">
+																<input class="toggle-btn" type="radio" value="Wecome"
+																	onclick="scene_welcome()"
+																	style="padding-right: 10px;" name="scene_control">
+															</div>
+															<!-- <button class="scbtn" onclick="scene_welcome()">
 																<h5>Welcome</h5>
-															</button>
+															</button> -->
 														</div>
 													</li>
-													<li style="margin-top: 5px;">
+													<li style="margin-top: 20px;">
 														<div>
-															<button class="scbtn" onclick="scene_goodnight()">
+															<div style="padding-left: 0px;">
+																<input class="toggle-btn" type="radio" value="Good Night"
+																	onclick="scene_goodnight()"
+																	style="padding-right: 10px;" name="scene_control">
+															</div>
+															<!-- <button class="scbtn" onclick="scene_goodnight()">
 																<h5>Good Night</h5>
-															</button>
+															</button> -->
 														</div>
 													</li>
-													<li style="margin-top: 5px;">
+													<li style="margin-top: 20px;">
 														<div>
-															<button class="scbtn" onclick="scene_goodbye()">
+															<div style="padding-left: 0px;">
+																<input class="toggle-btn" type="radio" value="Goodbye"
+																	onclick="scene_goodbye()"
+																	style="padding-right: 10px;" name="scene_control">
+															</div>
+															<!-- <button class="scbtn" onclick="scene_goodbye()">
 																<h5>Goodbye</h5>
-															</button>
+															</button> -->
 														</div>
 													</li>
 												</div>
@@ -179,8 +194,28 @@
 									<h3 style="padding-top: 10px">Lighting</h3>
 									<div class="row_container">
 										<div class="row" style="padding-top: 1px;padding-left: 5px;">
-											<div class="col-12" style="text-align: center;padding-left: 0px;">
-												<li>
+											<div class="col-12" style="padding-left: 0px;">
+												<li style="margin-top: 5px;">
+													<div style="padding-left: 80px;">
+														<input class="toggle-btn" type="checkbox" value="Low 1"
+															onclick="lighting_row1()" style="padding-right: 10px;">
+													</div>
+												</li>
+												<li style="margin-top: 20px;">
+													<div style="padding-left: 80px;">
+														<input class="toggle-btn" type="checkbox" value="Low 2"
+															onclick="lighting_row2()" style="padding-right: 10px;">
+													</div>
+												</li>
+												<li style="margin-top: 20px;">
+													<div style="padding-left: 80px;">
+														<input class="toggle-btn" type="checkbox" value="Low 3"
+															onclick="lighting_row3()" style="padding-right: 10px;">
+													</div>
+												</li>
+
+
+												<!-- <li>
 													<div>
 														<button class="scbtn" onclick="lighting_row1()">
 															<h5>Low 1</h5>
@@ -193,14 +228,15 @@
 															<h5>Low 2</h5>
 														</button>
 													</div>
-												</li>
-												<li style="margin-top: 5px;">
+												</li> -->
+												<!-- <li style="margin-top: 5px;">
 													<div>
 														<button class="scbtn" onclick="lighting_row3()">
 															<h5> Low 3</h5>
 														</button>
 													</div>
-												</li>
+												</li> -->
+
 											</div>
 										</div>
 									</div>
@@ -517,7 +553,7 @@
 	</script> -->
 
 	<!-- Lighting Low 3 Onpic -->
-	<script>
+	<!-- <script>
 		function lighting_row3() {
 			var image1_1 = document.getElementById('eorow3_1');
 			var image1_2 = document.getElementById('eorow3_2');
@@ -534,7 +570,7 @@
 				image1_3.src = "https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg";
 			}
 		}
-	</script>
+	</script> -->
 
 
 
