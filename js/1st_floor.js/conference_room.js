@@ -46,8 +46,8 @@ function con_welcome_changeImage() {
 }
 
 
-// conferenceroom Welcome
-function con_goodnight() {
+// conferenceroom Meeting
+function con_meeting() {
     console.log("Hello");
     //
     console.log("POST method by jQuery");
@@ -78,7 +78,7 @@ function con_goodnight() {
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
-            con_goodnight_changeImage()
+            con_meeting_changeImage();
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -90,105 +90,105 @@ function con_goodnight() {
 
 }
 
-function con_goodnight_changeImage() {
+function con_meeting_changeImage() {
+    document.getElementById('con').src ='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVAAAACWCAMAAAC/8CD2AAAAA1BMVEX/AAAZ4gk3AAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF8GxXYAARizDlgAAAAASUVORK5CYII='
+}
+
+// images/goodbye.jpg
+// conferenceroom Show Battery
+function con_showbatery() {
+    console.log("Hello");
+    //
+    console.log("POST method by jQuery");
+    jQuery.ajax({
+        // url: "https://cors-anywhere.herokuapp.com/https://peahivebackend.herokuapp.com/hiveapi/",
+        url: "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+        type: "POST",
+        headers: {
+            // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
+            "Authorization": "Token dscnsjdkcnsjdkcnjsdcnjdsncjsdnckjsdnckjsdcnkjsdcnskjdcnjksdncbs",
+            "Content-Type": "application/json; charset=utf-8",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+            "Access-Control-Allow-Methods": "POST",
+            "Access-Control-Allow-Headers": "Content-Type, Authorization",
+        },
+        contentType: "application/json",
+        data: JSON.stringify({
+            "topic": "Test post device control",
+            "type": "devicecontrol",
+            "message": {
+                "device": "MSA Device control",
+                "parameter": {
+                    "status": "on"
+                }
+            }
+        })
+    })
+        .done(function (data, textStatus, jqXHR) {
+            console.log("HTTP Request Succeeded: " + jqXHR.status);
+            console.log(data);
+            con_showbatery_changeImage()
+        })
+        .fail(function (jqXHR, textStatus, errorThrown) {
+            console.log("HTTP Request Failed");
+        })
+        .always(function () {
+            /* ... */
+        });
+    //
+
+}
+
+function con_showbatery_changeImage() {
+    document.getElementById('con').src = 'https://www.htmlcsscolor.com/preview/gallery/008000.png'
+}
+
+
+// conferenceroom Goodbye
+function con_goodbye() {
+    console.log("Hello");
+    //
+    console.log("POST method by jQuery");
+    jQuery.ajax({
+        // url: "https://cors-anywhere.herokuapp.com/https://peahivebackend.herokuapp.com/hiveapi/",
+        url: "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+        type: "POST",
+        headers: {
+            // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
+            "Authorization": "Token dscnsjdkcnsjdkcnjsdcnjdsncjsdnckjsdnckjsdcnkjsdcnskjdcnjksdncbs",
+            "Content-Type": "application/json; charset=utf-8",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+            "Access-Control-Allow-Methods": "POST",
+            "Access-Control-Allow-Headers": "Content-Type, Authorization",
+        },
+        contentType: "application/json",
+        data: JSON.stringify({
+            "topic": "Test post device control",
+            "type": "devicecontrol",
+            "message": {
+                "device": "MSA Device control",
+                "parameter": {
+                    "status": "on"
+                }
+            }
+        })
+    })
+        .done(function (data, textStatus, jqXHR) {
+            console.log("HTTP Request Succeeded: " + jqXHR.status);
+            console.log(data);
+            con_goodbye_changeImage()
+        })
+        .fail(function (jqXHR, textStatus, errorThrown) {
+            console.log("HTTP Request Failed");
+        })
+        .always(function () {
+            /* ... */
+        });
+    //
+
+}
+
+
+function con_goodbye_changeImage() {
     document.getElementById('con').src = 'images/goodbye.jpg'
-}
-
-
-// conferenceroom Day
-function con_day() {
-    console.log("Hello");
-    //
-    console.log("POST method by jQuery");
-    jQuery.ajax({
-        // url: "https://cors-anywhere.herokuapp.com/https://peahivebackend.herokuapp.com/hiveapi/",
-        url: "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
-        type: "POST",
-        headers: {
-            // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
-            "Authorization": "Token dscnsjdkcnsjdkcnjsdcnjdsncjsdnckjsdnckjsdcnkjsdcnskjdcnjksdncbs",
-            "Content-Type": "application/json; charset=utf-8",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
-            "Access-Control-Allow-Methods": "POST",
-            "Access-Control-Allow-Headers": "Content-Type, Authorization",
-        },
-        contentType: "application/json",
-        data: JSON.stringify({
-            "topic": "Test post device control",
-            "type": "devicecontrol",
-            "message": {
-                "device": "MSA Device control",
-                "parameter": {
-                    "status": "on"
-                }
-            }
-        })
-    })
-        .done(function (data, textStatus, jqXHR) {
-            console.log("HTTP Request Succeeded: " + jqXHR.status);
-            console.log(data);
-            con_day_changeImage()
-        })
-        .fail(function (jqXHR, textStatus, errorThrown) {
-            console.log("HTTP Request Failed");
-        })
-        .always(function () {
-            /* ... */
-        });
-    //
-
-}
-
-function con_day_changeImage() {
-    document.getElementById('con').src = 'https://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/blue0517.jpg?itok=V3825voJ'
-}
-
-
-// conferenceroom Day
-function con_night() {
-    console.log("Hello");
-    //
-    console.log("POST method by jQuery");
-    jQuery.ajax({
-        // url: "https://cors-anywhere.herokuapp.com/https://peahivebackend.herokuapp.com/hiveapi/",
-        url: "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
-        type: "POST",
-        headers: {
-            // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
-            "Authorization": "Token dscnsjdkcnsjdkcnjsdcnjdsncjsdnckjsdnckjsdcnkjsdcnskjdcnjksdncbs",
-            "Content-Type": "application/json; charset=utf-8",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
-            "Access-Control-Allow-Methods": "POST",
-            "Access-Control-Allow-Headers": "Content-Type, Authorization",
-        },
-        contentType: "application/json",
-        data: JSON.stringify({
-            "topic": "Test post device control",
-            "type": "devicecontrol",
-            "message": {
-                "device": "MSA Device control",
-                "parameter": {
-                    "status": "on"
-                }
-            }
-        })
-    })
-        .done(function (data, textStatus, jqXHR) {
-            console.log("HTTP Request Succeeded: " + jqXHR.status);
-            console.log(data);
-            con_night_changeImage()
-        })
-        .fail(function (jqXHR, textStatus, errorThrown) {
-            console.log("HTTP Request Failed");
-        })
-        .always(function () {
-            /* ... */
-        });
-    //
-
-}
-
-
-function con_night_changeImage() {
-    document.getElementById('con').src = 'https://colourlex.com/wp-content/uploads/2015/02/Red_lead_painted_swatch_Lipscher_225q-opt.jpg'
 }

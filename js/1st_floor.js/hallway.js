@@ -43,11 +43,11 @@ function hy_automatic() {
 }
 
 function hy_automatic_changeImage() {
-    document.getElementById('hy').src = 'https://www.fotoaparatas.lt/images/thumbs/thumb-3-55x30m-green-screen-349177-640-448.png'
+    document.getElementById('hy').src = 'https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2013/8/1/1375354802439/Blue---the-colour-008.jpg?width=300&quality=85&auto=format&fit=max&s=2a7663fea4602034647ecb92ae228d96'
 }
 
 
-// Hallway Aotumatic
+// Hallway Welcome
 function hy_welcome() {
     console.log("Hello");
     //
@@ -99,7 +99,7 @@ function hy_welcome_changeImage() {
 
 
 
-// Hallway Aotumatic
+// Hallway Goodbye
 function hy_goodbye() {
     console.log("Hello");
     //
