@@ -1076,13 +1076,14 @@
 										</div>
 										<div class="col-lg-6">
 											<!-- Pause -->
-											<div style="padding-top: 5px;padding-left:55px;">		
+											<div style="padding-top: 5px;padding-left:55px;">
 												<button id="" onclick="curtain_pause()" type="radio" name="curtain"
-												class="device_control_status_curtain" style="display: inline; border: 0px;">
-												<img src="./images/pause-thin-rounded-button.png" alt=""
-													style="width: 35px; height: 35px;">
-											</button>
-											</div>									
+													class="device_control_status_curtain"
+													style="display: inline; border: 0px;">
+													<img src="./images/pause-thin-rounded-button.png" alt=""
+														style="width: 35px; height: 35px;">
+												</button>
+											</div>
 										</div>
 									</div>
 
@@ -1095,10 +1096,6 @@
 															onclick="curtain_close()" style="padding-right: 10px;"
 															name="curtain">
 													</div>
-													<!-- <button class="curbtn" onclick="curtain_close()" type="radio"
-														name="radio">
-														<h5>All Close</h5>
-													</button> -->
 												</div>
 											</div>
 											<div class="col-lg-7" style="padding-left:25px;">
@@ -1108,10 +1105,6 @@
 															onclick="curtain_open()" style="padding-right: 10px;"
 															name="curtain">
 													</div>
-													<!-- <button class="curbtn" onclick="curtain_open()" type="radio"
-														name="radio">
-														<h5>All Open</h5>
-													</button> -->
 												</div>
 											</div>
 										</div>
@@ -1134,16 +1127,6 @@
 													<input class="toggle-btn" type="checkbox" value="Low 2"
 														onclick="lightingrow2()" style="padding-right: 10px;" name="">
 												</div>
-												<!-- <div>
-													<button class="lightbtn" onclick="lightingrow1()">
-														<h5>Row 1</h5>
-													</button>
-												</div>
-												<div style="padding-top: 7px;">
-													<button class="lightbtn" onclick="lightingrow2()">
-														<h5>Row 2</h5>
-													</button>
-												</div> -->
 											</div>
 											<div class="col-7" style="padding-left: 25px;">
 												<div style="padding-left: 0px;">
@@ -1154,63 +1137,9 @@
 													<input class="toggle-btn" type="checkbox" value="Low 4"
 														onclick="lightingrow4()" style="padding-right: 10px;" name="">
 												</div>
-												<!-- <div>
-													<button class="lightbtn" onclick="lightingrow3()">
-														<h5>Row 3</h5>
-													</button>
-												</div>
-												<div style="padding-top: 7px;">
-													<button class="lightbtn" onclick="lightingrow4()">
-														<h5>Row 4</h5>
-													</button>
-												</div> -->
 											</div>
 										</div>
-										<!-- <div class="row" style="padding-top: 5px;"> -->
-										<!-- Row1,Row2 -->
-										<!-- <div class="col-lg-3">
-												<h5 class="lr1">Row 1</h5>
-												<h5 class="lr2">Row 2</h5>
-											</div> -->
-										<!-- toggle -->
-										<!-- <div class="col-lg-3">
-												<li>
-													<label class="switch_one_left" style="margin-left: 0px;">
-														<input type="checkbox" checked>
-														<span class="slider round"></span>
-													</label>
-												</li>
-												<li>
-													<label class="switch_one_left"
-														style="margin-left: 0px;margin-top: 3px;">
-														<input type="checkbox" checked>
-														<span class="slider round"></span>
-													</label>
-												</li>
-											</div> -->
 
-										<!-- Row3,Row4 -->
-										<!-- <div class="col-lg-3">
-												<h5 class="lr3">Row 3</h5>
-												<h5 class="lr4">Row 4</h5>
-											</div> -->
-
-										<!-- toggle -->
-										<!-- <div class="col-lg-3">
-												<li>
-													<label class="switch_one_left">
-														<input type="checkbox" checked>
-														<span class="slider round"></span>
-													</label>
-												</li>
-												<li>
-													<label class="switch_one_left" style="margin-top: 3px;">
-														<input type="checkbox" checked>
-														<span class="slider round"></span>
-													</label>
-												</li>
-											</div> -->
-										<!-- </div> -->
 									</div>
 								</div>
 							</div>
@@ -1585,22 +1514,340 @@
 												<div class="menuof">
 
 													<!-- Power -->
-													<li>
+													<ul>
 														<button id="" type="button" name=""
 															class="device_control_status" style="border: 0px;">
 															<img src="images/remodeair/switchoff.png" alt=""
 																id="myImage" onclick="changeImage()"
 																style="width: 48px; height: 48px;">
 														</button>
-													</li>
+													</ul>
+													<!-- Source -->
+													<ul>
+														<!-- Trigger/Open The Modal -->
+														<button id="myBtn_source" class="SceneStyle">
+															<h5>Source</h5>
+														</button>
+
+														<!-- The Modal -->
+														<div id="myModal_source" class="modal">
+
+															<!-- Modal content -->
+															<div class="modal-content_source">
+																<div class="modal-header">
+																	<h3 class="colormodal">Source Control</h3>
+																	<span class="close"
+																		onclick="source()">&times;</span>
+																</div>
+																<div class="modal-body_source" style="">
+
+																	<div class="ACremoteControl" style="">
+																		<div class="row">
+																			<div class="onoffACbutton"
+																				style="">
+																				<div class="OffACbutton"
+																					style="margin-left: 50px;width: 48px">
+
+																					<button id=""
+																						onclick="turn_off_ac1()"
+																						type="button" name=""
+																						class="device_control_status"
+																						style="border: 0px;">
+																						<img src="images/remodeair/switchoff.png"
+																							alt=""
+																							style="width: 48px; height: 48px;">
+																					</button>
+																				</div>
+																				<div class="OnACbutton"
+																					style="margin-left: 50px; width: 48px">
+																					<button id=""
+																						onclick="turn_on_ac1()"
+																						type="button" name=""
+																						class="device_control_status"
+																						style="display: inline; border: 0px;">
+																						<img src="images/remodeair/switchon.png"
+																							alt=""
+																							style="width: 48px; height: 48px;">
+																					</button>
+																				</div>
+																				<div class="OnACbutton"
+																					style="margin-left: 60px; width: 48px">
+																					<button id=""
+																						onclick="turn_on_ac1()"
+																						type="button" name=""
+																						class="device_control_status"
+																						style="display: inline; border: 0px;">
+																						<img src="images/remodeair/switchon.png"
+																							alt=""
+																							style="width: 48px; height: 48px;">
+																					</button>
+																				</div>
+																			</div>
+																			<!-- <div class="col-lg-4" style="padding:0px;padding-left:30px;">
+																				<button id="" onclick="turn_off_ac1()"
+																					type="button" name=""
+																					class="device_control_status"
+																					style="border: 0px;">
+																					<img src="images/remodeair/switchoff.png"
+																						alt=""
+																						style="width: 48px; height: 48px;">
+																				</button></div>
+																			<div class="col-lg-4">
+																				<button id=""
+																					onclick="turn_off_ac1()"
+																					type="button" name=""
+																					class="device_control_status"
+																					style="border: 0px;">
+																					<img src="images/remodeair/switchoff.png"
+																						alt=""
+																						style="width: 48px; height: 48px;">
+																				</button></div>
+																			<div class="col-lg-4" style="padding-left: 32px;">
+																				<button id=""
+																					onclick="turn_off_ac1()"
+																					type="button" name=""
+																					class="device_control_status"
+																					style="border: 0px;">
+																					<img src="images/remodeair/switchoff.png"
+																						alt=""
+																						style="width: 48px; height: 48px;">
+																				</button></div> -->
+																		</div>
+																		<hr style="margin: 5px;">
+																		<div class="row" style="margin-top: 10px;border: 1px solid blue;border-radius: 70%;">
+																			<div class="left">
+																				<div class="OnACbutton"
+																					style="margin-left: 90px; width: 48px;margin-top: 62px;">
+																					<button id=""
+																						onclick="turn_on_ac1()"
+																						type="button" name=""
+																						class="device_control_status"
+																						style="display: inline; border: 0px;">
+																						<img src="images/remodeair/switchon.png"
+																							alt=""
+																							style="width: 48px; height: 48px;">
+																					</button>
+																				</div>
+
+																			</div>
+																			<div class="middle">
+																				<div class="OffACbutton"
+																					style="margin-left: 14px; width: 48px">
+																					<li>
+																						<button id=""
+																							onclick="turn_off_ac1()"
+																							type="button" name=""
+																							class="device_control_status"
+																							style="border: 0px;">
+																							<img src="images/remodeair/switchoff.png"
+																								alt=""
+																								style="width: 48px; height: 48px;">
+																						</button>
+																					</li>
+																					<li style="margin-top: 14px;">
+																						<button id=""
+																							onclick="turn_off_ac1()"
+																							type="button" name=""
+																							class="device_control_status"
+																							style="border: 0px;">
+																							<img src="images/remodeair/switchoff.png"
+																								alt=""
+																								style="width: 48px; height: 48px;">
+																						</button>
+																					</li>
+																					<li style="margin-top: 14px;">
+																						<button id=""
+																							onclick="turn_off_ac1()"
+																							type="button" name=""
+																							class="device_control_status"
+																							style="border: 0px;">
+																							<img src="images/remodeair/switchoff.png"
+																								alt=""
+																								style="width: 48px; height: 48px;">
+																						</button>
+																					</li>
+																				</div>
+																			</div>
+																			<div class="right">
+																				<div class="OffACbutton"
+																					style="margin-left: 14px; width: 48px;margin-top: 62px;">
+
+																					<button id=""
+																						onclick="turn_off_ac1()"
+																						type="button" name=""
+																						class="device_control_status"
+																						style="border: 0px;">
+																						<img src="images/remodeair/switchoff.png"
+																							alt=""
+																							style="width: 48px; height: 48px;">
+																					</button>
+																				</div>
+
+																			</div>
+
+
+																		</div>
+
+
+
+
+																		<!-- <div class="ACTempControl" style="margin: 10px">
+																			<div class="decreaseTemp">
+																				<button onclick="down_remote1()"
+																					type="button"
+																					class="device_control_status"
+																					style="border: 0px;">
+																					<img src="images/remodeair/iconreduce.png"
+																						alt=""
+																						style="width: 48px; height: 48px;">
+																				</button>
+																			</div>
+																			<div class="TempDisplay">
+																				<div id="result" class="TempMonitoring">
+																					25
+																				</div>
+																				<div class="degreeC" style=""> &#8451;
+																				</div>
+																			</div>
+																			<div class="increaseTemp">
+																				<button id="" onclick="up_remote1()"
+																					type="button"
+																					class="device_control_status"
+																					style="border: 0px;">
+																					<img src="images/remodeair/iconincrease.png"
+																						alt=""
+																						style="width: 48px; height: 48px;">
+																				</button>
+																			</div>
+																		</div> -->
+
+																		<hr style="margin: 5px;">
+
+																		<!-- <div class="ACModeControl" style="margin: 10px">
+																			<div class="CoolMode">
+																				<button id=""
+																					onclick="CoolModeControl()"
+																					type="button" name=""
+																					class="device_control_status"
+																					style="border: 0px;">
+																					<img src="images/remodeair/coolon.png"
+																						alt=""
+																						style="width: 32px; height: 32px;">
+																				</button>
+																			</div>
+																			<div class="DryMode">
+																				<button id="" onclick="DryModeControl()"
+																					type="button" name=""
+																					class="device_control_status"
+																					style="border: 0px;">
+																					<img src="images/remodeair/dryon.png"
+																						alt=""
+																						style="width: 32px; height: 32px;">
+																				</button>
+																			</div>
+																			<div class="FanMode">
+																				<button id="" onclick="FenModeControl()"
+																					type="button" name=""
+																					class="device_control_status"
+																					style="border: 0px;">
+																					<img src="images/remodeair/fanon.png"
+																						alt=""
+																						style="width: 32px; height: 32px;">
+																				</button>
+																			</div>
+																		</div> -->
+																		<hr style="margin: 5px">
+																		<!-- <p style="margin-top:0px;">Fan Speed:</p>
+																		<div class="FanSpeedControl"
+																			style="margin-top: 10px;margin-bottom: 10px">
+																			<div class="FanSpeedIcon"
+																				style="margin-top: -6px;">
+																				<button class="device_control_status">
+																					<img src="images/remodeair/fanoff.png"
+																						alt=""
+																						style="width: 18px; height: 18px; margin-top: 8px;">
+																				</button>
+																			</div>
+																			<div class="FanSpeedIcon"
+																				style="margin-top: -6px;">
+																				<button class="device_control_status">
+																					<img src="images/remodeair/fanoff.png"
+																						alt=""
+																						style="width: 24px; height: 24px; margin-top: 6px;">
+																				</button>
+																			</div>
+																			<div class="FanSpeedIcon"
+																				style="margin-top: -6px;">
+																				<button class="device_control_status">
+																					<img src="images/remodeair/fanoff.png"
+																						alt=""
+																						style="width: 30px; height: 30px; margin-top: 4px;">
+																				</button>
+																			</div>
+																			<div class="FanSpeedIcon"
+																				style="margin-top: -6px;">
+																				<button class="device_control_status">
+																					<img src="images/remodeair/fanoff.png"
+																						alt=""
+																						style="width: 36px; height: 36px; margin-top: 0px;">
+																				</button>
+																			</div>
+																			<div class="FanSpeedIcon"
+																				style="margin-top: -6px;">
+																				<button class="device_control_status">
+																					<img src="images/remodeair/fanon.png"
+																						alt=""
+																						style="width: 36px; height: 36px; margin-top: 0px;">
+																				</button>
+																			</div>
+																		</div> -->
+
+																		<hr style="margin: 5px;">
+
+																		<!-- <div class="onoffACbutton"
+																			style="margin: 10px;">
+																			<div class="OffACbutton">
+																				<button id="" onclick="turn_off_ac()"
+																					type="button" name=""
+																					class="device_control_status"
+																					style="border: 0px;">
+																					<img src="images/remodeair/swingoff.png"
+																						alt=""
+																						style="width: 48px; height: 48px;">
+																				</button>
+																			</div>
+																			<div class="OnACbutton">
+																				<button id="" onclick="turn_on_ac()"
+																					type="button" name=""
+																					class="device_control_status"
+																					style="display: inline; border: 0px;">
+																					<img src="images/remodeair/swingon.png"
+																						alt=""
+																						style="width: 48px; height: 48px;">
+																				</button>
+																			</div>
+																		</div> -->
+																	</div>
+																</div>
+																<!-- <div class="modal-footer">
+																		<h3>Modal Footer</h3>
+																	</div> -->
+															</div>
+														</div>
+													</ul>
+
+
+
+													<!-- Source -->
+
 													<!-- Sourse -->
-													<li style="margin-top:5px;">
+													<!-- <li style="margin-top:5px;">
 														<button id="" type="button" name=""
 															class="device_control_status" style="border: 0px;">
 															<img src="./images/left-arrow.png" alt="" id="mImage"
 																onclick="()" style="width: 48px; height: 48px;">
 														</button>
-													</li>
+													</li> -->
 												</div>
 											</div>
 										</div>
@@ -1746,67 +1993,90 @@
 
 
 	<!-- Lightinh Low 3 On pic -->
-	<script>
-		// function lightingrow3() {
-		// 	var image3_1 = document.getElementById('row3_1');
-		// 	var image3_2 = document.getElementById('row3_2');
+	<!-- <script>
+		function lightingrow3() {
+			var image3_1 = document.getElementById('row3_1');
+			var image3_2 = document.getElementById('row3_2');
 
 
-		// 	if (image3_1.src.match("https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg")) {
-		// 		image3_1.src = "images/goodbye.jpg";
-		// 		image3_2.src = "images/goodbye.jpg";
+			if (image3_1.src.match("https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg")) {
+				image3_1.src = "images/goodbye.jpg";
+				image3_2.src = "images/goodbye.jpg";
 
-		// 	} else {
-		// 		image3_1.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
-		// 		image3_2.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
-		// 	}
-		// }
-	</script>
+			} else {
+				image3_1.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
+				image3_2.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
+			}
+		}
+	</script> -->
 
 
 	<!-- Lighting Low 4 On pic -->
+	<!-- <script>
+		function lightingrow4() {
+			var image4_1 = document.getElementById('row4_1');
+			var image4_2 = document.getElementById('row4_2');
+			var image4_3 = document.getElementById('row4_3');
+			var image4_4 = document.getElementById('row4_4');
+			var image4_5 = document.getElementById('row4_5');
+			var image4_6 = document.getElementById('row4_6');
+			var image4_7 = document.getElementById('row4_7');
+			var image4_8 = document.getElementById('row4_8');
+			var image4_9 = document.getElementById('row4_9');
+
+			if (image4_1.src.match("https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg")) {
+				image4_1.src = "images/goodbye.jpg";
+				image4_2.src = "images/goodbye.jpg";
+				image4_3.src = "images/goodbye.jpg";
+				image4_4.src = "images/goodbye.jpg";
+				image4_5.src = "images/goodbye.jpg";
+				image4_6.src = "images/goodbye.jpg";
+				image4_7.src = "images/goodbye.jpg";
+				image4_8.src = "images/goodbye.jpg";
+				image4_9.src = "images/goodbye.jpg";
+
+			} else {
+				image4_1.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
+				image4_2.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
+				image4_3.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
+				image4_4.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
+				image4_5.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
+				image4_6.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
+				image4_7.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
+				image4_8.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
+				image4_9.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
+
+			}
+		}
+	</script> -->
+
+
+	<!-- Projecter Source-->
 	<script>
-		// function lightingrow4() {
-		// 	var image4_1 = document.getElementById('row4_1');
-		// 	var image4_2 = document.getElementById('row4_2');
-		// 	var image4_3 = document.getElementById('row4_3');
-		// 	var image4_4 = document.getElementById('row4_4');
-		// 	var image4_5 = document.getElementById('row4_5');
-		// 	var image4_6 = document.getElementById('row4_6');
-		// 	var image4_7 = document.getElementById('row4_7');
-		// 	var image4_8 = document.getElementById('row4_8');
-		// 	var image4_9 = document.getElementById('row4_9');
+		// Get the modal
+		var modal_source = document.getElementById("myModal_source");
 
-		// 	if (image4_1.src.match("https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg")) {
-		// 		image4_1.src = "images/goodbye.jpg";
-		// 		image4_2.src = "images/goodbye.jpg";
-		// 		image4_3.src = "images/goodbye.jpg";
-		// 		image4_4.src = "images/goodbye.jpg";
-		// 		image4_5.src = "images/goodbye.jpg";
-		// 		image4_6.src = "images/goodbye.jpg";
-		// 		image4_7.src = "images/goodbye.jpg";
-		// 		image4_8.src = "images/goodbye.jpg";
-		// 		image4_9.src = "images/goodbye.jpg";
+		// Get the button that opens the modal
+		var btn_source = document.getElementById("myBtn_source");
 
-		// 	} else {
-		// 		image4_1.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
-		// 		image4_2.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
-		// 		image4_3.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
-		// 		image4_4.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
-		// 		image4_5.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
-		// 		image4_6.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
-		// 		image4_7.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
-		// 		image4_8.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
-		// 		image4_9.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
+		// Get the <span> element that closes the modal
+		var span_source = document.getElementsByClassName("close")[0];
 
-		// 	}
-		// }
+		// When the user clicks the button, open the modal
+		btn_source.onclick = function () {
+			console.log("myModal_source");
+			modal_source.style.display = "block";
+		}
+
+		// When the user clicks on <span> (x), close the modal
+		function source() {
+			console.log("rfgfhgcfchxedhgbhjbmhbhjbh");
+			modal_source.style.display = "none";
+		}
+
+				// When the user clicks anywhere outside of the modal, close it
+
 	</script>
-
-
-
-
-
 
 
 	<!--Power Projecter -->
@@ -1820,6 +2090,7 @@
 			}
 		}
 	</script>
+
 
 	<!-- show Temp Remote 1-->
 	<script>

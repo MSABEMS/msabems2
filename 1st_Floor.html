@@ -203,8 +203,8 @@
 																	<div class="col-lg-6" style="">
 																		<div class="col-lg-6" style="">
 																			<div style="padding-left: 0px;">
-																				<input class="conference_welcome" type="radio"
-																					value="Wecome"
+																				<input class="conference_welcome"
+																					type="radio" value="Wecome"
 																					onclick="con_welcome()"
 																					style="padding-right: 10px;"
 																					name="scene_control">
@@ -219,9 +219,9 @@
 																			style="padding-top: 10px;">
 																			<div
 																				style="padding-left: 0px;padding-top: 15px;">
-																				<input class="conference_goodnight" type="radio"
-																					value="Goodnight"
-																					onclick="con_goodnight()"
+																				<input class="conference_meeting"
+																					type="radio" value="Meeting"
+																					onclick="con_meeting()"
 																					style="padding-right: 10px;"
 																					name="scene_control">
 																			</div>
@@ -234,10 +234,10 @@
 																	</div>
 																	<div class="col-lg-6" style="">
 																		<div class="col-lg-6" style="padding-top:0px;">
-																			<div
-																				style="padding-left: 0px;">
-																				<input class="conference_day" type="radio"
-																					value="Day" onclick="con_day()"
+																			<div style="padding-left: 0px;">
+																				<input class="conference_showbattery"
+																					type="radio" value="Show Battery"
+																					onclick="con_showbatery()"
 																					style="padding-right: 10px;"
 																					name="scene_control">
 																			</div>
@@ -248,8 +248,9 @@
 																		<div class="col-lg-6" style="padding-top: 10px">
 																			<div
 																				style="padding-left: 0px;padding-top: 15px;">
-																				<input class="conference_night" type="radio"
-																					value="Night" onclick="con_night()"
+																				<input class="conference_goodbye"
+																					type="radio" value="Goodbye"
+																					onclick="con_goodbye()"
 																					style="padding-right: 10px;"
 																					name="scene_control">
 																			</div>
@@ -283,13 +284,25 @@
 														<div class="modal-body">
 															<div class="menu_1stfloor">
 																<div class="row" style="margin-top: 30px">
-																	<div class="col-lg-6" style="text-align: center;">
-																		<button onclick="eo_welcome()" type="button"
-																			class="btn btn-outline-warning">Welcome</button>
+																	<div class="col-lg-6" style="">
+																		<div style="padding-left: 0px;">
+																			<input class="eo_welcome" type="radio"
+																				value="Wecome" onclick="eo_welcome()"
+																				style="padding-right: 10px;"
+																				name="eo_control">
+																		</div>
+																		<!-- <button onclick="eo_welcome()" type="button"
+																			class="btn btn-outline-warning">Welcome</button> -->
 																	</div>
-																	<div class="col-lg-6" style="text-align: center">
-																		<button onclick="eo_goodbye()" type="button"
-																			class="btn btn-outline-dark">Goodbye</button>
+																	<div class="col-lg-6" style="">
+																		<div style="padding-left: 0px;">
+																			<input class="eo_goodbye" type="radio"
+																				value="Goodbye" onclick="eo_goodbye()"
+																				style="padding-right: 10px;"
+																				name="eo_control">
+																		</div>
+																		<!-- <button onclick="eo_goodbye()" type="button"
+																			class="btn btn-outline-dark">Goodbye</button> -->
 																	</div>
 																</div>
 															</div>
@@ -315,20 +328,42 @@
 														<div class="modal-body">
 															<div class="menu_1stfloor">
 																<div class="row" style="margin-top: 30px">
-																	<div class="col-lg-4" style="text-align: center;">
-																		<button active onclick="hy_automatic()"
+																	<div class="col-lg-4" style="">
+																		<div style="padding-left: 0px;">
+																			<input class="hy_automatic" type="radio"
+																				value="Automatic"
+																				onclick="hy_automatic()"
+																				style="padding-right: 10px;"
+																				name="hy_control">
+																		</div>
+
+																		<!-- <button active onclick="hy_automatic()"
 																			type="button"
-																			class="btn btn-outline-success">Automatic</button>
+																			class="btn btn-outline-success">Automatic</button> -->
 																	</div>
-																	<div class="col-lg-4" style="text-align: center;">
+																	<div class="col-lg-4" style="">
+																		<div style="padding-left: 0px;">
+																			<input class="hy_welcome" type="radio"
+																				value="Welcome"
+																				onclick="hy_welcome()"
+																				style="padding-right: 10px;"
+																				name="hy_control">
+																		</div>
 
-																		<button onclick="hy_welcome()" type="button"
-																			class="btn btn-outline-warning">Welcome</button>
+																		<!-- <button onclick="hy_welcome()" type="button"
+																			class="btn btn-outline-warning">Welcome</button> -->
 																	</div>
 
-																	<div class="col-lg-4" style="text-align: center">
-																		<button onclick="hy_goodbye()" type="button"
-																			class="btn btn-outline-dark">Close</button>
+																	<div class="col-lg-4" style="">
+																		<div style="padding-left: 0px;">
+																			<input class="hy_goodbye" type="radio"
+																				value="Goodbye"
+																				onclick="hy_goodbye()"
+																				style="padding-right: 10px;"
+																				name="hy_control">
+																		</div>
+																		<!-- <button onclick="hy_goodbye()" type="button"
+																			class="btn btn-outline-dark">Close</button> -->
 																	</div>
 																</div>
 															</div>

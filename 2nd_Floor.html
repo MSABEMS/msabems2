@@ -34,7 +34,7 @@
 				<nav class="main_nav">
 					<ul class="d-flex flex-row align-items-start justify-content-start">
 
-						<li ><a href="index.html">Home</a></li>
+						<li><a href="index.html">Home</a></li>
 						<li><a href="1st_Floor.html">1st Floor</a></li>
 						<li class="active"><a href="2nd_Floor.html">2nd Floor</a></li>
 						<li><a href="conference_room.html">Conference Room</a></li>
@@ -137,15 +137,22 @@
 														<div class="modal-body">
 															<div class="menu_2ndfloor">
 																<div class="row" style="margin-top: 30px">
-																	<div class="col-lg-6" style="text-align: center;">
-																		<button onclick="or1_welcome()" type="button"
-																			class="btn btn-outline-warning">Welcome</button>
+																	<div class="col-lg-6" style="">
+																		<div style="padding-left: 0px;">
+																			<input class="or1_welcome" type="radio"
+																				value="Wecome" onclick="or1_welcome()"
+																				style="padding-left: 10px;"
+																				name="officeroom1_control">
+																		</div>
 																	</div>
-																	<div class="col-lg-6" style="text-align: center">
-																		<button onclick="or1_goodbye()" type="button"
-																			class="btn btn-outline-dark">Goodbye</button>
+																	<div class="col-lg-6" style="">
+																		<div style="padding-left: 0px;">
+																			<input class="or1_goodbye" type="radio"
+																				value="Goodbye" onclick="or1_goodbye()"
+																				style="padding-right: px;"
+																				name="officeroom1_control">
+																		</div>
 																	</div>
-
 																	<!-- <div class="col-lg-8">
 																		<div class="row">
 																			<div class="col-6">
@@ -153,7 +160,6 @@
 																			</div>
 																			<div class="col-6">
 																				
-
 																			</div>
 																		</div>
 																		<h4 style="padding-top: 5px;">Welcom</h4>
@@ -193,13 +199,26 @@
 														<div class="modal-body">
 															<div class="menu_2ndfloor">
 																<div class="row" style="margin-top:30px;">
-																	<div class="col-lg-6" style="text-align: center;">
-																		<button onclick="or2_welcome()" type="button"
-																			class="btn btn-outline-warning">Welcome</button>
+																	<div class="col-lg-6" style="">
+
+																		<div style="padding-left: 0px;">
+																			<input class="or2_welcome" type="radio"
+																				value="Wecome" onclick="or2_welcome()"
+																				style="padding-left: 10px;"
+																				name="officeroom2_control">
+																		</div>
+																		<!-- <button onclick="or2_welcome()" type="button"
+																			class="btn btn-outline-warning">Welcome</button> -->
 																	</div>
-																	<div class="col-lg-6" style="text-align: center">
-																		<button onclick="or2_goodbye()" type="button"
-																			class="btn btn-outline-dark">Goodbye</button>
+																	<div class="col-lg-6" style="">
+																		<div style="padding-left: 0px;">
+																			<input class="or2_goodbye" type="radio"
+																				value="Goodbye" onclick="or2_goodbye()"
+																				style="padding-right: px;"
+																				name="officeroom2_control">
+																		</div>
+																		<!-- <button onclick="or2_goodbye()" type="button"
+																			class="btn btn-outline-dark">Goodbye</button> -->
 																	</div>
 
 																	<!-- <div class="col-lg-8">
@@ -240,13 +259,34 @@
 														<div class="modal-body">
 															<div class="menu_2ndfloor">
 																<div class="row" style="margin-top: 30px">
-																	<div class="col-lg-6" style="text-align: center;">
-																		<button onclick="mc_welcome()" type="button"
-																			class="btn btn-outline-warning">Welcome</button>
+																	<div class="col-lg-4">
+																		<div style="padding-left: 0px;">
+																			<input class="mc_automatic" type="radio"
+																				value="Automatic"
+																				onclick="mc_automatic()"
+																				style="padding-right: 10px;"
+																				name="mc_control">
+																		</div>
 																	</div>
-																	<div class="col-lg-6" style="text-align: center">
-																		<button onclick="mc_goodbye()" type="button"
-																			class="btn btn-outline-dark">Goodbye</button>
+																	<div class="col-lg-4" style="">
+																		<div style="padding-left: 0px;">
+																			<input class="mc_welcome" type="radio"
+																				value="Wecome" onclick="mc_welcome()"
+																				style="padding-left: 10px;"
+																				name="mc_control">
+																		</div>
+																		<!-- <button onclick="mc_welcome()" type="button"
+																			class="btn btn-outline-warning">Welcome</button> -->
+																	</div>
+																	<div class="col-lg-4" style="">
+																		<div style="padding-left: 0px;">
+																			<input class="mc_goodbye" type="radio"
+																				value="Goodbye" onclick="mc_goodbye()"
+																				style="padding-right: px;"
+																				name="mc_control">
+																		</div>
+																		<!-- <button onclick="mc_goodbye()" type="button"
+																			class="btn btn-outline-dark">Goodbye</button> -->
 																	</div>
 
 																	<!-- <div class="col-lg-8">
@@ -287,40 +327,32 @@
 														<div class="modal-body">
 															<div class="menu_2ndfloor">
 																<div class="row" style="margin-top: 30px;">
-																	<div class="col-lg-4" style="text-align: center;">
-																		<button active onclick="hy_automatic()"
-																			type="button"
-																			class="btn btn-outline-success">Automatic</button>
+																	<div class="col-lg-4" style="">
+																		<div style="padding-left: 0px;">
+																			<input class="hy_automatic" type="radio"
+																				value="Automatic"
+																				onclick="hy_automatic()"
+																				style="padding-right: 10px;"
+																				name="hy_control">
+																		</div>
 																	</div>
-																	<div class="col-lg-4" style="text-align: center;">
+																	<div class="col-lg-4" style="">
+																		<div style="padding-left: 0px;">
+																			<input class="hy_welcome" type="radio"
+																				value="Welcome" onclick="hy_welcome()"
+																				style="padding-right: 10px;"
+																				name="hy_control">
+																		</div>
+																	</div>
 
-																		<button onclick="hy_welcome()" type="button"
-																			class="btn btn-outline-warning">Welcome</button>
+																	<div class="col-lg-4" style="">
+																		<div style="padding-left: 0px;">
+																			<input class="hy_goodbye" type="radio"
+																				value="Goodbye" onclick="hy_goodbye()"
+																				style="padding-right: 10px;"
+																				name="hy_control">
+																		</div>
 																	</div>
-
-																	<div class="col-lg-4" style="text-align: center">
-																		<button onclick="hy_goodbye()" type="button"
-																			class="btn btn-outline-dark">Close</button>
-																	</div>
-
-																	<!-- <div class="col-lg-8">
-																		<h4 style="padding-top: 5px;">Automatic</h4>
-																		<h4 style="padding-top: 15px;">Welcome</h4>
-																		<h4 style="padding-top: 15px;">Close</h4>
-																	</div>
-																	<div class="col-lg-4">
-																		<label class="switch">
-																			<input type="checkbox" checked>
-																			<span class="slider round"></span>
-																		</label>
-																		<label class="switch">
-																			<input type="checkbox" checked>
-																			<span class="slider round"></span>
-																		</label><label class="switch">
-																			<input type="checkbox" checked>
-																			<span class="slider round"></span>
-																		</label>
-																	</div> -->
 																</div>
 															</div>
 														</div>

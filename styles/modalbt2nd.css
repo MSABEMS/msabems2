@@ -192,3 +192,360 @@ input:checked+.slider:before {
 .container_switch {
   float: right;
 }
+
+
+
+
+/* Button in Modal Office Room 1>Welcome */
+
+input.or1_welcome {
+  visibility: hidden;
+}
+
+input.or1_welcome::before {
+  text-align: center;
+  content: attr(value);
+  display: inline-block;
+  padding: 5px;
+  background: transparent;
+  font-size: 10pt;
+  color: black;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  visibility: visible;
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  font-weight: normal;
+}
+
+input.or1_welcome:checked::before {
+  background: yellow;
+  color: black;
+  /* border-color: #eee; */
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+}
+
+
+/* Button in Modal Ofiice Room 1>Goodbye */
+
+input.or1_goodbye {
+  visibility: hidden;
+}
+
+input.or1_goodbye::before {
+  text-align: center;
+  content: attr(value);
+  display: inline-block;
+  padding: 5px;
+  background: transparent;
+  font-size: 10pt;
+  color: black;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  visibility: visible;
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  font-weight: normal;
+}
+
+input.or1_goodbye:checked::before {
+  background: dimgray;
+  color: #eee;
+  /* border-color: #eee; */
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+}
+
+
+/* Button in Modal Office Room 2>Welcome */
+
+input.or2_welcome {
+  visibility: hidden;
+}
+
+input.or2_welcome::before {
+  text-align: center;
+  content: attr(value);
+  display: inline-block;
+  padding: 5px;
+  background: transparent;
+  font-size: 10pt;
+  color: black;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  visibility: visible;
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  font-weight: normal;
+}
+
+input.or2_welcome:checked::before {
+  background: yellow;
+  color: black;
+  /* border-color: #eee; */
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+}
+
+
+/* Button in Modal Ofiice Room 2>Goodbye */
+
+input.or2_goodbye {
+  visibility: hidden;
+}
+
+input.or2_goodbye::before {
+  text-align: center;
+  content: attr(value);
+  display: inline-block;
+  padding: 5px;
+  background: transparent;
+  font-size: 10pt;
+  color: black;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  visibility: visible;
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  font-weight: normal;
+}
+
+input.or2_goodbye:checked::before {
+  background: dimgray;
+  color: #eee;
+  /* border-color: #eee; */
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+}
+
+
+/* Button in Modal MGC>Automatic */
+
+input.mc_automatic {
+  visibility: hidden;
+}
+
+input.mc_automatic::before {
+  text-align: center;
+  content: attr(value);
+  display: inline-block;
+  padding: 5px;
+  background: transparent;
+  font-size: 10pt;
+  color: black;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  visibility: visible;
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  font-weight: normal;
+}
+
+input.mc_automatic:checked::before {
+  background: blue;
+  color: #eee;
+  /* border-color: #eee; */
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+}
+
+
+
+
+/* Button in Modal MGC Room 2>Welcome */
+
+input.mc_welcome {
+  visibility: hidden;
+}
+
+input.mc_welcome::before {
+  text-align: center;
+  content: attr(value);
+  display: inline-block;
+  padding: 5px;
+  background: transparent;
+  font-size: 10pt;
+  color: black;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  visibility: visible;
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  font-weight: normal;
+}
+
+input.mc_welcome:checked::before {
+  background: yellow;
+  color: black;
+  /* border-color: #eee; */
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+}
+
+
+/* Button in Modal MGC Room 2>Goodbye */
+
+input.mc_goodbye {
+  visibility: hidden;
+}
+
+input.mc_goodbye::before {
+  text-align: center;
+  content: attr(value);
+  display: inline-block;
+  padding: 5px;
+  background: transparent;
+  font-size: 10pt;
+  color: black;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  visibility: visible;
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  font-weight: normal;
+}
+
+input.mc_goodbye:checked::before {
+  background: dimgray;
+  color: #eee;
+  /* border-color: #eee; */
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+/* Button in Modal Hallway>Automatic */
+
+input.hy_automatic {
+  visibility: hidden;
+}
+
+input.hy_automatic::before {
+  text-align: center;
+  content: attr(value);
+  display: inline-block;
+  padding: 5px;
+  background: transparent;
+  font-size: 10pt;
+  color: black;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  visibility: visible;
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  font-weight: normal;
+}
+
+input.hy_automatic:checked::before {
+  background: blue;
+  color: #eee;
+  /* border-color: #eee; */
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+}
+
+/* Button in Modal Hallway>Welcome */
+
+input.hy_welcome {
+  visibility: hidden;
+}
+
+input.hy_welcome::before {
+  text-align: center;
+  content: attr(value);
+  display: inline-block;
+  padding: 5px;
+  background: transparent;
+  font-size: 10pt;
+  color: black;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  visibility: visible;
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  font-weight: normal;
+}
+
+input.hy_welcome:checked::before {
+  background: yellow;
+  color: black;
+  /* border-color: #eee; */
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+}
+
+/* Button in Modal Hallway>Goodbye */
+
+input.hy_goodbye {
+  visibility: hidden;
+}
+
+input.hy_goodbye::before {
+  text-align: center;
+  content: attr(value);
+  display: inline-block;
+  padding: 5px;
+  background: transparent;
+  font-size: 10pt;
+  color: black;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  visibility: visible;
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  font-weight: normal;
+}
+
+input.hy_goodbye:checked::before {
+  background: dimgray;
+  color: #eee;
+  /* border-color: #eee; */
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+}
