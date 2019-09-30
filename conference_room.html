@@ -21,6 +21,7 @@
 	<script src="./js/Conference_Room/conference_screen_control.js"></script>
 	<script src="./js/Conference_Room/conference_air_control.js"></script>
 	<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+	<script src="./js/Conference_Room/conference_projector.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
 
 </head>
@@ -271,7 +272,7 @@
 
 																	<div class="ACModeControl" style="margin: 10px">
 																		<div class="CoolMode">
-																			<button id="" onclick="CoolModeControl()"
+																			<button id="" onclick="CoolModeControl_1()"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -281,7 +282,7 @@
 																			</button>
 																		</div>
 																		<div class="DryMode">
-																			<button id="" onclick="DryModeControl()"
+																			<button id="" onclick="DryModeControl_1()"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -291,7 +292,7 @@
 																			</button>
 																		</div>
 																		<div class="FanMode">
-																			<button id="" onclick="FenModeControl()"
+																			<button id="" onclick="FenModeControl_1()"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -351,7 +352,7 @@
 
 																	<div class="onoffACbutton" style="margin: 10px;">
 																		<div class="OffACbutton">
-																			<button id="" onclick="turn_off_ac()"
+																			<button id="" onclick="turn_off_ac_1()"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -361,7 +362,7 @@
 																			</button>
 																		</div>
 																		<div class="OnACbutton">
-																			<button id="" onclick="turn_on_ac()"
+																			<button id="" onclick="turn_on_ac_1()"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="display: inline; border: 0px;">
@@ -496,7 +497,7 @@
 
 																	<div class="ACModeControl" style="margin: 10px">
 																		<div class="CoolMode">
-																			<button id="" onclick="CoolModeControl()"
+																			<button id="" onclick="CoolModeControl_2()"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -506,7 +507,7 @@
 																			</button>
 																		</div>
 																		<div class="DryMode">
-																			<button id="" onclick="DryModeControl()"
+																			<button id="" onclick="DryModeControl_2()"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -516,7 +517,7 @@
 																			</button>
 																		</div>
 																		<div class="FanMode">
-																			<button id="" onclick="FenModeControl()"
+																			<button id="" onclick="FenModeControl_2()"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -571,12 +572,10 @@
 																			</button>
 																		</div>
 																	</div>
-
 																	<hr style="margin: 5px;">
-
 																	<div class="onoffACbutton" style="margin: 10px;">
 																		<div class="OffACbutton">
-																			<button id="" onclick="turn_off_ac()"
+																			<button id="" onclick="turn_off_ac_2()"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -586,7 +585,7 @@
 																			</button>
 																		</div>
 																		<div class="OnACbutton">
-																			<button id="" onclick="turn_on_ac()"
+																			<button id="" onclick="turn_on_ac_2()"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="display: inline; border: 0px;">
@@ -596,7 +595,6 @@
 																			</button>
 																		</div>
 																	</div>
-
 																</div>
 															</div>
 															<!-- <div class="modal-footer">
@@ -725,7 +723,7 @@
 
 																	<div class="ACModeControl" style="margin: 10px">
 																		<div class="CoolMode">
-																			<button id="" onclick="CoolModeControl()"
+																			<button id="" onclick="CoolModeControl_3()"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -735,7 +733,7 @@
 																			</button>
 																		</div>
 																		<div class="DryMode">
-																			<button id="" onclick="DryModeControl()"
+																			<button id="" onclick="DryModeControl_3()"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -745,7 +743,7 @@
 																			</button>
 																		</div>
 																		<div class="FanMode">
-																			<button id="" onclick="FenModeControl()"
+																			<button id="" onclick="FenModeControl_3()"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -805,7 +803,7 @@
 
 																	<div class="onoffACbutton" style="margin: 10px;">
 																		<div class="OffACbutton">
-																			<button id="" onclick="turn_off_ac()"
+																			<button id="" onclick="turn_off_ac_3()"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -815,7 +813,7 @@
 																			</button>
 																		</div>
 																		<div class="OnACbutton">
-																			<button id="" onclick="turn_on_ac()"
+																			<button id="" onclick="turn_on_ac_3()"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="display: inline; border: 0px;">
@@ -952,7 +950,7 @@
 
 																	<div class="ACModeControl" style="margin: 10px">
 																		<div class="CoolMode">
-																			<button id="" onclick="CoolModeControl()"
+																			<button id="" onclick="CoolModeControl_4()"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -962,7 +960,7 @@
 																			</button>
 																		</div>
 																		<div class="DryMode">
-																			<button id="" onclick="DryModeControl()"
+																			<button id="" onclick="DryModeControl_4()"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -972,7 +970,7 @@
 																			</button>
 																		</div>
 																		<div class="FanMode">
-																			<button id="" onclick="FenModeControl()"
+																			<button id="" onclick="FenModeControl_4()"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -1032,7 +1030,7 @@
 
 																	<div class="onoffACbutton" style="margin: 10px;">
 																		<div class="OffACbutton">
-																			<button id="" onclick="turn_off_ac()"
+																			<button id="" onclick="turn_off_ac_4()"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -1042,7 +1040,7 @@
 																			</button>
 																		</div>
 																		<div class="OnACbutton">
-																			<button id="" onclick="turn_on_ac()"
+																			<button id="" onclick="turn_on_ac_4()"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="display: inline; border: 0px;">
@@ -1543,43 +1541,61 @@
 
 																	<div class="ACremoteControl" style="">
 																		<div class="row">
-																			<div class="onoffACbutton"
-																				style="">
+																			<!-- Source -->
+																			<div class="OffACbutton"
+																				style="margin-left: 255px;width: 48px;padding-top:10px;">
+																				<!-- Source-->
+																				<button id=""
+																					onclick="projectorsource_source()"
+																					type="button" name=""
+																					class="device_control_status"
+																					style="border: 0px;">
+																					<img src="./images/Projector+/enter.png"
+																						alt=""
+																						style="width: 40px; height: 40px;">
+																				</button>
+																			</div>
+																		</div>
+																		<hr style="margin: 15px;">
+																		<div class="row">
+																			<div class="onoffACbutton" style="">
 																				<div class="OffACbutton"
 																					style="margin-left: 50px;width: 48px">
-
+																					<!-- Home Button-->
 																					<button id=""
-																						onclick="turn_off_ac1()"
+																						onclick="projectorsource_home()"
 																						type="button" name=""
 																						class="device_control_status"
 																						style="border: 0px;">
-																						<img src="images/remodeair/switchoff.png"
+																						<img src="./images/Projector+/home.png"
 																							alt=""
-																							style="width: 48px; height: 48px;">
+																							style="width: 40px; height: 40px;">
 																					</button>
 																				</div>
 																				<div class="OnACbutton"
 																					style="margin-left: 50px; width: 48px">
+																					<!-- Setting Button -->
 																					<button id=""
-																						onclick="turn_on_ac1()"
+																						onclick="projectorsource_setting()"
 																						type="button" name=""
 																						class="device_control_status"
 																						style="display: inline; border: 0px;">
-																						<img src="images/remodeair/switchon.png"
+																						<img src="./images/Projector+/controls.png"
 																							alt=""
-																							style="width: 48px; height: 48px;">
+																							style="width: 40px; height: 40px;">
 																					</button>
 																				</div>
 																				<div class="OnACbutton"
 																					style="margin-left: 60px; width: 48px">
+																					<!-- Back Button -->
 																					<button id=""
-																						onclick="turn_on_ac1()"
+																						onclick="projectorsource_back()"
 																						type="button" name=""
 																						class="device_control_status"
 																						style="display: inline; border: 0px;">
-																						<img src="images/remodeair/switchon.png"
+																						<img src="./images/Projector+/undo.png"
 																							alt=""
-																							style="width: 48px; height: 48px;">
+																							style="width: 40px; height: 40px;">
 																					</button>
 																				</div>
 																			</div>
@@ -1613,17 +1629,19 @@
 																						style="width: 48px; height: 48px;">
 																				</button></div> -->
 																		</div>
-																		<hr style="margin: 5px;">
-																		<div class="row" style="margin-top: 10px;border: 1px solid blue;border-radius: 70%;">
+																		<hr style="margin: 15px;">
+																		<div class="row" style="margin-top: 20px;">
 																			<div class="left">
 																				<div class="OnACbutton"
 																					style="margin-left: 90px; width: 48px;margin-top: 62px;">
+																					<!-- Left Button -->
+
 																					<button id=""
-																						onclick="turn_on_ac1()"
+																						onclick="projectorsource_left()"
 																						type="button" name=""
 																						class="device_control_status"
 																						style="display: inline; border: 0px;">
-																						<img src="images/remodeair/switchon.png"
+																						<img src="./images/Projector+/left.png"
 																							alt=""
 																							style="width: 48px; height: 48px;">
 																					</button>
@@ -1634,34 +1652,40 @@
 																				<div class="OffACbutton"
 																					style="margin-left: 14px; width: 48px">
 																					<li>
+																						<!-- Up Button -->
 																						<button id=""
-																							onclick="turn_off_ac1()"
+																							onclick="projectorsource_up()"
 																							type="button" name=""
 																							class="device_control_status"
 																							style="border: 0px;">
-																							<img src="images/remodeair/switchoff.png"
+																							<img src="./images/Projector+/up.png"
 																								alt=""
 																								style="width: 48px; height: 48px;">
 																						</button>
 																					</li>
 																					<li style="margin-top: 14px;">
+																						<!-- Enter Button -->
 																						<button id=""
-																							onclick="turn_off_ac1()"
+																							onclick="projectorsource_enter()"
 																							type="button" name=""
 																							class="device_control_status"
 																							style="border: 0px;">
-																							<img src="images/remodeair/switchoff.png"
+																							<h4
+																								style="color: black;widows: 48px;height:48px;padding-top:15px;">
+																								Enter</h4>
+																							<!-- <img src="images/remodeair/switchoff.png"
 																								alt=""
-																								style="width: 48px; height: 48px;">
+																								style="width: 48px; height: 48px;"> -->
 																						</button>
 																					</li>
 																					<li style="margin-top: 14px;">
+																						<!-- Down Button -->
 																						<button id=""
-																							onclick="turn_off_ac1()"
+																							onclick="projectorsource_down()"
 																							type="button" name=""
 																							class="device_control_status"
 																							style="border: 0px;">
-																							<img src="images/remodeair/switchoff.png"
+																							<img src="./images/Projector+/down.png"
 																								alt=""
 																								style="width: 48px; height: 48px;">
 																						</button>
@@ -1671,13 +1695,13 @@
 																			<div class="right">
 																				<div class="OffACbutton"
 																					style="margin-left: 14px; width: 48px;margin-top: 62px;">
-
+																					<!-- Right Button -->
 																					<button id=""
-																						onclick="turn_off_ac1()"
+																						onclick="projectorsource_right()"
 																						type="button" name=""
 																						class="device_control_status"
 																						style="border: 0px;">
-																						<img src="images/remodeair/switchoff.png"
+																						<img src="./images/Projector+/right.png"
 																							alt=""
 																							style="width: 48px; height: 48px;">
 																					</button>
@@ -1687,9 +1711,6 @@
 
 
 																		</div>
-
-
-
 
 																		<!-- <div class="ACTempControl" style="margin: 10px">
 																			<div class="decreaseTemp">
@@ -1721,7 +1742,14 @@
 																			</div>
 																		</div> -->
 
-																		<hr style="margin: 5px;">
+																		<hr style="margin: 15px;">
+																		<div class="fottermenu">
+																			<div
+																				style="padding-left:110px;padding-top:0px;">
+																				<h3 style="color: black">Optoma</h3>
+																			</div>
+
+																		</div>
 
 																		<!-- <div class="ACModeControl" style="margin: 10px">
 																			<div class="CoolMode">
@@ -1756,7 +1784,7 @@
 																				</button>
 																			</div>
 																		</div> -->
-																		<hr style="margin: 5px">
+																		<!-- <hr style="margin: 5px"> -->
 																		<!-- <p style="margin-top:0px;">Fan Speed:</p>
 																		<div class="FanSpeedControl"
 																			style="margin-top: 10px;margin-bottom: 10px">
@@ -1802,7 +1830,7 @@
 																			</div>
 																		</div> -->
 
-																		<hr style="margin: 5px;">
+																		<!-- <hr style="margin: 5px;"> -->
 
 																		<!-- <div class="onoffACbutton"
 																			style="margin: 10px;">
@@ -2080,7 +2108,7 @@
 
 
 	<!--Power Projecter -->
-	<script>
+	<!-- <script>
 		function changeImage() {
 			var image = document.getElementById('myImage');
 			if (image.src.match("images/remodeair/switchon")) {
@@ -2089,7 +2117,7 @@
 				image.src = "images/remodeair/switchon.png";
 			}
 		}
-	</script>
+	</script> -->
 
 
 	<!-- show Temp Remote 1-->
