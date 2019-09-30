@@ -20,6 +20,11 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
 
+    <script src="./js/energy.js/SmartPlug.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+
 
 
 </head>
@@ -75,6 +80,80 @@
             <div class="container" style="padding: 0px;margin-top: 50px;margin-left: 50px;margin-right: 50px;">
                 <div class="blog">
                     <div class="row">
+                        <!-- Smart Plug 1 -->
+                        <div class="smartplug1" style="width: 360px;height: 180px;">
+                            <div class="row" style=";">
+                                <div class="col-5" style=";padding: 0px">
+                                    <div class="left">
+                                        <li>
+                                            <!-- Smart Plug 1 -->
+                                            <div class="row" style="padding-top: 15px;">
+                                                <div class="col-4" style="padding: 0px;padding-left: 25px;">
+                                                    <button id="" type="button" name="" class="device_control_status"
+                                                        style="border: 0px;">
+                                                        <img src="images/remodeair/switchoff.png" alt="" id="myImage1"
+                                                            onclick="smartplug1()" style="width: 35px; height: 35px;">
+                                                    </button>
+                                                </div>
+                                                <div class="col-8"
+                                                    style="padding: 0px;padding-top: 10px;padding-left: 0px;">
+                                                    <div class="sp" style="">
+                                                        <h4>Smart Plug 1</h4>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li style="padding-top: 7px;">
+                                            <div class="ContentReport" style="padding-top: 5px;padding-left:20px;">
+                                                <div style="float: left">
+                                                    <h5>P:</h5>
+                                                </div>
+                                                <span class="a" style="margin-left: 50px;">
+                                                    xxx
+                                                </span>
+                                                <span class="a" style="margin-left: 30px;">W </span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="ContentReport" style="padding-top: 5px;padding-left:20px;">
+                                                <div style="float: left">
+                                                    <h5>V:</h5>
+                                                </div>
+                                                <span class="a" style="margin-left: 50px;">
+                                                    xxx
+                                                </span>
+                                                <span class="a" style="margin-left: 30px;">V</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="ContentReport" style="padding-top: 5px;padding-left:20px;">
+                                                <div style="float: left; margin-left: 5px;">
+                                                    <h5>I:</h5>
+                                                </div>
+                                                <span class="a" style="margin-left: 50px;">
+                                                    xxx
+                                                </span>
+                                                <span class="a" style="margin-left: 30px;">A</span>
+                                            </div>
+                                        </li>
+                                    </div>
+                                </div>
+                                <div class="col-7" style="text-align: center;">
+                                    <div class="conchart">
+                                        <div style="padding-top: 10px;">
+                                            <h5>Power</h5>
+                                        </div>
+
+                                        <div style="padding-right: 7px;">
+                                            <canvas id="myChart" width="400" height="350"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Smart Plug 2 -->
+
                         <div class="smartplug1" style="width: 360px;height: 180px;">
                             <div class="row" style=";">
                                 <div class="col-5" style=";padding: 0px">
@@ -84,8 +163,8 @@
                                                 <div class="col-4" style="padding: 0px;padding-left: 25px;">
                                                     <button id="" type="button" name="" class="device_control_status"
                                                         style="border: 0px;">
-                                                        <img src="images/remodeair/switchoff.png" alt="" id="myImage"
-                                                            onclick="changeImage()" style="width: 35px; height: 35px;">
+                                                        <img src="images/remodeair/switchoff.png" alt="" id="myImage2"
+                                                            onclick="smartplug2()" style="width: 35px; height: 35px;">
                                                     </button>
                                                 </div>
                                                 <div class="col-8"
@@ -146,6 +225,7 @@
                             </div>
                         </div>
 
+                        <!-- Smart Plug 3 -->
                         <div class="smartplug1" style="width: 360px;height: 180px;">
                             <div class="row" style=";">
                                 <div class="col-5" style=";padding: 0px">
@@ -155,79 +235,8 @@
                                                 <div class="col-4" style="padding: 0px;padding-left: 25px;">
                                                     <button id="" type="button" name="" class="device_control_status"
                                                         style="border: 0px;">
-                                                        <img src="images/remodeair/switchoff.png" alt="" id="myImage"
-                                                            onclick="changeImage()" style="width: 35px; height: 35px;">
-                                                    </button>
-                                                </div>
-                                                <div class="col-8"
-                                                    style="padding: 0px;padding-top: 10px;padding-left: 0px;">
-                                                    <div class="sp" style="">
-                                                        <h4>Smart Plug 1</h4>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li style="padding-top: 7px;">
-                                            <div class="ContentReport" style="padding-top: 5px;padding-left:20px;">
-                                                <div style="float: left">
-                                                    <h5>P:</h5>
-                                                </div>
-                                                <span class="a" style="margin-left: 50px;">
-                                                    xxx
-                                                </span>
-                                                <span class="a" style="margin-left: 30px;">W </span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="ContentReport" style="padding-top: 5px;padding-left:20px;">
-                                                <div style="float: left">
-                                                    <h5>V:</h5>
-                                                </div>
-                                                <span class="a" style="margin-left: 50px;">
-                                                    xxx
-                                                </span>
-                                                <span class="a" style="margin-left: 30px;">V</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="ContentReport" style="padding-top: 5px;padding-left:20px;">
-                                                <div style="float: left; margin-left: 5px;">
-                                                    <h5>I:</h5>
-                                                </div>
-                                                <span class="a" style="margin-left: 50px;">
-                                                    xxx
-                                                </span>
-                                                <span class="a" style="margin-left: 30px;">A</span>
-                                            </div>
-                                        </li>
-                                    </div>
-                                </div>
-                                <div class="col-7" style="text-align: center;">
-                                    <div class="conchart">
-                                        <div style="padding-top: 10px;">
-                                            <h5>Power</h5>
-                                        </div>
-
-                                        <div style="padding-right: 7px;">
-                                            <canvas id="myChart" width="400" height="350"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="smartplug1" style="width: 360px;height: 180px;">
-                            <div class="row" style=";">
-                                <div class="col-5" style=";padding: 0px">
-                                    <div class="left">
-                                        <li>
-                                            <div class="row" style="padding-top: 15px;">
-                                                <div class="col-4" style="padding: 0px;padding-left: 25px;">
-                                                    <button id="" type="button" name="" class="device_control_status"
-                                                        style="border: 0px;">
-                                                        <img src="images/remodeair/switchoff.png" alt="" id="myImage"
-                                                            onclick="changeImage()" style="width: 35px; height: 35px;">
+                                                        <img src="images/remodeair/switchoff.png" alt="" id="myImage3"
+                                                            onclick="smartplug3()" style="width: 35px; height: 35px;">
                                                     </button>
                                                 </div>
                                                 <div class="col-8"
@@ -377,7 +386,10 @@
 
                         </div> -->
                     </div>
+
                     <div class="row" style="padding-top: 50px;">
+
+                        <!-- Smart Plug 4 -->
                         <div class="smartplug1" style="width: 360px;height: 180px;">
                             <div class="row" style=";">
                                 <div class="col-5" style=";padding: 0px">
@@ -387,14 +399,14 @@
                                                 <div class="col-4" style="padding: 0px;padding-left: 25px;">
                                                     <button id="" type="button" name="" class="device_control_status"
                                                         style="border: 0px;">
-                                                        <img src="images/remodeair/switchoff.png" alt="" id="myImage"
-                                                            onclick="changeImage()" style="width: 35px; height: 35px;">
+                                                        <img src="images/remodeair/switchoff.png" alt="" id="myImage4"
+                                                            onclick="smartplug4()" style="width: 35px; height: 35px;">
                                                     </button>
                                                 </div>
                                                 <div class="col-8"
                                                     style="padding: 0px;padding-top: 10px;padding-left: 0px;">
                                                     <div class="sp" style="">
-                                                        <h4>Smart Plug 1</h4>
+                                                        <h4>Smart Plug 5</h4>
                                                     </div>
 
                                                 </div>
@@ -449,6 +461,7 @@
                             </div>
                         </div>
 
+                        <!-- Smart Plug 5 -->
                         <div class="smartplug1" style="width: 360px;height: 180px;">
                             <div class="row" style=";">
                                 <div class="col-5" style=";padding: 0px">
@@ -458,8 +471,8 @@
                                                 <div class="col-4" style="padding: 0px;padding-left: 25px;">
                                                     <button id="" type="button" name="" class="device_control_status"
                                                         style="border: 0px;">
-                                                        <img src="images/remodeair/switchoff.png" alt="" id="myImage"
-                                                            onclick="changeImage()" style="width: 35px; height: 35px;">
+                                                        <img src="images/remodeair/switchoff.png" alt="" id="myImage5"
+                                                            onclick="smartplug5()" style="width: 35px; height: 35px;">
                                                     </button>
                                                 </div>
                                                 <div class="col-8"
@@ -564,17 +577,65 @@
 
 
 
-    <!-- Power Plug  -->
-    <script>
-        function changeImage() {
-            var image = document.getElementById('myImage');
+    <!-- Power Plug 1 -->
+    <!-- <script>
+        function smartplug1() {
+            var image = document.getElementById('myImage1');
             if (image.src.match("images/remodeair/switchon")) {
                 image.src = "images/remodeair/switchoff.png";
             } else {
                 image.src = "images/remodeair/switchon.png";
             }
         }
-    </script>
+    </script> -->
+
+    <!-- Power Plug 2 -->
+    <!-- <script>
+        function smartplug2() {
+            var image = document.getElementById('myImage2');
+            if (image.src.match("images/remodeair/switchon")) {
+                image.src = "images/remodeair/switchoff.png";
+            } else {
+                image.src = "images/remodeair/switchon.png";
+            }
+        }
+    </script> -->
+
+    <!-- Power Plug 3 -->
+    <!-- <script>
+        function smartplug3() {
+            var image = document.getElementById('myImage3');
+            if (image.src.match("images/remodeair/switchon")) {
+                image.src = "images/remodeair/switchoff.png";
+            } else {
+                image.src = "images/remodeair/switchon.png";
+            }
+        }
+    </script> -->
+
+    <!-- Power Plug 4 -->
+    <!-- <script>
+        function smartplug4() {
+            var image = document.getElementById('myImage4');
+            if (image.src.match("images/remodeair/switchon")) {
+                image.src = "images/remodeair/switchoff.png";
+            } else {
+                image.src = "images/remodeair/switchon.png";
+            }
+        }
+    </script> -->
+
+    <!-- Power Plug 5 -->
+    <!-- <script>
+        function smartplug5() {
+            var image = document.getElementById('myImage5');
+            if (image.src.match("images/remodeair/switchon")) {
+                image.src = "images/remodeair/switchoff.png";
+            } else {
+                image.src = "images/remodeair/switchon.png";
+            }
+        }
+    </script> -->
 
 </body>
 
