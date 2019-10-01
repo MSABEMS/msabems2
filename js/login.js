@@ -19,10 +19,13 @@ function TestLogin() {
   console.log("POST method by jQuery");
   jQuery.ajax({
 
-      url: "https://hookb.in/ggBPqWd3rxCB0B1yRLjJ",
+      url: "https://cors-anywhere.herokuapp.com/https://hookb.in/G9rlkWNyBaU1m1eBMQZY",
       type: "POST",
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/G9rlkWNyBaU1m1eBMQZY",
+        "Access-Control-Allow-Methods": "POST",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization",  
       },
 
       data: JSON.stringify({
@@ -37,7 +40,8 @@ function TestLogin() {
         // console.log(data['type']);
         console.log("Login successful.");
         // localStorage.setItem("token", data['token']);
-        window.location.replace("index.html");
+        // window.location.replace("index.html");
+        console.log("Login successful Hahahaah")
       }
     })
     .fail(function(jqXHR, textStatus, errorThrown) {
