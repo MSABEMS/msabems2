@@ -5,13 +5,13 @@ function lightingrow1() {
   console.log("POST method by jQuery");
   jQuery.ajax({
     // url: "https://cors-anywhere.herokuapp.com/https://peahivebackend.herokuapp.com/hiveapi/",
-    url: "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+    url: "https://cors-anywhere.herokuapp.com/https://hookb.in/G9rlkWNyBaU1m1eBMQZY",
     type: "POST",
     headers: {
       // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
       "Authorization": "Token dscnsjdkcnsjdkcnjsdcnjdsncjsdnckjsdnckjsdcnkjsdcnskjdcnjksdncbs",
       "Content-Type": "application/json; charset=utf-8",
-      "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+      "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/G9rlkWNyBaU1m1eBMQZY",
       "Access-Control-Allow-Methods": "POST",
       "Access-Control-Allow-Headers": "Content-Type, Authorization",
     },
@@ -42,37 +42,52 @@ function lightingrow1() {
 }
 
 function lightingrow1_changeImage() {
-  var image1_1 = document.getElementById('row1_1');
-  var image1_2 = document.getElementById('row1_2');
-  var image1_3 = document.getElementById('row1_3');
+  // var image1_1 = document.getElementById('row1_1');
+  // var image1_2 = document.getElementById('row1_2');
+  // var image1_3 = document.getElementById('row1_3');
   var image1_4 = document.getElementById('row1_4');
   var image1_5 = document.getElementById('row1_5');
   var image1_6 = document.getElementById('row1_6');
   var image1_7 = document.getElementById('row1_7');
   var image1_8 = document.getElementById('row1_8');
   var image1_9 = document.getElementById('row1_9');
+  // var image2_1 = document.getElementById('row2_1');
+  var image2_2 = document.getElementById('row2_2');
+  var image2_3 = document.getElementById('row2_3');
+  var image2_4 = document.getElementById('row2_4');
 
-  if (image1_1.src.match("https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg")) {
-    image1_1.src = "images/goodbye.jpg";
-    image1_2.src = "images/goodbye.jpg";
-    image1_3.src = "images/goodbye.jpg";
+
+  if (image1_4.src.match("https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg")) {
+    // image1_1.src = "images/goodbye.jpg";
+    // image1_2.src = "images/goodbye.jpg";
+    // image1_3.src = "images/goodbye.jpg";
+    // image2_1.src = "images/goodbye.jpg";
     image1_4.src = "images/goodbye.jpg";
     image1_5.src = "images/goodbye.jpg";
     image1_6.src = "images/goodbye.jpg";
     image1_7.src = "images/goodbye.jpg";
     image1_8.src = "images/goodbye.jpg";
     image1_9.src = "images/goodbye.jpg";
+    
+    image2_2.src = "images/goodbye.jpg";
+    image2_3.src = "images/goodbye.jpg";
+    image2_4.src = "images/goodbye.jpg";
 
   } else {
-    image1_1.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
-    image1_2.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
-    image1_3.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
+    // image1_1.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
+    // image1_2.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
+    // image1_3.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
+    // image2_1.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
     image1_4.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
     image1_5.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
     image1_6.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
     image1_7.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
     image1_8.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
     image1_9.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
+    
+    image2_2.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
+    image2_3.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
+    image2_4.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
 
   }
 }
@@ -84,13 +99,13 @@ function lightingrow2() {
   console.log("POST method by jQuery");
   jQuery.ajax({
     // url: "https://cors-anywhere.herokuapp.com/https://peahivebackend.herokuapp.com/hiveapi/",
-    url: "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+    url: "https://cors-anywhere.herokuapp.com/https://hookb.in/G9rlkWNyBaU1m1eBMQZY",
     type: "POST",
     headers: {
       // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
       "Authorization": "Token dscnsjdkcnsjdkcnjsdcnjdsncjsdnckjsdnckjsdcnkjsdcnskjdcnjksdncbs",
       "Content-Type": "application/json; charset=utf-8",
-      "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+      "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/G9rlkWNyBaU1m1eBMQZY",
       "Access-Control-Allow-Methods": "POST",
       "Access-Control-Allow-Headers": "Content-Type, Authorization",
     },
@@ -122,23 +137,38 @@ function lightingrow2() {
 
 }
 function lightingrow2_changeImage() {
+  // var image2_1 = document.getElementById('row2_1');
+  // var image2_2 = document.getElementById('row2_2');
+  // var image2_3 = document.getElementById('row2_3');
+  // var image2_4 = document.getElementById('row2_4');
+  var image1_1 = document.getElementById('row1_1');
+  var image1_2 = document.getElementById('row1_2');
+  var image1_3 = document.getElementById('row1_3');
   var image2_1 = document.getElementById('row2_1');
-  var image2_2 = document.getElementById('row2_2');
-  var image2_3 = document.getElementById('row2_3');
-  var image2_4 = document.getElementById('row2_4');
 
 
-  if (image2_1.src.match("https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg")) {
+
+
+  if (image1_1.src.match("https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg")) {
+    // image2_1.src = "images/goodbye.jpg";
+    // image2_2.src = "images/goodbye.jpg";
+    // image2_3.src = "images/goodbye.jpg";
+    // image2_4.src = "images/goodbye.jpg";
+    image1_1.src = "images/goodbye.jpg";
+    image1_2.src = "images/goodbye.jpg";
+    image1_3.src = "images/goodbye.jpg";
     image2_1.src = "images/goodbye.jpg";
-    image2_2.src = "images/goodbye.jpg";
-    image2_3.src = "images/goodbye.jpg";
-    image2_4.src = "images/goodbye.jpg";
+    
 
   } else {
+    image1_1.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
+    image1_2.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
+    image1_3.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
     image2_1.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
-    image2_2.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
-    image2_3.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
-    image2_4.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
+    // image2_1.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
+    // image2_2.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
+    // image2_3.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
+    // image2_4.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
   }
 }
 
@@ -149,13 +179,13 @@ function lightingrow3() {
   console.log("POST method by jQuery");
   jQuery.ajax({
     // url: "https://cors-anywhere.herokuapp.com/https://peahivebackend.herokuapp.com/hiveapi/",
-    url: "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+    url: "https://cors-anywhere.herokuapp.com/https://hookb.in/G9rlkWNyBaU1m1eBMQZY",
     type: "POST",
     headers: {
       // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
       "Authorization": "Token dscnsjdkcnsjdkcnjsdcnjdsncjsdnckjsdnckjsdcnkjsdcnskjdcnjksdncbs",
       "Content-Type": "application/json; charset=utf-8",
-      "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+      "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/G9rlkWNyBaU1m1eBMQZY",
       "Access-Control-Allow-Methods": "POST",
       "Access-Control-Allow-Headers": "Content-Type, Authorization",
     },
@@ -207,13 +237,13 @@ function lightingrow4() {
   console.log("POST method by jQuery");
   jQuery.ajax({
     // url: "https://cors-anywhere.herokuapp.com/https://peahivebackend.herokuapp.com/hiveapi/",
-    url: "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+    url: "https://cors-anywhere.herokuapp.com/https://hookb.in/G9rlkWNyBaU1m1eBMQZY",
     type: "POST",
     headers: {
       // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
       "Authorization": "Token dscnsjdkcnsjdkcnjsdcnjdsncjsdnckjsdnckjsdcnkjsdcnskjdcnjksdncbs",
       "Content-Type": "application/json; charset=utf-8",
-      "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+      "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/G9rlkWNyBaU1m1eBMQZY",
       "Access-Control-Allow-Methods": "POST",
       "Access-Control-Allow-Headers": "Content-Type, Authorization",
     },

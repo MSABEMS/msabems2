@@ -14,9 +14,11 @@
 	<link rel="stylesheet" type="text/css" href="styles/mainhomepage.css">
 	<link rel="stylesheet" href="./styles/responsive.css">
 
+
 	<script src="./js/1st_floor.js/conference_room.js"></script>
 	<script src="./js/1st_floor.js/eo_room.js"></script>
 	<script src="./js/1st_floor.js/hallway.js"></script>
+
 
 
 
@@ -27,6 +29,7 @@
 <body>
 
 	<div class="super_container">
+
 
 		<!-- Header -->
 		<header class="header">
@@ -199,8 +202,8 @@
 														</div>
 														<div class="modal-body">
 															<div class="menu_one">
-																<div class="row" style="margin-top: 15px">
-																	<div class="col-lg-6" style="">
+																<div class="row" style="padding-top:15px;">
+																	<div class="col-lg-6" style="padding-left:30px">
 																		<div class="col-lg-6" style="">
 																			<div style="padding-left: 0px;">
 																				<input class="conference_welcome"
@@ -232,7 +235,7 @@
 
 																		</div>
 																	</div>
-																	<div class="col-lg-6" style="">
+																	<div class="col-lg-6" style="padding-left:10px">
 																		<div class="col-lg-6" style="padding-top:0px;">
 																			<div style="padding-left: 0px;">
 																				<input class="conference_showbattery"
@@ -283,27 +286,33 @@
 														</div>
 														<div class="modal-body">
 															<div class="menu_1stfloor">
-																<div class="row" style="margin-top: 30px">
-																	<div class="col-lg-6" style="">
-																		<div style="padding-left: 0px;">
+																<div class="row" style="margin-top: 20px">
+
+
+																	
+																	<div class="col-lg-4" style="padding-left:0px;">
+																		<div style="padding-left: 15px;">
 																			<input class="eo_welcome" type="radio"
 																				value="Wecome" onclick="eo_welcome()"
 																				style="padding-right: 10px;"
 																				name="eo_control">
 																		</div>
-																		<!-- <button onclick="eo_welcome()" type="button"
-																			class="btn btn-outline-warning">Welcome</button> -->
 																	</div>
-																	<div class="col-lg-6" style="">
+																	<div class="col-lg-4" style="padding-left:10px">
 																		<div style="padding-left: 0px;">
 																			<input class="eo_goodbye" type="radio"
 																				value="Goodbye" onclick="eo_goodbye()"
 																				style="padding-right: 10px;"
 																				name="eo_control">
 																		</div>
-																		<!-- <button onclick="eo_goodbye()" type="button"
-																			class="btn btn-outline-dark">Goodbye</button> -->
 																	</div>
+																	<div class="col-lg-6" style="padding-left: 10px">
+																		<input class="hy_automatic" type="radio"
+																			value="Automatic" onclick="hy_automatic()"
+																			style="padding-right: 10px;"
+																			name="hy_control">
+																	</div>
+
 																</div>
 															</div>
 														</div>
@@ -327,7 +336,7 @@
 														</div>
 														<div class="modal-body">
 															<div class="menu_1stfloor">
-																<div class="row" style="margin-top: 30px">
+																<div class="row" style="padding-top: 20px;">
 																	<div class="col-lg-4" style="">
 																		<div style="padding-left: 0px;">
 																			<input class="hy_automatic" type="radio"
@@ -336,16 +345,11 @@
 																				style="padding-right: 10px;"
 																				name="hy_control">
 																		</div>
-
-																		<!-- <button active onclick="hy_automatic()"
-																			type="button"
-																			class="btn btn-outline-success">Automatic</button> -->
 																	</div>
 																	<div class="col-lg-4" style="">
 																		<div style="padding-left: 0px;">
 																			<input class="hy_welcome" type="radio"
-																				value="Welcome"
-																				onclick="hy_welcome()"
+																				value="Welcome" onclick="hy_welcome()"
 																				style="padding-right: 10px;"
 																				name="hy_control">
 																		</div>
@@ -357,8 +361,7 @@
 																	<div class="col-lg-4" style="">
 																		<div style="padding-left: 0px;">
 																			<input class="hy_goodbye" type="radio"
-																				value="Goodbye"
-																				onclick="hy_goodbye()"
+																				value="Goodbye" onclick="hy_goodbye()"
 																				style="padding-right: 10px;"
 																				name="hy_control">
 																		</div>
@@ -445,8 +448,9 @@
 				</div>
 			</div>
 		</div>
+
 	</div>
-	</div>
+
 
 
 
