@@ -1,0 +1,32 @@
+#first-floor {
+    background-image: url(./S__29351956.jpg);
+    /* transform: rotate(20deg); */
+    background-repeat: no-repeat;
+    /* background-size: 50%; */
+    height: 550px;
+    width: 700px;
+    position: relative;
+    background-size: 100%;
+    
+}
+
+#second-floor {
+    background-image: url(./S__29351955.jpg);
+    /* transform: rotate(20deg); */
+    background-repeat: no-repeat;
+    /* background-size: 50%; */
+    height: 550px;
+    width: 700px;
+    position: relative;
+    background-size: 100%;
+}
+
+li{
+    list-style: none;
+}
+
+.status_sensor img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
