@@ -330,7 +330,7 @@ section
 	width: 100%;
 	height: 61px;
 	background: #ffffff;
-	padding-left: 64px;
+	padding-left: 30px;
 }
 
 .logo a
@@ -343,7 +343,7 @@ section
 .main_nav
 {
 	height: 100%;
-	margin-left: 133px;
+	margin-left: 2px;
 }
 .main_nav ul
 {
@@ -361,7 +361,7 @@ section
 }
 .main_nav ul li:not(:last-of-type)
 {
-	margin-right: 26px;
+	margin-right: 2px;
 }
 .main_nav ul li.active,
 .main_nav ul li:hover
