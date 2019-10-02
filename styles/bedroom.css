@@ -496,7 +496,7 @@ section {
 }
 
 .main_nav ul li:not(:last-of-type) {
-	margin-right: 26px;
+	margin-right: 2px;
 }
 
 .main_nav ul li.active, .main_nav ul li:hover {

@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="myHOME - real estate template project">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.2/bootstrap.min.css">
     <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="styles/energy.css">
@@ -14,6 +15,8 @@
 
 
     <link rel="stylesheet" type="text/css" href="styles/mainhomepage.css">
+    <!--Chart.JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
 </head>
 
@@ -24,7 +27,9 @@
             <!-- Header Content -->
             <div class="header_content d-flex flex-row align-items-center justify-content-start"
                 style="background: linear-gradient(135deg, rgba(154,36,252,1) 0%, rgba(168,195,255,1) 100%)">
-                <div class="logo"><a href="#" style="color: aliceblue;">MSA Building Dashboard</a></div>
+                <div class="logo" style="width: 330px">
+                    <a href="#" style="color: aliceblue;">MSA Building Dashboard</a>
+                </div>
                 <nav class="main_nav">
                     <ul class="d-flex flex-row align-items-start justify-content-start">
 
@@ -65,13 +70,14 @@
             </div>
         </div>
 
-
-
-
-
-        <div class="container">
+        <div class="container" style="padding-top: 90px;">
             <div class="row">
-                <div class="col-lg-6"></div>
+                <div class="col-lg-6">
+                    <canvas id="myChart" width="400" height="350"></canvas>
+                </div>
+
+
+
                 <div class="col-lg-6"></div>
             </div>
         </div>
@@ -82,6 +88,40 @@
 
 
     </div>
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'line',
+
+            // The data for our dataset
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                datasets: [{
+                    label: 'My First dataset',
+                    backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: [0, 10, 5, 2, 20, 30, 45]
+                }]
+            },
+
+            // Configuration options go here
+            options: {
+                options: {
+                    scales: {
+                        yAxes: [{
+                            stacked: true
+                        }]
+                    }
+                }
+            }
+        });
+
+
+
+
+
+    </script>
 
 
 </body>
