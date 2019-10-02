@@ -18,7 +18,7 @@
     height: 550px;
     width: 700px;
     position: relative;
-    background-size: 100%;
+    background-size: 104%;
 }
 
 li{
@@ -29,4 +29,8 @@ li{
     width: 20px;
     height: 20px;
     border-radius: 50%;
+}
+
+.namefloor{
+    text-align: center;
 }
