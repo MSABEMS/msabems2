@@ -55,27 +55,27 @@
 		</header>
 		<!--Menu-->
 		<div class="menu text-right">
-			<div class="menu_close"><i class="fa fa-times" aria-hidden="true"></i></div>
-			<div class="menu_log_reg">
-				<div class="log_reg d-flex flex-row align-items-center justify-content-end">
-					<ul class="d-flex flex-row align-items-start justify-content-start">
-						<li><a href="#">Login</a></li>
-						<li><a href="#">Register</a></li>
-					</ul>
+				<div class="menu_close"><i class="fa fa-times" aria-hidden="true"></i></div>
+				<div class="menu_log_reg">
+					<div class="log_reg d-flex flex-row align-items-center justify-content-end">
+						<ul class="d-flex flex-row align-items-start justify-content-start">
+							<li><a href="#">Login</a></li>
+							<li><a href="#">Register</a></li>
+						</ul>
+					</div>
+					<nav class="menu_nav" style="text-align: left;">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="1st_Floor.html">1st Floor</a></li>
+							<li><a href="2nd_Floor.html">2nd Floor</a></li>
+							<li><a href="conference_room.html">Conference Room</a></li>
+							<li><a href="bedroom.html">Bedroom</a></li>
+							<li><a href="energypage.html">Energy</a></li>
+							<li><a href="./door.window.html">Door/Window Censor</a></li>
+						</ul>
+					</nav>
 				</div>
-				<nav class="menu_nav" style="text-align: left;">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="1st_Floor.html">1st Floor</a></li>
-						<li><a href="2nd_Floor.html">2nd Floor</a></li>
-						<li><a href="conference_room.html">Conference Room</a></li>
-						<li><a href="bedroom.html">Bedroom</a></li>
-						<li><a href="energypage.html">Energy</a></li>
-					</ul>
-				</nav>
 			</div>
-		</div>
-
 
 		<!-- Home -->
 		<div class="homeContent">
@@ -105,8 +105,8 @@
 													<li style="margin-top: 20px;">
 														<div>
 															<div style="padding-left: 0px;">
-																<input class="toggle-btn" type="radio" value="Good Night"
-																	onclick="scene_goodnight()"
+																<input class="toggle-btn" type="radio"
+																	value="Good Night" onclick="scene_goodnight()"
 																	style="padding-right: 10px;" name="scene_control">
 															</div>
 															<!-- <button class="scbtn" onclick="scene_goodnight()">
@@ -400,6 +400,15 @@
 															style="width: 48px; height: 48px;">
 													</button>
 												</div>
+
+											</div>
+											<div>
+												<button style="margin-bottom: 10px; background: rgb(108,153,255); background: linear-gradient(135deg, rgba(108,153,255,1) 0%, rgba(213,163,255,1) 100%);
+												width: 120px; height: 40px; border-radius: 5px; border: 2px; font-family: 'Roboto', sans-serif;"
+													type="submit" name="login" value="Login" onclick="TestLogin()"
+													class="modal-login-button-2" href="/index.html">
+													submit
+
 											</div>
 
 											<hr style="margin: 5px;">

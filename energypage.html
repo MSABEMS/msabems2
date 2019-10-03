@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="styles/energy.css">
     <link rel="stylesheet" href="./styles/responsive.css">
 
-
+    <link rel="stylesheet" href="./styles/stylernergy.css">
     <link rel="stylesheet" type="text/css" href="styles/mainhomepage.css">
     <!--Chart.JS -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
@@ -70,26 +70,64 @@
             </div>
         </div>
 
-        <div class="container" style="padding-top: 90px;">
+        <div class="container" style="">
             <div class="row">
-                <div class="col-lg-6">
-                    <canvas id="myChart" width="400" height="350"></canvas>
+                <div class="col-lg-6" style="">
+                    <div class="row" style="">
+                        <div style="">
+                            <h4>MSA Control Building Energy Report</h4>
+                        </div>
+                    </div>
+                    <div class="box" style="">
+                        <div class="chart" style="">
+                            <canvas id="myChart1" width="550" height="400"></canvas>
+                        </div>
+                    </div>
                 </div>
-
-
-
-                <div class="col-lg-6"></div>
+                <div class="col-lg-6" style="">
+                    <div class="row" style="">
+                        <div style="">
+                            <h4>ESS Energy Report</h4>
+                        </div>
+                    </div>
+                    <div class="box" style="">
+                        <div class="chart" style="">
+                            <canvas id="myChart2" width="550" height="400"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="meter">
+                    <li >
+                        <button id="myBtn_remote4" class="SceneStyle">
+                            <h5>Meter 1</h5>
+                        </button>
+                        <button id="myBtn_remote4" class="SceneStyle" >
+                            <h5>Meter 2</h5>
+                        </button>
+                        <button id="myBtn_remote4" class="SceneStyle">
+                            <h5>Meter 3</h5>
+                        </button>
+                        <button id="myBtn_remote4" class="SceneStyle">
+                            <h5>Meter 4</h5>
+                        </button>
+                        <button id="myBtn_remote4" class="SceneStyle">
+                            <h5>Meter 5</h5>
+                        </button>
+                        <button id="myBtn_remote4" class="SceneStyle">
+                            <h5>Meter 6</h5>
+                        </button>
+                        <button id="myBtn_remote4" class="SceneStyle">
+                            <h5>Meter 7</h5>
+                        </button>
+                    </li>
+                </div>
             </div>
         </div>
-
-
-
-
-
-
     </div>
     <script>
-        var ctx = document.getElementById('myChart').getContext('2d');
+        var ctx = document.getElementById('myChart1').getContext('2d');
         var chart = new Chart(ctx, {
             // The type of chart we want to create
             type: 'line',
@@ -107,13 +145,13 @@
 
             // Configuration options go here
             options: {
-                options: {
-                    scales: {
-                        yAxes: [{
-                            stacked: true
-                        }]
-                    }
-                }
+                animation: {
+                    duration: 0
+                },
+                hover: {
+                    animationDuration: 0
+                },
+                responsiveAnimationDuration: 0
             }
         });
 
@@ -122,8 +160,36 @@
 
 
     </script>
+    <script>
+        var ctx = document.getElementById('myChart2').getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'line',
 
+            // The data for our dataset
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                datasets: [{
+                    label: 'My First dataset',
+                    backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: [0, 10, 5, 2, 20, 30, 45]
+                }]
+            },
 
+            // Configuration options go here
+            options: {
+                animation: {
+                    duration: 0
+                },
+                hover: {
+                    animationDuration: 0
+                },
+                responsiveAnimationDuration: 0
+            }
+        });
+
+    </script>
 </body>
 
 </html>
