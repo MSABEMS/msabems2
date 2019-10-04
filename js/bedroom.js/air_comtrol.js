@@ -140,8 +140,6 @@ function TestLogin() {
 
 
 
-
-
 // CoolModeControl
 function CoolModeControl() {
     console.log("Hello");
@@ -574,6 +572,20 @@ function speedfive() {
 
 }
 
+// Set Temp
+var score = 25
+function up_remote1() {
+    if (score < 30) {
+        score++;
+    }
+    document.getElementById("result").innerHTML = score;
+}
 
-
+function down_remote1() {
+    if (score > 17) {
+        score--;
+    }
+    document.getElementById("result").innerHTML = score;
+}
+// 
 

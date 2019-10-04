@@ -1,4 +1,4 @@
-// Smart Plug 1
+//  On/Off Smart Plug 1
 function smartplug1() {
     console.log("Hello");
     //
@@ -52,7 +52,7 @@ function smartplug1_changeImage() {
     }
 }
 
-// Smart Plug 2
+// On/Off Smart Plug 2
 function smartplug2() {
     console.log("Hello");
     //
@@ -106,7 +106,7 @@ function smartplug2_changeImage() {
     }
 }
 
-// Smart Plug 3
+// On/Off Smart Plug 3
 function smartplug3() {
     console.log("Hello");
     //
@@ -160,7 +160,7 @@ function smartplug3_changeImage() {
     }
 }
 
-// Smart Plug 4
+// On/Off Smart Plug 4
 function smartplug4() {
     console.log("Hello");
     //
@@ -214,7 +214,7 @@ function smartplug4_changeImage() {
     }
 }
 
-// Smart Plug 5
+// On/Off Smart Plug 5
 function smartplug5() {
     console.log("Hello");
     //
