@@ -1,4 +1,5 @@
-// Air Control 1
+// Air Control 
+// On Button
 function turn_on_ac1() {
     console.log("Hello");
     //
@@ -46,7 +47,7 @@ function turn_on_ac1_changeImage() {
     document.getElementById('ac_1').src = 'https://www.fotoaparatas.lt/images/thumbs/thumb-3-55x30m-green-screen-349177-640-448.png'
 }
 
-
+// Off Button
 function turn_off_ac1() {
     console.log("Hello");
     //
@@ -93,6 +94,68 @@ function turn_off_ac1() {
 function turn_off_ac1_changeImage() {
     document.getElementById('ac_1').src = 'images/goodbye.jpg'
 }
+
+//  Set Temp Remote 1
+var score = 25
+function up_remote1() {
+    if (score < 30) {
+        score++;
+    }
+    document.getElementById("result").innerHTML = score;
+}
+
+function down_remote1() {
+    if (score > 17) {
+        score--;
+    }
+    document.getElementById("result").innerHTML = score;
+}
+// 
+
+// Submit Temp
+function summitair1() {
+    console.log("Hello");
+    //
+    console.log("POST method by jQuery");
+    jQuery.ajax({
+        // url: "https://cors-anywhere.herokuapp.com/https://peahivebackend.herokuapp.com/hiveapi/",
+        url: "https://cors-anywhere.herokuapp.com/https://hookb.in/eKVMqQWYOMuG8GR3zd08",
+        type: "POST",
+        headers: {
+            // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
+            "Authorization": "Token dscnsjdkcnsjdkcnjsdcnjdsncjsdnckjsdnckjsdcnkjsdcnskjdcnjksdncbs",
+            "Content-Type": "application/json; charset=utf-8",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/eKVMqQWYOMuG8GR3zd08",
+            "Access-Control-Allow-Methods": "POST",
+            "Access-Control-Allow-Headers": "Content-Type, Authorization",
+        },
+        contentType: "application/json",
+        data: JSON.stringify({
+            "topic": "Test post device control",
+            "type": "devicecontrol",
+            "message": {
+                "device": "MSA Device control",
+                "parameter": {
+                    "status": "on"
+                }
+            }
+        })
+    })
+        .done(function (data, textStatus, jqXHR) {
+            console.log("HTTP Request Succeeded: " + jqXHR.status);
+            console.log(data);
+
+        })
+        .fail(function (jqXHR, textStatus, errorThrown) {
+            console.log("HTTP Request Failed");
+        })
+        .always(function () {
+            /* ... */
+        });
+    //
+
+}
+
 
 // CoolModeControl
 function CoolModeControl_1() {
@@ -626,6 +689,68 @@ function turn_off_ac2_changeImage() {
     document.getElementById('ac_2').src = 'images/goodbye.jpg'
 }
 
+// Set Temp Remote 2
+var score = 25
+function up_remote2() {
+    if (score < 30) {
+        score++;
+    }
+    document.getElementById("result2").innerHTML = score;
+}
+
+function down_remote2() {
+    if (score > 17) {
+        score--;
+    }
+    document.getElementById("result2").innerHTML = score;
+}
+// 
+
+// Submit Temp
+function summitair2() {
+    console.log("Hello");
+    //
+    console.log("POST method by jQuery");
+    jQuery.ajax({
+        // url: "https://cors-anywhere.herokuapp.com/https://peahivebackend.herokuapp.com/hiveapi/",
+        url: "https://cors-anywhere.herokuapp.com/https://hookb.in/eKVMqQWYOMuG8GR3zd08",
+        type: "POST",
+        headers: {
+            // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
+            "Authorization": "Token dscnsjdkcnsjdkcnjsdcnjdsncjsdnckjsdnckjsdcnkjsdcnskjdcnjksdncbs",
+            "Content-Type": "application/json; charset=utf-8",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/eKVMqQWYOMuG8GR3zd08",
+            "Access-Control-Allow-Methods": "POST",
+            "Access-Control-Allow-Headers": "Content-Type, Authorization",
+        },
+        contentType: "application/json",
+        data: JSON.stringify({
+            "topic": "Test post device control",
+            "type": "devicecontrol",
+            "message": {
+                "device": "MSA Device control",
+                "parameter": {
+                    "status": "on"
+                }
+            }
+        })
+    })
+        .done(function (data, textStatus, jqXHR) {
+            console.log("HTTP Request Succeeded: " + jqXHR.status);
+            console.log(data);
+
+        })
+        .fail(function (jqXHR, textStatus, errorThrown) {
+            console.log("HTTP Request Failed");
+        })
+        .always(function () {
+            /* ... */
+        });
+    //
+
+}
+
+
 // CoolModeControl
 function CoolModeControl_2() {
     console.log("Hello");
@@ -1156,8 +1281,47 @@ function turn_off_ac3_changeImage() {
     document.getElementById('ac_3').src = 'images/goodbye.jpg'
 }
 
+
+// Set Temp Remote 3
+var score = 25
+function up_remote3() {
+    if (score < 30) {
+        score++;
+    }
+    document.getElementById("result3").innerHTML = score;
+}
+
+function down_remote3() {
+    if (score > 17) {
+        score--;
+    }
+    document.getElementById("result3").innerHTML = score;
+}
+// 
+
+
+
+
 // CoolModeControl
-function CoolModeControl_3() {
+
+var score = 25
+function up_remote3() {
+    if (score < 30) {
+        score++;
+    }
+    document.getElementById("result3").innerHTML = score;
+}
+
+function down_remote3() {
+    if (score > 17) {
+        score--;
+    }
+    document.getElementById("result3").innerHTML = score;
+}
+
+
+// Submit Temp
+function summitair3() {
     console.log("Hello");
     //
     console.log("POST method by jQuery");
@@ -1591,6 +1755,7 @@ function remote3_speedfive() {
 
 // Air Control 4
 
+// On Button
 function turn_on_ac4() {
     console.log("Hello");
     //
@@ -1637,6 +1802,7 @@ function turn_on_ac4_changeImage() {
     document.getElementById('ac_4').src = 'https://www.fotoaparatas.lt/images/thumbs/thumb-3-55x30m-green-screen-349177-640-448.png'
 }
 
+// Off Button
 function turn_off_ac4() {
     console.log("Hello");
     //
@@ -1682,6 +1848,69 @@ function turn_off_ac4() {
 function turn_off_ac4_changeImage() {
     document.getElementById('ac_4').src = 'images/goodbye.jpg'
 }
+
+// Set Temp Remote 4
+var score = 25
+function up_remote4() {
+    if (score < 30) {
+        score++;
+    }
+    document.getElementById("result4").innerHTML = score;
+}
+
+function down_remote4() {
+    if (score > 17) {
+        score--;
+    }
+    document.getElementById("result4").innerHTML = score;
+}
+// 
+
+// Submit Temp
+function summitair4() {
+    console.log("Hello");
+    //
+    console.log("POST method by jQuery");
+    jQuery.ajax({
+        // url: "https://cors-anywhere.herokuapp.com/https://peahivebackend.herokuapp.com/hiveapi/",
+        url: "https://cors-anywhere.herokuapp.com/https://hookb.in/eKVMqQWYOMuG8GR3zd08",
+        type: "POST",
+        headers: {
+            // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
+            "Authorization": "Token dscnsjdkcnsjdkcnjsdcnjdsncjsdnckjsdnckjsdcnkjsdcnskjdcnjksdncbs",
+            "Content-Type": "application/json; charset=utf-8",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/eKVMqQWYOMuG8GR3zd08",
+            "Access-Control-Allow-Methods": "POST",
+            "Access-Control-Allow-Headers": "Content-Type, Authorization",
+        },
+        contentType: "application/json",
+        data: JSON.stringify({
+            "topic": "Test post device control",
+            "type": "devicecontrol",
+            "message": {
+                "device": "MSA Device control",
+                "parameter": {
+                    "status": "on"
+                }
+            }
+        })
+    })
+        .done(function (data, textStatus, jqXHR) {
+            console.log("HTTP Request Succeeded: " + jqXHR.status);
+            console.log(data);
+
+        })
+        .fail(function (jqXHR, textStatus, errorThrown) {
+            console.log("HTTP Request Failed");
+        })
+        .always(function () {
+            /* ... */
+        });
+    //
+
+}
+
+
 
 
 // CoolModeControl

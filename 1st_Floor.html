@@ -12,17 +12,14 @@
 	<link rel="stylesheet" type="text/css" href="styles/1st_Floor.css">
 	<link rel="stylesheet" href="styles/controlbt1st.css">
 	<link rel="stylesheet" type="text/css" href="styles/mainhomepage.css">
+	<link rel="stylesheet" href="./styles/responsive.css">
 	
 
 
 	<script src="./js/1st_floor.js/conference_room.js"></script>
 	<script src="./js/1st_floor.js/eo_room.js"></script>
 	<script src="./js/1st_floor.js/hallway.js"></script>
-
-
-
-
-
+	<script src="./js/1st_floor.js/modal.js"></script>
 
 </head>
 
@@ -59,26 +56,27 @@
 
 		<!-- Menu -->
 		<div class="menu text-right">
-			<div class="menu_close"><i class="fa fa-times" aria-hidden="true"></i></div>
-			<div class="menu_log_reg">
-				<div class="log_reg d-flex flex-row align-items-center justify-content-end">
-					<ul class="d-flex flex-row align-items-start justify-content-start">
-						<li><a href="#">Login</a></li>
-						<li><a href="#">Register</a></li>
-					</ul>
+				<div class="menu_close"><i class="fa fa-times" aria-hidden="true"></i></div>
+				<div class="menu_log_reg">
+					<div class="log_reg d-flex flex-row align-items-center justify-content-end">
+						<ul class="d-flex flex-row align-items-start justify-content-start">
+							<li><a href="#">Login</a></li>
+							<li><a href="#">Register</a></li>
+						</ul>
+					</div>
+					<nav class="menu_nav" style="text-align: left;">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="1st_Floor.html">1st Floor</a></li>
+							<li><a href="2nd_Floor.html">2nd Floor</a></li>
+							<li><a href="conference_room.html">Conference Room</a></li>
+							<li><a href="bedroom.html">Bedroom</a></li>
+							<li><a href="energypage.html">Energy</a></li>
+							<li><a href="./door.window.html">Door/Window Censor</a></li>
+						</ul>
+					</nav>
 				</div>
-				<nav class="menu_nav" style="text-align: left;">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="1st_Floor.html">1st Floor</a></li>
-						<li><a href="2nd_Floor.html">2nd Floor</a></li>
-						<li><a href="conference_room.html">Conference Room</a></li>
-						<li><a href="bedroom.html">Bedroom</a></li>
-						<li><a href="energypage.html">Energy</a></li>
-					</ul>
-				</nav>
 			</div>
-		</div>
 
 		<!-- Home -->
 		<div class="homeContent">
@@ -452,82 +450,6 @@
 		</div>
 
 	</div>
-
-
-
-
-	<!-- Hallway On Pic-->
-	<!-- <script>
-		function hy_automatic() {
-			document.getElementById('hy').src = 'https://www.fotoaparatas.lt/images/thumbs/thumb-3-55x30m-green-screen-349177-640-448.png'
-		}
-
-		function hy_welcome() {
-			document.getElementById('hy').src = 'https://www.agricar.co.uk/uploads/images/products/large/agricar-new-holland-bright-yellow-87295405-1539606274yy.png'
-		}
-
-		function hy_goodbye() {
-			document.getElementById('hy').src = 'images/goodbye.jpg'
-		}
-	</script> -->
-
-	<!-- EO Room On Pic -->
-	<!-- <script>
-		function eo_welcome() {
-			document.getElementById('eo').src = 'https://www.agricar.co.uk/uploads/images/products/large/agricar-new-holland-bright-yellow-87295405-1539606274yy.png'
-		}
-
-		function eo_goodbye() {
-			document.getElementById('eo').src = 'images/goodbye.jpg'
-		}
-	</script> -->
-
-	<!-- Conference Room On Pic -->
-	<!-- <script>
-		function con_welcome() {
-			document.getElementById('con').src = 'https://www.agricar.co.uk/uploads/images/products/large/agricar-new-holland-bright-yellow-87295405-1539606274yy.png'
-		}
-
-		function con_goodnight() {
-			document.getElementById('con').src = 'images/goodbye.jpg'
-		}
-
-		function con_day() {
-			document.getElementById('con').src = 'https://cdn-image.travelandleisure.com/sites/default/files/styles/1600x1000/public/blue0517.jpg?itok=V3825voJ'
-		}
-
-		function con_night() {
-			document.getElementById('con').src = 'https://colourlex.com/wp-content/uploads/2015/02/Red_lead_painted_swatch_Lipscher_225q-opt.jpg'
-		}
-	</script> -->
-
-	<!--open_modal_bedroom-->
-	<script>
-		// Get the modal
-		var modal_bedroom = document.getElementById("myModal_bedroom");
-
-		// Get the button that opens the modal
-		var btn_bedroom = document.getElementById("myBtn_bedroom");
-
-		// Get the <span> element that closes the modal
-		var span_bedroom = document.getElementsByClassName("close")[0];
-
-		// When the user clicks the button, open the modal
-		btn_bedroom.onclick = function () {
-			console.log("myModal_bedroom");
-			modal_bedroom.style.display = "block";
-		}
-
-		// When the user clicks on <span> (x), close the modal
-		function bedroom() {
-			console.log("rfgfhgcfchxedhgbhjbmhbhjbh");
-			modal_bedroom.style.display = "none";
-		}
-
-			// When the user clicks anywhere outside of the modal, close it
-
-	</script>
-
 	<!--open_modal_conferenceroom-->
 	<script>
 		// Get the modal

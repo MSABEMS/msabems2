@@ -55,27 +55,27 @@
 		</header>
 		<!--Menu-->
 		<div class="menu text-right">
-			<div class="menu_close"><i class="fa fa-times" aria-hidden="true"></i></div>
-			<div class="menu_log_reg">
-				<div class="log_reg d-flex flex-row align-items-center justify-content-end">
-					<ul class="d-flex flex-row align-items-start justify-content-start">
-						<li><a href="#">Login</a></li>
-						<li><a href="#">Register</a></li>
-					</ul>
+				<div class="menu_close"><i class="fa fa-times" aria-hidden="true"></i></div>
+				<div class="menu_log_reg">
+					<div class="log_reg d-flex flex-row align-items-center justify-content-end">
+						<ul class="d-flex flex-row align-items-start justify-content-start">
+							<li><a href="#">Login</a></li>
+							<li><a href="#">Register</a></li>
+						</ul>
+					</div>
+					<nav class="menu_nav" style="text-align: left;">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="1st_Floor.html">1st Floor</a></li>
+							<li><a href="2nd_Floor.html">2nd Floor</a></li>
+							<li><a href="conference_room.html">Conference Room</a></li>
+							<li><a href="bedroom.html">Bedroom</a></li>
+							<li><a href="energypage.html">Energy</a></li>
+							<li><a href="./door.window.html">Door/Window Censor</a></li>
+						</ul>
+					</nav>
 				</div>
-				<nav class="menu_nav" style="text-align: left;">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="1st_Floor.html">1st Floor</a></li>
-						<li><a href="2nd_Floor.html">2nd Floor</a></li>
-						<li><a href="conference_room.html">Conference Room</a></li>
-						<li><a href="bedroom.html">Bedroom</a></li>
-						<li><a href="energypage.html">Energy</a></li>
-					</ul>
-				</nav>
 			</div>
-		</div>
-
 
 		<!-- Home -->
 		<div class="homeContent">
@@ -105,8 +105,8 @@
 													<li style="margin-top: 20px;">
 														<div>
 															<div style="padding-left: 0px;">
-																<input class="toggle-btn" type="radio" value="Good Night"
-																	onclick="scene_goodnight()"
+																<input class="toggle-btn" type="radio"
+																	value="Good Night" onclick="scene_goodnight()"
 																	style="padding-right: 10px;" name="scene_control">
 															</div>
 															<!-- <button class="scbtn" onclick="scene_goodnight()">
@@ -400,6 +400,15 @@
 															style="width: 48px; height: 48px;">
 													</button>
 												</div>
+
+											</div>
+											<div>
+												<button style="margin-bottom: 10px; background: rgb(108,153,255); background: linear-gradient(135deg, rgba(108,153,255,1) 0%, rgba(213,163,255,1) 100%);
+												width: 120px; height: 40px; border-radius: 5px; border: 2px; font-family: 'Roboto', sans-serif;"
+													type="submit" name="login" value="Login" onclick="TestLogin()"
+													class="modal-login-button-2" href="/index.html">
+													submit
+
 											</div>
 
 											<hr style="margin: 5px;">
@@ -484,9 +493,6 @@
 
 										</div>
 									</div>
-									<!-- <div class="modal-footer">
-													  <h3>Modal Footer</h3>
-													</div> -->
 								</div>
 							</div>
 						</div>
@@ -495,102 +501,6 @@
 			</div>
 		</div>
 	</div>
-
-	<!-- Control ShowTemp -->
-	<script>
-		var score = 25
-		function up_remote1() {
-			if (score < 30) {
-				score++;
-			}
-			document.getElementById("result").innerHTML = score;
-		}
-
-		function down_remote1() {
-			if (score > 17) {
-				score--;
-			}
-			document.getElementById("result").innerHTML = score;
-		}
-	</script>
-
-
-	<!-- Lighting Low 1 Onpic -->
-	<!-- <script>
-		function lighting_row1_changeImage() {
-			var image1_1 = document.getElementById('eorow1_1');
-			var image1_2 = document.getElementById('eorow1_2');
-			var image1_3 = document.getElementById('eorow1_3');
-
-			if (image1_1.src.match("https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg")) {
-				image1_1.src = "images/goodbye.jpg";
-				image1_2.src = "images/goodbye.jpg";
-				image1_3.src = "images/goodbye.jpg";
-
-			} else {
-				image1_1.src = "https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg";
-				image1_2.src = "https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg";
-				image1_3.src = "https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg";
-			}
-		}
-	</script> -->
-
-	<!-- Lighting Low 2 Onpic -->
-	<!-- <script>
-		function lighting_row2() {
-			var image1_1 = document.getElementById('eorow2_1');
-			var image1_2 = document.getElementById('eorow2_2');
-			var image1_3 = document.getElementById('eorow2_3');
-
-			if (image1_1.src.match("https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg")) {
-				image1_1.src = "images/goodbye.jpg";
-				image1_2.src = "images/goodbye.jpg";
-				image1_3.src = "images/goodbye.jpg";
-
-			} else {
-				image1_1.src = "https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg";
-				image1_2.src = "https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg";
-				image1_3.src = "https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg";
-			}
-		}
-	</script> -->
-
-	<!-- Lighting Low 3 Onpic -->
-	<!-- <script>
-		function lighting_row3() {
-			var image1_1 = document.getElementById('eorow3_1');
-			var image1_2 = document.getElementById('eorow3_2');
-			var image1_3 = document.getElementById('eorow3_3');
-
-			if (image1_1.src.match("https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg")) {
-				image1_1.src = "images/goodbye.jpg";
-				image1_2.src = "images/goodbye.jpg";
-				image1_3.src = "images/goodbye.jpg";
-
-			} else {
-				image1_1.src = "https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg";
-				image1_2.src = "https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg";
-				image1_3.src = "https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg";
-			}
-		}
-	</script> -->
-
-
-
-	<!-- <script>
-		function turn_on_ac() {
-			document.getElementById('ac').src = 'https://www.fotoaparatas.lt/images/thumbs/thumb-3-55x30m-green-screen-349177-640-448.png'
-		}
-
-		function turn_off_ac() {
-			document.getElementById('ac').src = 'images/goodbye.jpg'
-		}
-	</script> -->
-
-
-
-
-
 
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="styles/bootstrap-4.1.2/popper.js"></script>
