@@ -1,27 +1,214 @@
-var ctx = document.getElementById('myChart1').getContext('2d');
-var chart = new Chart(ctx, {
-    // The type of chart we want to create
-    type: 'line',
+// window.onload = function () {
 
-    // The data for our dataset
-        data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-        datasets: [{
-            label: 'My First dataset',
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
-            data: [0, 10, 5, 2, 20, 30, 45]
+//     var chart = new CanvasJS.Chart("chartContainer1", {
+//         animationEnabled: true,
+//         exportEnabled: true,
+//         title: {
+//             // text: "MSA Control Building Energy Report" 
+//         },
+//         axisY: {
+//             title: "Number of Medals"
+//         },
+//         toolTip: {
+//             shared: true
+//         },
+//         legend: {
+//             cursor: "pointer",
+//             itemclick: toggleDataSeries
+//         },
+//         data: [{
+//             type: "spline",
+//             name: "Grid",
+//             showInLegend: true,
+//             dataPoints: [
+//                 { label: "Atlanta 1996", y: 44 },
+//                 { label: "Sydney 2000", y: 37 },
+//                 { label: "Athens 2004", y: 36 },
+//                 { label: "Beijing 2008", y: 36 },
+//                 { label: "London 2012", y: 46 },
+//                 { label: "Rio 2016", y: 46 }
+//             ]
+//         },
+//         {
+//             type: "spline",
+//             name: "PV",
+//             showInLegend: true,
+//             dataPoints: [
+//                 { label: "Atlanta 1996", y: 16 },
+//                 { label: "Sydney 2000", y: 28 },
+//                 { label: "Athens 2004", y: 32 },
+//                 { label: "Beijing 2008", y: 48 },
+//                 { label: "London 2012", y: 38 },
+//                 { label: "Rio 2016", y: 26 }
+//             ]
+//         },
+//         {
+//             type: "spline",
+//             name: "Total Load",
+//             showInLegend: true,
+//             dataPoints: [
+//                 { label: "Atlanta 1996", y: 1 },
+//                 { label: "Sydney 2000", y: 11 },
+//                 { label: "Athens 2004", y: 9 },
+//                 { label: "Beijing 2008", y: 19 },
+//                 { label: "London 2012", y: 29 },
+//                 { label: "Rio 2016", y: 27 }
+//             ]
+//         },
+//         {
+//             type: "spline",
+//             name: "1st Floor Load",
+//             showInLegend: true,
+//             dataPoints: [
+//                 { label: "Atlanta 1996", y: 26 },
+//                 { label: "Sydney 2000", y: 32 },
+//                 { label: "Athens 2004", y: 28 },
+//                 { label: "Beijing 2008", y: 22 },
+//                 { label: "London 2012", y: 20 },
+//                 { label: "Rio 2016", y: 19 }
+//             ]
+//         },
+//         {
+//             type: "spline",
+//             name: "2nd Floor Load",
+//             showInLegend: true,
+//             dataPoints: [
+//                 { label: "Atlanta 1996", y: 7 },
+//                 { label: "Sydney 2000", y: 8 },
+//                 { label: "Athens 2004", y: 9 },
+//                 { label: "Beijing 2008", y: 13 },
+//                 { label: "London 2012", y: 13 },
+//                 { label: "Rio 2016", y: 9 }
+//             ]
+//         },
+//         {
+//             type: "spline",
+//             name: "EBD Load",
+//             showInLegend: true,
+//             dataPoints: [
+//                 { label: "Atlanta 1996", y: 20 },
+//                 { label: "Sydney 2000", y: 13 },
+//                 { label: "Athens 2004", y: 13 },
+//                 { label: "Beijing 2008", y: 16 },
+//                 { label: "London 2012", y: 11 },
+//                 { label: "Rio 2016", y: 17 }
+//             ]
+//         },
+//         {
+//             type: "spline",
+//             name: "Precision A/C",
+//             showInLegend: true,
+//             dataPoints: [
+//                 { label: "Atlanta 1996", y: 20 },
+//                 { label: "Sydney 2000", y: 21 },
+//                 { label: "Athens 2004", y: 22 },
+//                 { label: "Beijing 2008", y: 23 },
+//                 { label: "London 2012", y: 24 },
+//                 { label: "Rio 2016", y: 28 }
+//             ]
+//         },
+//         {
+//             type: "spline",
+//             name: "Battrry",
+//             showInLegend: true,
+//             dataPoints: [
+//                 { label: "Atlanta 1996", y: 50 },
+//                 { label: "Sydney 2000", y: 40 },
+//                 { label: "Athens 2004", y: 30 },
+//                 { label: "Beijing 2008", y: 20 },
+//                 { label: "London 2012", y: 10 },
+//                 { label: "Rio 2016", y: 30 }
+//             ]
+//         },
+
+//         ]
+//     });
+
+//     chart.render();
+
+//     function toggleDataSeries(e) {
+//         if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+//             e.dataSeries.visible = false;
+//         }
+//         else {
+//             e.dataSeries.visible = true;
+//         }
+//         chart.render();
+//     }
+
+// }
+
+
+window.onload = function () {
+
+    var chart = new CanvasJS.Chart("chartContainer2", {
+        animationEnabled: true,
+        exportEnabled: true,
+        title: {
+            // text: "Gold Medals Won in Olympics"
+        },
+        axisY: {
+            title: "Number of Medals"
+        },
+        toolTip: {
+            shared: true
+        },
+        legend: {
+            cursor: "pointer",
+            itemclick: toggleDataSeries
+        },
+        data: [{
+            type: "spline",
+            name: "PCS Container",
+            showInLegend: true,
+            dataPoints: [
+                { label: "Atlanta 1996", y: 44 },
+                { label: "Sydney 2000", y: 37 },
+                { label: "Athens 2004", y: 36 },
+                { label: "Beijing 2008", y: 36 },
+                { label: "London 2012", y: 46 },
+                { label: "Rio 2016", y: 46 }
+            ]
+        },
+        {
+            type: "spline",
+            name: "Battery Container 01",
+            showInLegend: true,
+            dataPoints: [
+                { label: "Atlanta 1996", y: 26 },
+                { label: "Sydney 2000", y: 32 },
+                { label: "Athens 2004", y: 28 },
+                { label: "Beijing 2008", y: 22 },
+                { label: "London 2012", y: 20 },
+                { label: "Rio 2016", y: 19 }
+            ]
+        },
+
+        {
+            type: "spline",
+            name: "Battery Container 02",
+            showInLegend: true,
+            dataPoints: [
+                { label: "Atlanta 1996", y: 20 },
+                { label: "Sydney 2000", y: 13 },
+                { label: "Athens 2004", y: 13 },
+                { label: "Beijing 2008", y: 16 },
+                { label: "London 2012", y: 11 },
+                { label: "Rio 2016", y: 17 }
+            ]
         }]
-    },
+    });
 
-    // Configuration options go here
-    options: {
-        animation: {
-            duration: 0
-        },
-        hover: {
-            animationDuration: 0
-        },
-        responsiveAnimationDuration: 0
+    chart.render();
+
+    function toggleDataSeries(e) {
+        if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+            e.dataSeries.visible = false;
+        }
+        else {
+            e.dataSeries.visible = true;
+        }
+        chart.render();
     }
-});
+
+}

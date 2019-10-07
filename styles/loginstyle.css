@@ -1,60 +1,110 @@
+#pic {
+  background-image: url(./MSA\ Buildingopacity.png) ;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  /* height: 100px;   */
+  position: relative;
+  background-size: 80%;
+  /* opacity: 0.5;
+  filter: alpha(opacity=50); */
+    
+}
+.char {
+  padding-top: 7px;
+}
 
-{ margin: 0; padding: 0; }
-#all{
-   width:100%;
-   height:100%;
-   margin:0px auto;
-   position:relative; }
-#header{
-  background-color:#ec8000;
+
+
+.inbox {
+  padding-left: 50px;
+}
+
+h3 {
+  font-weight: normal;
+}
+
+.box {
+  padding-top: 30px;
+}
+
+.login {
+  margin-left: 235px;
+  margin-top: -5px;
+}
+
+li {
+  list-style: none;
+  float: left;
+}
+
+  {
+  margin: 0;
+  padding: 0;
+}
+
+#all {
+  width: 100%;
+  height: 100%;
+  margin: 0px auto;
+  position: relative;
+}
+
+#header {
+  /* background-color: #ec8000; */
   color: white;
-  background: linear-gradient(135deg, rgba(154,36,252,1) 0%, rgba(168,195,255,1) 100%);
-  height:100px;
-  padding:15px;
+  background: linear-gradient(135deg, rgba(154, 36, 252, 1) 0%, rgba(168, 195, 255, 1) 100%);
+  height: 61px;
+  padding-left: 40px;
+  padding-right: 30px;
+  padding-top: 15px;
   /* text-decoration-color: #ffff; */
 }
-#left{
-  background-color:#ffff;
-  color: red;
-  height:80%;
-  padding:10px;
-  width:100px;
-  position:absolute;}
-#content{
-  background-color:#ffff;
-  position:absolute;
-  margin:0 100px 0 200px;
-  padding:0px;
-  color: #8633FF  ;
-  }
-#right{
 
-  background-color:#ffff;
+#left {
+  background-color: #ffff;
   color: red;
-  height:80%;
-  width:400px;
-  position:absolute;
-  right:0; }
-#footer{
-  position:absolute;
+  height: 80%;
+  padding: 10px;
+  width: 100px;
+  position: absolute;
+}
+
+#content {
+  background: transparent;
+  position: absolute;
+  width: 70%;
+  margin-left: 30px;
+  padding: 0px;
+  color: #8633FF;
+}
+
+#right {
+  background-color: #ffff;
+  color: red;
+  height: 80%;
+  width: 30%;
+  position: absolute;
+  right: 0;
+  margin-right: 30px;
+  padding-top: 40px;
+}
+
+#footer {
+  color: wheat;
+  position: absolute;
   /* background-color:#808080; */
-
-  height:12%;
-  text-align:center;
-
+  height: 61px;
+  text-align: center;
   border: 0px 0px 0px 0px;
-  padding:0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  bottom: 0px;
+  width: 100%;
+  background: linear-gradient(135deg, rgba(154, 36, 252, 1) 0%, rgba(168, 195, 255, 1) 100%);
+}
 
-  bottom:0px;
-  width:100%;
-  background: linear-gradient(135deg, rgba(154,36,252,1) 0%, rgba(168,195,255,1) 100%);
- }
-
-
- .social-icon {
-   margin: 0px 10px;
- }
-
+.social-icon {
+  margin: 0px 10px;
+}
 
 .backgroundImage {
   opacity: 1;
@@ -62,37 +112,27 @@
   background-repeat: no-repeat;
   background-position: right;
   /* height: 100; */
-
 }
 
 .white-section {
   background-color: #fff;
 }
 
-.bodyContent{
+.bodyContent {
   font-size: 24px;
   color: #990099;
 }
 
-
 /* Footer Part */
-.container-fluid{
-  padding: 7% 15%;
 
-  text-align: center;
-
-  font-size: 14px;
-  color: white;
-  padding: 3% 3%;
-  align-items: center;
-  vertical-align: top;
-  background: linear-gradient(135deg, rgba(154,36,252,1) 0%, rgba(168,195,255,1) 100%);
-  width: 100%;
-  height: 20px;
+.container-fluid {
+  padding-top: 5px;
+  
+  
 }
 
-
 /* The Modal (background) */
+
 .modal {
   /* font family */
   font-family: 'Roboto', sans-serif;
@@ -120,6 +160,7 @@
 }
 
 /* Modal Content */
+
 .modal-content {
   position: relative;
   background-color: #fefefe;
@@ -133,16 +174,15 @@
   animation-name: animatetop;
   animation-duration: 0.4s;
   font-family: 'Roboto', sans-serif;
-
 }
 
 /* Add Animation */
+
 @-webkit-keyframes animatetop {
   from {
     top: -300px;
     opacity: 0;
   }
-
   to {
     top: 0;
     opacity: 1;
@@ -154,7 +194,6 @@
     top: -300px;
     opacity: 0;
   }
-
   to {
     top: 0;
     opacity: 1
@@ -162,6 +201,7 @@
 }
 
 /* The Close Button */
+
 .close {
   color: white;
   float: right;
@@ -169,8 +209,7 @@
   font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
+.close:hover, .close:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
