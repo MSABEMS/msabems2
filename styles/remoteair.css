@@ -137,7 +137,8 @@ hr {
   width: 100%;
 }
 
-.modal-content {
+/* Projecter */
+.modal-contentprojecter {
   position: relative;
   background-color: #fefefe;
   margin: auto;
@@ -155,12 +156,49 @@ hr {
   margin-left: 10px;
 }
 
+/* Air Control */
+.modal-content{
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 25%;
+  height: 480px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  float: right;
+  border-radius: 12px;
+  margin-right: 10px;
+}
+
+
+
+
+
+
+
+
 .modal-body {
   background-color: #fff;
   border-radius: 12px;
   padding-top: 0px;
   padding-bottom: 0px;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 .ACremoteControl {
   margin: 0px;
