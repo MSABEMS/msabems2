@@ -76,9 +76,9 @@ li {
 }
 body
 {
-	font-family: 'Montserrat', sans-serif;
+	/* font-family: 'Montserrat', sans-serif; */
 	font-size: 14px;
-	font-weight: 400;
+	font-weight: normal;
 	background: #FFFFFF;
 	color: #2b2e35;
 }

@@ -22,7 +22,7 @@ input.toggle-btn::before {
 }
 
 input.toggle-btn:checked::before {
-  background:#666;
+  background: #666;
   color: #eee;
   /* border-color: #eee; */
   height: 35px;
