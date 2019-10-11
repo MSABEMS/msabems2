@@ -16,7 +16,7 @@
   margin-left: 0%;
 }
 
-/* Modal Content */
+/* Modal Content For Scene Control */
 
 .modal-content-bedroom {
   position: relative;
@@ -24,13 +24,20 @@
   margin: auto;
   padding: 0;
   border: 1px solid #888;
+
+  /* Width of Modal: Percent of Screen */
   width: 30%;
+
+  /* Height of Modal: px  */
   height: 250px;
+  
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-animation-name: animatetop;
   -webkit-animation-duration: 0.4s;
   animation-name: animatetop;
   animation-duration: 0.4s;
+
+  /* Modal Position of Screen */
   float: left;
 }
 

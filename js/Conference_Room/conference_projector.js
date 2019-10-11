@@ -1,4 +1,4 @@
-// Home
+// Home Start
 function projectorsource_home() {
     console.log("Hello");
     //
@@ -30,7 +30,7 @@ function projectorsource_home() {
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
-            
+
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -41,8 +41,9 @@ function projectorsource_home() {
     //
 
 }
+// Home End
 
-// Source
+// Source Start
 function projectorsource_source() {
     console.log("Hello");
     //
@@ -74,7 +75,7 @@ function projectorsource_source() {
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
-            
+
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -85,8 +86,9 @@ function projectorsource_source() {
     //
 
 }
+// Source End
 
-// setting
+// setting Start
 function projectorsource_setting() {
     console.log("Hello");
     //
@@ -118,7 +120,7 @@ function projectorsource_setting() {
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
-            
+
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -129,8 +131,10 @@ function projectorsource_setting() {
     //
 
 }
+// setting End
 
-// Back
+
+// Back Start
 function projectorsource_back() {
     console.log("Hello");
     //
@@ -162,7 +166,7 @@ function projectorsource_back() {
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
-            
+
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -173,8 +177,10 @@ function projectorsource_back() {
     //
 
 }
+// Back End
 
-// Left
+
+// Left Start
 function projectorsource_left() {
     console.log("Hello");
     //
@@ -206,7 +212,7 @@ function projectorsource_left() {
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
-            
+
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -217,8 +223,10 @@ function projectorsource_left() {
     //
 
 }
+// Left End
 
-// Up
+
+// Up Start
 function projectorsource_up() {
     console.log("Hello");
     //
@@ -250,7 +258,7 @@ function projectorsource_up() {
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
-            
+
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -261,8 +269,10 @@ function projectorsource_up() {
     //
 
 }
+// Up End
 
-// Enter
+
+// Enter Start
 function projectorsource_enter() {
     console.log("Hello");
     //
@@ -294,7 +304,7 @@ function projectorsource_enter() {
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
-            
+
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -305,8 +315,10 @@ function projectorsource_enter() {
     //
 
 }
+// Enter End
 
-// Down
+
+// Down Start
 function projectorsource_down() {
     console.log("Hello");
     //
@@ -338,7 +350,7 @@ function projectorsource_down() {
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
-            
+
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -349,8 +361,10 @@ function projectorsource_down() {
     //
 
 }
+// Down End
 
-// Right
+
+// Right Start
 function projectorsource_right() {
     console.log("Hello");
     //
@@ -382,7 +396,7 @@ function projectorsource_right() {
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
-            
+
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -393,9 +407,10 @@ function projectorsource_right() {
     //
 
 }
+// Right End
 
 
-// Power
+// Power Start
 function changeImage() {
     console.log("Hello");
     //
@@ -428,7 +443,7 @@ function changeImage() {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
             changeImage_power()
-            
+
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -448,5 +463,5 @@ function changeImage_power() {
         image.src = "images/remodeair/switchon.png";
     }
 }
-
+// Power End
 

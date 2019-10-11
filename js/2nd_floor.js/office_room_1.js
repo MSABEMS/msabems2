@@ -1,4 +1,4 @@
-// Office Room 1 Welcome
+// Office Room 1 Welcome Start
 function or1_welcome() {
     console.log("Hello");
     //
@@ -45,9 +45,9 @@ function or1_welcome() {
 function or1_welcome_changeImage() {
     document.getElementById('or1').src = 'https://www.agricar.co.uk/uploads/images/products/large/agricar-new-holland-bright-yellow-87295405-1539606274yy.png'
 }
+// Office Room 1 Welcome End
 
-
-// Office Room 1 Goodbye
+// Office Room 1 Goodbye Start
 function or1_goodbye() {
     console.log("Hello");
     //
@@ -93,3 +93,4 @@ function or1_goodbye() {
 function or1_goodbye_changeImage() {
     document.getElementById('or1').src = 'images/goodbye.jpg'
 }
+// Office Room 1 Goodbye End

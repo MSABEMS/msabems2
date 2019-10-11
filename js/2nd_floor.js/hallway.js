@@ -1,4 +1,4 @@
-// Hall Way Automatic
+// Hall Way Automatic Start
 function hy_automatic() {
     console.log("Hello");
     //
@@ -45,9 +45,9 @@ function hy_automatic() {
 function hy_automatic_changeImage() {
     document.getElementById('hy').src = 'https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2013/8/1/1375354802439/Blue---the-colour-008.jpg?width=300&quality=85&auto=format&fit=max&s=2a7663fea4602034647ecb92ae228d96'
 }
+// Hall Way Automatic End
 
-
-// Hall Way Welcome
+// Hall Way Welcome Start
 function hy_welcome() {
     console.log("Hello");
     //
@@ -94,9 +94,9 @@ function hy_welcome() {
 function hy_welcome_changeImage() {
     document.getElementById('hy').src = 'https://www.agricar.co.uk/uploads/images/products/large/agricar-new-holland-bright-yellow-87295405-1539606274yy.png'
 }
+// Hall Way Welcome End
 
-
-// Hall Way Goodbye
+// Hall Way Goodbye Start
 function hy_goodbye() {
     console.log("Hello");
     //
@@ -140,7 +140,7 @@ function hy_goodbye() {
 
 }
 
-
 function hy_goodbye_changeImage() {
     document.getElementById('hy').src = 'images/goodbye.jpg'
 }
+// Hall Way Goodbye End

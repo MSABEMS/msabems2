@@ -27,6 +27,7 @@ function lightingrow1() {
       }
     })
   })
+  // When done, Do Next
     .done(function (data, textStatus, jqXHR) {
       console.log("HTTP Request Succeeded: " + jqXHR.status);
       console.log(data);
@@ -41,6 +42,7 @@ function lightingrow1() {
   //
 }
 
+// Change Image Colour From Gray to Yellow Start
 function lightingrow1_changeImage() {
   // var image1_1 = document.getElementById('row1_1');
   // var image1_2 = document.getElementById('row1_2');
@@ -91,6 +93,10 @@ function lightingrow1_changeImage() {
 
   }
 }
+// Change Image Colour From Gray to Yellow End
+
+
+
 
 // Row2
 function lightingrow2() {
@@ -136,6 +142,8 @@ function lightingrow2() {
   //
 
 }
+
+// Change Image Colour From Gray to Yellow Start
 function lightingrow2_changeImage() {
   // var image2_1 = document.getElementById('row2_1');
   // var image2_2 = document.getElementById('row2_2');
@@ -171,6 +179,8 @@ function lightingrow2_changeImage() {
     // image2_4.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
   }
 }
+// Change Image Colour From Gray to Yellow End
+
 
 // Row3
 function lightingrow3() {
@@ -215,6 +225,8 @@ function lightingrow3() {
   //
 
 }
+
+// Change Image Colour From Gray to Yellow Start
 function lightingrow3_changeImage() {
   var image3_1 = document.getElementById('row3_1');
   var image3_2 = document.getElementById('row3_2');
@@ -229,6 +241,7 @@ function lightingrow3_changeImage() {
     image3_2.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
   }
 }
+// Change Image Colour From Gray to Yellow End
 
 // Row4
 function lightingrow4() {
@@ -273,6 +286,8 @@ function lightingrow4() {
   //
 
 }
+
+// Change Image Colour From Gray to Yellow Start
 function lightingrow4_changeImage() {
   var image4_1 = document.getElementById('row4_1');
   var image4_2 = document.getElementById('row4_2');
@@ -308,6 +323,6 @@ function lightingrow4_changeImage() {
 
   }
 }
-
+// Change Image Colour From Gray to Yellow End
 
 

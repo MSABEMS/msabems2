@@ -1,4 +1,4 @@
-// Screen_up
+// Screen_up Start
 function screen_up() {
     console.log("Hello");
     //
@@ -40,8 +40,10 @@ function screen_up() {
     //
 
 }
+// Screen_up End
 
-// Screen_pause
+
+// Screen_pause Start
 function screen_pause() {
     console.log("Hello");
     //
@@ -83,8 +85,10 @@ function screen_pause() {
     //
 
 }
+// Screen_pause End
 
-// Screen_Down
+
+// Screen_Down Start
 function screen_down() {
     console.log("Hello");
     //
@@ -129,5 +133,5 @@ function screen_down() {
     //
 
 }
-
+// Screen_Down End
 

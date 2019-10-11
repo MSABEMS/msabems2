@@ -12,6 +12,18 @@
 .blog{
 	padding-top: 40px;
 }
+li{
+	list-style: none;
+}
+
+.data {
+	margin-top: 10px;
+}
+
+
+
+
+
 
 
 @charset "utf-8";
