@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
 	<title>MSA Building Dashboard</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="MSA Building Dashboard">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Link From External -->
 	<link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.2/bootstrap.min.css">
 	<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.3.4/owl.carousel.css">
 	<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.3.4/owl.theme.default.css">
 	<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.3.4/animate.css">
+
+	<!-- CSS Part ***** -->
 	<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
 	<link rel="stylesheet" type="text/css" href="styles/responsive.css">
 	<link rel="stylesheet" type="text/css" href="styles/mainhomepage.css">
+	<!-- CSS Part ***** -->
+
+	<!-- JS Part -->
+
+	<!-- JS Chart Edit *****-->
 	<script src="./js/home/chart.js"></script>
+	<!-- JS Chart Edit *****-->
+
+	<!-- JS Link From External -->
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="styles/bootstrap-4.1.2/popper.js"></script>
 	<script src="styles/bootstrap-4.1.2/bootstrap.min.js"></script>
@@ -46,9 +57,8 @@
 <body>
 
 	<!-- Header -->
-
 	<header class="header">
-		<!-- Header Content  b-->
+		<!-- Header Content  -->
 		<div class="header_content d-flex flex-row align-items-center justify-content-start"
 			style="background: linear-gradient(135deg, rgba(154,36,252,1) 0%, rgba(168,195,255,1) 100%)">
 			<div class="logo" style="width: 330px">
@@ -65,23 +75,18 @@
 					<li><a href="./smartplug.html">Smart Plug</a></li>
 					<li><a href="./door.window.html">Door/Window Sensor</a></li>
 				</ul>
-			</nav>
-			<!-- <div class="submit ml-auto"><a href="#">Hello admin</a></div> -->
+			</nav>			
 			<div class="hamburger ml-auto"><i class="fa fa-bars" aria-hidden="true"></i></div>
 		</div>
-
 	</header>
 
-	<!-- Menu -->
 
+	<!-- Menu -->
+	<!-- Right Content For Respondsive Sart-->
 	<div class="menu text-right">
 		<div class="menu_close"><i class="fa fa-times" aria-hidden="true"></i></div>
 		<div class="menu_log_reg">
 			<div class="log_reg d-flex flex-row align-items-center justify-content-end">
-				<ul class="d-flex flex-row align-items-start justify-content-start">
-					<li><a href="#">Login</a></li>
-					<li><a href="#">Register</a></li>
-				</ul>
 			</div>
 			<nav class="menu_nav" style="text-align: left;">
 				<ul>
@@ -97,10 +102,14 @@
 		</div>
 	</div>
 
+	<!-- Right Content For Respondsive End-->
+
 	<div class="homeContent">
 		<!-- Cover Header -->
-		<!-- <div class="namepage">HOMEPAGE</div> -->
+
 		<div class="flexbox-body" style="padding-top: 40px;">
+
+			<!--Left Content Start -->
 			<div class="ENVReport" style="padding-top:20px;">
 				<div class="">
 					<p class="weather_report_header" style="color: #5b5b5b;">MSA weather report</p>
@@ -108,6 +117,8 @@
 				<div class="weather_report_section">
 					<div class="Outdoor_weather" style="padding-top:10px;">
 						Weather report
+
+						<!--Ambient Temp Card  -->
 						<div class="ENV_report_card">
 							<div class="report_card_header" style=""> Ambient Temperature</div>
 							<div class="weather-flexbox">
@@ -120,6 +131,8 @@
 							</div>
 						</div>
 						<div class="ENV_report_card">
+
+							<!--Module Temp Card  -->
 							<div class="report_card_header" style="">Module Temperature</div>
 							<div class="weather-flexbox">
 								<div class="weather_icon">
@@ -130,7 +143,10 @@
 								</div>
 							</div>
 						</div>
+
+						<!-- Irradiance Card -->
 						<div class="ENV_report_card">
+
 							<div class="report_card_header" style="">Irradiance</div>
 							<div class="weather-flexbox">
 								<div class="weather_icon">
@@ -141,6 +157,8 @@
 								</div>
 							</div>
 						</div>
+
+						<!-- Wind Speed Card -->
 						<div class="ENV_report_card">
 							<div class="report_card_header" style="">Wind Speed</div>
 							<div class="weather-flexbox">
@@ -155,6 +173,8 @@
 					</div>
 					<div class="Indoor_weather">
 						Server Room
+
+						<!-- Temperature Card -->
 						<div class="ENV_report_card">
 							<div class="report_card_header" style="">Temperature</div>
 							<div class="weather-flexbox">
@@ -166,7 +186,10 @@
 								</div>
 							</div>
 						</div>
+
+						<!-- Humidity Card -->
 						<div class="ENV_report_card">
+
 							<div class="report_card_header" style="">Humidity</div>
 							<div class="weather-flexbox">
 								<div class="weather_icon">
@@ -180,6 +203,9 @@
 					</div>
 				</div>
 			</div>
+			<!--Left Content End -->
+
+			<!-- Middle Content Start-->
 			<div class="BuidingFloorPlan">
 				<div class="">
 					<div class="weather_report_header" style="font-size: 20px;">
@@ -188,18 +214,22 @@
 					<img src="images/MSA_Microgrid.png" alt="" style="margin-top: 16px;">
 				</div>
 			</div>
+			<!-- Middle Content End-->
 
-			<div class="SummaryEnergyReport" style="padding-top: 20px;">
+			<!-- Right Content Start-->
+			<div class="SummaryEnergyReport" style="padding-top: 50px;">
 				<div class="weather_report_header">
-					Summary Energy Report
+						<h5>MSA Control Buliding Energy Report</h5>
 				</div>
-				<p style="text-align: center;">Testing dounut-chart display</p>
+				<p style="text-align: center;"></p>
 				<div id="myChart" style="height: 370px; width: 100%;"></div>
 				<canvas id="myChart" width="400" height="400"></canvas>
 			</div>
+			<!-- Right Content End-->
 
 		</div>
 	</div>
 	</div>
 </body>
+
 </html>

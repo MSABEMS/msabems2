@@ -1,4 +1,4 @@
-// Lighting Low 1
+// Lighting Low 1 Start
 function lighting_row1() {
     console.log("Hello");
     //
@@ -57,9 +57,10 @@ function lighting_row1_changeImage() {
         image1_3.src = "https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg";
     }
 }
+// Lighting Low 1 End
 
 
-// Lighting Low 2
+// Lighting Low 2 Start
 function lighting_row2() {
     console.log("Hello");
     //
@@ -103,7 +104,6 @@ function lighting_row2() {
     //
 
 }
-
 function lighting_row2_changeImage() {
     var image1_1 = document.getElementById('eorow2_1');
     var image1_2 = document.getElementById('eorow2_2');
@@ -120,8 +120,10 @@ function lighting_row2_changeImage() {
         image1_3.src = "https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg";
     }
 }
+// Lighting Low 2 End
 
-// Lighting Low 3
+
+// Lighting Low 3 Start
 function lighting_row3() {
     console.log("Hello");
     //
@@ -181,3 +183,4 @@ function lighting_row3_changeImage() {
         image1_3.src = "https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg";
     }
 }
+// Lighting Low 3 End
