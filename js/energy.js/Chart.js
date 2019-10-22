@@ -7,7 +7,7 @@ window.onload = function () {
             // text: "MSA Control Building Energy Report"
         },
         axisY: {
-            title: "Number of Medals"
+            title: "Power (kW)"
         },
         toolTip: {
             shared: true
@@ -143,7 +143,7 @@ window.onload = function () {
             // text: "Gold Medals Won in Olympics"
         },
         axisY: {
-            title: "Number of Medals"
+            title: "Power (kW)"
         },
         toolTip: {
             shared: true
