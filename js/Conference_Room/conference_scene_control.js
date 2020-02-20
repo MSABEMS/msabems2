@@ -1,4 +1,4 @@
-// Conference_Wecome
+// Conference_Wecome Start
 function sc_welcome() {
     console.log("Hello");
     //
@@ -40,8 +40,10 @@ function sc_welcome() {
     //
 
 }
+// Conference_Wecome End
 
-// Conference_Meeting
+
+// Conference_Meeting Start
 function sc_meeting() {
     console.log("Hello");
     //
@@ -83,8 +85,10 @@ function sc_meeting() {
     //
 
 }
+// Conference_Meeting End
 
-// Conference_Show-Battery
+
+// Conference_Show-Battery Start
 function sc_sbattery() {
     console.log("Hello");
     //
@@ -126,8 +130,10 @@ function sc_sbattery() {
     //
 
 }
+// Conference_Show-Battery End
 
-// Conference_Goodbye
+
+// Conference_Goodbye  Start
 function sc_goodbye() {
     console.log("Hello");
     //
@@ -169,6 +175,6 @@ function sc_goodbye() {
     //
 
 }
-
+// Conference_Goodbye  End
 
 

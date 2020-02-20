@@ -7,19 +7,24 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="myHOME - real estate template project">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Link From External -->
 	<link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.2/bootstrap.min.css">
 	<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+	<!-- CSS Part ***** -->
 	<link rel="stylesheet" type="text/css" href="styles/1st_Floor.css">
 	<link rel="stylesheet" href="styles/controlbt1st.css">
 	<link rel="stylesheet" type="text/css" href="styles/mainhomepage.css">
 	<link rel="stylesheet" href="./styles/responsive.css">
-	
+	<!-- CSS Part ***** -->
 
-
+	<!-- JS Chart Edit *****-->
 	<script src="./js/1st_floor.js/conference_room.js"></script>
 	<script src="./js/1st_floor.js/eo_room.js"></script>
 	<script src="./js/1st_floor.js/hallway.js"></script>
-	<script src="./js/1st_floor.js/modal.js"></script>
+
+	<!-- JS Chart Edit *****-->
 
 </head>
 
@@ -46,7 +51,7 @@
 						<li><a href="bedroom.html">Bedroom</a></li>
 						<li><a href="energypage.html">Energy</a></li>
 						<li><a href="./smartplug.html">Smart Plug</a></li>
-						<li><a href="./door.window.html">Door/Window Censor</a></li>
+						<li><a href="./door.window.html">Door/Window Sensor</a></li>
 					</ul>
 				</nav>
 				<!-- <div class="submit ml-auto"><a href="#">Hello admin</a></div> -->
@@ -56,27 +61,27 @@
 
 		<!-- Menu -->
 		<div class="menu text-right">
-				<div class="menu_close"><i class="fa fa-times" aria-hidden="true"></i></div>
-				<div class="menu_log_reg">
-					<div class="log_reg d-flex flex-row align-items-center justify-content-end">
-						<ul class="d-flex flex-row align-items-start justify-content-start">
-							<li><a href="#">Login</a></li>
-							<li><a href="#">Register</a></li>
-						</ul>
-					</div>
-					<nav class="menu_nav" style="text-align: left;">
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="1st_Floor.html">1st Floor</a></li>
-							<li><a href="2nd_Floor.html">2nd Floor</a></li>
-							<li><a href="conference_room.html">Conference Room</a></li>
-							<li><a href="bedroom.html">Bedroom</a></li>
-							<li><a href="energypage.html">Energy</a></li>
-							<li><a href="./door.window.html">Door/Window Censor</a></li>
-						</ul>
-					</nav>
+			<div class="menu_close"><i class="fa fa-times" aria-hidden="true"></i></div>
+			<div class="menu_log_reg">
+				<div class="log_reg d-flex flex-row align-items-center justify-content-end">
+					<ul class="d-flex flex-row align-items-start justify-content-start">
+						<li><a href="#">Login</a></li>
+						<li><a href="#">Register</a></li>
+					</ul>
 				</div>
+				<nav class="menu_nav" style="text-align: left;">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="1st_Floor.html">1st Floor</a></li>
+						<li><a href="2nd_Floor.html">2nd Floor</a></li>
+						<li><a href="conference_room.html">Conference Room</a></li>
+						<li><a href="bedroom.html">Bedroom</a></li>
+						<li><a href="energypage.html">Energy</a></li>
+						<li><a href="./door.window.html">Door/Window Censor</a></li>
+					</ul>
+				</nav>
 			</div>
+		</div>
 
 		<!-- Home -->
 		<div class="homeContent">
@@ -90,37 +95,80 @@
 						<div class="col-lg-4">
 							<div class="sidebar">
 
-								<!--Energy Report-->
+								<!--Energy Report Start-->
 								<div class="categories">
 									<div class="sidebar_title">
 										<h3>Energy Report</h3>
 									</div>
-									<div class="sidebar_list">
-										<div class="ContentReport">Total Load: <span class="a"
-												style="margin-left: 105px;"> xxx </span> <span class="a"
-												style="margin-left: 30px;">kW</span>
+									<div class="sidebar_list" style="height: 150px;;">
+										<div class="" style="float: left">
+											<div class=""
+												style="padding-left: 15px;padding-right: 0px;width: 200px">
+												<div class="data">
+													<h5>Total Load</h5>
+												</div>
+												<div class="data"> 
+													<h5>EO Room Load</h5>
+												</div>
+												<div class="data">
+													<h5>Conference Room Load</h5>
+												</div>
+												<div class="data">
+													<h5>Bedroom Load</h5>
+												</div>
+											</div>
 										</div>
-										<div class="ContentReport">Officer Room 1 Load: <span class="a"
-												style="margin-left: 36px;"> xxx </span> <span class="a"
-												style="margin-left: 30px;">kW</span>
+										<div style="float: left; width: 60px;">
+											<div class="data">
+												<span class="a" style="">
+													<h5>xxx </h5>
+												</span>
+											</div>
+											<div class="data">
+												<span class="a" style="">
+													<h5>xxx </h5>
+												</span>
+											</div>
+											<div class="data">
+												<span class="a" style="">
+													<h5>xxx </h5>
+												</span>
+											</div>
+											<div class="data">
+												<span class="a" style="">
+													<h5>xxx </h5>
+												</span>
+											</div>
+
 										</div>
-										<div class="ContentReport">Officer Room 2 Load: <span class="a"
-												style="margin-left: 34px;"> xxx </span> <span class="a"
-												style="margin-left: 30px;">kW</span>
-										</div>
-										<div class="ContentReport">Main Control Load: <span class="a"
-												style="margin-left: 49px;"> xxx </span> <span class="a"
-												style="margin-left: 30px;">kW</span>
-										</div>
-										<div class="ContentReport">Critical Load: <span class="a"
-												style="margin-left: 90px;"> xxx </span> <span class="a"
-												style="margin-left: 30px;">kW</span>
+										<div style="width: 10px;float: left;">
+											<div class="data">
+												<span class="a" style="">
+													<h5>kW</h5>
+												</span>
+											</div>
+											<div class="data">
+												<span class="a" style="">
+													<h5>kW</h5>
+												</span>
+											</div>
+											<div class="data">
+												<span class="a" style="">
+													<h5>kW</h5>
+												</span>
+											</div>
+											<div class="data">
+												<span class="a" style="">
+													<h5>kW</h5>
+												</span>
+											</div>
 										</div>
 									</div>
 								</div>
-
+								<!--Energy Report End-->
+								
 								<!--Scene Control-->
-								<div class="archive">
+								<div class="archive" style="clear: both;padding-top: 5px">
 									<div class="sidebar_title">
 										<h3>Scene Control</h3>
 									</div>
@@ -129,7 +177,6 @@
 											<!--Bedroom-->
 											<ul>
 												<!-- Trigger/Open The Modal -->
-												<!-- <button id="myBtn_bedroom" class="SceneStyle">Bedroom</button> -->
 
 												<!-- The Modal -->
 												<div id="myModal_bedroom" class="modal">
@@ -176,14 +223,13 @@
 																		</label>
 																	</h4>
 																</li>
-
-
 															</div>
 														</div>
 
 													</div>
 												</div>
 											</ul>
+
 											<!--Conferenceroom-->
 											<ul>
 												<!-- Trigger/Open The Modal -->
@@ -198,6 +244,8 @@
 														style="border-radius:12px;">
 														<div class="modal-header">
 															<h3 style="margin-left: 10px">Conferenceroom</h3>
+
+															<!-- x Mark Click -->
 															<span class="close" style="margin-right: 7px"
 																onclick="conferenceroom()">&times;</span>
 														</div>
@@ -207,17 +255,20 @@
 																	<div class="col-lg-6" style="padding-left:30px">
 																		<div class="col-lg-6" style="">
 																			<div style="padding-left: 0px;">
+
+																				<!-- Edit Scene Name -->
+																				<!-- 
+																					value="Welcome" Edit Scene's Name Value
+																					name="conference_control" Edit Scnen Name Group
+																				 -->
 																				<input class="conference_welcome"
 																					type="radio" value="Welcome"
 																					onclick="con_welcome()"
 																					style="padding-right: 10px;"
-																					name="scene_control">
-																			</div>
-																			<!-- <button onclick="con_welcome()"
-																				type="button"
-																				class="btn btn-outline-warning">Welcome
+																					name="conference_control">
 
-																			</button> -->
+
+																			</div>
 																		</div>
 																		<div class="col-lg-6"
 																			style="padding-top: 10px;">
@@ -227,13 +278,8 @@
 																					type="radio" value="Meeting"
 																					onclick="con_meeting()"
 																					style="padding-right: 10px;"
-																					name="scene_control">
+																					name="conference_control">
 																			</div>
-																			<!-- <button onclick="con_goodnight()"
-																				type="button"
-																				class="btn btn-outline-dark">Goodnight
-																			</button> -->
-
 																		</div>
 																	</div>
 																	<div class="col-lg-6" style="padding-left:10px">
@@ -243,11 +289,9 @@
 																					type="radio" value="Show Battery"
 																					onclick="con_showbatery()"
 																					style="padding-right: 10px;"
-																					name="scene_control">
+																					name="conference_control">
 																			</div>
-																			<!-- <button onclick="con_day()" type="button"
-																				class="btn btn-outline-primary">Day
-																			</button> -->
+
 																		</div>
 																		<div class="col-lg-6" style="padding-top: 10px">
 																			<div
@@ -256,11 +300,8 @@
 																					type="radio" value="Goodbye"
 																					onclick="con_goodbye()"
 																					style="padding-right: 10px;"
-																					name="scene_control">
+																					name="conference_control">
 																			</div>
-																			<!-- <button onclick="con_night()" type="button"
-																				class="btn btn-outline-danger">Night</button> -->
-
 																		</div>
 																	</div>
 																</div>
@@ -319,6 +360,7 @@
 													</div>
 												</div>
 											</ul>
+
 											<!--Hallway-->
 											<ul>
 												<!-- Trigger/Open The Modal -->
@@ -375,6 +417,8 @@
 												</div>
 
 											</ul>
+
+
 										</div>
 									</div>
 								</div>
