@@ -1,14 +1,23 @@
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyBp8zIkQHu5YQBbNIyzF4jjmgne4qJn9q4",
-    authDomain: "peasbhmsr.firebaseapp.com",
-    databaseURL: "https://peasbhmsr.firebaseio.com",
-    projectId: "peasbhmsr",
-    storageBucket: "peasbhmsr.appspot.com",
-    messagingSenderId: "965333932207",
-    appId: "1:965333932207:web:77867fb92acf56d4"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+// Retrieve data from Firebase -> Outdoor
 
-  var ref = firebase.database().ref();
+
+
+// Retrieve data from Firebase -> Indoor
+var ref_indoor = firebase.database().ref().child("peasbhmsr").child("devicetype").child("multisensor").child("MS202001");
+var ref_temp = ref_indoor.child("TEMPERATURE")
+var ref_hum = ref_indoor.child("HUMIDITY")
+
+ref_temp.on("value", function(snapshot) {
+  console.log("Get temp from firebase")
+  //  console.log(snapshot.val());
+  var temp_server = snapshot.val();
+  // console.log("Temp is " + temp_server);
+  document.getElementById("temp_serverroom").innerHTML = temp_server;
+});
+
+ref_hum.on("value", function(snapshot) {
+  console.log("Get hum from firebase")
+  // console.log(snapshot.val());
+  var hum_server = snapshot.val();
+  document.getElementById("hum_serverroom").innerHTML = hum_server;
+});
