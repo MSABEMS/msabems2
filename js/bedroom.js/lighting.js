@@ -1,17 +1,17 @@
-// Lighting Low 1
+// Lighting Low 1 Start
 function lighting_row1() {
     console.log("Hello");
     //
     console.log("POST method by jQuery");
     jQuery.ajax({
         // url: "https://cors-anywhere.herokuapp.com/https://peahivebackend.herokuapp.com/hiveapi/",
-        url: "https://cors-anywhere.herokuapp.com/https://hookb.in/PxPd1ay3aOh0j0WBzJEm",
+        url: "https://cors-anywhere.herokuapp.com/https://hookb.in/2qMV6mpxeDiDYDK60pRq",
         type: "POST",
         headers: {
             // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
             "Authorization": "Token dscnsjdkcnsjdkcnjsdcnjdsncjsdnckjsdnckjsdcnkjsdcnskjdcnjksdncbs",
             "Content-Type": "application/json; charset=utf-8",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/2qMV6mpxeDiDYDK60pRq",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
@@ -57,22 +57,23 @@ function lighting_row1_changeImage() {
         image1_3.src = "https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg";
     }
 }
+// Lighting Low 1 End
 
 
-// Lighting Low 2
+// Lighting Low 2 Start
 function lighting_row2() {
     console.log("Hello");
     //
     console.log("POST method by jQuery");
     jQuery.ajax({
         // url: "https://cors-anywhere.herokuapp.com/https://peahivebackend.herokuapp.com/hiveapi/",
-        url: "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+        url: "https://cors-anywhere.herokuapp.com/https://hookb.in/2qMV6mpxeDiDYDK60pRq",
         type: "POST",
         headers: {
             // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
             "Authorization": "Token dscnsjdkcnsjdkcnjsdcnjdsncjsdnckjsdnckjsdcnkjsdcnskjdcnjksdncbs",
             "Content-Type": "application/json; charset=utf-8",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/2qMV6mpxeDiDYDK60pRq",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
@@ -103,7 +104,6 @@ function lighting_row2() {
     //
 
 }
-
 function lighting_row2_changeImage() {
     var image1_1 = document.getElementById('eorow2_1');
     var image1_2 = document.getElementById('eorow2_2');
@@ -120,21 +120,23 @@ function lighting_row2_changeImage() {
         image1_3.src = "https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg";
     }
 }
+// Lighting Low 2 End
 
-// Lighting Low 3
+
+// Lighting Low 3 Start
 function lighting_row3() {
     console.log("Hello");
     //
     console.log("POST method by jQuery");
     jQuery.ajax({
         // url: "https://cors-anywhere.herokuapp.com/https://peahivebackend.herokuapp.com/hiveapi/",
-        url: "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+        url: "https://cors-anywhere.herokuapp.com/https://hookb.in/2qMV6mpxeDiDYDK60pRq",
         type: "POST",
         headers: {
             // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
             "Authorization": "Token dscnsjdkcnsjdkcnjsdcnjdsncjsdnckjsdnckjsdcnkjsdcnskjdcnjksdncbs",
             "Content-Type": "application/json; charset=utf-8",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/2qMV6mpxeDiDYDK60pRq",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
@@ -181,3 +183,4 @@ function lighting_row3_changeImage() {
         image1_3.src = "https://thumbs.dreamstime.com/t/lights-garland-abstract-blurred-led-light-orange-lighting-bokeh-yellow-perspective-as-explosion-rays-62413661.jpg";
     }
 }
+// Lighting Low 3 End

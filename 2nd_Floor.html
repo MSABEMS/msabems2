@@ -7,17 +7,24 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="myHOME - real estate template project">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Link From External -->
 	<link rel="stylesheet" type="text/css" href="styles/bootstrap-4.1.2/bootstrap.min.css">
 	<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+	<!-- CSS Part ***** -->
 	<link rel="stylesheet" type="text/css" href="styles/2nd_Floor.css">
 	<link rel="stylesheet" href="styles/modalbt2nd.css">
 	<link rel="stylesheet" type="text/css" href="styles/mainhomepage.css">
 	<link rel="stylesheet" href="./styles/responsive.css">
+	<!-- CSS Part ***** -->
 
+	<!-- JS Chart Edit *****-->
 	<script src="./js/2nd_floor.js/office_room_1.js"></script>
 	<script src="./js/2nd_floor.js/office_room_2.js"></script>
 	<script src="./js/2nd_floor.js/mgc_room.js"></script>
 	<script src="./js/2nd_floor.js/hallway.js"></script>
+	<!-- JS Chart Edit *****-->
 </head>
 
 <body>
@@ -141,133 +148,186 @@
 								</div>
 
 								<!-- Scene Control -->
-								<div class="archive">
+								<div class="archive" style="clear: both; padding-top: 5px;">
 									<div class="sidebar_title">
 										<h3>Scene Control</h3>
 									</div>
 									<div class="sidebar_list_control" style="margin-top:30px;">
 										<div class="control_2nd_floor">
-											<!--Office Room 1-->
+
+											<!--Office room 1 new-->
 											<ul>
 												<!-- Trigger/Open The Modal -->
-												<button id="myBtn_officeroom1" class="SceneStyle">Office Room 1</button>
+												<button id="myBtn_officeroom1" class="SceneStyle">Office
+													Room 1</button>
 
 												<!-- The Modal -->
 												<div id="myModal_officeroom1" class="modal">
 
 													<!-- Modal content -->
-													<div class="modal-content-officeroom1">
+													<div class="modal-content-officeroom1"
+														style="border-radius:12px;">
 														<div class="modal-header">
 															<h3 style="margin-left: 10px">Office Room 1</h3>
-															<span class="close" style="margin-right: 2px"
+
+															<!-- x Mark Click -->
+															<span class="close" style="margin-right: 7px"
 																onclick="officeroom1()">&times;</span>
 														</div>
 														<div class="modal-body">
-															<div class="menu_2ndfloor">
-																<div class="row" style="margin-top: 20px">
-																	<div class="col-lg-6" style="padding-left: 30px">
-																		<div style="padding-left: 15px;">
-																			<input class="or1_welcome" type="radio"
-																				value="Welcome" onclick="or1_welcome()"
-																				style="padding-left: 10px;"
-																				name="officeroom1_control">
+															<div class="menu_one">
+																<div class="row" style="padding-top:15px;">
+																	<div class="col-lg-6" style="padding-left:30px">
+																		<div class="col-lg-6" style="">
+																			<div style="padding-left: 0px;">
+
+																				<!-- Edit Scene Name -->
+																				<!--
+																					value="Welcome" Edit Scene's Name Value
+																					name="conference_control" Edit Scnen Name Group
+																				 -->
+																				<input class="or1_welcome"
+																					type="radio" value="Welcome"
+																					onclick="or1_welcome()"
+																					style="padding-right: 10px;"
+																					name="officeroom1_control">
+
+
+																			</div>
+																		</div>
+																		<div class="col-lg-6"
+																			style="padding-top: 10px;">
+																			<div
+																				style="padding-left: 0px;padding-top: 15px;">
+																				<input class="or1_goodbye"
+																					type="radio" value="Goodbye"
+																					onclick="or1_goodbye()"
+																					style="padding-right: 10px;"
+																					name="officeroom1_control">
+																			</div>
 																		</div>
 																	</div>
 																	<div class="col-lg-6" style="padding-left:10px">
-																		<div style="padding-left: 15px;">
-																			<input class="or1_goodbye" type="radio"
-																				value="Goodbye" onclick="or1_goodbye()"
-																				style="padding-right: px;"
-																				name="officeroom1_control">
+																		<div class="col-lg-6" style="padding-top:0px;">
+																			<div style="padding-left: 0px;">
+																				<input class="or1_curtain_open"
+																					type="radio" value="Curtain Open"
+																					onclick="or1_curtain_open()"
+																					style="padding-right: 10px;"
+																					name="officeroom1_control">
+																			</div>
+
+																		</div>
+																		<div class="col-lg-6" style="padding-top: 10px">
+																			<div
+																				style="padding-left: 0px;padding-top: 15px;">
+																				<input class="or1_curtain_close"
+																					type="radio" value="Curtain Close"
+																					onclick="or1_curtain_close()"
+																					style="padding-right: 10px;"
+																					name="officeroom1_control">
+																			</div>
 																		</div>
 																	</div>
-																	<!-- <div class="col-lg-8">
-																		<div class="row">
-																			<div class="col-6">
-																				
-																			</div>
-																			<div class="col-6">
-																				
-																			</div>
-																		</div>
-																		<h4 style="padding-top: 5px;">Welcom</h4>
-																		<h4 style="padding-top: 15px;">Goodbye</h4>
-																	</div> -->
-																	<!-- <div class="col-lg-4">
-																		<label class="switch">
-																			<input type="checkbox">
-																			<span class="slider round"></span>
-																		</label>
-																		<label class="switch">
-																			<input type="checkbox">
-																			<span class="slider round"></span>
-																		</label>
-																	</div> -->
 																</div>
 															</div>
 														</div>
 													</div>
 												</div>
+
 											</ul>
-											<!--Office Room 2-->
-											<ul>
-												<!-- Trigger/Open The Modal -->
-												<button id="myBtn_officeroom2" class="SceneStyle">Office Room 2</button>
+	<!--Office room 1 new end-->
 
-												<!-- The Modal -->
-												<div id="myModal_officeroom2" class="modal">
 
-													<!-- Modal content -->
-													<div class="modal-content-officeroom2">
-														<div class="modal-header">
-															<h3 style="margin-left: 10px">Office Room 2</h3>
-															<span class="close" style="margin-right: 7px"
-																onclick="officeroom2()">&times;</span>
-														</div>
-														<div class="modal-body">
-															<div class="menu_2ndfloor">
-																<div class="row" style="margin-top:20px;">
-																	<div class="col-lg-6" style="padding-left:30px">
-																		<div style="padding-left: 15px;">
-																			<input class="or2_welcome" type="radio"
-																				value="Welcome" onclick="or2_welcome()"
-																				style="padding-left: 10px;"
-																				name="officeroom2_control">
-																		</div>
-																		<!-- <button onclick="or2_welcome()" type="button"
-																			class="btn btn-outline-warning">Welcome</button> -->
-																	</div>
-																	<div class="col-lg-6" style="padding-left:10px;">
-																		<div style="padding-left: 15px;">
-																			<input class="or2_goodbye" type="radio"
-																				value="Goodbye" onclick="or2_goodbye()"
-																				style="padding-right: px;"
-																				name="officeroom2_control">
-																		</div>
-																		<!-- <button onclick="or2_goodbye()" type="button"
-																			class="btn btn-outline-dark">Goodbye</button> -->
-																	</div>
+	<!--Office room 2 new-->
+	<ul>
+		<!-- Trigger/Open The Modal -->
+		<button id="myBtn_officeroom2" class="SceneStyle">Office
+			Room 2</button>
 
-																	<!-- <div class="col-lg-8">
-																		<h4 style="padding-top: 5px">Welcome</h4>
-																		<h4 style="padding-top: 15px;">Goodbye</h4>
-																	</div>
-																	<div class="col-lg-4">
-																		<label class="switch">
-																			<input type="checkbox" checked>
-																			<span class="slider round"></span>
-																		</label>
-																		<label class="switch">
-																			<input type="checkbox" checked>
-																			<span class="slider round"></span>
-																		</label>
-																	</div> -->
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</ul>
+		<!-- The Modal -->
+		<div id="myModal_officeroom2" class="modal">
+
+			<!-- Modal content -->
+			<div class="modal-content-officeroom2"
+				style="border-radius:12px;">
+				<div class="modal-header">
+					<h3 style="margin-left: 10px">Office Room 2</h3>
+
+					<!-- x Mark Click -->
+					<span class="close" style="margin-right: 7px"
+						onclick="officeroom2()">&times;</span>
+				</div>
+				<div class="modal-body">
+					<div class="menu_one">
+						<div class="row" style="padding-top:15px;">
+							<div class="col-lg-6" style="padding-left:30px">
+								<div class="col-lg-6" style="">
+									<div style="padding-left: 0px;">
+
+										<!-- Edit Scene Name -->
+										<!--
+											value="Welcome" Edit Scene's Name Value
+											name="conference_control" Edit Scnen Name Group
+										 -->
+										<input class="or2_welcome"
+											type="radio" value="Welcome"
+											onclick="or2_welcome()"
+											style="padding-right: 10px;"
+											name="officeroom2_control">
+
+
+									</div>
+								</div>
+								<div class="col-lg-6"
+									style="padding-top: 10px;">
+									<div
+										style="padding-left: 0px;padding-top: 15px;">
+										<input class="or2_goodbye"
+											type="radio" value="Goodbye"
+											onclick="or2_goodbye()"
+											style="padding-right: 10px;"
+											name="officeroom2_control">
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-6" style="padding-left:10px">
+								<div class="col-lg-6" style="padding-top:0px;">
+									<div style="padding-left: 0px;">
+										<input class="or2_curtain_open"
+											type="radio" value="Curtain Open"
+											onclick="or2_curtain_open()"
+											style="padding-right: 10px;"
+											name="officeroom2_control">
+									</div>
+
+								</div>
+								<div class="col-lg-6" style="padding-top: 10px">
+									<div
+										style="padding-left: 0px;padding-top: 15px;">
+										<input class="or2_curtain_close"
+											type="radio" value="Curtain Close"
+											onclick="or2_curtain_close()"
+											style="padding-right: 10px;"
+											name="officeroom2_control">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</ul>
+<!--Office room 1 new end-->
+
+
+
+
+
+
+
 											<!--MGC Control-->
 											<ul>
 												<!-- Trigger/Open The Modal -->
@@ -354,6 +414,7 @@
 														<div class="modal-body">
 															<div class="menu_2ndfloor">
 																<div class="row" style="margin-top: 20px;">
+
 																	<div class="col-lg-4" style="">
 																		<div style="padding-left: 0px;">
 																			<input class="hy_automatic" type="radio"
@@ -363,6 +424,7 @@
 																				name="hy_control">
 																		</div>
 																	</div>
+
 																	<div class="col-lg-4" style="">
 																		<div style="padding-left: 0px;">
 																			<input class="hy_welcome" type="radio"
@@ -380,6 +442,7 @@
 																				name="hy_control">
 																		</div>
 																	</div>
+
 																</div>
 															</div>
 														</div>

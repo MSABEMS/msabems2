@@ -1,17 +1,17 @@
-// conferenceroom Welcome
+// conferenceroom Welcome Start
 function con_welcome() {
     console.log("Hello");
     //
     console.log("POST method by jQuery");
     jQuery.ajax({
         // url: "https://cors-anywhere.herokuapp.com/https://peahivebackend.herokuapp.com/hiveapi/",
-        url: "https://cors-anywhere.herokuapp.com/https://hookb.in/pz69q7DXwkU3b3qV0wgo",
+        url: "https://cors-anywhere.herokuapp.com/https://hookb.in/2qMV6mpxeDiDYDK60pRq",
         type: "POST",
         headers: {
             // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
             "Authorization": "Token dscnsjdkcnsjdkcnjsdcnjdsncjsdnckjsdnckjsdcnkjsdcnskjdcnjksdncbs",
             "Content-Type": "application/json; charset=utf-8",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/pz69q7DXwkU3b3qV0wgo",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/2qMV6mpxeDiDYDK60pRq",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
@@ -41,25 +41,27 @@ function con_welcome() {
     //
 
 }
+// Founction Change Image
 function con_welcome_changeImage() {
     document.getElementById('con').src = 'https://www.agricar.co.uk/uploads/images/products/large/agricar-new-holland-bright-yellow-87295405-1539606274yy.png'
 }
+// conferenceroom Welcome End
 
 
-// conferenceroom Meeting
+// conferenceroom Meeting Start
 function con_meeting() {
     console.log("Hello");
     //
     console.log("POST method by jQuery");
     jQuery.ajax({
         // url: "https://cors-anywhere.herokuapp.com/https://peahivebackend.herokuapp.com/hiveapi/",
-        url: "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+        url: "https://cors-anywhere.herokuapp.com/https://hookb.in/2qMV6mpxeDiDYDK60pRq",
         type: "POST",
         headers: {
             // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
             "Authorization": "Token dscnsjdkcnsjdkcnjsdcnjdsncjsdnckjsdnckjsdcnkjsdcnskjdcnjksdncbs",
             "Content-Type": "application/json; charset=utf-8",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/2qMV6mpxeDiDYDK60pRq",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
@@ -89,26 +91,27 @@ function con_meeting() {
     //
 
 }
-
+// Founction Change Image
 function con_meeting_changeImage() {
     document.getElementById('con').src ='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVAAAACWCAMAAAC/8CD2AAAAA1BMVEX/AAAZ4gk3AAAAR0lEQVR4nO3BAQEAAACCIP+vbkhAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF8GxXYAARizDlgAAAAASUVORK5CYII='
 }
+// conferenceroom Meeting End
 
-// images/goodbye.jpg
-// conferenceroom Show Battery
+
+// conferenceroom Show Battery Start
 function con_showbatery() {
     console.log("Hello");
     //
     console.log("POST method by jQuery");
     jQuery.ajax({
         // url: "https://cors-anywhere.herokuapp.com/https://peahivebackend.herokuapp.com/hiveapi/",
-        url: "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+        url: "https://cors-anywhere.herokuapp.com/https://hookb.in/2qMV6mpxeDiDYDK60pRq",
         type: "POST",
         headers: {
             // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
             "Authorization": "Token dscnsjdkcnsjdkcnjsdcnjdsncjsdnckjsdnckjsdcnkjsdcnskjdcnjksdncbs",
             "Content-Type": "application/json; charset=utf-8",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/2qMV6mpxeDiDYDK60pRq",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
@@ -138,26 +141,27 @@ function con_showbatery() {
     //
 
 }
-
+// Founction Change Image
 function con_showbatery_changeImage() {
     document.getElementById('con').src = 'https://www.htmlcsscolor.com/preview/gallery/008000.png'
 }
+// conferenceroom Show Battery End
 
 
-// conferenceroom Goodbye
+// conferenceroom Goodbye Start
 function con_goodbye() {
     console.log("Hello");
     //
     console.log("POST method by jQuery");
     jQuery.ajax({
         // url: "https://cors-anywhere.herokuapp.com/https://peahivebackend.herokuapp.com/hiveapi/",
-        url: "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+        url: "https://cors-anywhere.herokuapp.com/https://hookb.in/2qMV6mpxeDiDYDK60pRq",
         type: "POST",
         headers: {
             // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
             "Authorization": "Token dscnsjdkcnsjdkcnjsdcnjdsncjsdnckjsdnckjsdcnkjsdcnskjdcnjksdncbs",
             "Content-Type": "application/json; charset=utf-8",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/2qMV6mpxeDiDYDK60pRq",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
@@ -187,8 +191,8 @@ function con_goodbye() {
     //
 
 }
-
-
+// Founction Change Image
 function con_goodbye_changeImage() {
     document.getElementById('con').src = 'images/goodbye.jpg'
 }
+// conferenceroom Goodbye End
