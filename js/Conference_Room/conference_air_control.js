@@ -1,4 +1,4 @@
-// Air Control 
+// A/C Remote 1 Start
 // On Button
 function turn_on_ac1() {
     console.log("Hello");
@@ -588,6 +588,7 @@ function remote1_speedfive() {
     //
 
 }
+// A/C Remote 1 End
 
 
 
@@ -595,8 +596,7 @@ function remote1_speedfive() {
 
 
 
-
-// Air Comtrol 2
+// A/C Remote 2 Start 
 function turn_on_ac2() {
     console.log("Hello");
     //
@@ -704,7 +704,7 @@ function down_remote2() {
     }
     document.getElementById("result2").innerHTML = score;
 }
-// 
+
 
 // Submit Temp
 function summitair2() {
@@ -1181,13 +1181,13 @@ function remote2_speedfive() {
     //
 
 }
+// A/C Remote 2 End
 
 
 
 
 
-
-// Air Control 3
+// A/C Remote 3 Start
 function turn_on_ac3() {
     console.log("Hello");
     //
@@ -1751,9 +1751,11 @@ function remote3_speedfive() {
     //
 
 }
+// A/C Remote 3 End
 
 
-// Air Control 4
+
+// A/C Remote 4 Start
 
 // On Button
 function turn_on_ac4() {
@@ -1909,8 +1911,6 @@ function summitair4() {
     //
 
 }
-
-
 
 
 // CoolModeControl
@@ -2344,5 +2344,5 @@ function remote4_speedfive() {
     //
 
 }
-
+// A/C Remote 4 End
 

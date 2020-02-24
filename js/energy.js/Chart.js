@@ -150,7 +150,7 @@ window.onload = function () {
         },
         legend: {
             cursor: "pointer",
-            itemclick: toggleDataSeries
+            itemclick: toggleDataSeries2
         },
         data: [{
             type: "spline",
@@ -196,7 +196,7 @@ window.onload = function () {
 
     chart_2.render();
 
-    function toggleDataSeries(e) {
+    function toggleDataSeries2(e) {
         if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
             e.dataSeries.visible = false;
         }
@@ -205,6 +205,5 @@ window.onload = function () {
         }
         chart_2.render();
     }
-
-
 }
+

@@ -25,7 +25,24 @@
 }
 
 /* Modal Content */
-.modal-content-officeroom1, .modal-content-officeroom2, .modal-content-maincontrol {
+.modal-content-officeroom1,.modal-content-officeroom2 {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 30%;
+  height: 170px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  float: left;
+}
+
+/* Modal Content */
+.modal-content-maincontrol {
   position: relative;
   background-color: #fefefe;
   margin: auto;
@@ -230,6 +247,72 @@ input.or1_welcome:checked::before {
   cursor: pointer;
 }
 
+/* Button in Modal Office Room 1>Curtain open */
+input.or1_curtain_open {
+  visibility: hidden;
+}
+
+input.or1_curtain_open::before {
+  text-align: center;
+  content: attr(value);
+  display: inline-block;
+  padding: 5px;
+  background: transparent;
+  font-size: 10pt;
+  color: black;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  visibility: visible;
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  font-weight: normal;
+}
+
+input.or1_curtain_open:checked::before {
+  background: yellow;
+  color: black;
+  /* border-color: #eee; */
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+}
+
+
+/* Button in Modal Office Room 1>Curtain close */
+input.or1_curtain_close {
+  visibility: hidden;
+}
+
+input.or1_curtain_close::before {
+  text-align: center;
+  content: attr(value);
+  display: inline-block;
+  padding: 5px;
+  background: transparent;
+  font-size: 10pt;
+  color: black;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  visibility: visible;
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  font-weight: normal;
+}
+
+input.or1_curtain_close:checked::before {
+  background: yellow;
+  color: black;
+  /* border-color: #eee; */
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+}
 
 /* Button in Modal Ofiice Room 1>Goodbye */
 
@@ -300,6 +383,72 @@ input.or2_welcome:checked::before {
   cursor: pointer;
 }
 
+/* Button in Modal Office Room 2>Curtain open */
+input.or2_curtain_open {
+  visibility: hidden;
+}
+
+input.or2_curtain_open::before {
+  text-align: center;
+  content: attr(value);
+  display: inline-block;
+  padding: 5px;
+  background: transparent;
+  font-size: 10pt;
+  color: black;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  visibility: visible;
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  font-weight: normal;
+}
+
+input.or2_curtain_open:checked::before {
+  background: yellow;
+  color: black;
+  /* border-color: #eee; */
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+}
+
+
+/* Button in Modal Office Room 2>Curtain close */
+input.or2_curtain_close {
+  visibility: hidden;
+}
+
+input.or2_curtain_close::before {
+  text-align: center;
+  content: attr(value);
+  display: inline-block;
+  padding: 5px;
+  background: transparent;
+  font-size: 10pt;
+  color: black;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  visibility: visible;
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  font-weight: normal;
+}
+
+input.or2_curtain_close:checked::before {
+  background: yellow;
+  color: black;
+  /* border-color: #eee; */
+  height: 35px;
+  width: 110px;
+  cursor: pointer;
+}
 
 /* Button in Modal Ofiice Room 2>Goodbye */
 

@@ -1,14 +1,18 @@
 window.onload = function() {
 
-    var chart = new CanvasJS.Chart("chartContainer", {
+    var chart = new CanvasJS.Chart("myChart", {
         theme: "light2", // "light1", "light2", "dark1", "dark2"
         exportEnabled: true,
         animationEnabled: true,
         title: {
-            text: "Desktop Browser Market Share in 2016"
+            text: ""
+            
         },
+
         data: [{
+
             type: "pie",
+            // Type line,area,column,bar,pie,funnel,financial 
             startAngle: 25,
             toolTipContent: "<b>{label}</b>: {y}%",
             showInLegend: "true",
