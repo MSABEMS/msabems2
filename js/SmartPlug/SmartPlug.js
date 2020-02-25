@@ -42,24 +42,22 @@ function smartplug1(devieID_smart_plug_1) {
     //
     console.log("POST method by jQuery");
     jQuery.ajax({
-        // url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug/",
-        url: "https://cors-anywhere.herokuapp.com/https://hookb.in/Z2loLbOlQlt1MVqkb7aY",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
         type: "POST",
         headers: {
-            // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
+            "Content-Type": "application/x-www-form-urlencoded",
             "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
-            "Content-Type": "application/json; charset=utf-8",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/Z2loLbOlQlt1MVqkb7aY",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
-        contentType: "application/json",
-        data: JSON.stringify({
+        contentType: "application/x-www-form-urlencoded",
+        data: {
             "device_type": "plug",
             "device_id": "plug001",
             "status": Status_smart_plug_1,
+        },
         })
-    })
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
@@ -119,18 +117,16 @@ function smartplug2(devieID_smart_plug_2) {
     //
     console.log("POST method by jQuery");
     jQuery.ajax({
-        // url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug/",
-        url: "https://cors-anywhere.herokuapp.com/https://hookb.in/Z2loLbOlQlt1MVqkb7aY",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
         type: "POST",
         headers: {
-            // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
+            "Content-Type": "application/x-www-form-urlencoded",
             "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
-            "Content-Type": "application/json; charset=utf-8",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/Z2loLbOlQlt1MVqkb7aY",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
-        contentType: "application/json",
+        contentType: "application/x-www-form-urlencoded",
         data: JSON.stringify({
             "device_type": "plug",
             "device_id": "plug002",
