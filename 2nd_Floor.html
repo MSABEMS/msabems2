@@ -101,7 +101,7 @@
 									<div class="sidebar_list">
 										<div class="ContentReport">
 											Total Load: 
-											<span class="a" style="margin-left: 105px;"> 
+											<span class="a" id="Floor2_Total_Load" style="margin-left: 105px;"> 
 												waiting 
 											</span> 
 											<span class="a" style="margin-left: 30px;">
@@ -110,7 +110,7 @@
 										</div>
 										<div class="ContentReport">
 											Officer Room 1 Load: 
-											<span class="a" style="margin-left: 36px;">
+											<span class="a" id="OfficeRoom_1" style="margin-left: 43px;">
 												waiting
 											</span> 
 											<span class="a" style="margin-left: 30px;">
@@ -119,7 +119,7 @@
 										</div>
 										<div class="ContentReport">
 											Officer Room 2 Load: 
-											<span class="a" style="margin-left: 34px;">
+											<span class="a" id="OfficeRoom_2" style="margin-left: 41px;">
 												waiting
 											 </span> 
 											 <span class="a" style="margin-left: 30px;">
@@ -128,7 +128,7 @@
 										</div>
 										<div class="ContentReport">
 											Main Control Load: 
-											<span class="a" style="margin-left: 49px;">
+											<span class="a" id="MainControl" style="margin-left: 56px;">
 												waiting 
 											</span> 
 											<span class="a" style="margin-left: 30px;">
@@ -137,7 +137,7 @@
 										</div>
 										<div class="ContentReport">
 											Critical Load: 
-											<span class="a" style="margin-left: 90px;">
+											<span class="a" id="CriLoad" style="margin-left: 92px;">
 												waiting 
 											</span>
 											<span class="a" style="margin-left: 30px;">
@@ -524,6 +524,12 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase.js"></script>
+	<script src="init-firebase.js"></script>
+	<script src="js/2nd_floor.js/energyFloor2.js"></script>
+
 	<!--open_modal_officeroom1-->
 	<script>
 
