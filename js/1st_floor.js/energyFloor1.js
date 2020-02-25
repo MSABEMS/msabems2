@@ -37,5 +37,3 @@ var cal_kW_Bedroom = parseInt(localStorage.getItem("kW_Bedroom"));
 var total_load_floor1 = cal_kW_EO + cal_kW_Conference + cal_kW_Bedroom
 
 document.getElementById("Floor1_Total_Load").innerHTML = (total_load_floor1); 
-
-// document.getElementById("Floor1_Total_Load").innerHTML = ;
