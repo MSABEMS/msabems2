@@ -25,8 +25,6 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
 
     <!-- JS Chart Edit *****-->
-    <script src="./js/SmartPlug/SmartPlug.js"></script>
-    <!-- JS Chart Edit *****-->
 
     <!-- JS Link From External -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
@@ -92,18 +90,18 @@
 
                         <!-- Smart Plug 1 -->
                         <div class="smartplug1" style="margin-left: 25px;">
-                            <div class="row" style=";">
-                                <div class="col-5" style=";padding: 0px">
+                            <div class="row" style="">
+                                <div class="col-5" style="padding: 0px">
                                     <div class="left">
                                         <li>
 
           <!-- Smart Plug 1 -->
                                             <div class="row" style="padding-top: 15px;">
                                                 <div class="col-4" style="padding: 0px;padding-left: 25px;">
-                                                    <button id="" type="button" name="" class="device_control_status"
-                                                        style="border: 0px;">
+                                                    <button id="btn_Plug_1" type="button" name="" class="device_control_status"
+                                                            onclick="smartplug1(this.id)" style="border: 0px;">
                                                         <img src="images/remodeair/switchoff.png" alt="" id="myImage1"
-                                                            onclick="smartplug1()" style="width: 35px; height: 35px;">
+                                                             style="width: 35px; height: 35px;">
                                                     </button>
                                                 </div>
                                                 <div class="col-8"
@@ -123,10 +121,12 @@
                                                     <div class="p" style="float: left;padding-left: 10px;width: 20px;">
                                                         <h5>P:</h5>
                                                     </div>
-                                                    <span class="value" style="">
+                                                    <span class="value" id="kW_Plug_1" style="">
                                                         xxx
                                                     </span>
-                                                    <span class="unit" style="">W </span>
+                                                    <span class="unit" style="">
+                                                        W 
+                                                    </span>
                                                 </div>
                                             </li>
                                             <li>
@@ -134,10 +134,12 @@
                                                     <div style="float: left;padding-left: 10px;width: 20px;">
                                                         <h5>V:</h5>
                                                     </div>
-                                                    <span class="value" style="">
+                                                    <span class="value" id="V_Plug_1" style="">
                                                         xxx
                                                     </span>
-                                                    <span class="unit" style="">V</span>
+                                                    <span class="unit" style="">
+                                                        V
+                                                    </span>
                                                 </div>
                                             </li>
                                             <li>
@@ -145,10 +147,12 @@
                                                     <div class="i" style="float: left; margin-left: 10px;width: 10px;">
                                                         <h5>I:</h5>
                                                     </div>
-                                                    <span class="value" style="">
+                                                    <span class="value" id="I_Plug_1" style="">
                                                         xxx
                                                     </span>
-                                                    <span class="unit" style="">A</span>
+                                                    <span class="unit" style="">
+                                                        A
+                                                    </span>
                                                 </div>
                                             </li>
                                             <!-- Smart Plug #1 Information End-->
@@ -174,16 +178,16 @@
 
 <!-- Smart Plug 2 Start-->
                         <div class="smartplug1" style="margin-left: 30px;">
-                            <div class="row" style=";">
-                                <div class="col-5" style=";padding: 0px">
+                            <div class="row" style="">
+                                <div class="col-5" style="padding: 0px">
                                     <div class="left">
                                         <li>
                                             <div class="row" style="padding-top: 15px;">
                                                 <div class="col-4" style="padding: 0px;padding-left: 25px;">
-                                                    <button id="" type="button" name="" class="device_control_status"
-                                                        style="border: 0px;">
+                                                    <button id="btn_Plug_2" type="button" name="" class="device_control_status"
+                                                        onclick="smartplug2(this.id)" style="border: 0px;">
                                                         <img src="images/remodeair/switchoff.png" alt="" id="myImage2"
-                                                            onclick="smartplug2()" style="width: 35px; height: 35px;">
+                                                             style="width: 35px; height: 35px;">
                                                     </button>
                                                 </div>
                                                 <div class="col-8"
@@ -203,10 +207,12 @@
                                                     <div style="float: left;padding-left: 10px;width: 20px;">
                                                         <h5>P:</h5>
                                                     </div>
-                                                    <span class="value" style="">
+                                                    <span class="value" id="kW_Plug_2" style="">
                                                         xxx
                                                     </span>
-                                                    <span class="unit" style="">W </span>
+                                                    <span class="unit" style="">
+                                                        W 
+                                                    </span>
                                                 </div>
                                             </li>
                                             <li>
@@ -214,10 +220,12 @@
                                                     <div style="float: left;padding-left: 10px;width: 20px;">
                                                         <h5>V:</h5>
                                                     </div>
-                                                    <span class="value" style="">
+                                                    <span class="value" id="V_Plug_2" style="">
                                                         xxx
                                                     </span>
-                                                    <span class="unit" style="">V</span>
+                                                    <span class="unit" style="">
+                                                        V
+                                                    </span>
                                                 </div>
                                             </li>
                                             <li>
@@ -225,10 +233,12 @@
                                                     <div style="float: left; margin-left: 10px;width: 10px;">
                                                         <h5>I:</h5>
                                                     </div>
-                                                    <span class="value" style="">
+                                                    <span class="value" id="I_Plug_2" style="">
                                                         xxx
                                                     </span>
-                                                    <span class="unit">A</span>
+                                                    <span class="unit">
+                                                        A
+                                                    </span>
                                                 </div>
                                             </li>
                                         </div>
@@ -511,6 +521,10 @@
         </div>
     </div>
 
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase.js"></script>
+	<script src="init-firebase.js"></script>
+    <script src="./js/SmartPlug/SmartPlug.js"></script>
 
     <!-- Chart Smart Plug1 -->
     <script>

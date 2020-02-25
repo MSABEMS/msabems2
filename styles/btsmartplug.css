@@ -26,9 +26,8 @@
 
 
 .smartplug1  {
-  background: rgb(154, 36, 252);
-  background: linear-gradient(135deg, rgba(154, 36, 252, 1) 0%, rgba(168, 195, 255, 1) 100%);
-  border-radius: 12px;
+  background: rgb(215,192,17);
+  background: radial-gradient(circle, rgba(215,192,17,1) 0%, rgba(234,247,184,1) 100%);  border-radius: 12px;
   padding-left: 10px;
   width: 360px;
   height: 180px;
