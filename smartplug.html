@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Smart Piug</title>
+    <title>Smart Plug</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -125,7 +125,7 @@
                                                         xxx
                                                     </span>
                                                     <span class="unit" style="">
-                                                        W 
+                                                        W
                                                     </span>
                                                 </div>
                                             </li>
@@ -211,7 +211,7 @@
                                                         xxx
                                                     </span>
                                                     <span class="unit" style="">
-                                                        W 
+                                                        W
                                                     </span>
                                                 </div>
                                             </li>
@@ -264,185 +264,199 @@
 
 
 <!-- Smart Plug 3 Start-->
-                        <div class="smartplug1" style="margin-left: 30px;">
-                            <div class="row" style=";">
-                                <div class="col-5" style=";padding: 0px">
-                                    <div class="left">
-                                        <li>
-                                            <div class="row" style="padding-top: 15px;">
-                                                <div class="col-4" style="padding: 0px;padding-left: 25px;">
-                                                    <button id="" type="button" name="" class="device_control_status"
-                                                        style="border: 0px;">
-                                                        <img src="images/remodeair/switchoff.png" alt="" id="myImage3"
-                                                            onclick="smartplug3()" style="width: 35px; height: 35px;">
-                                                    </button>
-                                                </div>
-                                                <div class="col-8"
-                                                    style="padding: 0px;padding-top: 10px;padding-left: 0px;">
-                                                    <div class="sp" style="">
-                                                        <h4>Smart Plug 3</h4>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </li>
-
-                                        <!-- Smart Plug #3 Information Start-->
-                                        <div style="padding-top: 15px;padding-left:10px;">
-                                            <li style="">
-                                                <div class="ContentReport" style="">
-                                                    <div style="float: left;padding-left: 10px;width: 20px;">
-                                                        <h5>P:</h5>
-                                                    </div>
-                                                    <span class="value" style="">
-                                                        xxx
-                                                    </span>
-                                                    <span class="unit" style="">W </span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="ContentReport" style="">
-                                                    <div style="float: left;padding-left: 10px;width: 20px;">
-                                                        <h5>V:</h5>
-                                                    </div>
-                                                    <span class="value" style="">
-                                                        xxx
-                                                    </span>
-                                                    <span class="unit" style="">V</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="ContentReport" style="">
-                                                    <div style="float: left; margin-left: 10px;width: 10px;">
-                                                        <h5>I:</h5>
-                                                    </div>
-                                                    <span class="value" style="">
-                                                        xxx
-                                                    </span>
-                                                    <span class="unit">A</span>
-                                                </div>
-                                            </li>
-                                        </div>
-                                        <!-- Smart Plug #3 Information End-->
-
-                                    </div>
-                                </div>
-                                <div class="col-7" style="text-align: center;">
-                                    <div class="conchart">
-                                        <div style="padding-top: 10px;">
-                                            <!-- <h5>Power</h5> -->
-                                        </div>
-
-                                        <div style="padding-right: 7px;">
-                                            <!-- Smart Plug #3 Chart -->
-                                            <!-- <canvas id="myChart3" width="400" height="350"></canvas> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+<div class="smartplug1" style="margin-left: 30px;">
+    <div class="row" style="">
+        <div class="col-5" style="padding: 0px">
+            <div class="left">
+                <li>
+                    <div class="row" style="padding-top: 15px;">
+                        <div class="col-4" style="padding: 0px;padding-left: 25px;">
+                            <button id="btn_Plug_3" type="button" name="" class="device_control_status"
+                                onclick="smartplug3(this.id)" style="border: 0px;">
+                                <img src="images/remodeair/switchoff.png" alt="" id="myImage3"
+                                     style="width: 35px; height: 35px;">
+                            </button>
                         </div>
+                        <div class="col-8"
+                            style="padding: 0px;padding-top: 10px;padding-left: 0px;">
+                            <div class="sp" style="">
+                                <h4>Smart Plug 3</h4>
+                            </div>
+
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Smart Plug #3 Information Start-->
+                <div style="padding-top: 15px;padding-left:10px;">
+                    <li style="">
+                        <div class="ContentReport" style="">
+                            <div style="float: left;padding-left: 10px;width: 20px;">
+                                <h5>P:</h5>
+                            </div>
+                            <span class="value" id="kW_Plug_3" style="">
+                                xxx
+                            </span>
+                            <span class="unit" style="">
+                                W
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ContentReport" style="">
+                            <div style="float: left;padding-left: 10px;width: 20px;">
+                                <h5>V:</h5>
+                            </div>
+                            <span class="value" id="V_Plug_3" style="">
+                                xxx
+                            </span>
+                            <span class="unit" style="">
+                                V
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ContentReport" style="">
+                            <div style="float: left; margin-left: 10px;width: 10px;">
+                                <h5>I:</h5>
+                            </div>
+                            <span class="value" id="I_Plug_3" style="">
+                                xxx
+                            </span>
+                            <span class="unit">
+                                A
+                            </span>
+                        </div>
+                    </li>
+                </div>
+                <!-- Smart Plug #3 Information End-->
+
+            </div>
+        </div>
+        <div class="col-7" style="text-align: center;">
+            <div class="conchart">
+                <div style="padding-top: 10px;">
+                    <!-- <h5>Power</h5> -->
+                </div>
+
+                <div style="padding-right: 7px;">
+                    <!-- Smart Plug #3 Chart -->
+                    <!-- <canvas id="myChart3" width="400" height="350"></canvas> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <!-- Smart Plug 3 End-->
+
 
                     </div>
 
                     <div class="row" style="padding-top: 50px;">
 
 <!-- Smart Plug 4 Start-->
-                        <div class="smartplug1" style="margin-left: 210px">
-                            <div class="row" style=";">
-                                <div class="col-5" style=";padding: 0px">
-                                    <div class="left">
-                                        <li>
-                                            <div class="row" style="padding-top: 15px;">
-                                                <div class="col-4" style="padding: 0px;padding-left: 25px;">
-                                                    <button id="" type="button" name="" class="device_control_status"
-                                                        style="border: 0px;">
-                                                        <img src="images/remodeair/switchoff.png" alt="" id="myImage4"
-                                                            onclick="smartplug4()" style="width: 35px; height: 35px;">
-                                                    </button>
-                                                </div>
-                                                <div class="col-8"
-                                                    style="padding: 0px;padding-top: 10px;padding-left: 0px;">
-                                                    <div class="sp" style="">
-                                                        <h4>Smart Plug 4</h4>
-                                                    </div>
+                                              <div class="smartplug1" style="margin-left: 30px;">
+                                                  <div class="row" style="">
+                                                      <div class="col-5" style="padding: 0px">
+                                                          <div class="left">
+                                                              <li>
+                                                                  <div class="row" style="padding-top: 15px;">
+                                                                      <div class="col-4" style="padding: 0px;padding-left: 25px;">
+                                                                          <button id="btn_Plug_4" type="button" name="" class="device_control_status"
+                                                                              onclick="smartplug4(this.id)" style="border: 0px;">
+                                                                              <img src="images/remodeair/switchoff.png" alt="" id="myImage4"
+                                                                                   style="width: 35px; height: 35px;">
+                                                                          </button>
+                                                                      </div>
+                                                                      <div class="col-8"
+                                                                          style="padding: 0px;padding-top: 10px;padding-left: 0px;">
+                                                                          <div class="sp" style="">
+                                                                              <h4>Smart Plug 4</h4>
+                                                                          </div>
 
-                                                </div>
-                                            </div>
-                                        </li>
+                                                                      </div>
+                                                                  </div>
+                                                              </li>
 
-                                        <!-- Smart Plug #4 Information Start-->
-                                        <div style="padding-top: 15px;padding-left:10px;">
-                                            <li style="">
-                                                <div class="ContentReport" style="">
-                                                    <div style="float: left;padding-left: 10px;width: 20px;">
-                                                        <h5>P:</h5>
-                                                    </div>
-                                                    <span class="value" style="">
-                                                        xxx
-                                                    </span>
-                                                    <span class="unit" style="">W </span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="ContentReport" style="">
-                                                    <div style="float: left;padding-left: 10px;width: 20px;">
-                                                        <h5>V:</h5>
-                                                    </div>
-                                                    <span class="value" style="">
-                                                        xxx
-                                                    </span>
-                                                    <span class="unit" style="">V</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="ContentReport" style="">
-                                                    <div style="float: left; margin-left: 10px;width: 10px;">
-                                                        <h5>I:</h5>
-                                                    </div>
-                                                    <span class="value" style="">
-                                                        xxx
-                                                    </span>
-                                                    <span class="unit">A</span>
-                                                </div>
-                                            </li>
-                                        </div>
-                                        <!-- Smart Plug #4 Information End-->
+                                                              <!-- Smart Plug #2 Information Start-->
+                                                              <div style="padding-top: 15px;padding-left:10px;">
+                                                                  <li style="">
+                                                                      <div class="ContentReport" style="">
+                                                                          <div style="float: left;padding-left: 10px;width: 20px;">
+                                                                              <h5>P:</h5>
+                                                                          </div>
+                                                                          <span class="value" id="kW_Plug_4" style="">
+                                                                              xxx
+                                                                          </span>
+                                                                          <span class="unit" style="">
+                                                                              W
+                                                                          </span>
+                                                                      </div>
+                                                                  </li>
+                                                                  <li>
+                                                                      <div class="ContentReport" style="">
+                                                                          <div style="float: left;padding-left: 10px;width: 20px;">
+                                                                              <h5>V:</h5>
+                                                                          </div>
+                                                                          <span class="value" id="V_Plug_4" style="">
+                                                                              xxx
+                                                                          </span>
+                                                                          <span class="unit" style="">
+                                                                              V
+                                                                          </span>
+                                                                      </div>
+                                                                  </li>
+                                                                  <li>
+                                                                      <div class="ContentReport" style="">
+                                                                          <div style="float: left; margin-left: 10px;width: 10px;">
+                                                                              <h5>I:</h5>
+                                                                          </div>
+                                                                          <span class="value" id="I_Plug_4" style="">
+                                                                              xxx
+                                                                          </span>
+                                                                          <span class="unit">
+                                                                              A
+                                                                          </span>
+                                                                      </div>
+                                                                  </li>
+                                                              </div>
+                                                              <!-- Smart Plug #2 Information End-->
 
-                                    </div>
-                                </div>
-                                <div class="col-7" style="text-align: center;">
-                                    <div class="conchart">
-                                        <div style="padding-top: 10px;">
-                                            <!-- <h5>Power</h5> -->
-                                        </div>
+                                                          </div>
+                                                      </div>
+                                                      <div class="col-7" style="text-align: center;">
+                                                          <div class="conchart">
+                                                              <div style="padding-top: 10px;">
+                                                                  <!-- <h5>Power</h5> -->
+                                                              </div>
 
-                                        <div style="padding-right: 7px;">
-                                            <!-- Smart Plug #4 Chart -->
-                                            <!-- <canvas id="myChart4" width="400" height="350"></canvas> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                                              <div style="padding-right: 7px;">
+                                                                  <!-- Smart Plug #2 Chart -->
+                                                                  <!-- <canvas id="myChart2" width="400" height="350"></canvas> -->
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
 
 <!-- Smart Plug 4 End-->
 
 
 <!-- Smart Plug 5 Start-->
-                        <div class="smartplug1" style="margin-left: 30px">
-                            <div class="row" style=";">
-                                <div class="col-5" style=";padding: 0px">
 
-                                    <!-- Smart Plug #5 Information Start-->
+                        <div class="smartplug1" style="margin-left: 30px;">
+                            <div class="row" style="">
+                                <div class="col-5" style="padding: 0px">
                                     <div class="left">
                                         <li>
                                             <div class="row" style="padding-top: 15px;">
                                                 <div class="col-4" style="padding: 0px;padding-left: 25px;">
-                                                    <button id="" type="button" name="" class="device_control_status"
-                                                        style="border: 0px;">
+                                                    <button id="btn_Plug_5" type="button" name="" class="device_control_status"
+                                                        onclick="smartplug5(this.id)" style="border: 0px;">
                                                         <img src="images/remodeair/switchoff.png" alt="" id="myImage5"
-                                                            onclick="smartplug5()" style="width: 35px; height: 35px;">
+                                                             style="width: 35px; height: 35px;">
                                                     </button>
                                                 </div>
                                                 <div class="col-8"
@@ -454,16 +468,20 @@
                                                 </div>
                                             </div>
                                         </li>
+
+                                        <!-- Smart Plug #5 Information Start-->
                                         <div style="padding-top: 15px;padding-left:10px;">
                                             <li style="">
                                                 <div class="ContentReport" style="">
                                                     <div style="float: left;padding-left: 10px;width: 20px;">
                                                         <h5>P:</h5>
                                                     </div>
-                                                    <span class="value" style="">
+                                                    <span class="value" id="kW_Plug_5" style="">
                                                         xxx
                                                     </span>
-                                                    <span class="unit" style="">W </span>
+                                                    <span class="unit" style="">
+                                                        W
+                                                    </span>
                                                 </div>
                                             </li>
                                             <li>
@@ -471,10 +489,12 @@
                                                     <div style="float: left;padding-left: 10px;width: 20px;">
                                                         <h5>V:</h5>
                                                     </div>
-                                                    <span class="value" style="">
+                                                    <span class="value" id="V_Plug_5" style="">
                                                         xxx
                                                     </span>
-                                                    <span class="unit" style="">V</span>
+                                                    <span class="unit" style="">
+                                                        V
+                                                    </span>
                                                 </div>
                                             </li>
                                             <li>
@@ -482,18 +502,18 @@
                                                     <div style="float: left; margin-left: 10px;width: 10px;">
                                                         <h5>I:</h5>
                                                     </div>
-                                                    <span class="value" style="">
+                                                    <span class="value" id="I_Plug_5" style="">
                                                         xxx
                                                     </span>
-                                                    <span class="unit">A</span>
+                                                    <span class="unit">
+                                                        A
+                                                    </span>
                                                 </div>
                                             </li>
                                         </div>
+                                        <!-- Smart Plug #5 Information End-->
 
                                     </div>
-                             <!-- Smart Plug #5 Information End-->
-
-
                                 </div>
                                 <div class="col-7" style="text-align: center;">
                                     <div class="conchart">
@@ -509,6 +529,7 @@
                                 </div>
                             </div>
                         </div>
+
 <!-- Smart Plug 5 End-->
 
 
