@@ -24,10 +24,6 @@
 	<!-- CSS Part ***** -->
 
 	<!-- JS Chart Edit *****-->
-	<script src="./js/bedroom.js/scene_control.js"></script>
-	<script src="./js/bedroom.js/lighting.js"></script>
-	<script src="./js/bedroom.js/air_comtrol.js"></script>
-	<!-- JS Chart Edit *****-->
 
 </head>
 
@@ -103,9 +99,6 @@
 																	onclick="scene_welcome()"
 																	style="padding-right: 10px;" name="scene_control">
 															</div>
-															<!-- <button class="scbtn" onclick="scene_welcome()">
-																<h5>Welcome</h5>
-															</button> -->
 														</div>
 													</li>
 													<li style="margin-top: 20px;">
@@ -115,9 +108,6 @@
 																	value="Good Night" onclick="scene_goodnight()"
 																	style="padding-right: 10px;" name="scene_control">
 															</div>
-															<!-- <button class="scbtn" onclick="scene_goodnight()">
-																<h5>Good Night</h5>
-															</button> -->
 														</div>
 													</li>
 													<li style="margin-top: 20px;">
@@ -127,74 +117,11 @@
 																	onclick="scene_goodbye()"
 																	style="padding-right: 10px;" name="scene_control">
 															</div>
-															<!-- <button class="scbtn" onclick="scene_goodbye()">
-																<h5>Goodbye</h5>
-															</button> -->
 														</div>
 													</li>
 												</div>
-												<!-- <div style="padding-top: 7px;">
-																<button class="scbtn">
-																	<h5>Meeting</h5>
-																</button>
-															</div> -->
-
-												<!-- <div class="col-7" style="padding-left: 25px;">
-													<div>
-														<button class="scbtn">
-															<h5>Good Night</h5>
-														</button>
-													</div>
-													
-												</div> -->
 											</div>
-											<!-- <div class="row" style="padding-top: 1px;padding-left: 5px;">
-												<div class="col-12">
-													<div style="margin-left:60px; margin-top: 5px;">
-														<button class="scbtn">
-															<h5>Goodbye</h5>
-														</button>
-													</div>
-												</div>
-
-											</div> -->
-
 										</div>
-										<!-- <div style="margin-top: 5px;">
-											<button class="scbtn" style="margin-left:5px;width: 100px">Welcome</button>
-											<button class="scbtn" style="margin-left: 20px;width:120px;;">Good Night</button>
-										</div>
-										<div style="margin-top: 10px; margin-left: 65px;">
-											<button class="scbtn" style="width: 100px;">Goodbye</button>
-										</div> -->
-
-										<!-- <div class="row">
-											<div class="col-lg-8">
-												<h4>Wecome</h4>
-												<h4>Good Night</h4>
-												<h4>Goodbye</h4>
-											</div>
-											<div class="col-lg-4" style="padding-right: 32px">
-												<li>
-													<label class="switch_one_left">
-														<input type="checkbox" checked>
-														<span class="slider round"></span>
-													</label>
-												</li>
-												<li>
-													<label class="switch_one_left">
-														<input type="checkbox" checked>
-														<span class="slider round"></span>
-													</label>
-												</li>
-												<li>
-													<label class="switch_one_left">
-														<input type="checkbox" checked>
-														<span class="slider round"></span>
-													</label>
-												</li>
-											</div>
-										</div> -->
 									</div>
 								</div>
 							</div>
@@ -222,30 +149,6 @@
 															onclick="lighting_row3()" style="padding-right: 10px;">
 													</div>
 												</li>
-
-
-												<!-- <li>
-													<div>
-														<button class="scbtn" onclick="lighting_row1()">
-															<h5>Low 1</h5>
-														</button>
-													</div>
-												</li>
-												<li style="margin-top: 5px;">
-													<div>
-														<button class="scbtn" onclick="lighting_row2()">
-															<h5>Low 2</h5>
-														</button>
-													</div>
-												</li> -->
-												<!-- <li style="margin-top: 5px;">
-													<div>
-														<button class="scbtn" onclick="lighting_row3()">
-															<h5> Low 3</h5>
-														</button>
-													</div>
-												</li> -->
-
 											</div>
 										</div>
 									</div>
@@ -358,7 +261,7 @@
 										<div class="ACremoteControl" style="text-align: center; ">
 											<div class="onoffACbutton">
 												<div class="OffACbutton">
-													<button id="" onclick="turn_off_ac()" type="button" name=""
+													<button id="AC104001" onclick="turn_off_ac(this.id)" type="button" name=""
 														class="device_control_status" style="border: 0px;">
 														<img src="images/remodeair/switchoff.png" alt=""
 															style="width: 48px; height: 48px;">
@@ -369,7 +272,7 @@
 													</li>
 												</div>
 												<div class="OnACbutton">
-													<button id="" onclick="turn_on_ac()" type="button" name=""
+													<button id="AC104001" onclick="turn_on_ac(this.id)" type="button" name=""
 														class="device_control_status"
 														style="display: inline; border: 0px;">
 														<img src="images/remodeair/switchon.png" alt=""
@@ -410,28 +313,28 @@
 											<div>
 												<button style="margin-bottom: 10px; background: rgb(108,153,255); background: linear-gradient(135deg, rgba(108,153,255,1) 0%, rgba(213,163,255,1) 100%);
 												width: 120px; height: 40px; border-radius: 5px; border: 2px; font-family: 'Roboto', sans-serif;"
-													type="submit" name="login" value="Login" onclick="TestLogin()"
-													class="modal-login-button-2" href="/index.html">
+													type="submit" name="login" value="Login" 
+													onclick="Adj_Temp(this.id)" id="AC104001" class="modal-login-button-2" >
 													Submit
 											</div>
 											<hr style="margin: 5px;">
 											<div class="ACModeControl">
 												<div class="CoolMode">
-													<button id="" onclick="CoolModeControl()" type="button" name=""
+													<button id="AC104001" onclick="CoolModeControl(this.id)" type="button" name=""
 														class="device_control_status" style="border: 0px;">
 														<img src="images/remodeair/coolon.png" alt=""
 															style="width: 32px; height: 32px;">
 													</button>
 												</div>
 												<div class="DryMode">
-													<button id="" onclick="DryModeControl()" type="button" name=""
+													<button id="AC104001" onclick="DryModeControl(this.id)" type="button" name=""
 														class="device_control_status" style="border: 0px;">
 														<img src="images/remodeair/dryon.png" alt=""
 															style="width: 32px; height: 32px;">
 													</button>
 												</div>
 												<div class="FanMode">
-													<button id="" onclick="FenModeControl()" type="button" name=""
+													<button id="AC104001" onclick="FenModeControl(this.id)" type="button" name=""
 														class="device_control_status" style="border: 0px;">
 														<img src="images/remodeair/fanon.png" alt=""
 															style="width: 32px; height: 32px;">
@@ -442,31 +345,31 @@
 											<p style="margin: 0px;">Fan Speed:</p>
 											<div class="FanSpeedControl">
 												<div class="FanSpeedIcon" style="margin-top: -6px;">
-													<button class="device_control_status" onclick="speedone()">
+													<button class="device_control_status" id="AC104001" onclick="speedone(this.id)">
 														<img src="images/remodeair/fanoff.png" alt=""
 															style="width: 18px; height: 18px; margin-top: 8px;">
 													</button>
 												</div>
 												<div class="FanSpeedIcon" style="margin-top: -6px;">
-													<button class="device_control_status" onclick="speedtwo()">
+													<button class="device_control_status" id="AC104001" onclick="speedtwo(this.id)">
 														<img src="images/remodeair/fanoff.png" alt=""
 															style="width: 24px; height: 24px; margin-top: 6px;">
 													</button>
 												</div>
 												<div class="FanSpeedIcon" style="margin-top: -6px;">
-													<button class="device_control_status" onclick="speedthree()">
+													<button class="device_control_status" id="AC104001" onclick="speedthree(this.id)">
 														<img src="images/remodeair/fanoff.png" alt=""
 															style="width: 30px; height: 30px; margin-top: 4px;">
 													</button>
 												</div>
 												<div class="FanSpeedIcon" style="margin-top: -6px;">
-													<button class="device_control_status" onclick="speedfour()">
+													<button class="device_control_status" id="AC104001" onclick="speedfour(this.id)">
 														<img src="images/remodeair/fanoff.png" alt=""
 															style="width: 36px; height: 36px; margin-top: 0px;">
 													</button>
 												</div>
 												<div class="FanSpeedIcon" style="margin-top: -6px;">
-													<button class="device_control_status" onclick="speedfive()">
+													<button class="device_control_status" id="AC104001" onclick="speedfive(this.id)">
 														<img src="images/remodeair/fanon.png" alt=""
 															style="width: 36px; height: 36px; margin-top: 0px;">
 													</button>
@@ -477,14 +380,14 @@
 
 											<div class="onoffACbutton">
 												<div class="OffACbutton">
-													<button id="" onclick="swingturn_off_ac()" type="button" name=""
+													<button id="AC104001" onclick="swingturn_off_ac(this.id)" type="button" name=""
 														class="device_control_status" style="border: 0px;">
 														<img src="images/remodeair/swingoff.png" alt=""
 															style="width: 48px; height: 48px;">
 													</button>
 												</div>
 												<div class="OnACbutton">
-													<button id="" onclick="swingturn_on_ac()" type="button" name=""
+													<button id="AC104001" onclick="swingturn_on_ac(this.id)" type="button" name=""
 														class="device_control_status"
 														style="display: inline; border: 0px;">
 														<img src="images/remodeair/swingon.png" alt=""
@@ -503,7 +406,11 @@
 			</div>
 		</div>
 	</div>
-
+	<!-- <script src="init-firebase.js"></script> -->
+	<!-- JS Chart Edit *****-->
+	<script src="./js/bedroom.js/scene_control.js"></script>
+	<script src="./js/bedroom.js/lighting.js"></script>
+	<script src="./js/bedroom.js/air_control.js"></script>
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="styles/bootstrap-4.1.2/popper.js"></script>
 	<script src="styles/bootstrap-4.1.2/bootstrap.min.js"></script>
@@ -516,7 +423,7 @@
 	<script src="plugins/easing/easing.js"></script>
 	<script src="plugins/progressbar/progressbar.min.js"></script>
 	<script src="plugins/parallax-js-master/parallax.min.js"></script>
-	<script src="js/about.js"></script>
+	<!-- <script src="js/about.js"></script> -->
 </body>
 
 </html>
