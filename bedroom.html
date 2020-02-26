@@ -314,27 +314,27 @@
 												<button style="margin-bottom: 10px; background: rgb(108,153,255); background: linear-gradient(135deg, rgba(108,153,255,1) 0%, rgba(213,163,255,1) 100%);
 												width: 120px; height: 40px; border-radius: 5px; border: 2px; font-family: 'Roboto', sans-serif;"
 													type="submit" name="login" value="Login" 
-													onclick="Adj_Temp()" class="modal-login-button-2" >
+													onclick="Adj_Temp(this.id)" id="AC104001" class="modal-login-button-2" >
 													Submit
 											</div>
 											<hr style="margin: 5px;">
 											<div class="ACModeControl">
 												<div class="CoolMode">
-													<button id="" onclick="CoolModeControl()" type="button" name=""
+													<button id="AC104001" onclick="CoolModeControl(this.id)" type="button" name=""
 														class="device_control_status" style="border: 0px;">
 														<img src="images/remodeair/coolon.png" alt=""
 															style="width: 32px; height: 32px;">
 													</button>
 												</div>
 												<div class="DryMode">
-													<button id="" onclick="DryModeControl()" type="button" name=""
+													<button id="AC104001" onclick="DryModeControl(this.id)" type="button" name=""
 														class="device_control_status" style="border: 0px;">
 														<img src="images/remodeair/dryon.png" alt=""
 															style="width: 32px; height: 32px;">
 													</button>
 												</div>
 												<div class="FanMode">
-													<button id="" onclick="FenModeControl()" type="button" name=""
+													<button id="AC104001" onclick="FenModeControl(this.id)" type="button" name=""
 														class="device_control_status" style="border: 0px;">
 														<img src="images/remodeair/fanon.png" alt=""
 															style="width: 32px; height: 32px;">
@@ -345,31 +345,31 @@
 											<p style="margin: 0px;">Fan Speed:</p>
 											<div class="FanSpeedControl">
 												<div class="FanSpeedIcon" style="margin-top: -6px;">
-													<button class="device_control_status" onclick="speedone()">
+													<button class="device_control_status" id="AC104001" onclick="speedone(this.id)">
 														<img src="images/remodeair/fanoff.png" alt=""
 															style="width: 18px; height: 18px; margin-top: 8px;">
 													</button>
 												</div>
 												<div class="FanSpeedIcon" style="margin-top: -6px;">
-													<button class="device_control_status" onclick="speedtwo()">
+													<button class="device_control_status" id="AC104001" onclick="speedtwo(this.id)">
 														<img src="images/remodeair/fanoff.png" alt=""
 															style="width: 24px; height: 24px; margin-top: 6px;">
 													</button>
 												</div>
 												<div class="FanSpeedIcon" style="margin-top: -6px;">
-													<button class="device_control_status" onclick="speedthree()">
+													<button class="device_control_status" id="AC104001" onclick="speedthree(this.id)">
 														<img src="images/remodeair/fanoff.png" alt=""
 															style="width: 30px; height: 30px; margin-top: 4px;">
 													</button>
 												</div>
 												<div class="FanSpeedIcon" style="margin-top: -6px;">
-													<button class="device_control_status" onclick="speedfour()">
+													<button class="device_control_status" id="AC104001" onclick="speedfour(this.id)">
 														<img src="images/remodeair/fanoff.png" alt=""
 															style="width: 36px; height: 36px; margin-top: 0px;">
 													</button>
 												</div>
 												<div class="FanSpeedIcon" style="margin-top: -6px;">
-													<button class="device_control_status" onclick="speedfive()">
+													<button class="device_control_status" id="AC104001" onclick="speedfive(this.id)">
 														<img src="images/remodeair/fanon.png" alt=""
 															style="width: 36px; height: 36px; margin-top: 0px;">
 													</button>
@@ -380,14 +380,14 @@
 
 											<div class="onoffACbutton">
 												<div class="OffACbutton">
-													<button id="" onclick="swingturn_off_ac()" type="button" name=""
+													<button id="AC104001" onclick="swingturn_off_ac(this.id)" type="button" name=""
 														class="device_control_status" style="border: 0px;">
 														<img src="images/remodeair/swingoff.png" alt=""
 															style="width: 48px; height: 48px;">
 													</button>
 												</div>
 												<div class="OnACbutton">
-													<button id="" onclick="swingturn_on_ac()" type="button" name=""
+													<button id="AC104001" onclick="swingturn_on_ac(this.id)" type="button" name=""
 														class="device_control_status"
 														style="display: inline; border: 0px;">
 														<img src="images/remodeair/swingon.png" alt=""
