@@ -1,33 +1,24 @@
 // Scene Control Wecome Start
 function scene_welcome() {
-  console.log("Hello");
+  console.log("Activate Scene: Welcome:");
   //
   console.log("POST method by jQuery");
   jQuery.ajax({
-    // url: "https://cors-anywhere.herokuapp.com/https://peahivebackend.herokuapp.com/hiveapi/",
-    url: "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+    url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/scene",
     type: "POST",
     headers: {
-      // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
-      "Authorization": "Token dscnsjdkcnsjdkcnjsdcnjdsncjsdnckjsdnckjsdcnkjsdcnskjdcnjksdncbs",
-      "Content-Type": "application/json; charset=utf-8",
-      "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
-      "Access-Control-Allow-Methods": "POST",
-      "Access-Control-Allow-Headers": "Content-Type, Authorization",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
+        "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/scene",
+        "Access-Control-Allow-Methods": "POST",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization",
     },
-    contentType: "application/json",
-    data: JSON.stringify({
-      "topic": "Test post device control",
-      "type": "devicecontrol",
-      "message": {
-        "device": "MSA Device control",
-        "parameter": {
-          "status": "on"
-        }
-      }
-    })
+    contentType: "application/x-www-form-urlencoded",
+    data: {
+      "scene_id": "fl1_scene041",
+    },
   })
-    .done(function (data, textStatus, jqXHR) {
+.done(function (data, textStatus, jqXHR) {
       console.log("HTTP Request Succeeded: " + jqXHR.status);
       console.log(data);
     })
@@ -45,32 +36,23 @@ function scene_welcome() {
 
 // Scene Control Good Night Start
 function scene_goodnight() {
-  console.log("Hello");
+  console.log("Activate Scene: Goognight:");
   //
   console.log("POST method by jQuery");
   jQuery.ajax({
-    // url: "https://cors-anywhere.herokuapp.com/https://peahivebackend.herokuapp.com/hiveapi/",
-    url: "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+    url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/scene",
     type: "POST",
     headers: {
-      // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
-      "Authorization": "Token dscnsjdkcnsjdkcnjsdcnjdsncjsdnckjsdnckjsdcnkjsdcnskjdcnjksdncbs",
-      "Content-Type": "application/json; charset=utf-8",
-      "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
-      "Access-Control-Allow-Methods": "POST",
-      "Access-Control-Allow-Headers": "Content-Type, Authorization",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
+        "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/scene",
+        "Access-Control-Allow-Methods": "POST",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization",
     },
-    contentType: "application/json",
-    data: JSON.stringify({
-      "topic": "Test post device control",
-      "type": "devicecontrol",
-      "message": {
-        "device": "MSA Device control",
-        "parameter": {
-          "status": "on"
-        }
-      }
-    })
+    contentType: "application/x-www-form-urlencoded",
+    data: {
+      "scene_id": "fl1_scene042",
+    },
   })
     .done(function (data, textStatus, jqXHR) {
       console.log("HTTP Request Succeeded: " + jqXHR.status);
@@ -90,32 +72,23 @@ function scene_goodnight() {
 
 // Scene ControlBye Start
 function scene_goodbye() {
-  console.log("Hello");
+  console.log("Activate Scene: GoodBye:");
   //
   console.log("POST method by jQuery");
   jQuery.ajax({
-    // url: "https://cors-anywhere.herokuapp.com/https://peahivebackend.herokuapp.com/hiveapi/",
-    url: "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+    url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/scene",
     type: "POST",
     headers: {
-      // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
-      "Authorization": "Token dscnsjdkcnsjdkcnjsdcnjdsncjsdnckjsdnckjsdcnkjsdcnskjdcnjksdncbs",
-      "Content-Type": "application/json; charset=utf-8",
-      "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
-      "Access-Control-Allow-Methods": "POST",
-      "Access-Control-Allow-Headers": "Content-Type, Authorization",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
+        "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/scene",
+        "Access-Control-Allow-Methods": "POST",
+        "Access-Control-Allow-Headers": "Content-Type, Authorization",
     },
-    contentType: "application/json",
-    data: JSON.stringify({
-      "topic": "Test post device control",
-      "type": "devicecontrol",
-      "message": {
-        "device": "MSA Device control",
-        "parameter": {
-          "status": "on"
-        }
-      }
-    })
+    contentType: "application/x-www-form-urlencoded",
+    data: {
+      "scene_id": "fl1_scene043",
+    },
   })
     .done(function (data, textStatus, jqXHR) {
       console.log("HTTP Request Succeeded: " + jqXHR.status);
