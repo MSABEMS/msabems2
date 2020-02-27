@@ -1,146 +1,100 @@
 // Hall Way Automatic Start
-function hy_automatic() {
-    console.log("Hello");
-    //
-    console.log("POST method by jQuery");
-    jQuery.ajax({
-        // url: "https://cors-anywhere.herokuapp.com/https://peahivebackend.herokuapp.com/hiveapi/",
-        url: "https://cors-anywhere.herokuapp.com/https://hookb.in/2qMV6mpxeDiDYDK60pRq",
-        type: "POST",
-        headers: {
-            // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
-            "Authorization": "Token dscnsjdkcnsjdkcnjsdcnjdsncjsdnckjsdnckjsdcnkjsdcnskjdcnjksdncbs",
-            "Content-Type": "application/json; charset=utf-8",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/2qMV6mpxeDiDYDK60pRq",
-            "Access-Control-Allow-Methods": "POST",
-            "Access-Control-Allow-Headers": "Content-Type, Authorization",
-        },
-        contentType: "application/json",
-        data: JSON.stringify({
-            "topic": "Test post device control",
-            "type": "devicecontrol",
-            "message": {
-                "device": "MSA Device control",
-                "parameter": {
-                    "status": "on"
-                }
-            }
-        })
-    })
-        .done(function (data, textStatus, jqXHR) {
-            console.log("HTTP Request Succeeded: " + jqXHR.status);
-            console.log(data);
-            hy_automatic_changeImage()
-        })
-        .fail(function (jqXHR, textStatus, errorThrown) {
-            console.log("HTTP Request Failed");
-        })
-        .always(function () {
-            /* ... */
-        });
-    //
-
-}
-
-function hy_automatic_changeImage() {
-    document.getElementById('hy').src = 'https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2013/8/1/1375354802439/Blue---the-colour-008.jpg?width=300&quality=85&auto=format&fit=max&s=2a7663fea4602034647ecb92ae228d96'
-}
-// Hall Way Automatic End
-
-// Hall Way Welcome Start
 function hy_welcome() {
-    console.log("Hello");
+    console.log("Activate Scene: Hallway 2 Welcome:");
     //
     console.log("POST method by jQuery");
     jQuery.ajax({
-        // url: "https://cors-anywhere.herokuapp.com/https://peahivebackend.herokuapp.com/hiveapi/",
-        url: "https://cors-anywhere.herokuapp.com/https://hookb.in/2qMV6mpxeDiDYDK60pRq",
-        type: "POST",
-        headers: {
-            // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
-            "Authorization": "Token dscnsjdkcnsjdkcnjsdcnjdsncjsdnckjsdnckjsdcnkjsdcnskjdcnjksdncbs",
-            "Content-Type": "application/json; charset=utf-8",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/2qMV6mpxeDiDYDK60pRq",
-            "Access-Control-Allow-Methods": "POST",
-            "Access-Control-Allow-Headers": "Content-Type, Authorization",
-        },
-        contentType: "application/json",
-        data: JSON.stringify({
-            "topic": "Test post device control",
-            "type": "devicecontrol",
-            "message": {
-                "device": "MSA Device control",
-                "parameter": {
-                    "status": "on"
-                }
-            }
-        })
+      url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/scene",
+      type: "POST",
+      headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+          "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
+          "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/scene",
+          "Access-Control-Allow-Methods": "POST",
+          "Access-Control-Allow-Headers": "Content-Type, Authorization",
+      },
+      contentType: "application/x-www-form-urlencoded",
+      data: {
+        "scene_id": "fl2_scene041",
+      },
     })
-        .done(function (data, textStatus, jqXHR) {
-            console.log("HTTP Request Succeeded: " + jqXHR.status);
-            console.log(data);
-            hy_welcome_changeImage() 
-        })
-        .fail(function (jqXHR, textStatus, errorThrown) {
-            console.log("HTTP Request Failed");
-        })
-        .always(function () {
-            /* ... */
-        });
+  .done(function (data, textStatus, jqXHR) {
+        console.log("HTTP Request Succeeded: " + jqXHR.status);
+        console.log(data);
+      })
+      .fail(function (jqXHR, textStatus, errorThrown) {
+        console.log("HTTP Request Failed");
+      })
+      .always(function () {
+        /* ... */
+      });
     //
 
 }
 
-function hy_welcome_changeImage() {
-    document.getElementById('hy').src = 'https://www.agricar.co.uk/uploads/images/products/large/agricar-new-holland-bright-yellow-87295405-1539606274yy.png'
-}
-// Hall Way Welcome End
+function hy_automatic() {
+    console.log("Activate Scene: Hallway 2 Automation:");
+    //
+    console.log("POST method by jQuery");
+    jQuery.ajax({
+      url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/scene",
+      type: "POST",
+      headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+          "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
+          "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/scene",
+          "Access-Control-Allow-Methods": "POST",
+          "Access-Control-Allow-Headers": "Content-Type, Authorization",
+      },
+      contentType: "application/x-www-form-urlencoded",
+      data: {
+        "scene_id": "fl2_scene042",
+      },
+    })
+  .done(function (data, textStatus, jqXHR) {
+        console.log("HTTP Request Succeeded: " + jqXHR.status);
+        console.log(data);
+      })
+      .fail(function (jqXHR, textStatus, errorThrown) {
+        console.log("HTTP Request Failed");
+      })
+      .always(function () {
+        /* ... */
+      });
+    //
 
-// Hall Way Goodbye Start
+}
+
 function hy_goodbye() {
-    console.log("Hello");
+    console.log("Activate Scene: Hallway 2 Goodbye:");
     //
     console.log("POST method by jQuery");
     jQuery.ajax({
-        // url: "https://cors-anywhere.herokuapp.com/https://peahivebackend.herokuapp.com/hiveapi/",
-        url: "https://cors-anywhere.herokuapp.com/https://hookb.in/2qMV6mpxeDiDYDK60pRq",
-        type: "POST",
-        headers: {
-            // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
-            "Authorization": "Token dscnsjdkcnsjdkcnjsdcnjdsncjsdnckjsdnckjsdcnkjsdcnskjdcnjksdncbs",
-            "Content-Type": "application/json; charset=utf-8",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/2qMV6mpxeDiDYDK60pRq",
-            "Access-Control-Allow-Methods": "POST",
-            "Access-Control-Allow-Headers": "Content-Type, Authorization",
-        },
-        contentType: "application/json",
-        data: JSON.stringify({
-            "topic": "Test post device control",
-            "type": "devicecontrol",
-            "message": {
-                "device": "MSA Device control",
-                "parameter": {
-                    "status": "on"
-                }
-            }
-        })
+      url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/scene",
+      type: "POST",
+      headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+          "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
+          "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/scene",
+          "Access-Control-Allow-Methods": "POST",
+          "Access-Control-Allow-Headers": "Content-Type, Authorization",
+      },
+      contentType: "application/x-www-form-urlencoded",
+      data: {
+        "scene_id": "fl2_scene043",
+      },
     })
-        .done(function (data, textStatus, jqXHR) {
-            console.log("HTTP Request Succeeded: " + jqXHR.status);
-            console.log(data);
-            hy_goodbye_changeImage()
-        })
-        .fail(function (jqXHR, textStatus, errorThrown) {
-            console.log("HTTP Request Failed");
-        })
-        .always(function () {
-            /* ... */
-        });
+  .done(function (data, textStatus, jqXHR) {
+        console.log("HTTP Request Succeeded: " + jqXHR.status);
+        console.log(data);
+      })
+      .fail(function (jqXHR, textStatus, errorThrown) {
+        console.log("HTTP Request Failed");
+      })
+      .always(function () {
+        /* ... */
+      });
     //
 
-}
-
-function hy_goodbye_changeImage() {
-    document.getElementById('hy').src = 'images/goodbye.jpg'
 }
 // Hall Way Goodbye End
