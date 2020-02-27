@@ -74,7 +74,7 @@ function up_temp_con_ac_1() {
     if (score < 30) {
         score++;
     }
-    document.getElementById("result").innerHTML = score;
+    document.getElementById("result1").innerHTML = score;
     return(score);
 }
 
@@ -82,7 +82,7 @@ function down_temp_con_ac_1() {
     if (score > 17) {
         score--;
     }
-    document.getElementById("result").innerHTML = score;
+    document.getElementById("result1").innerHTML = score;
     return(score);
 }
 
