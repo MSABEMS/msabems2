@@ -41,9 +41,9 @@ ref_kW_CriLoad.on("value", function(snapshot) {
     var CriLoad_local = localStorage.setItem("CriLoad", CriLoad)
 });
 
-var cal_kW_Lighting_1 = parseInt(localStorage.getItem("kW_Lighting_1"));
-var cal_kW_Outlet_1 = parseInt(localStorage.getItem("kW_Outlet_1"));
-var cal_kW_kW_Aircon_1 = parseInt(localStorage.getItem("kW_Aircon_1"));
+var cal_kW_Lighting_2 = parseInt(localStorage.getItem("kW_Lighting_2"));
+var cal_kW_Outlet_2 = parseInt(localStorage.getItem("kW_Outlet_2"));
+var cal_kW_Aircon_2 = parseInt(localStorage.getItem("kW_Aircon_2"));
 var CriLoad = parseInt(localStorage.getItem("CriLoad"));
 var total_load_floor2 = cal_kW_Lighting_2 + cal_kW_Outlet_2 + cal_kW_Aircon_2 + CriLoad
 
