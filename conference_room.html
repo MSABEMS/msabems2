@@ -18,12 +18,14 @@
 	<link rel="stylesheet" href="styles/btconference.css">
 	<link rel="stylesheet" href="styles/remoteair.css">
 	<link rel="stylesheet" href="./styles/responsive.css">
+	<link rel="stylesheet" type="text/css" href="./styles/con_lighting.css">
 	<!-- CSS Part ***** -->
 
 	<!-- JS Chart Edit *****-->
 
 	<!-- JS Link From External -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 </head>
 
@@ -1138,7 +1140,7 @@
 										<div class="col-lg-6">
 											<!-- Pause -->
 											<div style="padding-top: 5px;padding-left:55px;">
-												<button id="" onclick="curtain_pause()" type="radio" name="curtain"
+												<button id="" onclick="conference_curtain_pause()" type="radio" name="curtain"
 													class="device_control_status_curtain"
 													style="display: inline; border: 0px;">
 													<img src="./images/pause-thin-rounded-button.png" alt=""
@@ -1154,7 +1156,7 @@
 												<div>
 													<div style="padding-left: 0px;">
 														<input class="toggle-btn" type="radio" value="All Close"
-															onclick="curtain_close()" style="padding-right: 10px;"
+															onclick="conference_curtain_close()" style="padding-right: 10px;"
 															name="curtain">
 													</div>
 												</div>
@@ -1163,7 +1165,7 @@
 												<div>
 													<div style="padding-left: 0px;">
 														<input class="toggle-btn" type="radio" value="All Open"
-															onclick="curtain_open()" style="padding-right: 10px;"
+															onclick="conference_curtain_open()" style="padding-right: 10px;"
 															name="curtain">
 													</div>
 												</div>
@@ -1180,24 +1182,52 @@
 									<h3 style="padding-top:10px;">Lighting</h3>
 									<div class="row_container">
 										<div class="row" style="padding-top: 1px;padding-left: 5px;">
-											<div class="col-5">
+											<div class="col-5" style="margin-left: 16px;">
 												<div style="padding-left: 0px;">
-													<input class="toggle-btn" type="checkbox" value="Row 1"
-														onclick="lightingrow1()" style="padding-right: 10px;" name="">
+													<div>
+														<h4>Row1
+															<button class="device_control_status" style="height: 35%; width: 35%; margin-left: 3px;" 
+															onclick="lightingrow1()"
+															>
+																<img id="Conference_Lighting_row1_Button" class="" src="images/remodeair/switchoff.png" alt="">
+															</button>
+														</h3>
+													</div>
 												</div>
-												<div style="padding-left: 0px;padding-top: 20px;">
-													<input class="toggle-btn" type="checkbox" value="Row 2"
-														onclick="lightingrow2()" style="padding-right: 10px;" name="">
+												<div style="padding-left: 0px;padding-top: 10px;">
+													<div>
+														<h4>Row2
+															<button class="device_control_status" style="height: 35%; width: 35%; margin-left: -1px;" 
+															onclick="lightingrow2()"
+															>
+																<img id="" class="" src="images/remodeair/switchoff.png" alt="">
+															</button>
+														</h3>
+													</div>
 												</div>
 											</div>
-											<div class="col-7" style="padding-left: 25px;">
+											<div class="col-5" style="margin-left: 5 px;">
 												<div style="padding-left: 0px;">
-													<input class="toggle-btn" type="checkbox" value="Row 3"
-														onclick="lightingrow3()" style="padding-right: 10px;" name="">
+													<div>
+														<h4>Row3
+															<button class="device_control_status" style="height: 35%; width: 35%;" 
+															onclick="lightingrow3()"
+															>
+																<img id="" class="" src="images/remodeair/switchoff.png" alt="">
+															</button>
+														</h3>
+													</div>
 												</div>
-												<div style="padding-left: 0px;padding-top: 20px">
-													<input class="toggle-btn" type="checkbox" value="Row 4"
-														onclick="lightingrow4()" style="padding-right: 10px;" name="">
+												<div style="padding-left: -5 px; padding-top: 10px">
+													<div>
+														<h4>Row4
+															<button class="device_control_status" style="height: 35%; width: 35%; margin-left: -2px;" 
+															onclick="lightingrow4()"
+															>
+																<img id="" class="" src="images/remodeair/switchoff.png" alt="">
+															</button>
+														</h3>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -1829,7 +1859,7 @@
 	<script src="init-firebase.js"></script>
 
 	<!-- JS Logical *****-->
-	<script src="./js/Conference_Room/conference_lighting_control.js"></script>
+	<script src="./js/Conference_Room/conference_lighting_control_row1.js"></script>
 	<script src="./js/Conference_Room/conference_curtain_control.js"></script>
 	<script src="./js/Conference_Room/conference_scene_control.js"></script>
 	<script src="./js/Conference_Room/conference_kvm_control.js"></script>
