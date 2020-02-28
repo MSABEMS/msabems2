@@ -1,133 +1,104 @@
-// All Close Start
-function curtain_close() {
-  console.log("Hello");
+// On
+function conference_curtain_open(device_id) {
+  console.log("conference_curtain_open" + device_id);
+  console.log(device_id)
   //
   console.log("POST method by jQuery");
   jQuery.ajax({
-    // url: "https://cors-anywhere.herokuapp.com/https://peahivebackend.herokuapp.com/hiveapi/",
-    url: "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
-    type: "POST",
-    headers: {
-      // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
-      "Authorization": "Token dscnsjdkcnsjdkcnjsdcnjdsncjsdnckjsdnckjsdcnkjsdcnskjdcnjksdncbs",
-      "Content-Type": "application/json; charset=utf-8",
-      "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
-      "Access-Control-Allow-Methods": "POST",
-      "Access-Control-Allow-Headers": "Content-Type, Authorization",
-    },
-    contentType: "application/json",
-    data: JSON.stringify({
-      "topic": "Test post device control",
-      "type": "devicecontrol",
-      "message": {
-        "device": "MSA Device control",
-        "parameter": {
-          "status": "on"
-        }
-      }
-    })
+      url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/curtain",
+      type: "POST",
+      headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+          "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
+          "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/curtain",
+          "Access-Control-Allow-Methods": "POST",
+          "Access-Control-Allow-Headers": "Content-Type, Authorization",
+      },
+      contentType: "application/x-www-form-urlencoded",
+      data: {
+          "device_type": "curtain",
+          "device_id": device_id,
+          "status": "OPEN",
+      },
   })
-    .done(function (data, textStatus, jqXHR) {
-      console.log("HTTP Request Succeeded: " + jqXHR.status);
-      console.log(data);
-    })
-    .fail(function (jqXHR, textStatus, errorThrown) {
-      console.log("HTTP Request Failed");
-    })
-    .always(function () {
-      /* ... */
-    });
-  //
-
+      .done(function (data, textStatus, jqXHR) {
+          console.log("HTTP Request Succeeded: " + jqXHR.status);
+          console.log(data);
+      })
+      .fail(function (jqXHR, textStatus, errorThrown) {
+          console.log("HTTP Request Failed");
+      })
+      .always(function () {
+          /* ... */
+      });
 }
-// All Close End
 
-
-// All Open Start
-function curtain_open() {
-  console.log("Hello");
+// Off
+function conference_curtain_close(device_id) {
+  console.log("conference_curtain_close" + device_id);
+  console.log(device_id)
   //
   console.log("POST method by jQuery");
   jQuery.ajax({
-    // url: "https://cors-anywhere.herokuapp.com/https://peahivebackend.herokuapp.com/hiveapi/",
-    url: "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
-    type: "POST",
-    headers: {
-      // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
-      "Authorization": "Token dscnsjdkcnsjdkcnjsdcnjdsncjsdnckjsdnckjsdcnkjsdcnskjdcnjksdncbs",
-      "Content-Type": "application/json; charset=utf-8",
-      "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
-      "Access-Control-Allow-Methods": "POST",
-      "Access-Control-Allow-Headers": "Content-Type, Authorization",
-    },
-    contentType: "application/json",
-    data: JSON.stringify({
-      "topic": "Test post device control",
-      "type": "devicecontrol",
-      "message": {
-        "device": "MSA Device control",
-        "parameter": {
-          "status": "on"
-        }
-      }
-    })
+      url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/curtain",
+      type: "POST",
+      headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+          "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
+          "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/curtain",
+          "Access-Control-Allow-Methods": "POST",
+          "Access-Control-Allow-Headers": "Content-Type, Authorization",
+      },
+      contentType: "application/x-www-form-urlencoded",
+      data: {
+          "device_type": "curtain",
+          "device_id": device_id,
+          "status": "CLOSE",
+      },
   })
-    .done(function (data, textStatus, jqXHR) {
-      console.log("HTTP Request Succeeded: " + jqXHR.status);
-      console.log(data);
-    })
-    .fail(function (jqXHR, textStatus, errorThrown) {
-      console.log("HTTP Request Failed");
-    })
-    .always(function () {
-      /* ... */
-    });
-  //
-
+      .done(function (data, textStatus, jqXHR) {
+          console.log("HTTP Request Succeeded: " + jqXHR.status);
+          console.log(data);
+      })
+      .fail(function (jqXHR, textStatus, errorThrown) {
+          console.log("HTTP Request Failed");
+      })
+      .always(function () {
+          /* ... */
+      });
 }
-// All Open End
 
-
-// All Pause Start
-function curtain_pause() {
-  console.log("Hello");
+// Pause
+function conference_curtain_pause(device_id) {
+  console.log("conference_curtain_pause" + device_id);
+  console.log(device_id)
   //
   console.log("POST method by jQuery");
   jQuery.ajax({
-    // url: "https://cors-anywhere.herokuapp.com/https://peahivebackend.herokuapp.com/hiveapi/",
-    url: "https://cors-anywhere.herokuapp.com/https://hookb.in/pz69q7DXwkU3b3qV0wgo",
-    type: "POST",
-    headers: {
-      // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
-      "Authorization": "Token dscnsjdkcnsjdkcnjsdcnjdsncjsdnckjsdnckjsdcnkjsdcnskjdcnjksdncbs",
-      "Content-Type": "application/json; charset=utf-8",
-      "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/pz69q7DXwkU3b3qV0wgo",
-      "Access-Control-Allow-Methods": "POST",
-      "Access-Control-Allow-Headers": "Content-Type, Authorization",
-    },
-    contentType: "application/json",
-    data: JSON.stringify({
-      "topic": "Test post device control",
-      "type": "devicecontrol",
-      "message": {
-        "device": "MSA Device control",
-        "parameter": {
-          "status": "on"
-        }
-      }
-    })
+      url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/curtain",
+      type: "POST",
+      headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+          "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
+          "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/curtain",
+          "Access-Control-Allow-Methods": "POST",
+          "Access-Control-Allow-Headers": "Content-Type, Authorization",
+      },
+      contentType: "application/x-www-form-urlencoded",
+      data: {
+          "device_type": "curtain",
+          "device_id": device_id,
+          "status": "PAUSE",
+      },
   })
-    .done(function (data, textStatus, jqXHR) {
-      console.log("HTTP Request Succeeded: " + jqXHR.status);
-      console.log(data);
-    })
-    .fail(function (jqXHR, textStatus, errorThrown) {
-      console.log("HTTP Request Failed");
-    })
-    .always(function () {
-      /* ... */
-    });
-  //
-
+      .done(function (data, textStatus, jqXHR) {
+          console.log("HTTP Request Succeeded: " + jqXHR.status);
+          console.log(data);
+      })
+      .fail(function (jqXHR, textStatus, errorThrown) {
+          console.log("HTTP Request Failed");
+      })
+      .always(function () {
+          /* ... */
+      });
 }
-// All Pause End
