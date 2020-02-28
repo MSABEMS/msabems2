@@ -1,36 +1,36 @@
 // Retrieve data from Firebase
 var ref_indoor = firebase.database().ref().child("peasbhmsr").child("devicetype").child("powermeter");
-var ref_kW_OfficeRoom_1 = ref_indoor.child("F2OFF1");
-var ref_kW_OfficeRoom_2 = ref_indoor.child("F2OFF2");
-var ref_kW_MainControl = ref_indoor.child("F2MAIN");
+var ref_kW_Lighting_2 = ref_indoor.child("F2L2")
+var ref_kW_Outlet_2 = ref_indoor.child("F2O2")
+var ref_kW_Aircon_2 = ref_indoor.child("F2AC2")
 var ref_kW_CriLoad = ref_indoor.child("F2CRI");
 
-ref_kW_OfficeRoom_1.on("value", function(snapshot) {
-    console.log("Get kW_EO from firebase")
+ref_kW_Lighting_2.on("value", function(snapshot) {
+    console.log("Get kW_Lighting_2 from firebase")
     //  console.log(snapshot.val());
-    var OfficeRoom_1 = snapshot.val();
+    var kW_Lighting_2 = snapshot.val();
     // console.log("Temp is " + temp_server);
-    document.getElementById("OfficeRoom_1").innerHTML = OfficeRoom_1;
-    var OfficeRoom_1_local = localStorage.setItem("OfficeRoom_1", OfficeRoom_1)
+    document.getElementById("kW_Lighting_2").innerHTML = kW_Lighting_2;
+    var kW_Lighting_2_local = localStorage.setItem("kW_Lighting_2", kW_Lighting_2)
   });
 
-ref_kW_OfficeRoom_2.on("value", function(snapshot) {
-    console.log("Get kW_EO from firebase")
+ref_kW_Outlet_2.on("value", function(snapshot) {
+    console.log("Get kW_Outlet_2 from firebase")
     //  console.log(snapshot.val());
-    var OfficeRoom_2 = snapshot.val();
+    var kW_Outlet_2 = snapshot.val();
     // console.log("Temp is " + temp_server);
-    document.getElementById("OfficeRoom_2").innerHTML = OfficeRoom_2;
-    var OfficeRoom_2_local = localStorage.setItem("OfficeRoom_2", OfficeRoom_2)
+    document.getElementById("kW_Outlet_2").innerHTML = kW_Outlet_2;
+    var kW_Outlet_2_local = localStorage.setItem("kW_Outlet_2", kW_Outlet_2)
 });
 
-ref_kW_MainControl.on("value", function(snapshot) {
-    console.log("Get kW_EO from firebase")
+ref_kW_Aircon_2.on("value", function(snapshot) {
+    console.log("Get kW_Aircon_2 from firebase")
     //  console.log(snapshot.val());
-    var MainControl = snapshot.val();
+    var kW_Aircon_2 = snapshot.val();
     // console.log("Temp is " + temp_server);
-    document.getElementById("MainControl").innerHTML = MainControl;
-    var MainControl_local = localStorage.setItem("MainControl", MainControl)
-  });
+    document.getElementById("kW_Aircon_2").innerHTML = kW_Aircon_2;
+    var kW_Aircon_2_local = localStorage.setItem("kW_Aircon_2", kW_Aircon_2)
+});
 
 ref_kW_CriLoad.on("value", function(snapshot) {
     console.log("Get kW_EO from firebase")
@@ -41,10 +41,10 @@ ref_kW_CriLoad.on("value", function(snapshot) {
     var CriLoad_local = localStorage.setItem("CriLoad", CriLoad)
 });
 
-var OfficeRoom_1 = parseInt(localStorage.getItem("OfficeRoom_1"));
-var OfficeRoom_2 = parseInt(localStorage.getItem("OfficeRoom_2"));
-var MainControl = parseInt(localStorage.getItem("MainControl"));
+var cal_kW_Lighting_1 = parseInt(localStorage.getItem("kW_Lighting_1"));
+var cal_kW_Outlet_1 = parseInt(localStorage.getItem("kW_Outlet_1"));
+var cal_kW_kW_Aircon_1 = parseInt(localStorage.getItem("kW_Aircon_1"));
 var CriLoad = parseInt(localStorage.getItem("CriLoad"));
-var total_load_floor2 = OfficeRoom_1 + OfficeRoom_2 + MainControl + CriLoad
+var total_load_floor2 = cal_kW_Lighting_2 + cal_kW_Outlet_2 + cal_kW_Aircon_2 + CriLoad
 
-document.getElementById("Floor2_Total_Load").innerHTML = (total_load_floor2); 
+document.getElementById("Floor2_Total_Load").innerHTML = (total_load_floor2);
