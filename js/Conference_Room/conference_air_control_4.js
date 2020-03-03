@@ -1,16 +1,16 @@
 // On
 function turn_on_con_ac_4(device_id) {
-    console.log("turn_on_con_ac_1" + device_id);
+    console.log("turn_on_con_ac_4" + device_id);
     console.log(device_id)
     //
     console.log("POST method by jQuery");
     jQuery.ajax({
-        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/status",
         type: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
             "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/status",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
@@ -35,17 +35,17 @@ function turn_on_con_ac_4(device_id) {
 
 // Off
 function turn_off_con_ac_4(device_id) {
-    console.log("turn_off_con_ac_1" + device_id);
+    console.log("turn_off_con_ac_4" + device_id);
     console.log(device_id)
     //
     console.log("POST method by jQuery");
     jQuery.ajax({
-        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/status",
         type: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
             "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/status",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
@@ -88,25 +88,26 @@ function down_temp_con_ac_4() {
 
 // Submit Temp
 function summit_air4(device_id) {
-    console.log("Adjust Con_1 AC Temp: " + score + "degreeC")
+    var set_temp_data = { device_type: "AC",
+                          device_id: device_id, 
+                          command: JSON.stringify({status:"ON",mode:"COLD",FAN:"5",stemp: score.toString()} 
+                          )};
+    console.log(set_temp_data)
+    console.log(device_id + " adjust Con_1 AC Temp: " + score + "degreeC")
     console.log("Please wait...we are adjusting your AC temp.")
     jQuery.ajax({
-        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/command",
         type: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
             "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/command",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
         contentType: "application/x-www-form-urlencoded",
-        data: {
-            "device_type": "AC",
-            "device_id": device_id,
-            "status": "OFF",
-        },
-        })
+        data: set_temp_data,
+        }) 
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
