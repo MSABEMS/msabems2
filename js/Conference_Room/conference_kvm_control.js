@@ -1,31 +1,25 @@
 // kvm_Input1 Start
-function kvm_input1() {
-    console.log("Hello");
+function kvm_input1(device_id) {
+    console.log("kvm_input1 clicked: " + device_id);
+    console.log(device_id)
     //
-    console.log("POST method by jQuery");
+    console.log("POST projectorsource_home method by jQuery");
     jQuery.ajax({
-        // url: "https://cors-anywhere.herokuapp.com/https://peahivebackend.herokuapp.com/hiveapi/",
-        url: "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/status",
         type: "POST",
         headers: {
-            // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
-            "Authorization": "Token dscnsjdkcnsjdkcnjsdcnjdsncjsdnckjsdnckjsdcnkjsdcnskjdcnjksdncbs",
-            "Content-Type": "application/json; charset=utf-8",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+            "Content-Type": "application/x-www-form-urlencoded",
+            "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/status",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
-        contentType: "application/json",
-        data: JSON.stringify({
-            "topic": "Test post device control",
-            "type": "devicecontrol",
-            "message": {
-                "device": "MSA Device control",
-                "parameter": {
-                    "status": "on"
-                }
-            }
-        })
+        contentType: "application/x-www-form-urlencoded",
+        data: {
+            "device_type": "kvmswitch",
+            "device_id": device_id,
+            "status": "INPUT1",
+        },
     })
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
@@ -37,40 +31,32 @@ function kvm_input1() {
         .always(function () {
             /* ... */
         });
-    //
-
 }
 // kvm_Input1 End
 
 
 // kvm_Input2 Start
-function kvm_input2() {
-    console.log("Hello");
+function kvm_input2(device_id) {
+    console.log("kvm_input2 clicked: " + device_id);
+    console.log(device_id)
     //
-    console.log("POST method by jQuery");
+    console.log("POST kvm_input2 method by jQuery");
     jQuery.ajax({
-        // url: "https://cors-anywhere.herokuapp.com/https://peahivebackend.herokuapp.com/hiveapi/",
-        url: "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/status",
         type: "POST",
         headers: {
-            // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
-            "Authorization": "Token dscnsjdkcnsjdkcnjsdcnjdsncjsdnckjsdnckjsdcnkjsdcnskjdcnjksdncbs",
-            "Content-Type": "application/json; charset=utf-8",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+            "Content-Type": "application/x-www-form-urlencoded",
+            "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/status",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
-        contentType: "application/json",
-        data: JSON.stringify({
-            "topic": "Test post device control",
-            "type": "devicecontrol",
-            "message": {
-                "device": "MSA Device control",
-                "parameter": {
-                    "status": "on"
-                }
-            }
-        })
+        contentType: "application/x-www-form-urlencoded",
+        data: {
+            "device_type": "kvmswitch",
+            "device_id": device_id,
+            "status": "INPUT2",
+        },
     })
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
@@ -82,40 +68,32 @@ function kvm_input2() {
         .always(function () {
             /* ... */
         });
-    //
-
 }
 // kvm_Input2 End
 
 
 // kvm_Input3 Start
-function kvm_input3() {
-    console.log("Hello");
+function kvm_input3(device_id) {
+    console.log("kvm_input3 clicked: " + device_id);
+    console.log(device_id)
     //
-    console.log("POST method by jQuery");
+    console.log("POST kvm_input3 method by jQuery");
     jQuery.ajax({
-        // url: "https://cors-anywhere.herokuapp.com/https://peahivebackend.herokuapp.com/hiveapi/",
-        url: "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/status",
         type: "POST",
         headers: {
-            // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
-            "Authorization": "Token dscnsjdkcnsjdkcnjsdcnjdsncjsdnckjsdnckjsdcnkjsdcnskjdcnjksdncbs",
-            "Content-Type": "application/json; charset=utf-8",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+            "Content-Type": "application/x-www-form-urlencoded",
+            "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/status",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
-        contentType: "application/json",
-        data: JSON.stringify({
-            "topic": "Test post device control",
-            "type": "devicecontrol",
-            "message": {
-                "device": "MSA Device control",
-                "parameter": {
-                    "status": "on"
-                }
-            }
-        })
+        contentType: "application/x-www-form-urlencoded",
+        data: {
+            "device_type": "kvmswitch",
+            "device_id": device_id,
+            "status": "INPUT3",
+        },
     })
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
@@ -127,40 +105,32 @@ function kvm_input3() {
         .always(function () {
             /* ... */
         });
-    //
-
 }
 // kvm_Input3 End
 
 
 // kvm_Input4 Start
-function kvm_input4() {
-    console.log("Hello");
+function kvm_input4(device_id) {
+    console.log("kvm_input4 clicked: " + device_id);
+    console.log(device_id)
     //
-    console.log("POST method by jQuery");
+    console.log("POST kvm_input4 method by jQuery");
     jQuery.ajax({
-        // url: "https://cors-anywhere.herokuapp.com/https://peahivebackend.herokuapp.com/hiveapi/",
-        url: "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/status",
         type: "POST",
         headers: {
-            // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
-            "Authorization": "Token dscnsjdkcnsjdkcnjsdcnjdsncjsdnckjsdnckjsdcnkjsdcnskjdcnjksdncbs",
-            "Content-Type": "application/json; charset=utf-8",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+            "Content-Type": "application/x-www-form-urlencoded",
+            "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/status",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
-        contentType: "application/json",
-        data: JSON.stringify({
-            "topic": "Test post device control",
-            "type": "devicecontrol",
-            "message": {
-                "device": "MSA Device control",
-                "parameter": {
-                    "status": "on"
-                }
-            }
-        })
+        contentType: "application/x-www-form-urlencoded",
+        data: {
+            "device_type": "kvmswitch",
+            "device_id": device_id,
+            "status": "INPUT4",
+        },
     })
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
@@ -172,7 +142,5 @@ function kvm_input4() {
         .always(function () {
             /* ... */
         });
-    //
-
 }
 //  kvm_Input4 End

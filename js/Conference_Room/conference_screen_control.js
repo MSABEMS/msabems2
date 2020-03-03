@@ -40,7 +40,7 @@ function screen_pause(device_id) {
     sceen_post_data = { 
         device_type: "curtain",
         device_id: device_id, 
-        command: JSON.stringify({status: "pause"})
+        command: JSON.stringify({status: "stop"})
     };
     console.log(sceen_post_data)
     jQuery.ajax({

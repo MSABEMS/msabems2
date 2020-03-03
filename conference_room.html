@@ -1549,9 +1549,12 @@
 											<div class="col-lg-5">
 												<div>
 													<div style="padding-left: 0px;">
-														<input class="toggle-btn" type="radio" value="Input 1"
+														<button id="KS101001" onclick="kvm_input1(this.id)" class="SceneStyle" style="padding-right: 10px;">
+															<h5>Input 1</h5>
+														</button>
+														<!-- <input class="toggle-btn" type="radio" value="Input 1"
 															onclick="kvm_input1()" style="padding-right: 10px;"
-															name="kvm">
+															name="kvm"> -->
 													</div>
 													<!-- <button class="scbtn" onclick="kvm_input1()">
 														<h5>Input 1</h5>
@@ -1559,9 +1562,12 @@
 												</div>
 												<div style="padding-top: 20px;">
 													<div style="padding-left: 0px;">
-														<input class="toggle-btn" type="radio" value="Input 2"
+														<button id="KS101001" onclick="kvm_input2(this.id)" class="SceneStyle" style="padding-right: 10px;">
+															<h5>Input 2</h5>
+														</button>
+														<!-- <input class="toggle-btn" type="radio" value="Input 2"
 															onclick="kvm_input2()" style="padding-right: 10px;"
-															name="kvm">
+															name="kvm"> -->
 													</div>
 													<!-- <button class="scbtn" onclick="kvm_input2()">
 														<h5>Input 2</h5>
@@ -1571,9 +1577,12 @@
 											<div class="col-lg-7" style="padding-left: 22px;">
 												<div>
 													<div style="padding-left: 0px;">
-														<input class="toggle-btn" type="radio" value="Input 3"
+														<button id="KS101001" onclick="kvm_input3(this.id)" class="SceneStyle" style="padding-right: 10px;">
+															<h5>Input 3</h5>
+														</button>
+														<!-- <input class="toggle-btn" type="radio" value="Input 3"
 															onclick="kvm_input3()" style="padding-right: 10px;"
-															name="kvm">
+															name="kvm"> -->
 													</div>
 													<!-- <button class="scbtn" onclick="kvm_input3()">
 														<h5>Input 3</h5>
@@ -1581,9 +1590,12 @@
 												</div>
 												<div style="padding-top: 20px;">
 													<div style="padding-left: 0px;">
-														<input class="toggle-btn" type="radio" value="Input 4"
+														<button id="KS101001" onclick="kvm_input4(this.id)" class="SceneStyle" style="padding-right: 10px;">
+															<h5>Input 4</h5>
+														</button>
+														<!-- <input class="toggle-btn" type="radio" value="Input 4"
 															onclick="kvm_input4()" style="padding-right: 10px;"
-															name="kvm">
+															name="kvm"> -->
 													</div>
 													<!-- <button class="scbtn" onclick="kvm_input4()">
 														<h5>Input 4</h5>
@@ -1608,10 +1620,10 @@
 												<!-- Power -->
 												<ul style="padding-left: 50px;">
 													<div class="menuof">
-														<button id="" type="button" name=""
+														<button id="PT101001" onclick="control_projector(this.id)" type="button" name=""
 															class="device_control_status" style="border: 0px;">
 															<img src="images/remodeair/switchoff.png" alt=""
-																id="myImage" onclick="changeImage()"
+																id="myImage" 
 																style="width: 48px; height: 48px;">
 														</button>
 													</div>
@@ -1650,8 +1662,8 @@
 																			<div class="DryMode">
 																			</div>
 																			<div class="FanMode">
-																				<button id=""
-																					onclick="projectorsource_source()"
+																				<button id="PR101001"
+																					onclick="projectorsource_source(this.id)"
 																					type="button" name=""
 																					class="device_control_status"
 																					style="border: 0px;">
@@ -1665,8 +1677,8 @@
 
 																		<div class="ACModeControl" style="margin: 15px">
 																			<div class="CoolMode">
-																				<button id=""
-																					onclick="projectorsource_home()"
+																				<button id="PR101001"
+																					onclick="projectorsource_home(this.id)"
 																					type="button" name=""
 																					class="device_control_status"
 																					style="border: 0px;">
@@ -1676,8 +1688,8 @@
 																				</button>
 																			</div>
 																			<div class="DryMode">
-																				<button id=""
-																					onclick="projectorsource_setting()"
+																				<button id="PR101001"
+																					onclick="projectorsource_setting(device_id)"
 																					type="button" name=""
 																					class="device_control_status"
 																					style="display: inline; border: 0px;">
@@ -1687,8 +1699,8 @@
 																				</button>
 																			</div>
 																			<div class="FanMode">
-																				<button id=""
-																					onclick="projectorsource_back()"
+																				<button id="PR101001"
+																					onclick="projectorsource_back(device_id)"
 																					type="button" name=""
 																					class="device_control_status"
 																					style="display: inline; border: 0px;">
@@ -1704,8 +1716,8 @@
 																			<div class="CoolMode">
 																			</div>
 																			<div class="DryMode">
-																				<button id=""
-																					onclick="projectorsource_up()"
+																				<button id="PR101001"
+																					onclick="projectorsource_up(device_id)"
 																					type="button" name=""
 																					class="device_control_status"
 																					style="border: 0px;">
@@ -1720,8 +1732,8 @@
 																		<div class="ACModeControl" style="margin: 15px">
 																			<div class="CoolMode"
 																				style="padding-left: 50px;">
-																				<button id=""
-																					onclick="projectorsource_left()"
+																				<button id="PR101001"
+																					onclick="projectorsource_left(device_id)"
 																					type="button" name=""
 																					class="device_control_status"
 																					style="display: inline; border: 0px;">
@@ -1731,23 +1743,20 @@
 																				</button>
 																			</div>
 																			<div class="DryMode">
-																				<button id=""
-																					onclick="projectorsource_enter()"
+																				<button id="PR101001"
+																					onclick="projectorsource_enter(device_id)"
 																					type="button" name=""
 																					class="device_control_status"
 																					style="border: 0px;">
-																					<h4
-																						style="color: black;widows: 48px;height:48px;padding-top:15px;">
-																						Enter</h4>
-																					<!-- <img src="images/remodeair/switchoff.png"
-																								alt=""
-																								style="width: 48px; height: 48px;"> -->
+																					<h4 style="color: black;widows: 48px;height:48px;padding-top:15px;">
+																						Enter
+																					</h4>
 																				</button>
 																			</div>
 																			<div class="FanMode"
 																				style="padding-right: 50px;">
-																				<button id=""
-																					onclick="projectorsource_right()"
+																				<button id="PR101001"
+																					onclick="projectorsource_right(device_id)"
 																					type="button" name=""
 																					class="device_control_status"
 																					style="border: 0px;">
@@ -1761,8 +1770,8 @@
 																			<div class="CoolMode">
 																			</div>
 																			<div class="DryMode">
-																				<button id=""
-																					onclick="projectorsource_down()"
+																				<button id="PR101001"
+																					onclick="projectorsource_down(device_id)"
 																					type="button" name=""
 																					class="device_control_status"
 																					style="border: 0px;">
