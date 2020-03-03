@@ -186,7 +186,7 @@
 																		<div class="OffACbutton">
 
 																			<!-- On Click = Sent Command = turn_off_ac1() to External-->
-																			<button id="" onclick="turn_off_con_ac_1()"
+																			<button id="AC101001" onclick="turn_off_con_ac_1(this.id)"
 																				type="button"
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -201,7 +201,7 @@
 																			</li>
 																		</div>
 																		<div class="OnACbutton">
-																			<button id="" onclick="turn_on_con_ac_1()"
+																			<button id="AC101001" onclick="turn_on_con_ac_1(this.id)"
 																				type="button"
 																				class="device_control_status"
 																				style="display: inline; border: 0px;">
@@ -908,7 +908,7 @@
 																	style="text-align: center; ">
 																	<div class="onoffACbutton" style="padding: 5px;">
 																		<div class="OffACbutton">
-																			<button id="" onclick="turn_off_con_ac_4()"
+																			<button id="AC101001" onclick="turn_off_con_ac_4(this.id)"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -923,7 +923,7 @@
 																			</li>
 																		</div>
 																		<div class="OnACbutton">
-																			<button id="" onclick="turn_on_con_ac_4()"
+																			<button id="AC101001" onclick="turn_on_con_ac_4(this.id)"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="display: inline; border: 0px;">
@@ -985,7 +985,7 @@
 																			<div class="degreeC" style=""> &#8451;</div>
 																		</div>
 																		<div class="increaseTemp">
-																			<button id="" onclick="up_temp_con_ac_4()"
+																			<button id="AC101001" onclick="up_temp_con_ac_4(this.id)"
 																				type="button"
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -998,10 +998,10 @@
 																	<div>
 																		<button style="margin-bottom: 10px; background: rgb(108,153,255); background: linear-gradient(135deg, rgba(108,153,255,1) 0%, rgba(213,163,255,1) 100%);
 																		width: 100px; height: 35px; border-radius: 5px; border: 2px; font-family: 'Roboto', sans-serif;"
-																			type="submit" name="login" value="Login"
-																			onclick="summit_air4()"
+																			id="AC101001" type="submit" name="login" value="Login"
+																			onclick="summit_air4(this.id)"
 																			class="modal-login-button-2"
-																			href="/index.html">
+																			>
 																			Submit
 																	</div>
 
@@ -1808,7 +1808,7 @@
 											<div class="col-lg-7">
 												<li>
 													<!-- Up -->
-													<button id="" onclick="screen_up()" type="button" name=""
+													<button id="PT101001" onclick="screen_up(this.id)" type="button" name=""
 														class="device_control_status"
 														style="display: inline; border: 0px;">
 														<img src="images/screen/up-button.png" alt=""
@@ -1818,7 +1818,7 @@
 												<li>
 													<!-- Pause -->
 													<div style="padding-left: 3px">
-														<button id="" onclick="screen_pause()" type="button" name=""
+														<button id="PT101001" onclick="screen_pause(this.id)" type="button" name=""
 															class="device_control_status"
 															style="display: inline; border: 0px;">
 															<img src="./images/pause-thin-rounded-button.png" alt=""
@@ -1829,7 +1829,7 @@
 												</li>
 												<li>
 													<!-- Down -->
-													<button id="" onclick="screen_down()" type="button" name=""
+													<button id="PT101001" onclick="screen_down(this.id)" type="button" name=""
 														class="device_control_status"
 														style="display: inline; border: 0px;">
 														<img src="images/screen/down-button.png" alt=""
