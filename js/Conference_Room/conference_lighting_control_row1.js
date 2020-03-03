@@ -1,3 +1,7 @@
+// Set lighting to default status: OFF
+var Status_lighting_row_1 = "OFF"
+localStorage.setItem("Status_lighting_row_1_Local", Status_lighting_row_1)
+
 // Retrieve data from Firebase for Checking Device Status
 var ref_devices_data = firebase.database().ref().child("peasbhmsr").child("devicetype").child("lighting");
 var ref_lighting_row_1 = ref_devices_data.child("xxxxxx");
@@ -6,7 +10,7 @@ ref_lighting_row_1.on("value", function(snapshot) {
     console.log("Get smart_plug_1 from firebase")
     var lighting_row_1 = snapshot.val();
     // console.log(smart_plug_1["CURRENT"])
-    document.getElementById("xxx").innerHTML = lighting_row_1["STATUS"];
+    // document.getElementById("xxx").innerHTML = lighting_row_1["STATUS"];
     // Recheck Device Status from Firebase // 
     var Status_lighting_row_1 = lighting_row_1["STATUS"];
     console.log(Status_lighting_row_1);

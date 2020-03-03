@@ -1,3 +1,7 @@
+// Set lighting to default status: OFF
+var Status_lighting_row_3 = "OFF"
+localStorage.setItem("Status_lighting_row_3_Local", Status_lighting_row_3)
+
 // Retrieve data from Firebase for Checking Device Status
 var ref_devices_data = firebase.database().ref().child("peasbhmsr").child("devicetype").child("lighting");
 var ref_lighting_row_3 = ref_devices_data.child("yyyyyy");

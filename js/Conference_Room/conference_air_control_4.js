@@ -1,3 +1,29 @@
+// Retrieve data from Firebase for Checking Device Status
+var ref_devices_data = firebase.database().ref().child("peasbhmsr").child("devicetype").child("ac");
+var ref_conference_AC_4 = ref_devices_data.child("AC101001");
+
+ref_conference_AC_4.on("value", function(snapshot) {
+    console.log("Get conference_AC_4 from firebase")
+    var conference_AC_4 = snapshot.val();
+    var Status_conference_AC_4 = conference_AC_4["STATUS"];
+    var temp_conference_AC_4 = conference_AC_4["TEMPERATURE"];
+    console.log("Get Status Conference AC 4: ")
+    console.log("Conference AC 4 is: " + Status_conference_AC_4 + " and temperature is: " + temp_conference_AC_4);
+    document.getElementById("result4").innerHTML = temp_conference_AC_4;
+    Status_conference_AC_4_changeImage(Status_conference_AC_4)
+  });
+
+// Change Image for Smart Plug
+function Status_conference_AC_4_changeImage(Status_conference_AC_4) {
+  var image = document.getElementById('ac_4');
+
+  if (Status_conference_AC_4 == "OFF") {
+      image.src = "images/goodbye.jpg";
+    } else {
+      image.src = "https://www.fotoaparatas.lt/images/thumbs/thumb-3-55x30m-green-screen-349177-640-448.png";
+      }
+}
+
 // On
 function turn_on_con_ac_4(device_id) {
     console.log("turn_on_con_ac_4" + device_id);
