@@ -1,6 +1,32 @@
+// Retrieve data from Firebase for Checking Device Status
+var ref_devices_data = firebase.database().ref().child("peasbhmsr").child("devicetype").child("ac");
+var ref_conference_AC_2 = ref_devices_data.child("AC101003");
+
+ref_conference_AC_2.on("value", function(snapshot) {
+    console.log("Get conference_AC_2 from firebase")
+    var conference_AC_2 = snapshot.val();
+    var Status_conference_AC_2 = conference_AC_2["STATUS"];
+    var temp_conference_AC_2 = conference_AC_2["TEMPERATURE"];
+    console.log("Get Status Conference AC 2: ")
+    console.log("Conference AC 2 is: " + Status_conference_AC_2 + " and temperature is: " + temp_conference_AC_2);
+    document.getElementById("result2").innerHTML = temp_conference_AC_2;
+    Status_conference_AC_2_changeImage(Status_conference_AC_2)
+  });
+
+// Change Image for Smart Plug
+function Status_conference_AC_2_changeImage(Status_conference_AC_2) {
+  var image = document.getElementById('ac_2');
+
+  if (Status_conference_AC_2 == "OFF") {
+      image.src = "images/goodbye.jpg";
+    } else {
+      image.src = "https://www.fotoaparatas.lt/images/thumbs/thumb-3-55x30m-green-screen-349177-640-448.png";
+      }
+}
+
 // On
 function turn_on_con_ac_2(device_id) {
-    console.log("turn_on_con_ac_1" + device_id);
+    console.log("turn_on_con_ac_2" + device_id);
     console.log(device_id)
     //
     console.log("POST method by jQuery");
@@ -88,6 +114,11 @@ function down_temp_con_ac_2() {
 
 // Submit Temp
 function summit_air2(device_id) {
+    var set_temp_data = { device_type: "AC",
+    device_id: device_id, 
+    command: JSON.stringify({status:"ON",mode:"COLD",FAN:"5",stemp: score.toString()} 
+    )};
+    console.log(set_temp_data)
     console.log("Adjust Con_1 AC Temp: " + score + "degreeC")
     console.log("Please wait...we are adjusting your AC temp.")
     jQuery.ajax({
@@ -101,11 +132,7 @@ function summit_air2(device_id) {
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
         contentType: "application/x-www-form-urlencoded",
-        data: {
-            "device_type": "AC",
-            "device_id": device_id,
-            "status": "OFF",
-        },
+        data: set_temp_data,
         })
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);

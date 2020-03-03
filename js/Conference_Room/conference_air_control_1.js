@@ -1,3 +1,29 @@
+// Retrieve data from Firebase for Checking Device Status
+var ref_devices_data = firebase.database().ref().child("peasbhmsr").child("devicetype").child("ac");
+var ref_conference_AC_1 = ref_devices_data.child("AC101004");
+
+ref_conference_AC_1.on("value", function(snapshot) {
+    console.log("Get conference_AC_1 from firebase")
+    var conference_AC_1 = snapshot.val();
+    var Status_conference_AC_1 = conference_AC_1["STATUS"];
+    var temp_conference_AC_1 = conference_AC_1["TEMPERATURE"];
+    console.log("Get Status Conference AC 1: ")
+    console.log("Conference AC 1 is: " + Status_conference_AC_1 + " and temperature is: " + temp_conference_AC_1);
+    document.getElementById("result1").innerHTML = temp_conference_AC_1;
+    Status_conference_AC_1_changeImage(Status_conference_AC_1)
+  });
+
+// Change Image for Smart Plug
+function Status_conference_AC_1_changeImage(Status_conference_AC_1) {
+  var image = document.getElementById('ac_1');
+
+  if (Status_conference_AC_1 == "OFF") {
+      image.src = "images/goodbye.jpg";
+    } else {
+      image.src = "https://www.fotoaparatas.lt/images/thumbs/thumb-3-55x30m-green-screen-349177-640-448.png";
+      }
+}
+
 // On
 function turn_on_con_ac_1(device_id) {
     console.log("turn_on_con_ac_1" + device_id);
@@ -88,6 +114,11 @@ function down_temp_con_ac_1() {
 
 // Submit Temp
 function summit_air1(device_id) {
+    var set_temp_data = { device_type: "AC",
+    device_id: device_id, 
+    command: JSON.stringify({status:"ON",mode:"COLD",FAN:"5",stemp: score.toString()} 
+    )};
+    console.log(set_temp_data)
     console.log("Adjust Con_1 AC Temp: " + score + "degreeC")
     console.log("Please wait...we are adjusting your AC temp.")
     jQuery.ajax({
@@ -101,11 +132,7 @@ function summit_air1(device_id) {
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
         contentType: "application/x-www-form-urlencoded",
-        data: {
-            "device_type": "AC",
-            "device_id": device_id,
-            "status": "OFF",
-        },
+        data: set_temp_data,
         })
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);

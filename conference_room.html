@@ -186,7 +186,7 @@
 																		<div class="OffACbutton">
 
 																			<!-- On Click = Sent Command = turn_off_ac1() to External-->
-																			<button id="AC101001" onclick="turn_off_con_ac_1(this.id)"
+																			<button id="AC101004" onclick="turn_off_con_ac_1(this.id)"
 																				type="button"
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -201,7 +201,7 @@
 																			</li>
 																		</div>
 																		<div class="OnACbutton">
-																			<button id="AC101001" onclick="turn_on_con_ac_1(this.id)"
+																			<button id="AC101004" onclick="turn_on_con_ac_1(this.id)"
 																				type="button"
 																				class="device_control_status"
 																				style="display: inline; border: 0px;">
@@ -277,9 +277,9 @@
 																		<button style="margin-bottom: 10px; background: rgb(108,153,255); background: linear-gradient(135deg, rgba(108,153,255,1) 0%, rgba(213,163,255,1) 100%);
 																		width: 100px; height: 35px; border-radius: 5px; border: 2px; font-family: 'Roboto', sans-serif;"
 																			type="submit" name="login" value="Login"
-																			onclick="summit_air1()"
+																			onclick="summit_air1(this.id)"
 																			class="modal-login-button-2"
-																			href="/index.html">
+																			id="AC101004">
 																			Submit
 																	</div>
 
@@ -287,7 +287,7 @@
 
 																	<div class="ACModeControl" style="margin: 10px">
 																		<div class="CoolMode">
-																			<button id="" onclick="CoolModeControl_1()"
+																			<button id="AC101004" onclick="CoolModeControl_1(this.id)"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -297,7 +297,7 @@
 																			</button>
 																		</div>
 																		<div class="DryMode">
-																			<button id="" onclick="DryModeControl_1()"
+																			<button id="AC101004" onclick="DryModeControl_1(this.id)"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -307,7 +307,7 @@
 																			</button>
 																		</div>
 																		<div class="FanMode">
-																			<button id="" onclick="FenModeControl_1()"
+																			<button id="AC101004" onclick="FenModeControl_1(this.id)"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -323,8 +323,8 @@
 																		style="margin-top: 10px;margin-bottom: 10px">
 																		<div class="FanSpeedIcon"
 																			style="margin-top: -6px;">
-																			<button class="device_control_status"
-																				onclick="remote1_speedone()">
+																			<button class="device_control_status" id="AC101004"
+																				onclick="remote1_speedone(this.id)">
 																				<img src="images/remodeair/fanoff.png"
 																					alt=""
 																					style="width: 18px; height: 18px; margin-top: 8px;">
@@ -332,8 +332,8 @@
 																		</div>
 																		<div class="FanSpeedIcon"
 																			style="margin-top: -6px;">
-																			<button class="device_control_status"
-																				onclick="remote1_speedtwo()">
+																			<button class="device_control_status" id="AC101004"
+																				onclick="remote1_speedtwo(this.id)">
 																				<img src="images/remodeair/fanoff.png"
 																					alt=""
 																					style="width: 24px; height: 24px; margin-top: 6px;">
@@ -341,8 +341,8 @@
 																		</div>
 																		<div class="FanSpeedIcon"
 																			style="margin-top: -6px;">
-																			<button class="device_control_status"
-																				onclick="remote1_speedthree()">
+																			<button class="device_control_status" id="AC101004"
+																				onclick="remote1_speedthree(this.id)">
 																				<img src="images/remodeair/fanoff.png"
 																					alt=""
 																					style="width: 30px; height: 30px; margin-top: 4px;">
@@ -350,8 +350,8 @@
 																		</div>
 																		<div class="FanSpeedIcon"
 																			style="margin-top: -6px;">
-																			<button class="device_control_status"
-																				onclick="remote1_speedfour()">
+																			<button class="device_control_status" id="AC101004"
+																				onclick="remote1_speedfour(this.id)">
 																				<img src="images/remodeair/fanoff.png"
 																					alt=""
 																					style="width: 36px; height: 36px; margin-top: 0px;">
@@ -359,8 +359,8 @@
 																		</div>
 																		<div class="FanSpeedIcon"
 																			style="margin-top: -6px;">
-																			<button class="device_control_status"
-																				onclick="remote1_speedfive ()">
+																			<button class="device_control_status" id="AC101004"
+																				onclick="remote1_speedfive (this.id)">
 																				<img src="images/remodeair/fanon.png"
 																					alt=""
 																					style="width: 36px; height: 36px; margin-top: 0px;">
@@ -372,7 +372,7 @@
 
 																	<div class="onoffACbutton" style="margin: 10px;">
 																		<div class="OffACbutton">
-																			<button id="" onclick="swingturn_off_con_ac_1()"
+																			<button id="AC101004" onclick="swingturn_off_con_ac_1(this.id)"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -382,7 +382,7 @@
 																			</button>
 																		</div>
 																		<div class="OnACbutton">
-																			<button id="" onclick="swingturn_on_con_ac_1()"
+																			<button id="AC101004" onclick="swingturn_on_con_ac_1(this.id)"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="display: inline; border: 0px;">
@@ -1408,7 +1408,7 @@
 
 															<img id="row3_2" src="images/goodbye.jpg" alt=""
 																class="Row3"
-																style=" width: 30px;height: 30px;margin-top:5px;margin-left: 5px; ">
+																style=" width: 30px;height: 30px;margin-top:5px;margin-left: 5px; border-radius: 50%  ">
 														</li>
 														<li>
 															<h5
@@ -1902,7 +1902,7 @@
 
 		// When the user clicks on <span> (x), close the modal
 		function xremote1() {
-			console.log("rfgfhgcfchxedhgbhjbmhbhjbh");
+			console.log("close the modal with: X");
 			modal_remote1.style.display = "none";
 		}
 
@@ -1928,7 +1928,7 @@
 
 		// When the user clicks on <span> (x), close the modal
 		function xremote2() {
-			console.log("rfgfhgcfchxedhgbhjbmhbhjbh");
+			console.log("close the modal with: X");
 			modal_remote2.style.display = "none";
 		}
 
@@ -1955,7 +1955,7 @@
 
 		// When the user clicks on <span> (x), close the modal
 		function xremote3() {
-			console.log("rfgfhgcfchxedhgbhjbmhbhjbh");
+			console.log("close the modal with: X");
 			modal_remote3.style.display = "none";
 		}
 
@@ -1982,7 +1982,7 @@
 
 		// When the user clicks on <span> (x), close the modal
 		function xremote4() {
-			console.log("rfgfhgcfchxedhgbhjbmhbhjbh");
+			console.log("close the modal with: X");
 			modal_remote4.style.display = "none";
 		}
 
@@ -2009,7 +2009,7 @@
 
 		// When the user clicks on <span> (x), close the modal
 		function source() {
-			console.log("rfgfhgcfchxedhgbhjbmhbhjbh");
+			console.log("close the modal with: X");
 			modal_source.style.display = "none";
 		}
 
