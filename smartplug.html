@@ -193,7 +193,7 @@
                                                 <div class="col-8"
                                                     style="padding: 0px;padding-top: 10px;padding-left: 0px;">
                                                     <div class="sp" style="">
-                                                        <h4>Smart Plug 2</h4>
+                                                        <h4>Smart Plug 2 (Bedroom fan)</h4>
                                                     </div>
 
                                                 </div>
@@ -373,14 +373,14 @@
                                                                       <div class="col-8"
                                                                           style="padding: 0px;padding-top: 10px;padding-left: 0px;">
                                                                           <div class="sp" style="">
-                                                                              <h4>Smart Plug 4</h4>
+                                                                              <h4>Smart Plug 4 (Conf.Fan)</h4>
                                                                           </div>
 
                                                                       </div>
                                                                   </div>
                                                               </li>
 
-                                                              <!-- Smart Plug #2 Information Start-->
+                                                              <!-- Smart Plug #4 Information Start-->
                                                               <div style="padding-top: 15px;padding-left:10px;">
                                                                   <li style="">
                                                                       <div class="ContentReport" style="">
@@ -531,6 +531,94 @@
                         </div>
 
 <!-- Smart Plug 5 End-->
+
+<!-- Smart Plug 6 Start-->
+
+                        <div class="smartplug1" style="margin-left: 30px;">
+                            <div class="row" style="">
+                                <div class="col-5" style="padding: 0px">
+                                    <div class="left">
+                                        <li>
+                                            <div class="row" style="padding-top: 15px;">
+                                                <div class="col-4" style="padding: 0px;padding-left: 25px;">
+                                                    <button id="btn_Plug_6" type="button" name="" class="device_control_status"
+                                                        onclick="smartplug6(this.id)" style="border: 0px;">
+                                                        <img src="images/remodeair/switchoff.png" alt="" id="myImage6"
+                                                             style="width: 35px; height: 35px;">
+                                                    </button>
+                                                </div>
+                                                <div class="col-8"
+                                                    style="padding: 0px;padding-top: 10px;padding-left: 0px;">
+                                                    <div class="sp" style="">
+                                                        <h4>Smart Plug 6</h4>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                        <!-- Smart Plug #6 Information Start-->
+                                        <div style="padding-top: 15px;padding-left:10px;">
+                                            <li style="">
+                                                <div class="ContentReport" style="">
+                                                    <div style="float: left;padding-left: 10px;width: 20px;">
+                                                        <h5>P:</h5>
+                                                    </div>
+                                                    <span class="value" id="kW_Plug_6" style="">
+                                                        xxx
+                                                    </span>
+                                                    <span class="unit" style="">
+                                                        W
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="ContentReport" style="">
+                                                    <div style="float: left;padding-left: 10px;width: 20px;">
+                                                        <h5>V:</h5>
+                                                    </div>
+                                                    <span class="value" id="V_Plug_6" style="">
+                                                        xxx
+                                                    </span>
+                                                    <span class="unit" style="">
+                                                        V
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="ContentReport" style="">
+                                                    <div style="float: left; margin-left: 10px;width: 10px;">
+                                                        <h5>I:</h5>
+                                                    </div>
+                                                    <span class="value" id="I_Plug_6" style="">
+                                                        xxx
+                                                    </span>
+                                                    <span class="unit">
+                                                        A
+                                                    </span>
+                                                </div>
+                                            </li>
+                                        </div>
+                                        <!-- Smart Plug #6 Information End-->
+
+                                    </div>
+                                </div>
+                                <div class="col-7" style="text-align: center;">
+                                    <div class="conchart">
+                                        <div style="padding-top: 10px;">
+                                            <!-- <h5>Power</h5> -->
+                                        </div>
+
+                                        <div style="padding-right: 7px;">
+                                            <!-- Smart Plug #5 Chart -->
+                                            <!-- <canvas id="myChart5" width="400" height="350"></canvas> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+<!-- Smart Plug 6 End-->
 
 
                     </div>
@@ -686,6 +774,40 @@
     <!-- Chart Smart Plug 5 -->
     <script>
         var ctx = document.getElementById('myChart5').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                datasets: [{
+                    data: [10, 20, 30],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(54, 162, 235, 1)',
+                    ],
+                    borderWidth: 1
+                }],
+                // These labels appear in the legend and in the tooltips when hovering different arcs
+                // labels: [
+                //   'Red',
+                //   'Yellow',
+                //   'Blue'
+                // ]
+            },
+            // options: {
+            // 	rotation: 1 * Math.PI,
+            // 	circumference: 1 * Math.PI,
+            // }
+        });
+    </script>
+
+    <!-- Chart Smart Plug 6 -->
+    <script>
+        var ctx = document.getElementById('myChart6').getContext('2d');
         var myChart = new Chart(ctx, {
             type: 'line',
             data: {
