@@ -28,7 +28,8 @@ function Status_lighting_row_3_changeImage(Status_lighting_row_3) {
       } else {
       image.src = "images/remodeair/switchon.png";
       image3_1.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";
-      image3_2.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";        }
+      image3_2.src = "https://www.solidbackgrounds.com/images/2560x1440/2560x1440-chrome-yellow-solid-color-background.jpg";        
+    }
 }
 
 //  On/Off Lighting Row 3
