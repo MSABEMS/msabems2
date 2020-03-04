@@ -1,5 +1,10 @@
 // On
 function conference_curtain_open(device_id) {
+    allOpen_post_data = { 
+        device_type: "curtain",
+        device_id: device_id, 
+        command: JSON.stringify({status: "up"})
+    };
   console.log("conference_curtain_open" + device_id);
   console.log(device_id)
   //
@@ -15,11 +20,7 @@ function conference_curtain_open(device_id) {
           "Access-Control-Allow-Headers": "Content-Type, Authorization",
       },
       contentType: "application/x-www-form-urlencoded",
-      data: {
-          "device_type": "curtain",
-          "device_id": device_id,
-          "status": "OPEN",
-      },
+      data: allOpen_post_data,
   })
       .done(function (data, textStatus, jqXHR) {
           console.log("HTTP Request Succeeded: " + jqXHR.status);
@@ -35,6 +36,11 @@ function conference_curtain_open(device_id) {
 
 // Off
 function conference_curtain_close(device_id) {
+    allClose_post_data = { 
+        device_type: "curtain",
+        device_id: device_id, 
+        command: JSON.stringify({status: "down"})
+    };
   console.log("conference_curtain_close" + device_id);
   console.log(device_id)
   //
@@ -50,11 +56,7 @@ function conference_curtain_close(device_id) {
           "Access-Control-Allow-Headers": "Content-Type, Authorization",
       },
       contentType: "application/x-www-form-urlencoded",
-      data: {
-          "device_type": "curtain",
-          "device_id": device_id,
-          "status": "CLOSE",
-      },
+      data: allClose_post_data,
   })
       .done(function (data, textStatus, jqXHR) {
           console.log("HTTP Request Succeeded: " + jqXHR.status);
@@ -70,6 +72,11 @@ function conference_curtain_close(device_id) {
 
 // Pause
 function conference_curtain_pause(device_id) {
+    pause_post_data = { 
+        device_type: "curtain",
+        device_id: device_id, 
+        command: JSON.stringify({status: "stop"})
+    };
   console.log("conference_curtain_pause" + device_id);
   console.log(device_id)
   //
@@ -85,11 +92,7 @@ function conference_curtain_pause(device_id) {
           "Access-Control-Allow-Headers": "Content-Type, Authorization",
       },
       contentType: "application/x-www-form-urlencoded",
-      data: {
-          "device_type": "curtain",
-          "device_id": device_id,
-          "status": "PAUSE",
-      },
+      data: pause_post_data,
   })
       .done(function (data, textStatus, jqXHR) {
           console.log("HTTP Request Succeeded: " + jqXHR.status);

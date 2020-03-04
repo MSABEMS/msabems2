@@ -1140,7 +1140,7 @@
 										<div class="col-lg-6">
 											<!-- Pause -->
 											<div style="padding-top: 5px;padding-left:55px;">
-												<button id="" onclick="conference_curtain_pause()" type="radio" name="curtain"
+												<button id="SC999ALL" onclick="conference_curtain_pause(this.id)" type="radio" name="curtain"
 													class="device_control_status_curtain"
 													style="display: inline; border: 0px;">
 													<img src="./images/pause-thin-rounded-button.png" alt=""
@@ -1155,8 +1155,8 @@
 											<div class="col-lg-5">
 												<div>
 													<div style="padding-left: 0px;">
-														<input class="toggle-btn" type="radio" value="All Close"
-															onclick="conference_curtain_close()" style="padding-right: 10px;"
+														<input id="SC999ALL" class="toggle-btn" type="radio" value="All Close"
+															onclick="conference_curtain_close(this.id)" style="padding-right: 10px;"
 															name="curtain">
 													</div>
 												</div>
@@ -1164,8 +1164,8 @@
 											<div class="col-lg-7" style="padding-left:25px;">
 												<div>
 													<div style="padding-left: 0px;">
-														<input class="toggle-btn" type="radio" value="All Open"
-															onclick="conference_curtain_open()" style="padding-right: 10px;"
+														<input id="SC999ALL" class="toggle-btn" type="radio" value="All Open"
+															onclick="conference_curtain_open(this.id)" style="padding-right: 10px;"
 															name="curtain">
 													</div>
 												</div>
