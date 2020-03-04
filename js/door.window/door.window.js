@@ -186,30 +186,27 @@ ref_smoke_detected_2.on("value", function(snapshot) {
   // document.getElementById("status_smoke_2").innerHTML = smoke_detected_2[""];
   // Recheck Device Status from Firebase //
    var Status_smoke_detected_2 = smoke_detected_2["SMOKE"];
-   //var Status_co_detected_2 = smoke_detected_2["CO"];
+   var Status_co_detected_2 = smoke_detected_2["CO"];
   // console.log(Status_smoke_detected_2);
-   smokedetected2_changeImage(Status_smoke_detected_2)
-   //smokedetected2_changeImage(Status_co_detected_2)
-  // var Status_smoke_detected_2_Local = localStorage.setItem("Status_smoke_detected_2_Local", Status_smoke_detected_3)
+   smokedetected2_changeImage(Status_smoke_detected_2,Status_co_detected_2)
+     // var Status_smoke_detected_2_Local = localStorage.setItem("Status_smoke_detected_2_Local", Status_smoke_detected_3)
 });
 
 // Change Image for Smoke Detected
-function smokedetected2_changeImage(Status_smoke_detected_2) {
+function smokedetected2_changeImage(Status_smoke_detected_2,Status_co_detected_2) {
   var image = document.getElementById('SD103001_2');
-  if (Status_smoke_detected_2 == "CLEAR") {
+  if ((Status_smoke_detected_2 == "CLEAR") && (Status_co_detected_2 == "CLEAR")) {
       image.src = "images/smokeclear.jpg";
-  } else {
+  } else if ((Status_smoke_detected_2 == "DETECTED") && (Status_co_detected_2 == "CLEAR")) {
       image.src = "images/smokedetected.jpg";
   }
+    else if ((Status_smoke_detected_2 == "CLEAR") && (Status_co_detected_2 == "DETECTED")) {
+      image.src = "images/codetected.jpg";
+  }
+    else {
+        image.src = "images/smokedetected.jpg";
+  }    
 }
-//function codetected1_changeImage(Status_co_detected_2) {
-  //var image = document.getElementById('SD103001_2');
-  //if (Status_co_detected_2 == "CLEAR") {
-  //    image.src = "images/smokeclear.jpg";
-  //} else {
-   //   image.src = "images/codetected.jpg";
-  //}
-//}
 
 // Retrieve data from Firebase for Checking Device Status
 // Floor 1 EO Room
@@ -471,27 +468,24 @@ ref_smoke_detected_3.on("value", function(snapshot) {
    var Status_smoke_detected_3 = smoke_detected_3["SMOKE"];
    var Status_co_detected_3 = smoke_detected_3["CO"];
   // console.log(Status_smoke_detected_3);
-   smokedetected3_changeImage(Status_smoke_detected_3)
-   smokedetected3_changeImage(Status_co_detected_3)
-  // var Status_smoke_detected_3_Local = localStorage.setItem("Status_smoke_detected_3_Local", Status_smoke_detected_3)
+   smokedetected3_changeImage(Status_smoke_detected_3,Status_co_detected_3)
+     // var Status_smoke_detected_3_Local = localStorage.setItem("Status_smoke_detected_3_Local", Status_smoke_detected_3)
 });
 
 // Change Image for Smoke Detected
-function smokedetected3_changeImage(Status_smoke_detected_3) {
+function smokedetected3_changeImage(Status_smoke_detected_3,Status_co_detected_3) {
   var image = document.getElementById('SD101001_1');
-  if (Status_smoke_detected_3 == "CLEAR") {
+  if ((Status_smoke_detected_3 == "CLEAR") && (Status_co_detected_3 == "CLEAR")) {
       image.src = "images/smokeclear.jpg";
-  } else {
+  } else if ((Status_smoke_detected_3 == "DETECTED") && (Status_co_detected_3 == "CLEAR")) {
       image.src = "images/smokedetected.jpg";
   }
-}
-function codetected3_changeImage(Status_co_detected_3) {
-  var image = document.getElementById('SD101001_1');
-  if (Status_co_detected_3 == "CLEAR") {
-      image.src = "images/smokeclear.jpg";
-  } else {
+    else if ((Status_smoke_detected_3 == "CLEAR") && (Status_co_detected_3 == "DETECTED")) {
       image.src = "images/codetected.jpg";
   }
+    else {
+        image.src = "images/smokedetected.jpg";
+  }    
 }
 
 // Retrieve data from Firebase for Checking Device Status
@@ -839,28 +833,26 @@ ref_smoke_detected_4.on("value", function(snapshot) {
    var Status_smoke_detected_4 = smoke_detected_4["SMOKE"];
    var Status_co_detected_4 = smoke_detected_4["CO"];
   // console.log(Status_smoke_detected_4);
-   smokedetected4_changeImage(Status_smoke_detected_4)
-   smokedetected4_changeImage(Status_co_detected_4)
-  // var Status_smoke_detected_4_Local = localStorage.setItem("Status_smoke_detected_4_Local", Status_smoke_detected_4)
+   smokedetected4_changeImage(Status_smoke_detected_4,Status_co_detected_4)
+     // var Status_smoke_detected_4_Local = localStorage.setItem("Status_smoke_detected_4_Local", Status_smoke_detected_4)
 });
 
 // Change Image for Smoke Detected
-function smokedetected4_changeImage(Status_smoke_detected_4) {
+function smokedetected4_changeImage(Status_smoke_detected_4,Status_co_detected_4) {
   var image = document.getElementById('SD201001_4');
-  if (Status_smoke_detected_4 == "CLEAR") {
+  if ((Status_smoke_detected_4 == "CLEAR") && (Status_co_detected_4 == "CLEAR")) {
       image.src = "images/smokeclear.jpg";
-  } else {
+  } else if ((Status_smoke_detected_4 == "DETECTED") && (Status_co_detected_4 == "CLEAR")) {
       image.src = "images/smokedetected.jpg";
   }
-}
-function codetected4_changeImage(Status_co_detected_3) {
-  var image = document.getElementById('SD201001_4');
-  if (Status_co_detected_4 == "CLEAR") {
-      image.src = "images/smokeclear.jpg";
-  } else {
+    else if ((Status_smoke_detected_4 == "CLEAR") && (Status_co_detected_4 == "DETECTED")) {
       image.src = "images/codetected.jpg";
   }
+    else {
+        image.src = "images/smokedetected.jpg";
+  }    
 }
+
 
 // Retrieve data from Firebase for Checking Device Status
 // Floor 2 MGC Room
@@ -876,27 +868,24 @@ ref_smoke_detected_5.on("value", function(snapshot) {
    var Status_smoke_detected_5 = smoke_detected_5["SMOKE"];
    var Status_co_detected_5 = smoke_detected_5["CO"];
   // console.log(Status_smoke_detected_5);
-   smokedetected5_changeImage(Status_smoke_detected_5)
-   smokedetected5_changeImage(Status_co_detected_5)
-  // var Status_smoke_detected_5_Local = localStorage.setItem("Status_smoke_detected_5_Local", Status_smoke_detected_5)
+   smokedetected5_changeImage(Status_smoke_detected_5,Status_co_detected_5)
+     // var Status_smoke_detected_5_Local = localStorage.setItem("Status_smoke_detected_5_Local", Status_smoke_detected_5)
 });
 
 // Change Image for Smoke Detected
-function smokedetected5_changeImage(Status_smoke_detected_5) {
-  var image = document.getElementById('SD202001_5');
-  if (Status_smoke_detected_5 == "CLEAR") {
+function smokedetected5_changeImage(Status_smoke_detected_5,Status_co_detected_5) {
+  var image = document.getElementById('SD201001_5');
+  if ((Status_smoke_detected_5 == "CLEAR") && (Status_co_detected_5 == "CLEAR")) {
       image.src = "images/smokeclear.jpg";
-  } else {
+  } else if ((Status_smoke_detected_5 == "DETECTED") && (Status_co_detected_5 == "CLEAR")) {
       image.src = "images/smokedetected.jpg";
   }
-}
-function codetected5_changeImage(Status_co_detected_5) {
-  var image = document.getElementById('SD202001_5');
-  if (Status_co_detected_5 == "CLEAR") {
-      image.src = "images/smokeclear.jpg";
-  } else {
+    else if ((Status_smoke_detected_5 == "CLEAR") && (Status_co_detected_5 == "DETECTED")) {
       image.src = "images/codetected.jpg";
   }
+    else {
+        image.src = "images/smokedetected.jpg";
+  }    
 }
 
 // Retrieve data from Firebase for Checking Device Status
@@ -912,29 +901,27 @@ ref_smoke_detected_6.on("value", function(snapshot) {
   // Recheck Device Status from Firebase //
    var Status_smoke_detected_6 = smoke_detected_6["SMOKE"];
    var Status_co_detected_6 = smoke_detected_6["CO"];
-  // console.log(Status_smoke_detected_3);
-   smokedetected6_changeImage(Status_smoke_detected_6)
-   smokedetected6_changeImage(Status_co_detected_6)
-  // var Status_smoke_detected_6_Local = localStorage.setItem("Status_smoke_detected_6_Local", Status_smoke_detected_6)
+  // console.log(Status_smoke_detected_6);
+   smokedetected6_changeImage(Status_smoke_detected_6,Status_co_detected_6)
+     // var Status_smoke_detected_6_Local = localStorage.setItem("Status_smoke_detected_6_Local", Status_smoke_detected_6)
 });
 
 // Change Image for Smoke Detected
-function smokedetected6_changeImage(Status_smoke_detected_6) {
+function smokedetected6_changeImage(Status_smoke_detected_6,Status_co_detected_6) {
   var image = document.getElementById('SD203001_6');
-  if (Status_smoke_detected_6 == "CLEAR") {
+  if ((Status_smoke_detected_6 == "CLEAR") && (Status_co_detected_6 == "CLEAR")) {
       image.src = "images/smokeclear.jpg";
-  } else {
+  } else if ((Status_smoke_detected_6 == "DETECTED") && (Status_co_detected_6 == "CLEAR")) {
       image.src = "images/smokedetected.jpg";
   }
-}
-function codetected6_changeImage(Status_co_detected_6) {
-  var image = document.getElementById('SD203001_6');
-  if (Status_co_detected_6 == "CLEAR") {
-      image.src = "images/smokeclear.jpg";
-  } else {
+    else if ((Status_smoke_detected_6 == "CLEAR") && (Status_co_detected_6 == "DETECTED")) {
       image.src = "images/codetected.jpg";
   }
+    else {
+        image.src = "images/smokedetected.jpg";
+  }    
 }
+
 
 // Retrieve data from Firebase for Checking Device Status
 // Floor 2 MGC Room
