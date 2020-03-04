@@ -3,7 +3,6 @@
 
 <head>
     <title>Door/Window Sensor</title>
-    <title>Conference Room</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="myHOME - real estate template project">
@@ -20,7 +19,6 @@
     <!-- CSS Part ***** -->
 
     <!-- JS Chart Edit *****-->
-    <script src="./js/door.window/door.window.js"></script>
     <!-- JS Chart Edit *****-->
 
     <!-- JS Link From External -->
@@ -30,6 +28,10 @@
 </head>
 
 <body>
+    <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase.js"></script>
+	<script src="init-firebase.js"></script>
+    <script src="./js/door.window/door.window.js"></script>
+
     <div class="super_container">
         <!-- Header -->
 
@@ -101,22 +103,24 @@
                                         <div class="col-lg-5" style="padding: 0px;border:1px solid transparent;">
                                             <li>
                                                 <div class="status_sensor">
-                                                    <img id="WS103001_15" src="images/goodbye.jpg" alt="" class="Row1"
+                                                    <img id="WS103001_15" src="images/closed.jpg" alt="" class="Row1"
                                                         style=" margin-left: 91px;margin-top: 75px; ">
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="status_sensor">
-                                                    <img id="WS103002_16" src="images/goodbye.jpg" alt="" class="Row1"
+                                                    <img id="WS103002_16" src="images/closed.jpg" alt="" class="Row1"
                                                         style="margin-left: 86px;margin-top: 20px; ">
                                                 </div>
                                             </li>
+                                            
                                             <li>
                                                 <div class="status_sensor">
                                                     <img id="SD104001_3" src="images/goodbye.jpg" alt="" class="Row1"
                                                         style=" margin-left: 70px;margin-top: 33px; ">
                                                 </div>
                                             </li>
+                                            
                                             <li>
                                                 <div class="status_sensor">
                                                     <img id="DS103001_1" src="images/goodbye.jpg" alt="" class="Row1"
@@ -139,6 +143,7 @@
 
                                         <!-- Floor 1 Left Part #2 Start-->
                                         <div class="col-lg-7" style="padding:0px;border:1px solid transparent ">
+                                            
                                             <li>
                                                 <div class="status_sensor">
                                                     <img id="SD103001_2" src="images/goodbye.jpg" alt="" class="Row1"
@@ -157,12 +162,14 @@
                                                         style=" margin-left: 45px;margin-top: 5px; ">
                                                 </div>
                                             </li>
+                                           
                                             <li>
                                                 <div class="status_sensor">
                                                     <img id="DS109001_3" src="images/goodbye.jpg" alt="" class="Row1"
                                                         style=" margin-left: 103px;margin-top: -30px; ">
                                                 </div>
                                             </li>
+                                            
                                             <li>
                                                 <div class="status_sensor">
                                                     <img id="WS103003_17" src="images/goodbye.jpg" alt="" class="Row1"
@@ -211,12 +218,14 @@
 
                                 <!-- Floor 1 Right Part Start-->
                                 <div class="col-lg-5" style="padding: 0px;border: 1px solid transparent">
-                                    <li>
+                                    
+                                        <li>
                                         <div class="status_sensor">
                                             <img id="SD101001_1" src="images/goodbye.jpg" alt="" class="Row1"
                                                 style=" margin-left: 70px;margin-top: 315px;border:1px solid transparent ">
                                         </div>
                                     </li>
+                                    
                                     <li>
                                         <div class="status_sensor">
                                             <img id="WS101001_18" src="images/goodbye.jpg" alt="" class="Row1"
@@ -293,8 +302,7 @@
 
                                 <!-- Floor 2 Right Part Start-->
                                 <div class="col-lg-5" style="padding: 0px;border:1px solid transparent">
-
-                                    <!-- Floor 2 Right Part Row 1 Start-->
+                                <!-- Floor 2 Right Part Row 1 Start-->
                                     <div class="row" style="padding: 0px; border:1px solid transparent">
                                         <li>
                                             <div class="status_sensor">
@@ -312,9 +320,10 @@
 
                                     <!-- Floor 2 Right Part Row 2 Start-->
                                     <div class="row" style="">
-                                        
+
                                         <!-- Floor 2 Right Part Row 2/Part 1 Start-->
                                         <div class="col-lg-6" style="border:1px solid transparent;padding:0px">
+                                            
                                             <li>
                                                 <div class="status_sensor">
                                                     <img id="SD201001_4" src="images/goodbye.jpg" alt="" class="Row1"
@@ -322,6 +331,7 @@
 
                                                 </div>
                                             </li>
+                                        
                                             <li>
                                                 <div class="status_sensor">
                                                     <img id="SD202001_5" src="images/goodbye.jpg" alt="" class="Row1"
@@ -329,13 +339,16 @@
 
                                                 </div>
                                             </li>
-                                            <li>
+                                        
+                                        
+                                                <li>
                                                 <div class="status_sensor">
                                                     <img id="SD202001_6" src="images/goodbye.jpg" alt="" class="Row1"
                                                         style=" margin-left: 80px;margin-top: 80px; border: 1px solid transparent ">
 
                                                 </div>
                                             </li>
+                                          
                                         </div>
                                         <!-- Floor 2 Right Part Row 2/Part 1 End-->
 
@@ -400,6 +413,7 @@
             </div>
         </div>
     </div>
+	
 </body>
 
 </html>

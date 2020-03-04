@@ -18,21 +18,14 @@
 	<link rel="stylesheet" href="styles/btconference.css">
 	<link rel="stylesheet" href="styles/remoteair.css">
 	<link rel="stylesheet" href="./styles/responsive.css">
+	<link rel="stylesheet" type="text/css" href="./styles/con_lighting.css">
 	<!-- CSS Part ***** -->
 
-	<!-- JS Chart Edit *****-->
-	<script src="./js/Conference_Room/conference_lighting_control.js"></script>
-	<script src="./js/Conference_Room/conference_curtain_control.js"></script>
-	<script src="./js/Conference_Room/conference_scene_control.js"></script>
-	<script src="./js/Conference_Room/conference_kvm_control.js"></script>
-	<script src="./js/Conference_Room/conference_screen_control.js"></script>
-	<script src="./js/Conference_Room/conference_air_control.js"></script>
-	<script src="./js/Conference_Room/conference_projector.js"></script>
-	<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
 	<!-- JS Chart Edit *****-->
 
 	<!-- JS Link From External -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 </head>
 
@@ -109,47 +102,46 @@
 											<div class="row" style="padding-top: 1px;padding-left: 5px;">
 												<div class="col-5">
 													<div>
-														<div style="padding-left: 0px;">
+														<!-- <div style="padding-left: 0px;">
 															<input class="toggle-btn" type="radio" value="Welcome"
-																onclick="sc_welcome()" style="padding-right: 10px;"
+																onclick="con_welcome()" style="padding-right: 10px;"
 																name="scene_control">
-														</div>
-														<!-- <button class="scbtn" onclick="sc_welcome()">
+														</div> -->
+														<button class="scbtn" onclick="con_welcome()">
 															<h5>Welcome</h5>
-														</button> -->
+														</button>
 													</div>
-													<div style="padding-top: 20px;">
-														<div style="padding-left: 0px;">
+													<div style="padding-top: 10px;">
+														<!-- <div style="padding-left: 0px;">
 															<input class="toggle-btn" type="radio" value="Meeting"
-																onclick="sc_meeting()" style="padding-right: 10px;"
+																onclick="con_meeting()" style="padding-right: 10px;"
 																name="scene_control">
-														</div>
-														<!-- <button class="scbtn" onclick="sc_meeting()">
+														</div> -->
+														<button class="scbtn" onclick="con_meeting()">
 															<h5>Meeting</h5>
-														</button> -->
+														</button>
 													</div>
 												</div>
-												<div class="col-7" style="padding-left: 25px;">
+												<div class="col-7" style="padding-left: 15px;">
 													<div>
-														<div style="padding-left: 0px;">
+														<!-- <div style="padding-left: 0px;">
 															<input class="toggle-btn" type="radio" value="Show Battery"
-																onclick="sc_sbattery()" style="padding-right: 10px;"
+																onclick="con_showbatery()" style="padding-right: 10px;"
 																name="scene_control">
-														</div>
-														<!-- <button class="scbtn" onclick="sc_sbattery()">
+														</div> -->
+														<button class="scbtn" onclick="con_showbatery()">
 															<h5>Show Battery</h5>
-														</button> -->
+														</button>
 													</div>
-													<div style="padding-top: 20px;">
-														<div style="padding-left: 0px;">
+													<div style="padding-top: 10px;">
+														<!-- <div style="padding-left: 0px;">
 															<input class="toggle-btn" type="radio" value="Goodbye"
-																onclick="sc_goodbye()" style="padding-right: 10px;"
+																onclick="con_goodbye()" style="padding-right: 10px;"
 																name="scene_control">
-														</div>
-
-														<!-- <button class="scbtn" onclick="sc_goodbye()">
+														</div> -->
+														<button class="scbtn" onclick="con_goodbye()">
 															<h5>Goodbye</h5>
-														</button> -->
+														</button>
 													</div>
 												</div>
 											</div>
@@ -194,7 +186,7 @@
 																		<div class="OffACbutton">
 
 																			<!-- On Click = Sent Command = turn_off_ac1() to External-->
-																			<button id="" onclick="turn_off_ac1()"
+																			<button id="AC101004" onclick="turn_off_con_ac_1(this.id)"
 																				type="button"
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -209,7 +201,7 @@
 																			</li>
 																		</div>
 																		<div class="OnACbutton">
-																			<button id="" onclick="turn_on_ac1()"
+																			<button id="AC101004" onclick="turn_on_con_ac_1(this.id)"
 																				type="button"
 																				class="device_control_status"
 																				style="display: inline; border: 0px;">
@@ -256,7 +248,7 @@
 																			</button>
 																		</div> -->
 																		<div class="decreaseTemp">
-																			<button onclick="down_remote1()"
+																			<button onclick="down_temp_con_ac_1()"
 																				type="button"
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -266,12 +258,12 @@
 																			</button>
 																		</div>
 																		<div class="TempDisplay">
-																			<div id="result" class="TempMonitoring">25
+																			<div id="result1" class="TempMonitoring">25
 																			</div>
 																			<div class="degreeC" style=""> &#8451;</div>
 																		</div>
 																		<div class="increaseTemp">
-																			<button id="" onclick="up_remote1()"
+																			<button id="" onclick="up_temp_con_ac_1()"
 																				type="button"
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -285,9 +277,9 @@
 																		<button style="margin-bottom: 10px; background: rgb(108,153,255); background: linear-gradient(135deg, rgba(108,153,255,1) 0%, rgba(213,163,255,1) 100%);
 																		width: 100px; height: 35px; border-radius: 5px; border: 2px; font-family: 'Roboto', sans-serif;"
 																			type="submit" name="login" value="Login"
-																			onclick="summitair1()"
+																			onclick="summit_air1(this.id)"
 																			class="modal-login-button-2"
-																			href="/index.html">
+																			id="AC101004">
 																			Submit
 																	</div>
 
@@ -295,7 +287,7 @@
 
 																	<div class="ACModeControl" style="margin: 10px">
 																		<div class="CoolMode">
-																			<button id="" onclick="CoolModeControl_1()"
+																			<button id="AC101004" onclick="CoolModeControl_1(this.id)"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -305,7 +297,7 @@
 																			</button>
 																		</div>
 																		<div class="DryMode">
-																			<button id="" onclick="DryModeControl_1()"
+																			<button id="AC101004" onclick="DryModeControl_1(this.id)"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -315,7 +307,7 @@
 																			</button>
 																		</div>
 																		<div class="FanMode">
-																			<button id="" onclick="FenModeControl_1()"
+																			<button id="AC101004" onclick="FenModeControl_1(this.id)"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -331,8 +323,8 @@
 																		style="margin-top: 10px;margin-bottom: 10px">
 																		<div class="FanSpeedIcon"
 																			style="margin-top: -6px;">
-																			<button class="device_control_status"
-																				onclick="remote1_speedone()">
+																			<button class="device_control_status" id="AC101004"
+																				onclick="remote1_speedone(this.id)">
 																				<img src="images/remodeair/fanoff.png"
 																					alt=""
 																					style="width: 18px; height: 18px; margin-top: 8px;">
@@ -340,8 +332,8 @@
 																		</div>
 																		<div class="FanSpeedIcon"
 																			style="margin-top: -6px;">
-																			<button class="device_control_status"
-																				onclick="remote1_speedtwo()">
+																			<button class="device_control_status" id="AC101004"
+																				onclick="remote1_speedtwo(this.id)">
 																				<img src="images/remodeair/fanoff.png"
 																					alt=""
 																					style="width: 24px; height: 24px; margin-top: 6px;">
@@ -349,8 +341,8 @@
 																		</div>
 																		<div class="FanSpeedIcon"
 																			style="margin-top: -6px;">
-																			<button class="device_control_status"
-																				onclick="remote1_speedthree()">
+																			<button class="device_control_status" id="AC101004"
+																				onclick="remote1_speedthree(this.id)">
 																				<img src="images/remodeair/fanoff.png"
 																					alt=""
 																					style="width: 30px; height: 30px; margin-top: 4px;">
@@ -358,8 +350,8 @@
 																		</div>
 																		<div class="FanSpeedIcon"
 																			style="margin-top: -6px;">
-																			<button class="device_control_status"
-																				onclick="remote1_speedfour()">
+																			<button class="device_control_status" id="AC101004"
+																				onclick="remote1_speedfour(this.id)">
 																				<img src="images/remodeair/fanoff.png"
 																					alt=""
 																					style="width: 36px; height: 36px; margin-top: 0px;">
@@ -367,8 +359,8 @@
 																		</div>
 																		<div class="FanSpeedIcon"
 																			style="margin-top: -6px;">
-																			<button class="device_control_status"
-																				onclick="remote1_speedfive ()">
+																			<button class="device_control_status" id="AC101004"
+																				onclick="remote1_speedfive (this.id)">
 																				<img src="images/remodeair/fanon.png"
 																					alt=""
 																					style="width: 36px; height: 36px; margin-top: 0px;">
@@ -380,7 +372,7 @@
 
 																	<div class="onoffACbutton" style="margin: 10px;">
 																		<div class="OffACbutton">
-																			<button id="" onclick="turn_off_ac_1()"
+																			<button id="AC101004" onclick="swingturn_off_con_ac_1(this.id)"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -390,7 +382,7 @@
 																			</button>
 																		</div>
 																		<div class="OnACbutton">
-																			<button id="" onclick="turn_on_ac_1()"
+																			<button id="AC101004" onclick="swingturn_on_con_ac_1(this.id)"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="display: inline; border: 0px;">
@@ -435,7 +427,7 @@
 																	style="text-align: center; ">
 																	<div class="onoffACbutton" style="padding: 5px;">
 																		<div class="OffACbutton">
-																			<button id="" onclick="turn_off_ac2()"
+																			<button id="" onclick="turn_off_con_ac_2()"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -450,7 +442,7 @@
 																			</li>
 																		</div>
 																		<div class="OnACbutton">
-																			<button id="" onclick="turn_on_ac2()"
+																			<button id="" onclick="turn_on_con_ac_2()"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="display: inline; border: 0px;">
@@ -497,7 +489,7 @@
 																			</button>
 																		</div> -->
 																		<div class="decreaseTemp">
-																			<button onclick="down_remote2()"
+																			<button onclick="down_temp_con_ac_2()"
 																				type="button"
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -512,7 +504,7 @@
 																			<div class="degreeC" style=""> &#8451;</div>
 																		</div>
 																		<div class="increaseTemp">
-																			<button id="" onclick="up_remote2()"
+																			<button id="" onclick="up_temp_con_ac_2()"
 																				type="button"
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -526,7 +518,7 @@
 																		<button style="margin-bottom: 10px; background: rgb(108,153,255); background: linear-gradient(135deg, rgba(108,153,255,1) 0%, rgba(213,163,255,1) 100%);
 																		width: 100px; height: 35px; border-radius: 5px; border: 2px; font-family: 'Roboto', sans-serif;"
 																			type="submit" name="login" value="Login"
-																			onclick="summitair2()"
+																			onclick="summit_air2()"
 																			class="modal-login-button-2"
 																			href="/index.html">
 																			Submit
@@ -619,7 +611,7 @@
 																	<hr style="margin: 5px;">
 																	<div class="onoffACbutton" style="margin: 10px;">
 																		<div class="OffACbutton">
-																			<button id="" onclick="turn_off_ac_2()"
+																			<button id="" onclick="swingturn_off_con_ac_2()"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -629,7 +621,7 @@
 																			</button>
 																		</div>
 																		<div class="OnACbutton">
-																			<button id="" onclick="turn_on_ac_2()"
+																			<button id="" onclick="swingturn_on_con_ac_2()"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="display: inline; border: 0px;">
@@ -674,7 +666,7 @@
 																	style="text-align: center; ">
 																	<div class="onoffACbutton" style="padding: 5px;">
 																		<div class="OffACbutton">
-																			<button id="" onclick="turn_off_ac3()"
+																			<button id="" onclick="turn_off_con_ac_3()"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -690,7 +682,7 @@
 
 																		</div>
 																		<div class="OnACbutton">
-																			<button id="" onclick="turn_on_ac3()"
+																			<button id="" onclick="turn_on_con_ac_3()"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="display: inline; border: 0px;">
@@ -737,7 +729,7 @@
 																			</button>
 																		</div> -->
 																		<div class="decreaseTemp">
-																			<button onclick="down_remote3()"
+																			<button onclick="down_temp_con_ac_3()"
 																				type="button"
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -752,7 +744,7 @@
 																			<div class="degreeC" style=""> &#8451;</div>
 																		</div>
 																		<div class="increaseTemp">
-																			<button id="" onclick="up_remote3()"
+																			<button id="" onclick="up_temp_con_ac_3()"
 																				type="button"
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -766,7 +758,7 @@
 																		<button style="margin-bottom: 10px; background: rgb(108,153,255); background: linear-gradient(135deg, rgba(108,153,255,1) 0%, rgba(213,163,255,1) 100%);
 																		width: 100px; height: 35px; border-radius: 5px; border: 2px; font-family: 'Roboto', sans-serif;"
 																			type="submit" name="login" value="Login"
-																			onclick="summitair3()"
+																			onclick="summit_air3()"
 																			class="modal-login-button-2"
 																			href="/index.html">
 																			Submit
@@ -861,7 +853,7 @@
 
 																	<div class="onoffACbutton" style="margin: 10px;">
 																		<div class="OffACbutton">
-																			<button id="" onclick="turn_off_ac_3()"
+																			<button id="" onclick="swingturn_off_con_ac_3()"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -871,7 +863,7 @@
 																			</button>
 																		</div>
 																		<div class="OnACbutton">
-																			<button id="" onclick="turn_on_ac_3()"
+																			<button id="" onclick="swingturn_on_con_ac_3()"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="display: inline; border: 0px;">
@@ -916,7 +908,7 @@
 																	style="text-align: center; ">
 																	<div class="onoffACbutton" style="padding: 5px;">
 																		<div class="OffACbutton">
-																			<button id="" onclick="turn_off_ac4()"
+																			<button id="AC101001" onclick="turn_off_con_ac_4(this.id)"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -931,7 +923,7 @@
 																			</li>
 																		</div>
 																		<div class="OnACbutton">
-																			<button id="" onclick="turn_on_ac4()"
+																			<button id="AC101001" onclick="turn_on_con_ac_4(this.id)"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="display: inline; border: 0px;">
@@ -978,7 +970,7 @@
 																			</button>
 																		</div> -->
 																		<div class="decreaseTemp">
-																			<button onclick="down_remote4()"
+																			<button onclick="down_temp_con_ac_4()"
 																				type="button"
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -993,7 +985,7 @@
 																			<div class="degreeC" style=""> &#8451;</div>
 																		</div>
 																		<div class="increaseTemp">
-																			<button id="" onclick="up_remote4()"
+																			<button id="AC101001" onclick="up_temp_con_ac_4(this.id)"
 																				type="button"
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -1006,10 +998,10 @@
 																	<div>
 																		<button style="margin-bottom: 10px; background: rgb(108,153,255); background: linear-gradient(135deg, rgba(108,153,255,1) 0%, rgba(213,163,255,1) 100%);
 																		width: 100px; height: 35px; border-radius: 5px; border: 2px; font-family: 'Roboto', sans-serif;"
-																			type="submit" name="login" value="Login"
-																			onclick="summitair4()"
+																			id="AC101001" type="submit" name="login" value="Login"
+																			onclick="summit_air4(this.id)"
 																			class="modal-login-button-2"
-																			href="/index.html">
+																			>
 																			Submit
 																	</div>
 
@@ -1102,7 +1094,7 @@
 
 																	<div class="onoffACbutton" style="margin: 10px;">
 																		<div class="OffACbutton">
-																			<button id="" onclick="turn_off_ac_4()"
+																			<button id="" onclick="swingturn_off_con_ac_4()"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -1112,7 +1104,7 @@
 																			</button>
 																		</div>
 																		<div class="OnACbutton">
-																			<button id="" onclick="turn_on_ac_4()"
+																			<button id="" onclick="swingturn_on_con_ac_4()"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="display: inline; border: 0px;">
@@ -1148,7 +1140,7 @@
 										<div class="col-lg-6">
 											<!-- Pause -->
 											<div style="padding-top: 5px;padding-left:55px;">
-												<button id="" onclick="curtain_pause()" type="radio" name="curtain"
+												<button id="SC999ALL" onclick="conference_curtain_pause(this.id)" type="radio" name="curtain"
 													class="device_control_status_curtain"
 													style="display: inline; border: 0px;">
 													<img src="./images/pause-thin-rounded-button.png" alt=""
@@ -1163,8 +1155,8 @@
 											<div class="col-lg-5">
 												<div>
 													<div style="padding-left: 0px;">
-														<input class="toggle-btn" type="radio" value="All Close"
-															onclick="curtain_close()" style="padding-right: 10px;"
+														<input id="SC999ALL" class="toggle-btn" type="radio" value="All Close"
+															onclick="conference_curtain_close(this.id)" style="padding-right: 10px;"
 															name="curtain">
 													</div>
 												</div>
@@ -1172,8 +1164,8 @@
 											<div class="col-lg-7" style="padding-left:25px;">
 												<div>
 													<div style="padding-left: 0px;">
-														<input class="toggle-btn" type="radio" value="All Open"
-															onclick="curtain_open()" style="padding-right: 10px;"
+														<input id="SC999ALL" class="toggle-btn" type="radio" value="All Open"
+															onclick="conference_curtain_open(this.id)" style="padding-right: 10px;"
 															name="curtain">
 													</div>
 												</div>
@@ -1190,24 +1182,52 @@
 									<h3 style="padding-top:10px;">Lighting</h3>
 									<div class="row_container">
 										<div class="row" style="padding-top: 1px;padding-left: 5px;">
-											<div class="col-5">
+											<div class="col-5" style="margin-left: 16px;">
 												<div style="padding-left: 0px;">
-													<input class="toggle-btn" type="checkbox" value="Row 1"
-														onclick="lightingrow1()" style="padding-right: 10px;" name="">
+													<div>
+														<h4>Row1
+															<button class="device_control_status" style="height: 35%; width: 35%; margin-left: 3px;" 
+															onclick="lightingrow1()"
+															>
+																<img id="Conference_Lighting_row1_Button" class="" src="images/remodeair/switchoff.png" alt="">
+															</button>
+														</h3>
+													</div>
 												</div>
-												<div style="padding-left: 0px;padding-top: 20px;">
-													<input class="toggle-btn" type="checkbox" value="Row 2"
-														onclick="lightingrow2()" style="padding-right: 10px;" name="">
+												<div style="padding-left: 0px;padding-top: 10px;">
+													<div>
+														<h4>Row2
+															<button class="device_control_status" style="height: 35%; width: 35%; margin-left: -1px;" 
+															onclick="lightingrow2()"
+															>
+																<img id="Conference_Lighting_row2_Button" class="" src="images/remodeair/switchoff.png" alt="">
+															</button>
+														</h3>
+													</div>
 												</div>
 											</div>
-											<div class="col-7" style="padding-left: 25px;">
+											<div class="col-5" style="margin-left: 5 px;">
 												<div style="padding-left: 0px;">
-													<input class="toggle-btn" type="checkbox" value="Row 3"
-														onclick="lightingrow3()" style="padding-right: 10px;" name="">
+													<div>
+														<h4>Row3
+															<button class="device_control_status" style="height: 35%; width: 35%;" 
+															onclick="lightingrow3()"
+															>
+																<img id="Conference_Lighting_row3_Button" class="" src="images/remodeair/switchoff.png" alt="">
+															</button>
+														</h3>
+													</div>
 												</div>
-												<div style="padding-left: 0px;padding-top: 20px">
-													<input class="toggle-btn" type="checkbox" value="Row 4"
-														onclick="lightingrow4()" style="padding-right: 10px;" name="">
+												<div style="padding-left: -5 px; padding-top: 10px">
+													<div>
+														<h4>Row4
+															<button class="device_control_status" style="height: 35%; width: 35%; margin-left: -2px;" 
+															onclick="lightingrow4()"
+															>
+																<img id="Conference_Lighting_row4_Button" class="" src="images/remodeair/switchoff.png" alt="">
+															</button>
+														</h3>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -1388,7 +1408,7 @@
 
 															<img id="row3_2" src="images/goodbye.jpg" alt=""
 																class="Row3"
-																style=" width: 30px;height: 30px;margin-top:5px;margin-left: 5px; ">
+																style=" width: 30px;height: 30px;margin-top:5px;margin-left: 5px; border-radius: 50%  ">
 														</li>
 														<li>
 															<h5
@@ -1529,9 +1549,12 @@
 											<div class="col-lg-5">
 												<div>
 													<div style="padding-left: 0px;">
-														<input class="toggle-btn" type="radio" value="Input 1"
+														<button id="KS101001" onclick="kvm_input1(this.id)" class="SceneStyle" style="padding-right: 10px;">
+															<h5>Input 1</h5>
+														</button>
+														<!-- <input class="toggle-btn" type="radio" value="Input 1"
 															onclick="kvm_input1()" style="padding-right: 10px;"
-															name="kvm">
+															name="kvm"> -->
 													</div>
 													<!-- <button class="scbtn" onclick="kvm_input1()">
 														<h5>Input 1</h5>
@@ -1539,9 +1562,12 @@
 												</div>
 												<div style="padding-top: 20px;">
 													<div style="padding-left: 0px;">
-														<input class="toggle-btn" type="radio" value="Input 2"
+														<button id="KS101001" onclick="kvm_input2(this.id)" class="SceneStyle" style="padding-right: 10px;">
+															<h5>Input 2</h5>
+														</button>
+														<!-- <input class="toggle-btn" type="radio" value="Input 2"
 															onclick="kvm_input2()" style="padding-right: 10px;"
-															name="kvm">
+															name="kvm"> -->
 													</div>
 													<!-- <button class="scbtn" onclick="kvm_input2()">
 														<h5>Input 2</h5>
@@ -1551,9 +1577,12 @@
 											<div class="col-lg-7" style="padding-left: 22px;">
 												<div>
 													<div style="padding-left: 0px;">
-														<input class="toggle-btn" type="radio" value="Input 3"
+														<button id="KS101001" onclick="kvm_input3(this.id)" class="SceneStyle" style="padding-right: 10px;">
+															<h5>Input 3</h5>
+														</button>
+														<!-- <input class="toggle-btn" type="radio" value="Input 3"
 															onclick="kvm_input3()" style="padding-right: 10px;"
-															name="kvm">
+															name="kvm"> -->
 													</div>
 													<!-- <button class="scbtn" onclick="kvm_input3()">
 														<h5>Input 3</h5>
@@ -1561,9 +1590,12 @@
 												</div>
 												<div style="padding-top: 20px;">
 													<div style="padding-left: 0px;">
-														<input class="toggle-btn" type="radio" value="Input 4"
+														<button id="KS101001" onclick="kvm_input4(this.id)" class="SceneStyle" style="padding-right: 10px;">
+															<h5>Input 4</h5>
+														</button>
+														<!-- <input class="toggle-btn" type="radio" value="Input 4"
 															onclick="kvm_input4()" style="padding-right: 10px;"
-															name="kvm">
+															name="kvm"> -->
 													</div>
 													<!-- <button class="scbtn" onclick="kvm_input4()">
 														<h5>Input 4</h5>
@@ -1588,10 +1620,10 @@
 												<!-- Power -->
 												<ul style="padding-left: 50px;">
 													<div class="menuof">
-														<button id="" type="button" name=""
+														<button id="PT101001" onclick="control_projector(this.id)" type="button" name=""
 															class="device_control_status" style="border: 0px;">
 															<img src="images/remodeair/switchoff.png" alt=""
-																id="myImage" onclick="changeImage()"
+																id="myImage" 
 																style="width: 48px; height: 48px;">
 														</button>
 													</div>
@@ -1630,8 +1662,8 @@
 																			<div class="DryMode">
 																			</div>
 																			<div class="FanMode">
-																				<button id=""
-																					onclick="projectorsource_source()"
+																				<button id="PR101001"
+																					onclick="projectorsource_source(this.id)"
 																					type="button" name=""
 																					class="device_control_status"
 																					style="border: 0px;">
@@ -1645,8 +1677,8 @@
 
 																		<div class="ACModeControl" style="margin: 15px">
 																			<div class="CoolMode">
-																				<button id=""
-																					onclick="projectorsource_home()"
+																				<button id="PR101001"
+																					onclick="projectorsource_home(this.id)"
 																					type="button" name=""
 																					class="device_control_status"
 																					style="border: 0px;">
@@ -1656,8 +1688,8 @@
 																				</button>
 																			</div>
 																			<div class="DryMode">
-																				<button id=""
-																					onclick="projectorsource_setting()"
+																				<button id="PR101001"
+																					onclick="projectorsource_setting(device_id)"
 																					type="button" name=""
 																					class="device_control_status"
 																					style="display: inline; border: 0px;">
@@ -1667,8 +1699,8 @@
 																				</button>
 																			</div>
 																			<div class="FanMode">
-																				<button id=""
-																					onclick="projectorsource_back()"
+																				<button id="PR101001"
+																					onclick="projectorsource_back(device_id)"
 																					type="button" name=""
 																					class="device_control_status"
 																					style="display: inline; border: 0px;">
@@ -1684,8 +1716,8 @@
 																			<div class="CoolMode">
 																			</div>
 																			<div class="DryMode">
-																				<button id=""
-																					onclick="projectorsource_up()"
+																				<button id="PR101001"
+																					onclick="projectorsource_up(device_id)"
 																					type="button" name=""
 																					class="device_control_status"
 																					style="border: 0px;">
@@ -1700,8 +1732,8 @@
 																		<div class="ACModeControl" style="margin: 15px">
 																			<div class="CoolMode"
 																				style="padding-left: 50px;">
-																				<button id=""
-																					onclick="projectorsource_left()"
+																				<button id="PR101001"
+																					onclick="projectorsource_left(device_id)"
 																					type="button" name=""
 																					class="device_control_status"
 																					style="display: inline; border: 0px;">
@@ -1711,23 +1743,20 @@
 																				</button>
 																			</div>
 																			<div class="DryMode">
-																				<button id=""
-																					onclick="projectorsource_enter()"
+																				<button id="PR101001"
+																					onclick="projectorsource_enter(device_id)"
 																					type="button" name=""
 																					class="device_control_status"
 																					style="border: 0px;">
-																					<h4
-																						style="color: black;widows: 48px;height:48px;padding-top:15px;">
-																						Enter</h4>
-																					<!-- <img src="images/remodeair/switchoff.png"
-																								alt=""
-																								style="width: 48px; height: 48px;"> -->
+																					<h4 style="color: black;widows: 48px;height:48px;padding-top:15px;">
+																						Enter
+																					</h4>
 																				</button>
 																			</div>
 																			<div class="FanMode"
 																				style="padding-right: 50px;">
-																				<button id=""
-																					onclick="projectorsource_right()"
+																				<button id="PR101001"
+																					onclick="projectorsource_right(device_id)"
 																					type="button" name=""
 																					class="device_control_status"
 																					style="border: 0px;">
@@ -1741,8 +1770,8 @@
 																			<div class="CoolMode">
 																			</div>
 																			<div class="DryMode">
-																				<button id=""
-																					onclick="projectorsource_down()"
+																				<button id="PR101001"
+																					onclick="projectorsource_down(device_id)"
 																					type="button" name=""
 																					class="device_control_status"
 																					style="border: 0px;">
@@ -1788,7 +1817,7 @@
 											<div class="col-lg-7">
 												<li>
 													<!-- Up -->
-													<button id="" onclick="screen_up()" type="button" name=""
+													<button id="PT101001" onclick="screen_up(this.id)" type="button" name=""
 														class="device_control_status"
 														style="display: inline; border: 0px;">
 														<img src="images/screen/up-button.png" alt=""
@@ -1798,7 +1827,7 @@
 												<li>
 													<!-- Pause -->
 													<div style="padding-left: 3px">
-														<button id="" onclick="screen_pause()" type="button" name=""
+														<button id="PT101001" onclick="screen_pause(this.id)" type="button" name=""
 															class="device_control_status"
 															style="display: inline; border: 0px;">
 															<img src="./images/pause-thin-rounded-button.png" alt=""
@@ -1809,7 +1838,7 @@
 												</li>
 												<li>
 													<!-- Down -->
-													<button id="" onclick="screen_down()" type="button" name=""
+													<button id="PT101001" onclick="screen_down(this.id)" type="button" name=""
 														class="device_control_status"
 														style="display: inline; border: 0px;">
 														<img src="images/screen/down-button.png" alt=""
@@ -1834,6 +1863,26 @@
 		</div>
 	</div>
 
+	<!-- Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase.js"></script>
+	<script src="init-firebase.js"></script>
+
+	<!-- JS Logical *****-->
+	<script src="./js/Conference_Room/conference_lighting_control_row1.js"></script>
+	<script src="./js/Conference_Room/conference_lighting_control_row2.js"></script>
+	<script src="./js/Conference_Room/conference_lighting_control_row3.js"></script>
+	<script src="./js/Conference_Room/conference_lighting_control_row4.js"></script>
+	<script src="./js/Conference_Room/conference_curtain_control.js"></script>
+	<script src="./js/Conference_Room/conference_scene_control.js"></script>
+	<script src="./js/Conference_Room/conference_kvm_control.js"></script>
+	<script src="./js/Conference_Room/conference_screen_control.js"></script>
+	<script src="./js/Conference_Room/conference_air_control_1.js"></script>
+	<script src="./js/Conference_Room/conference_air_control_2.js"></script>
+	<script src="./js/Conference_Room/conference_air_control_3.js"></script>
+	<script src="./js/Conference_Room/conference_air_control_4.js"></script>
+	<script src="./js/Conference_Room/conference_projector.js"></script>
+	<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+
 	<!-- MOdal Air Remote 1-->
 	<script>
 		// Get the modal
@@ -1853,7 +1902,7 @@
 
 		// When the user clicks on <span> (x), close the modal
 		function xremote1() {
-			console.log("rfgfhgcfchxedhgbhjbmhbhjbh");
+			console.log("close the modal with: X");
 			modal_remote1.style.display = "none";
 		}
 
@@ -1879,7 +1928,7 @@
 
 		// When the user clicks on <span> (x), close the modal
 		function xremote2() {
-			console.log("rfgfhgcfchxedhgbhjbmhbhjbh");
+			console.log("close the modal with: X");
 			modal_remote2.style.display = "none";
 		}
 
@@ -1906,7 +1955,7 @@
 
 		// When the user clicks on <span> (x), close the modal
 		function xremote3() {
-			console.log("rfgfhgcfchxedhgbhjbmhbhjbh");
+			console.log("close the modal with: X");
 			modal_remote3.style.display = "none";
 		}
 
@@ -1933,7 +1982,7 @@
 
 		// When the user clicks on <span> (x), close the modal
 		function xremote4() {
-			console.log("rfgfhgcfchxedhgbhjbmhbhjbh");
+			console.log("close the modal with: X");
 			modal_remote4.style.display = "none";
 		}
 
@@ -1960,7 +2009,7 @@
 
 		// When the user clicks on <span> (x), close the modal
 		function source() {
-			console.log("rfgfhgcfchxedhgbhjbmhbhjbh");
+			console.log("close the modal with: X");
 			modal_source.style.display = "none";
 		}
 

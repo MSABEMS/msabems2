@@ -33,9 +33,9 @@
 	<!-- CSS Part ***** -->
 
 	<!-- JS Chart Edit *****-->
-	<script src="./js/1st_floor.js/conference_room.js"></script>
+	<!-- <script src="./js/1st_floor.js/conference_room.js"></script>
 	<script src="./js/1st_floor.js/eo_room.js"></script>
-	<script src="./js/1st_floor.js/hallway.js"></script>
+	<script src="./js/1st_floor.js/hallway.js"></script> -->
 
 	<!--  Edit *****-->
 	<script src="js/listings.js"></script>
@@ -91,7 +91,7 @@
 						<li><a href="conference_room.html">Conference Room</a></li>
 						<li><a href="bedroom.html">Bedroom</a></li>
 						<li><a href="energypage.html">Energy</a></li>
-						<li><a href="./door.window.html">Door/Window Censor</a></li>
+						<li><a href="./door.window.html">Security</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -119,29 +119,28 @@
 											<div class="ContentReport">
 												Total Load:
 												<span class="a" id="Floor1_Total_Load" style="margin-left: 105px;"> waiting </span>
+												<span class="a" style="margin-left: 50px;">kW</span>
+											</div>
+											<div class="ContentReport">
+												Lightings Load:
+												<span class="a" id="kW_Lighting_1" style="margin-left: 77px;"> waiting </span>
 												<span class="a" style="margin-left: 30px;">kW</span>
 											</div>
 											<div class="ContentReport">
-												EO Room Load:
-												<span class="a" id="kW_EO" style="margin-left: 71px;"> waiting </span>
+												Outlets Load:
+												<span class="a" id="kW_Outlet_1" style="margin-left: 90px;"> waiting </span>
 												<span class="a" style="margin-left: 30px;">kW</span>
 											</div>
 											<div class="ContentReport">
-												Conference Room Load:
-												<span class="a" id="kW_Conference" style="margin-left: 11px;"> waiting </span>
-												<span class="a" style="margin-left: 30px;">kW</span>
-											</div>
-											<div class="ContentReport">
-												Bedroom Load:
-												<span class="a" id="kW_Bedroom" style="margin-left: 71px;"> waiting </span>
+												Air-Condition Load:
+												<span class="a" id="kW_Aircon_1" style="margin-left: 50px;"> waiting </span>
 												<span class="a" style="margin-left: 30px;">kW</span>
 											</div>
 										</div>
 									</div>
-								
 
 								<!--Energy Report End-->
-								
+
 								<!--Scene Control-->
 								<div class="archive" style="clear: both;padding-top: 5px">
 									<div class="sidebar_title">
@@ -149,67 +148,13 @@
 									</div>
 									<div class="sidebar_list_control" style="margin-top:30px;">
 										<div class="control_1st_floor">
-											<!--Bedroom-->
-											<ul>
-												<!-- Trigger/Open The Modal -->
-
-												<!-- The Modal -->
-												<div id="myModal_bedroom" class="modal">
-
-													<!-- Modal content -->
-													<div class="modal-content-bedroom">
-														<div class="modal-header">
-															<h3 style="margin-left: 10px">Bedroom</h3>
-															<span class="close" style="margin-right: 2px"
-																onclick="bedroom()">&times;</span>
-														</div>
-														<div class="modal-body">
-															<div class="menu_1stfloor">
-																<li>
-																	<h4>Welcome
-																		<label class="switch">
-																			<input type="checkbox" checked>
-																			<span class="slider round"></span>
-																		</label>
-
-																	</h4>
-																</li>
-																<li>
-																	<h4>Day
-																		<label class="switch">
-																			<input type="checkbox" checked>
-																			<span class="slider round"></span>
-																		</label>
-																	</h4>
-																</li>
-																<li>
-																	<h4>Night
-																		<label class="switch">
-																			<input type="checkbox" checked>
-																			<span class="slider round"></span>
-																		</label>
-																	</h4>
-																</li>
-																<li>
-																	<h4>Goodnight
-																		<label class="switch">
-																			<input type="checkbox" checked>
-																			<span class="slider round"></span>
-																		</label>
-																	</h4>
-																</li>
-															</div>
-														</div>
-
-													</div>
-												</div>
-											</ul>
 
 											<!--Conferenceroom-->
 											<ul>
 												<!-- Trigger/Open The Modal -->
-												<button id="myBtn_conferenceroom" class="SceneStyle">Conference
-													Room</button>
+												<button id="myBtn_conferenceroom" class="SceneStyle">
+													Conference Room
+												</button>
 
 												<!-- The Modal -->
 												<div id="myModal_conferenceroom" class="modal">
@@ -222,7 +167,9 @@
 
 															<!-- x Mark Click -->
 															<span class="close" style="margin-right: 7px"
-																onclick="conferenceroom()">&times;</span>
+																onclick="conferenceroom()">
+																&times
+															</span>
 														</div>
 														<div class="modal-body">
 															<div class="menu_one">
@@ -232,7 +179,7 @@
 																			<div style="padding-left: 0px;">
 
 																				<!-- Edit Scene Name -->
-																				<!-- 
+																				<!--
 																					value="Welcome" Edit Scene's Name Value
 																					name="conference_control" Edit Scnen Name Group
 																				 -->
@@ -473,6 +420,7 @@
 	<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase.js"></script>
 	<script src="init-firebase.js"></script>
 	<script src="js/1st_floor.js/energyFloor1.js"></script>
+	<script src="js/1st_floor.js/SceenControlFl1.js"></script>
 
 	<!--open_modal_conferenceroom-->
 	<script>
@@ -493,7 +441,7 @@
 
 		// When the user clicks on <span> (x), close the modal
 		function conferenceroom() {
-			console.log("rfgfhgcfchxedhgbhjbmhbhjbh");
+			console.log("Pop-up Conference Modal...");
 			modal_conferenceroom.style.display = "none";
 		}
 

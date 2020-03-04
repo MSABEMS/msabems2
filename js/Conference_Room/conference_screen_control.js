@@ -1,31 +1,24 @@
 // Screen_up Start
-function screen_up() {
-    console.log("Hello");
-    //
-    console.log("POST method by jQuery");
+function screen_up(device_id) {
+    console.log("POST Screen Up method by jQuery");
+    sceen_post_data = { 
+        device_type: "curtain",
+        device_id: device_id, 
+        command: JSON.stringify({status: "up"})
+    };
+    console.log(sceen_post_data)
     jQuery.ajax({
-        // url: "https://cors-anywhere.herokuapp.com/https://peahivebackend.herokuapp.com/hiveapi/",
-        url: "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/curtain",
         type: "POST",
         headers: {
-            // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
-            "Authorization": "Token dscnsjdkcnsjdkcnjsdcnjdsncjsdnckjsdnckjsdcnkjsdcnskjdcnjksdncbs",
-            "Content-Type": "application/json; charset=utf-8",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+            "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
+            "Content-Type": "application/x-www-form-urlencoded",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/curtain",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
         contentType: "application/json",
-        data: JSON.stringify({
-            "topic": "Test post device control",
-            "type": "devicecontrol",
-            "message": {
-                "device": "MSA Device control",
-                "parameter": {
-                    "status": "on"
-                }
-            }
-        })
+        data: sceen_post_data,
     })
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
@@ -37,40 +30,31 @@ function screen_up() {
         .always(function () {
             /* ... */
         });
-    //
-
 }
 // Screen_up End
 
 
 // Screen_pause Start
-function screen_pause() {
-    console.log("Hello");
-    //
-    console.log("POST method by jQuery");
+function screen_pause(device_id) {
+    console.log("POST Screen Pause method by jQuery");
+    sceen_post_data = { 
+        device_type: "curtain",
+        device_id: device_id, 
+        command: JSON.stringify({status: "stop"})
+    };
+    console.log(sceen_post_data)
     jQuery.ajax({
-        // url: "https://cors-anywhere.herokuapp.com/https://peahivebackend.herokuapp.com/hiveapi/",
-        url: "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/curtain",
         type: "POST",
         headers: {
-            // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
-            "Authorization": "Token dscnsjdkcnsjdkcnjsdcnjdsncjsdnckjsdnckjsdcnkjsdcnskjdcnjksdncbs",
-            "Content-Type": "application/json; charset=utf-8",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+            "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
+            "Content-Type": "application/x-www-form-urlencoded",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/curtain",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
         contentType: "application/json",
-        data: JSON.stringify({
-            "topic": "Test post device control",
-            "type": "devicecontrol",
-            "message": {
-                "device": "MSA Device control",
-                "parameter": {
-                    "status": "on"
-                }
-            }
-        })
+        data: sceen_post_data,
     })
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
@@ -82,47 +66,34 @@ function screen_pause() {
         .always(function () {
             /* ... */
         });
-    //
-
 }
 // Screen_pause End
 
-
 // Screen_Down Start
-function screen_down() {
-    console.log("Hello");
-    //
-    console.log("POST method by jQuery");
+function screen_down(device_id) {
+    console.log("POST Screen Down method by jQuery");
+    sceen_post_data = { 
+        device_type: "curtain",
+        device_id: device_id, 
+        command: JSON.stringify({status: "down"})
+    };
+    console.log(sceen_post_data)
     jQuery.ajax({
-        // url: "https://cors-anywhere.herokuapp.com/https://peahivebackend.herokuapp.com/hiveapi/",
-        url: "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/curtain",
         type: "POST",
         headers: {
-            // "Authorization": "Token d6c0e1dd9df3d71a3b21d70959bf0857859c4199",
-            "Authorization": "Token dscnsjdkcnsjdkcnjsdcnjdsncjsdnckjsdnckjsdcnkjsdcnskjdcnjksdncbs",
-            "Content-Type": "application/json; charset=utf-8",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/OeZ0BBGoNjsyVylW6bVN",
+            "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
+            "Content-Type": "application/x-www-form-urlencoded",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/curtain",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
         contentType: "application/json",
-        data: JSON.stringify({
-            "topic": "Test post device control",
-            "type": "devicecontrol",
-            "message": {
-                "device": "MSA Device control",
-                "parameter": {
-                    "status": "on"
-                }
-            }
-        })
+        data: sceen_post_data,
     })
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
-            //
-            // Device status animation
-            //
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -130,7 +101,6 @@ function screen_down() {
         .always(function () {
             /* ... */
         });
-    //
 
 }
 // Screen_Down End
