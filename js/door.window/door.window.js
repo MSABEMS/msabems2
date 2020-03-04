@@ -11,7 +11,7 @@ var ref_open_closed_1 = ref_devices_data.child("WS103001");
 ref_open_closed_1.on("value", function(snapshot) {
   console.log("Get open_closed_1 from firebase")
   var open_closed_1 = snapshot.val();
-  // console.log(open_closed_1)
+  console.log(open_closed_1)
   // document.getElementById("status_1").innerHTML = open_closed_1["STATUS"];
   // Recheck Device Status from Firebase //
   var Status_open_closed_1 = open_closed_1["STATUS"];
@@ -105,13 +105,13 @@ ref_smoke_detected_1.on("value", function(snapshot) {
 // Change Image for Smoke Detected
 function smokedetected1_changeImage(Status_smoke_detected_1,Status_co_detected_1) {
   var image = document.getElementById('SD104001_3');
-  if (Status_smoke_detected_1 == "CLEAR") && (Status_co_detected_1 == "CLEAR") {
+  if ((Status_smoke_detected_1 == "CLEAR") && (Status_co_detected_1 == "CLEAR")) {
       image.src = "images/smokeclear.jpg";
   } 
-  else if (Status_smoke_detected_1 == "DETECTED") && (Status_co_detected_1 == "CLEAR") {
+  else if ((Status_smoke_detected_1 == "DETECTED") && (Status_co_detected_1 == "CLEAR")) {
     image.src = "images/smokedetected.jpg";
 }
- else if (Status_smoke_detected_1 == "CLEAR") && (Status_co_detected_1 == "DETECTED") {
+ else if ((Status_smoke_detected_1 == "CLEAR") && (Status_co_detected_1 == "DETECTED")) {
   image.src = "images/codetected.jpg";
 }
   else {
@@ -186,10 +186,10 @@ ref_smoke_detected_2.on("value", function(snapshot) {
   // document.getElementById("status_smoke_2").innerHTML = smoke_detected_2[""];
   // Recheck Device Status from Firebase //
    var Status_smoke_detected_2 = smoke_detected_2["SMOKE"];
-   var Status_co_detected_2 = smoke_detected_2["CO"];
+   //var Status_co_detected_2 = smoke_detected_2["CO"];
   // console.log(Status_smoke_detected_2);
    smokedetected2_changeImage(Status_smoke_detected_2)
-   smokedetected2_changeImage(Status_co_detected_2)
+   //smokedetected2_changeImage(Status_co_detected_2)
   // var Status_smoke_detected_2_Local = localStorage.setItem("Status_smoke_detected_2_Local", Status_smoke_detected_3)
 });
 
@@ -202,14 +202,14 @@ function smokedetected2_changeImage(Status_smoke_detected_2) {
       image.src = "images/smokedetected.jpg";
   }
 }
-function codetected1_changeImage(Status_co_detected_2) {
-  var image = document.getElementById('SD103001_2');
-  if (Status_co_detected_2 == "CLEAR") {
-      image.src = "images/smokeclear.jpg";
-  } else {
-      image.src = "images/codetected.jpg";
-  }
-}
+//function codetected1_changeImage(Status_co_detected_2) {
+  //var image = document.getElementById('SD103001_2');
+  //if (Status_co_detected_2 == "CLEAR") {
+  //    image.src = "images/smokeclear.jpg";
+  //} else {
+   //   image.src = "images/codetected.jpg";
+  //}
+//}
 
 // Retrieve data from Firebase for Checking Device Status
 // Floor 1 EO Room
