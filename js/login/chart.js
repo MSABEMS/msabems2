@@ -5,7 +5,7 @@ window.onload = function() {
         exportEnabled: true,
         animationEnabled: true,
         title: {
-            text: "Desktop Browser Market Share in 2016"
+            text: "Ratio of Power Grid"
         },
         data: [{
             type: "pie",
@@ -19,10 +19,6 @@ window.onload = function() {
                 { y: 51.08, label: "Grid" },
                 { y: 27.34, label: "PV" },
                 { y: 10.62, label: "Battery" },
-                // { y: 5.02, label: "Load" },
-                // { y: 4.07, label: "Safari" },
-                // { y: 1.22, label: "Opera" },
-                // { y: 0.44, label: "Others" }
             ]
         }]
     });

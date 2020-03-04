@@ -1,56 +1,58 @@
 // When the user clicks the button, open the modal
-function loginButton() {
+function Modal_loginButton() {
   // Get the button that opens the modal
   // Get the modal
   var modal = document.getElementById("myModal");
   modal.style.display = "block";
 }
 
-function dismissButton() {
+function dismiss_Modal_Button() {
   var modal = document.getElementById("myModal");
   modal.style.display = "none";
 }
 
-function TestLogin() {
-  // console.log("Login Button Active.");
-  // location.href = "index.html";
-
-  //  POST method by jQuery
-  console.log("POST method by jQuery");
+function Login() {
+  login_data = JSON.stringify({
+    username: document.getElementById("username").value,
+    password: document.getElementById("password").value
+  })
+  console.log(login_data)
+  console.log("POST Login method by jQuery")
   jQuery.ajax({
-
-      url: "https://cors-anywhere.herokuapp.com/https://hookb.in/G9rlkWNyBaU1m1eBMQZY",
+      url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/login",
       type: "POST",
       headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://hookb.in/G9rlkWNyBaU1m1eBMQZY",
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/login",
         "Access-Control-Allow-Methods": "POST",
         "Access-Control-Allow-Headers": "Content-Type, Authorization",  
       },
-
-      data: JSON.stringify({
-        "username": document.getElementById("username").value,
-        "password": document.getElementById("password").value
-      })
-    })
+      contentType: "application/x-www-form-urlencoded",
+      data: {
+        "password": "28Sep1960",
+        "username": "admin",
+    },
+  })
     .done(function(data, textStatus, jqXHR) {
       console.log("HTTP Request Succeeded: " + jqXHR.status);
       console.log(data);
       if (jqXHR.status == 200) {
-        // console.log(data['type']);
         console.log("Login successful.");
-        // localStorage.setItem("token", data['token']);
-        // window.location.replace("index.html");
-        console.log("Login successful Hahahaah")
+        localStorage.setItem("token_local", data['token']);
+        window.location.replace("index.html");
       }
     })
     .fail(function(jqXHR, textStatus, errorThrown) {
       console.log("HTTP Request Failed");
+      alert("Usernamr or Password is wrong. Please try again!!!")
     })
     .always(function() {
       /* ... */
     });
-  //
+}
+
+function TestClicked() {
+  console.log("Test")
 }
 
 window.onclick = function(event) {

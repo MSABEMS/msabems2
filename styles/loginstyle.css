@@ -26,18 +26,13 @@ h3 {
 }
 
 .login {
-  margin-left: 235px;
+  margin-left: 180px;
   margin-top: -5px;
 }
 
 li {
   list-style: none;
   float: left;
-}
-
-  {
-  margin: 0;
-  padding: 0;
 }
 
 #all {
