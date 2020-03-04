@@ -29,8 +29,8 @@ function Login() {
       },
       contentType: "application/x-www-form-urlencoded",
       data: {
-        "password": "28Sep1960",
-        "username": "admin",
+        "username": document.getElementById("username").value.toString(),
+        "password": document.getElementById("password").value.toString()
     },
   })
     .done(function(data, textStatus, jqXHR) {
