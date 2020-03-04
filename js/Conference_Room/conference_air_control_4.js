@@ -11,6 +11,8 @@ ref_conference_AC_4.on("value", function(snapshot) {
     console.log("Conference AC 4 is: " + Status_conference_AC_4 + " and temperature is: " + temp_conference_AC_4);
     document.getElementById("result4").innerHTML = temp_conference_AC_4;
     Status_conference_AC_4_changeImage(Status_conference_AC_4)
+    Status_remote_AC_changeImage(Status_conference_AC_4)
+    return(temp_conference_AC_4)
   });
 
 // Change Image for Smart Plug
@@ -22,6 +24,37 @@ function Status_conference_AC_4_changeImage(Status_conference_AC_4) {
     } else {
       image.src = "https://www.fotoaparatas.lt/images/thumbs/thumb-3-55x30m-green-screen-349177-640-448.png";
       }
+}
+
+function Status_remote_AC_changeImage(Status_conference_AC_4) {
+    var image1 = document.getElementById('ac4_cool');
+    var image2 = document.getElementById('ac4_dry');
+    var image3 = document.getElementById('ac4_fan');
+    var image4 = document.getElementById('ac4_lv1');
+    var image5 = document.getElementById('ac4_lv2');
+    var image6 = document.getElementById('ac4_lv3');
+    var image7 = document.getElementById('ac4_lv4');
+    var image8 = document.getElementById('ac4_lv5');
+
+    if (Status_conference_AC_4 == "OFF") {
+        image1.src = "images/remodeair/cooloff.png";
+        image2.src = "images/remodeair/dryoff.png";
+        image3.src = "images/remodeair/fanoff.png";
+        image4.src = "images/remodeair/fanoff.png";
+        image5.src = "images/remodeair/fanoff.png";
+        image6.src = "images/remodeair/fanoff.png";
+        image7.src = "images/remodeair/fanoff.png";
+        image8.src = "images/remodeair/fanoff.png";
+      } else {
+        image1.src = "images/remodeair/coolon.png";
+        image2.src = "images/remodeair/dryoff.png";
+        image3.src = "images/remodeair/fanoff.png";
+        image4.src = "images/remodeair/fanoff.png";
+        image5.src = "images/remodeair/fanoff.png";
+        image6.src = "images/remodeair/fanoff.png";
+        image7.src = "images/remodeair/fanoff.png";
+        image8.src = "images/remodeair/fanon.png";
+        }
 }
 
 // On
@@ -95,7 +128,7 @@ function turn_off_con_ac_4(device_id) {
 }
 
 // Set Temp
-var score = 25
+var score = 25;
 function up_temp_con_ac_4() {
     if (score < 30) {
         score++;
@@ -148,30 +181,33 @@ function summit_air4(device_id) {
 
 // CoolModeControl
 function CoolModeControl_4(device_id) {
+    console.log("CoolModeControl_4")
     console.log(device_id + " cool mode control: COOL");
+    console.log("Temp is : " + score)
+    var set_mode_data = {   device_type: "AC",
+                            device_id: device_id, 
+                            command: JSON.stringify({status:"ON",mode:"COLD",FAN:"5",stemp: score.toString()})
+                        };
+    console.log(set_mode_data)
     //
     console.log("POST method by jQuery");
     jQuery.ajax({
-        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/command",
         type: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
             "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/command",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
         contentType: "application/x-www-form-urlencoded",
-        data: {
-            "device_type": "AC",
-            "device_id": device_id,
-            "status": "OFF",
-        },
-    })
+        data: set_mode_data,
+        })
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
-
+            Update_Cool_Mode()
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -180,35 +216,43 @@ function CoolModeControl_4(device_id) {
             /* ... */
         });
     //
+}
 
+function Update_Cool_Mode() {
+    document.getElementById('ac4_cool').src = "images/remodeair/coolon.png";
+    document.getElementById('ac4_dry').src = "images/remodeair/dryoff.png";
+    document.getElementById('ac4_fan').src = "images/remodeair/fanoff.png";
 }
 
 // DryModeControl
 function DryModeControl_4(device_id) {
+    console.log("DryModeControl_4")
     console.log(device_id + " cool mode control: DRY");
+    console.log("Temp is : " + score)
+    var set_mode_data = {   device_type: "AC",
+                            device_id: device_id, 
+                            command: JSON.stringify({status:"ON",mode:"DRY",FAN:"5",stemp: score.toString()})
+                        };
+    console.log(set_mode_data)
     //
     console.log("POST method by jQuery");
     jQuery.ajax({
-        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/command",
         type: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
             "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/command",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
         contentType: "application/x-www-form-urlencoded",
-        data: {
-            "device_type": "AC",
-            "device_id": device_id,
-            "status": "OFF",
-        },
+        data: set_mode_data,
     })
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
-
+            Update_Dry_Mode()
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -217,35 +261,43 @@ function DryModeControl_4(device_id) {
             /* ... */
         });
     //
+}
 
+function Update_Dry_Mode() {
+    document.getElementById('ac4_cool').src = "images/remodeair/cooloff.png";
+    document.getElementById('ac4_dry').src = "images/remodeair/dryon.png";
+    document.getElementById('ac4_fan').src = "images/remodeair/fanoff.png";
 }
 
 // FenModeControl
 function FenModeControl_4(device_id) {
+    console.log("FenModeControl_4")
     console.log(device_id + " cool mode control: FAN");
+    console.log("Temp is : " + score)
+    var set_mode_data = {   device_type: "AC",
+                            device_id: device_id, 
+                            command: JSON.stringify({status:"ON",mode:"FAN",FAN:"5",stemp: score.toString()})
+                        };
+    console.log(set_mode_data)
     //
     console.log("POST method by jQuery");
     jQuery.ajax({
-        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/command",
         type: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
             "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/command",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
         contentType: "application/x-www-form-urlencoded",
-        data: {
-            "device_type": "AC",
-            "device_id": device_id,
-            "status": "OFF",
-        },
+        data: set_mode_data,
     })
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
-
+            Update_Fan_Mode()
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -254,8 +306,14 @@ function FenModeControl_4(device_id) {
             /* ... */
         });
     //
-
 }
+
+function Update_Fan_Mode() {
+    document.getElementById('ac4_cool').src = "images/remodeair/cooloff.png";
+    document.getElementById('ac4_dry').src = "images/remodeair/dryoff.png";
+    document.getElementById('ac4_fan').src = "images/remodeair/fanon.png";
+}
+
 
 //Swing turn_off_ac
 function swingturn_off_con_ac_4(device_id) {
@@ -334,29 +392,31 @@ function swingturn_on_con_ac_4(device_id) {
 // Speed Fan
 function remote4_speedone(device_id) {
     console.log(device_id + " fan speed level: ONE");
+    console.log("Temp is : " + score)
+    var set_mode_data = {   device_type: "AC",
+                            device_id: device_id, 
+                            command: JSON.stringify({status:"ON",mode:"COLD",FAN:"1",stemp: score.toString()})
+                        };
+    console.log(set_mode_data)
     //
     console.log("POST method by jQuery");
     jQuery.ajax({
-        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/command",
         type: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
             "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/command",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
         contentType: "application/x-www-form-urlencoded",
-        data: {
-            "device_type": "AC",
-            "device_id": device_id,
-            "status": "OFF",
-        },
+        data: set_mode_data,
     })
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
-
+            Update_Speed_LV1()
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -365,33 +425,43 @@ function remote4_speedone(device_id) {
             /* ... */
         });
     //
-
 }
+
+function Update_Speed_LV1() {
+    document.getElementById('ac4_lv1').src = "images/remodeair/fanon.png";
+    document.getElementById('ac4_lv2').src = "images/remodeair/fanoff.png";
+    document.getElementById('ac4_lv3').src = "images/remodeair/fanoff.png";
+    document.getElementById('ac4_lv4').src = "images/remodeair/fanoff.png";
+    document.getElementById('ac4_lv5').src = "images/remodeair/fanoff.png";
+}
+
 function remote4_speedtwo(device_id) {
     console.log(device_id + " fan speed level: TWO");
+    console.log("Temp is : " + score)
+    var set_mode_data = {   device_type: "AC",
+                            device_id: device_id, 
+                            command: JSON.stringify({status:"ON",mode:"COLD",FAN:"2",stemp: score.toString()})
+                        };
+    console.log(set_mode_data)
     //
     console.log("POST method by jQuery");
     jQuery.ajax({
-        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/command",
         type: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
             "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/command",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
         contentType: "application/x-www-form-urlencoded",
-        data: {
-            "device_type": "AC",
-            "device_id": device_id,
-            "status": "OFF",
-        },
+        data: set_mode_data,
     })
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
-
+            Update_Speed_LV2()
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -400,33 +470,43 @@ function remote4_speedtwo(device_id) {
             /* ... */
         });
     //
-
 }
+
+function Update_Speed_LV2() {
+    document.getElementById('ac4_lv1').src = "images/remodeair/fanoff.png";
+    document.getElementById('ac4_lv2').src = "images/remodeair/fanon.png";
+    document.getElementById('ac4_lv3').src = "images/remodeair/fanoff.png";
+    document.getElementById('ac4_lv4').src = "images/remodeair/fanoff.png";
+    document.getElementById('ac4_lv5').src = "images/remodeair/fanoff.png";
+}
+
 function remote4_speedthree(device_id) {
     console.log(device_id + " fan speed level: THREE");
+    console.log("Temp is : " + score)
+    var set_mode_data = {   device_type: "AC",
+                            device_id: device_id, 
+                            command: JSON.stringify({status:"ON",mode:"COLD",FAN:"3",stemp: score.toString()})
+                        };
+    console.log(set_mode_data)
     //
     console.log("POST method by jQuery");
     jQuery.ajax({
-        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/command",
         type: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
             "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/command",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
         contentType: "application/x-www-form-urlencoded",
-        data: {
-            "device_type": "AC",
-            "device_id": device_id,
-            "status": "OFF",
-        },
+        data: set_mode_data,
     })
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
-
+            Update_Speed_LV3()
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -435,33 +515,43 @@ function remote4_speedthree(device_id) {
             /* ... */
         });
     //
-
 }
+
+function Update_Speed_LV3() {
+    document.getElementById('ac4_lv1').src = "images/remodeair/fanoff.png";
+    document.getElementById('ac4_lv2').src = "images/remodeair/fanoff.png";
+    document.getElementById('ac4_lv3').src = "images/remodeair/fanon.png";
+    document.getElementById('ac4_lv4').src = "images/remodeair/fanoff.png";
+    document.getElementById('ac4_lv5').src = "images/remodeair/fanoff.png";
+}
+
 function remote4_speedfour(device_id) {
     console.log(device_id + " fan speed level: FOUR");
+    console.log("Temp is : " + score)
+    var set_mode_data = {   device_type: "AC",
+                            device_id: device_id, 
+                            command: JSON.stringify({status:"ON",mode:"COLD",FAN:"4",stemp: score.toString()})
+                        };
+    console.log(set_mode_data)
     //
     console.log("POST method by jQuery");
     jQuery.ajax({
-        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/command",
         type: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
             "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/command",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
         contentType: "application/x-www-form-urlencoded",
-        data: {
-            "device_type": "AC",
-            "device_id": device_id,
-            "status": "OFF",
-        },
+        data: set_mode_data,
     })
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
-
+            Update_Speed_LV4()
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -470,33 +560,43 @@ function remote4_speedfour(device_id) {
             /* ... */
         });
     //
-
 }
+
+function Update_Speed_LV4() {
+    document.getElementById('ac4_lv1').src = "images/remodeair/fanoff.png";
+    document.getElementById('ac4_lv2').src = "images/remodeair/fanoff.png";
+    document.getElementById('ac4_lv3').src = "images/remodeair/fanoff.png";
+    document.getElementById('ac4_lv4').src = "images/remodeair/fanon.png";
+    document.getElementById('ac4_lv5').src = "images/remodeair/fanoff.png";
+}
+
 function remote4_speedfive(device_id) {
     console.log(device_id + " fan speed level: FIVE");
+    console.log("Temp is : " + score)
+    var set_mode_data = {   device_type: "AC",
+                            device_id: device_id, 
+                            command: JSON.stringify({status:"ON",mode:"COLD",FAN:"5",stemp: score.toString()})
+                        };
+    console.log(set_mode_data)
     //
     console.log("POST method by jQuery");
     jQuery.ajax({
-        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/command",
         type: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
             "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/command",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
         contentType: "application/x-www-form-urlencoded",
-        data: {
-            "device_type": "AC",
-            "device_id": device_id,
-            "status": "OFF",
-        },
+        data: set_mode_data,
     })
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
-
+            Update_Speed_LV5()
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -505,6 +605,13 @@ function remote4_speedfive(device_id) {
             /* ... */
         });
     //
+}
 
+function Update_Speed_LV5() {
+    document.getElementById('ac4_lv1').src = "images/remodeair/fanoff.png";
+    document.getElementById('ac4_lv2').src = "images/remodeair/fanoff.png";
+    document.getElementById('ac4_lv3').src = "images/remodeair/fanoff.png";
+    document.getElementById('ac4_lv4').src = "images/remodeair/fanoff.png";
+    document.getElementById('ac4_lv5').src = "images/remodeair/fanon.png";
 }
 
