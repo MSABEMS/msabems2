@@ -18,7 +18,7 @@ ref_bedroom_AC.on("value", function(snapshot) {
 // Change Image for Smart Plug
 function Status_bedroom_AC_changeImage(Status_bedroom_AC) {
   var image = document.getElementById('ac1');
-
+    console.log(Status_bedroom_AC)
   if (Status_bedroom_AC == "OFF") {
       image.src = "images/goodbye.jpg";
     } else {
@@ -26,7 +26,7 @@ function Status_bedroom_AC_changeImage(Status_bedroom_AC) {
       }
 }
 
-function Status_remote_AC_changeImage(Status_conference_AC_4) {
+function Status_remote_AC_changeImage(Status_bedroom_AC) {
     var image1 = document.getElementById('ac_cool');
     var image2 = document.getElementById('ac_dry');
     var image3 = document.getElementById('ac_fan');
@@ -36,7 +36,7 @@ function Status_remote_AC_changeImage(Status_conference_AC_4) {
     var image7 = document.getElementById('ac_lv4');
     var image8 = document.getElementById('ac_lv5');
 
-    if (Status_conference_AC_4 == "OFF") {
+    if (Status_bedroom_AC == "OFF") {
         image1.src = "images/remodeair/cooloff.png";
         image2.src = "images/remodeair/dryoff.png";
         image3.src = "images/remodeair/fanoff.png";
@@ -58,7 +58,7 @@ function Status_remote_AC_changeImage(Status_conference_AC_4) {
 }
 
 // On
-function turn_on_con_ac(device_id) {
+function turn_on_ac(device_id) {
     console.log("turn_on_con_ac" + device_id);
     console.log(device_id)
     //
@@ -93,7 +93,7 @@ function turn_on_con_ac(device_id) {
 }
 
 // Off
-function turn_off_con_ac(device_id) {
+function turn_off_ac(device_id) {
     console.log("turn_off_con_ac" + device_id);
     console.log(device_id)
     //
@@ -129,19 +129,19 @@ function turn_off_con_ac(device_id) {
 
 // Set Temp
 var score = 25;
-function up_temp_con_ac_4() {
+function up_remote1() {
     if (score < 30) {
         score++;
     }
-    document.getElementById("result4").innerHTML = score;
+    document.getElementById("result").innerHTML = score;
     return(score);
 }
 
-function down_temp_con_ac_4() {
+function down_remote1() {
     if (score > 17) {
         score--;
     }
-    document.getElementById("result4").innerHTML = score;
+    document.getElementById("result").innerHTML = score;
     return(score);
 }
 
