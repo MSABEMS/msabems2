@@ -247,7 +247,7 @@ function summit_air1(device_id) {
 // CoolModeControl
 function CoolModeControl_1(device_id) {
     var fan_speed_conference_AC_1_local = localStorage.getItem("fan_speed_conference_AC_1_local");
-    var mode_conference_AC_1_local = localStorage.getItem("mode_conference_AC_1_local");
+    var mode_conference_AC_1_local = "COLD";
     console.log("CoolModeControl_1")
     console.log(device_id + " cool mode control: COOL");
     console.log("Temp is : " + score_AC1)
