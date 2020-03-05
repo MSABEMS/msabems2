@@ -77,7 +77,7 @@ function projectorsource_source(device_id) {
 // Source End
 
 // setting Start
-function projectorsource_setting() {
+function projectorsource_setting(device_id) {
     console.log("-----Control_projector----- :" + device_id);
     var Status_projector_device = "MENU"
     projector_post = { 
