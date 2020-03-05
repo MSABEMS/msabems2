@@ -7,11 +7,16 @@ ref_conference_AC_4.on("value", function(snapshot) {
     var conference_AC_4 = snapshot.val();
     var Status_conference_AC_4 = conference_AC_4["STATUS"];
     var temp_conference_AC_4 = conference_AC_4["TEMPERATURE"];
+    var fan_speed_conference_AC_4 = conference_AC_4["FAN_SPEED"];
+    var mode_conference_AC_4 = conference_AC_4["MODE"];
     console.log("Get Status Conference AC 4: ")
     console.log("Conference AC 4 is: " + Status_conference_AC_4 + " and temperature is: " + temp_conference_AC_4);
     document.getElementById("result4").innerHTML = temp_conference_AC_4;
+    localStorage.setItem("temp_conference_AC_4_local", temp_conference_AC_4)
+    localStorage.setItem("fan_speed_conference_AC_4_local", fan_speed_conference_AC_4)
+    localStorage.setItem("mode_conference_AC_4_local", mode_conference_AC_4)
     Status_conference_AC_4_changeImage(Status_conference_AC_4)
-    Status_remote_AC_changeImage(Status_conference_AC_4)
+    Status_remote_AC_changeImage(Status_conference_AC_4, fan_speed_conference_AC_4, mode_conference_AC_4)
     return(temp_conference_AC_4)
   });
 
@@ -26,7 +31,7 @@ function Status_conference_AC_4_changeImage(Status_conference_AC_4) {
       }
 }
 
-function Status_remote_AC_changeImage(Status_conference_AC_4) {
+function Status_remote_AC_changeImage(Status_conference_AC_4, fan_speed_conference_AC_4, mode_conference_AC_4) {
     var image1 = document.getElementById('ac4_cool');
     var image2 = document.getElementById('ac4_dry');
     var image3 = document.getElementById('ac4_fan');
@@ -45,15 +50,73 @@ function Status_remote_AC_changeImage(Status_conference_AC_4) {
         image6.src = "images/remodeair/fanoff.png";
         image7.src = "images/remodeair/fanoff.png";
         image8.src = "images/remodeair/fanoff.png";
-      } else {
-        image1.src = "images/remodeair/coolon.png";
-        image2.src = "images/remodeair/dryoff.png";
-        image3.src = "images/remodeair/fanoff.png";
-        image4.src = "images/remodeair/fanoff.png";
-        image5.src = "images/remodeair/fanoff.png";
-        image6.src = "images/remodeair/fanoff.png";
-        image7.src = "images/remodeair/fanoff.png";
-        image8.src = "images/remodeair/fanon.png";
+      } else if (Status_conference_AC_4 == "ON") {
+          if (mode_conference_AC_4 == "COLD") {
+             if (fan_speed_conference_AC_4 == "1") {
+                image1.src = "images/remodeair/coolon.png";
+                image2.src = "images/remodeair/dryoff.png";
+                image3.src = "images/remodeair/fanoff.png";
+                image4.src = "images/remodeair/fanon.png";
+                image5.src = "images/remodeair/fanoff.png";
+                image6.src = "images/remodeair/fanoff.png";
+                image7.src = "images/remodeair/fanoff.png";
+                image8.src = "images/remodeair/fanoff.png";
+            } else if (fan_speed_conference_AC_4 == "2") {
+                image1.src = "images/remodeair/coolon.png";
+                image2.src = "images/remodeair/dryoff.png";
+                image3.src = "images/remodeair/fanoff.png";
+                image4.src = "images/remodeair/fanoff.png";
+                image5.src = "images/remodeair/fanon.png";
+                image6.src = "images/remodeair/fanoff.png";
+                image7.src = "images/remodeair/fanoff.png";
+                image8.src = "images/remodeair/fanoff.png";
+            } else if (fan_speed_conference_AC_4 == "3") {
+                image1.src = "images/remodeair/coolon.png";
+                image2.src = "images/remodeair/dryoff.png";
+                image3.src = "images/remodeair/fanoff.png";
+                image4.src = "images/remodeair/fanoff.png";
+                image5.src = "images/remodeair/fanoff.png";
+                image6.src = "images/remodeair/fanon.png";
+                image7.src = "images/remodeair/fanoff.png";
+                image8.src = "images/remodeair/fanoff.png";
+            } else if (fan_speed_conference_AC_4 == "4") {
+                image1.src = "images/remodeair/coolon.png";
+                image2.src = "images/remodeair/dryoff.png";
+                image3.src = "images/remodeair/fanoff.png";
+                image4.src = "images/remodeair/fanoff.png";
+                image5.src = "images/remodeair/fanoff.png";
+                image6.src = "images/remodeair/fanoff.png";
+                image7.src = "images/remodeair/fanon.png";
+                image8.src = "images/remodeair/fanoff.png";
+            } else if (fan_speed_conference_AC_4 == "5") {
+                image1.src = "images/remodeair/coolon.png";
+                image2.src = "images/remodeair/dryoff.png";
+                image3.src = "images/remodeair/fanoff.png";
+                image4.src = "images/remodeair/fanoff.png";
+                image5.src = "images/remodeair/fanoff.png";
+                image6.src = "images/remodeair/fanoff.png";
+                image7.src = "images/remodeair/fanoff.png";
+                image8.src = "images/remodeair/fanon.png";
+            }
+          } else if (mode_conference_AC_4 == "DRY") {
+                image1.src = "images/remodeair/cooloff.png";
+                image2.src = "images/remodeair/dryon.png";
+                image3.src = "images/remodeair/fanoff.png";
+                image4.src = "images/remodeair/fanoff.png";
+                image5.src = "images/remodeair/fanoff.png";
+                image6.src = "images/remodeair/fanoff.png";
+                image7.src = "images/remodeair/fanoff.png";
+                image8.src = "images/remodeair/fanoff.png";
+              } else if (mode_conference_AC_4 == "FAN") {
+                image1.src = "images/remodeair/cooloff.png";
+                image2.src = "images/remodeair/dryoff.png";
+                image3.src = "images/remodeair/fanon.png";
+                image4.src = "images/remodeair/fanoff.png";
+                image5.src = "images/remodeair/fanoff.png";
+                image6.src = "images/remodeair/fanoff.png";
+                image7.src = "images/remodeair/fanoff.png";
+                image8.src = "images/remodeair/fanoff.png";
+                  }
         }
 }
 
@@ -128,7 +191,7 @@ function turn_off_con_ac_4(device_id) {
 }
 
 // Set Temp
-var score = 25;
+var score = parseInt(localStorage.getItem("temp_conference_AC_4_local"));
 function up_temp_con_ac_4() {
     if (score < 30) {
         score++;
@@ -147,9 +210,10 @@ function down_temp_con_ac_4() {
 
 // Submit Temp
 function summit_air4(device_id) {
+    var fan_speed_conference_AC_4_local = localStorage.getItem("fan_speed_conference_AC_4_local");
     var set_temp_data = { device_type: "AC",
                           device_id: device_id, 
-                          command: JSON.stringify({status:"ON",mode:"COLD",FAN:"5",stemp: score.toString()} 
+                          command: JSON.stringify({status:"ON",mode:"COLD",FAN: fan_speed_conference_AC_4_local,stemp: score.toString()} 
                           )};
     console.log(set_temp_data)
     console.log(device_id + " adjust Con_1 AC Temp: " + score + "degreeC")
@@ -170,6 +234,7 @@ function summit_air4(device_id) {
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
+            localStorage.setItem("temp_conference_AC_4_local", score)
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -181,12 +246,14 @@ function summit_air4(device_id) {
 
 // CoolModeControl
 function CoolModeControl_4(device_id) {
+    var fan_speed_conference_AC_4_local = localStorage.getItem("fan_speed_conference_AC_4_local");
+    var mode_conference_AC_4_local = localStorage.getItem("mode_conference_AC_4_local");
     console.log("CoolModeControl_4")
     console.log(device_id + " cool mode control: COOL");
     console.log("Temp is : " + score)
     var set_mode_data = {   device_type: "AC",
                             device_id: device_id, 
-                            command: JSON.stringify({status:"ON",mode:"COLD",FAN:"5",stemp: score.toString()})
+                            command: JSON.stringify({status:"ON",mode: mode_conference_AC_4_local,FAN: fan_speed_conference_AC_4_local,stemp: score.toString()})
                         };
     console.log(set_mode_data)
     //
@@ -207,7 +274,8 @@ function CoolModeControl_4(device_id) {
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
-            Update_Cool_Mode()
+            // Update_Cool_Mode()
+            Status_remote_AC_changeImage(Status_conference_AC_4 = "ON", fan_speed_conference_AC_4_local, mode_conference_AC_4_local)
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -226,12 +294,14 @@ function Update_Cool_Mode() {
 
 // DryModeControl
 function DryModeControl_4(device_id) {
+    var fan_speed_conference_AC_4_local = localStorage.getItem("fan_speed_conference_AC_4_local");
+    var mode_conference_AC_4_local = "DRY";
     console.log("DryModeControl_4")
     console.log(device_id + " cool mode control: DRY");
     console.log("Temp is : " + score)
     var set_mode_data = {   device_type: "AC",
                             device_id: device_id, 
-                            command: JSON.stringify({status:"ON",mode:"DRY",FAN:"5",stemp: score.toString()})
+                            command: JSON.stringify({status:"ON",mode: mode_conference_AC_4_local,FAN: fan_speed_conference_AC_4_local,stemp: score.toString()})
                         };
     console.log(set_mode_data)
     //
@@ -252,7 +322,8 @@ function DryModeControl_4(device_id) {
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
-            Update_Dry_Mode()
+            // Update_Dry_Mode()
+            Status_remote_AC_changeImage(Status_conference_AC_4 = "ON", fan_speed_conference_AC_4_local, mode_conference_AC_4_local)
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -271,12 +342,14 @@ function Update_Dry_Mode() {
 
 // FenModeControl
 function FenModeControl_4(device_id) {
+    var fan_speed_conference_AC_4_local = localStorage.getItem("fan_speed_conference_AC_4_local");
+    var mode_conference_AC_4_local = "FAN";
     console.log("FenModeControl_4")
     console.log(device_id + " cool mode control: FAN");
     console.log("Temp is : " + score)
     var set_mode_data = {   device_type: "AC",
                             device_id: device_id, 
-                            command: JSON.stringify({status:"ON",mode:"FAN",FAN:"5",stemp: score.toString()})
+                            command: JSON.stringify({status:"ON",mode: mode_conference_AC_4_local,FAN: fan_speed_conference_AC_4_local,stemp: score.toString()})
                         };
     console.log(set_mode_data)
     //
@@ -297,7 +370,8 @@ function FenModeControl_4(device_id) {
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
-            Update_Fan_Mode()
+            // Update_Fan_Mode()
+            Status_remote_AC_changeImage(Status_conference_AC_4 = "ON", fan_speed_conference_AC_4_local, mode_conference_AC_4_local)
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -417,6 +491,7 @@ function remote4_speedone(device_id) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
             Update_Speed_LV1()
+            localStorage.setItem("fan_speed_conference_AC_4_local", "1")
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -462,6 +537,7 @@ function remote4_speedtwo(device_id) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
             Update_Speed_LV2()
+            localStorage.setItem("fan_speed_conference_AC_4_local", "2")
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -507,6 +583,7 @@ function remote4_speedthree(device_id) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
             Update_Speed_LV3()
+            localStorage.setItem("fan_speed_conference_AC_4_local", "3")
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -552,6 +629,7 @@ function remote4_speedfour(device_id) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
             Update_Speed_LV4()
+            localStorage.setItem("fan_speed_conference_AC_4_local", "4")
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -597,6 +675,7 @@ function remote4_speedfive(device_id) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
             Update_Speed_LV5()
+            localStorage.setItem("fan_speed_conference_AC_4_local", "5")
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -614,4 +693,3 @@ function Update_Speed_LV5() {
     document.getElementById('ac4_lv4').src = "images/remodeair/fanoff.png";
     document.getElementById('ac4_lv5').src = "images/remodeair/fanon.png";
 }
-

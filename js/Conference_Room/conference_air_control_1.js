@@ -7,11 +7,18 @@ ref_conference_AC_1.on("value", function(snapshot) {
     var conference_AC_1 = snapshot.val();
     var Status_conference_AC_1 = conference_AC_1["STATUS"];
     var temp_conference_AC_1 = conference_AC_1["TEMPERATURE"];
+    var fan_speed_conference_AC_1 = conference_AC_1["FAN_SPEED"];
+    var mode_conference_AC_1 = conference_AC_1["MODE"];
     console.log("Get Status Conference AC 1: ")
     console.log("Conference AC 1 is: " + Status_conference_AC_1 + " and temperature is: " + temp_conference_AC_1);
     document.getElementById("result1").innerHTML = temp_conference_AC_1;
-    Status_conference_AC_1_changeImage(Status_conference_AC_1)
-  });
+    localStorage.setItem("temp_conference_AC_1_local", temp_conference_AC_1)
+    localStorage.setItem("fan_speed_conference_AC_1_local", fan_speed_conference_AC_1)
+    localStorage.setItem("mode_conference_AC_1_local", mode_conference_AC_1)
+    Status_conference_AC_1_changeImage(Status_conference_AC_1)    
+    Status_remote_AC_changeImage(Status_conference_AC_1, fan_speed_conference_AC_1, mode_conference_AC_1)
+    return(temp_conference_AC_1)
+});
 
 // Change Image for Smart Plug
 function Status_conference_AC_1_changeImage(Status_conference_AC_1) {
@@ -22,6 +29,95 @@ function Status_conference_AC_1_changeImage(Status_conference_AC_1) {
     } else {
       image.src = "https://www.fotoaparatas.lt/images/thumbs/thumb-3-55x30m-green-screen-349177-640-448.png";
       }
+}
+
+function Status_remote_AC_changeImage(Status_conference_AC_1, fan_speed_conference_AC_1, mode_conference_AC_1) {
+    var image1 = document.getElementById('ac1_cool');
+    var image2 = document.getElementById('ac1_dry');
+    var image3 = document.getElementById('ac1_fan');
+    var image4 = document.getElementById('ac1_lv1');
+    var image5 = document.getElementById('ac1_lv2');
+    var image6 = document.getElementById('ac1_lv3');
+    var image7 = document.getElementById('ac1_lv4');
+    var image8 = document.getElementById('ac1_lv5');
+
+    if (Status_conference_AC_1 == "OFF") {
+        image1.src = "images/remodeair/cooloff.png";
+        image2.src = "images/remodeair/dryoff.png";
+        image3.src = "images/remodeair/fanoff.png";
+        image4.src = "images/remodeair/fanoff.png";
+        image5.src = "images/remodeair/fanoff.png";
+        image6.src = "images/remodeair/fanoff.png";
+        image7.src = "images/remodeair/fanoff.png";
+        image8.src = "images/remodeair/fanoff.png";
+      } else if (Status_conference_AC_1 == "ON") {
+          if (mode_conference_AC_1 == "COLD") {
+             if (fan_speed_conference_AC_1 == "1") {
+                image1.src = "images/remodeair/coolon.png";
+                image2.src = "images/remodeair/dryoff.png";
+                image3.src = "images/remodeair/fanoff.png";
+                image4.src = "images/remodeair/fanon.png";
+                image5.src = "images/remodeair/fanoff.png";
+                image6.src = "images/remodeair/fanoff.png";
+                image7.src = "images/remodeair/fanoff.png";
+                image8.src = "images/remodeair/fanoff.png";
+            } else if (fan_speed_conference_AC_1 == "2") {
+                image1.src = "images/remodeair/coolon.png";
+                image2.src = "images/remodeair/dryoff.png";
+                image3.src = "images/remodeair/fanoff.png";
+                image4.src = "images/remodeair/fanoff.png";
+                image5.src = "images/remodeair/fanon.png";
+                image6.src = "images/remodeair/fanoff.png";
+                image7.src = "images/remodeair/fanoff.png";
+                image8.src = "images/remodeair/fanoff.png";
+            } else if (fan_speed_conference_AC_1 == "3") {
+                image1.src = "images/remodeair/coolon.png";
+                image2.src = "images/remodeair/dryoff.png";
+                image3.src = "images/remodeair/fanoff.png";
+                image4.src = "images/remodeair/fanoff.png";
+                image5.src = "images/remodeair/fanoff.png";
+                image6.src = "images/remodeair/fanon.png";
+                image7.src = "images/remodeair/fanoff.png";
+                image8.src = "images/remodeair/fanoff.png";
+            } else if (fan_speed_conference_AC_1 == "4") {
+                image1.src = "images/remodeair/coolon.png";
+                image2.src = "images/remodeair/dryoff.png";
+                image3.src = "images/remodeair/fanoff.png";
+                image4.src = "images/remodeair/fanoff.png";
+                image5.src = "images/remodeair/fanoff.png";
+                image6.src = "images/remodeair/fanoff.png";
+                image7.src = "images/remodeair/fanon.png";
+                image8.src = "images/remodeair/fanoff.png";
+            } else if (fan_speed_conference_AC_1 == "5") {
+                image1.src = "images/remodeair/coolon.png";
+                image2.src = "images/remodeair/dryoff.png";
+                image3.src = "images/remodeair/fanoff.png";
+                image4.src = "images/remodeair/fanoff.png";
+                image5.src = "images/remodeair/fanoff.png";
+                image6.src = "images/remodeair/fanoff.png";
+                image7.src = "images/remodeair/fanoff.png";
+                image8.src = "images/remodeair/fanon.png";
+            }
+          } else if (mode_conference_AC_1 == "DRY") {
+                image1.src = "images/remodeair/cooloff.png";
+                image2.src = "images/remodeair/dryon.png";
+                image3.src = "images/remodeair/fanoff.png";
+                image4.src = "images/remodeair/fanoff.png";
+                image5.src = "images/remodeair/fanoff.png";
+                image6.src = "images/remodeair/fanoff.png";
+                image7.src = "images/remodeair/fanoff.png";
+                image8.src = "images/remodeair/fanoff.png";
+              } else if (mode_conference_AC_1 == "FAN") {
+                image1.src = "images/remodeair/cooloff.png";
+                image2.src = "images/remodeair/dryoff.png";
+                image3.src = "images/remodeair/fanon.png";
+                image4.src = "images/remodeair/fanoff.png";
+                image5.src = "images/remodeair/fanoff.png";
+                image6.src = "images/remodeair/fanoff.png";
+                image7.src = "images/remodeair/fanoff.png";
+                image8.src = "images/remodeair/fanoff.png";
+                  }
+        }
 }
 
 // On
@@ -95,7 +191,7 @@ function turn_off_con_ac_1(device_id) {
 }
 
 // Set Temp
-var score = 25
+var score = parseInt(localStorage.getItem("temp_conference_AC_1_local"));
 function up_temp_con_ac_1() {
     if (score < 30) {
         score++;
@@ -114,9 +210,10 @@ function down_temp_con_ac_1() {
 
 // Submit Temp
 function summit_air1(device_id) {
+    var fan_speed_conference_AC_1_local = localStorage.getItem("fan_speed_conference_AC_1_local");
     var set_temp_data = { device_type: "AC",
     device_id: device_id, 
-    command: JSON.stringify({status:"ON",mode:"COLD",FAN:"5",stemp: score.toString()} 
+    command: JSON.stringify({status:"ON",mode:"COLD",FAN: fan_speed_conference_AC_1_local,stemp: score.toString()} 
     )};
     console.log(set_temp_data)
     console.log("Adjust Con_1 AC Temp: " + score + "degreeC")
@@ -137,6 +234,7 @@ function summit_air1(device_id) {
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
+            localStorage.setItem("temp_conference_AC_1_local", score)
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -148,30 +246,35 @@ function summit_air1(device_id) {
 
 // CoolModeControl
 function CoolModeControl_1(device_id) {
+    var fan_speed_conference_AC_1_local = localStorage.getItem("fan_speed_conference_AC_1_local");
+    var mode_conference_AC_1_local = localStorage.getItem("mode_conference_AC_1_local");
+    console.log("CoolModeControl_1")
     console.log(device_id + " cool mode control: COOL");
+    console.log("Temp is : " + score)
+    var set_mode_data = {   device_type: "AC",
+                            device_id: device_id, 
+                            command: JSON.stringify({status:"ON",mode: mode_conference_AC_1_local,FAN: fan_speed_conference_AC_1_local,stemp: score.toString()})
+                        };
+    console.log(set_mode_data)
     //
     console.log("POST method by jQuery");
     jQuery.ajax({
-        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/command",
         type: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
             "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/command",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
         contentType: "application/x-www-form-urlencoded",
-        data: {
-            "device_type": "AC",
-            "device_id": device_id,
-            "status": "OFF",
-        },
+        data: set_mode_data,
     })
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
-
+            Status_remote_AC_changeImage(Status_conference_AC_1 = "ON", fan_speed_conference_AC_1_local, mode_conference_AC_1_local)
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -185,30 +288,35 @@ function CoolModeControl_1(device_id) {
 
 // DryModeControl
 function DryModeControl_1(device_id) {
+    var fan_speed_conference_AC_1_local = localStorage.getItem("fan_speed_conference_AC_1_local");
+    var mode_conference_AC_1_local = "DRY";
+    console.log("DryModeControl_1")
     console.log(device_id + " cool mode control: DRY");
+    console.log("Temp is : " + score)
+    var set_mode_data = {   device_type: "AC",
+                            device_id: device_id, 
+                            command: JSON.stringify({status:"ON",mode: mode_conference_AC_1_local,FAN: fan_speed_conference_AC_1_local,stemp: score.toString()})
+                        };
+    console.log(set_mode_data)
     //
     console.log("POST method by jQuery");
     jQuery.ajax({
-        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/command",
         type: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
             "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/command",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
         contentType: "application/x-www-form-urlencoded",
-        data: {
-            "device_type": "AC",
-            "device_id": device_id,
-            "status": "OFF",
-        },
+        data: set_mode_data,
     })
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
-
+            Status_remote_AC_changeImage(Status_conference_AC_1 = "ON", fan_speed_conference_AC_1_local, mode_conference_AC_1_local)
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -222,30 +330,35 @@ function DryModeControl_1(device_id) {
 
 // FenModeControl
 function FenModeControl_1(device_id) {
+    var fan_speed_conference_AC_1_local = localStorage.getItem("fan_speed_conference_AC_1_local");
+    var mode_conference_AC_1_local = "FAN";
+    console.log("FenModeControl_1")
     console.log(device_id + " cool mode control: FAN");
+    console.log("Temp is : " + score)
+    var set_mode_data = {   device_type: "AC",
+                            device_id: device_id, 
+                            command: JSON.stringify({status:"ON",mode: mode_conference_AC_1_local,FAN: fan_speed_conference_AC_1_local,stemp: score.toString()})
+                        };
+    console.log(set_mode_data)
     //
     console.log("POST method by jQuery");
     jQuery.ajax({
-        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/command",
         type: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
             "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/command",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
         contentType: "application/x-www-form-urlencoded",
-        data: {
-            "device_type": "AC",
-            "device_id": device_id,
-            "status": "OFF",
-        },
+        data: set_mode_data,
     })
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
-
+            Status_remote_AC_changeImage(Status_conference_AC_1 = "ON", fan_speed_conference_AC_1_local, mode_conference_AC_1_local)
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -334,29 +447,32 @@ function swingturn_on_con_ac_1(device_id) {
 // Speed Fan
 function remote1_speedone(device_id) {
     console.log(device_id + " fan speed level: ONE");
+    console.log("Temp is : " + score)
+    var set_mode_data = {   device_type: "AC",
+                            device_id: device_id, 
+                            command: JSON.stringify({status:"ON",mode:"COLD",FAN:"1",stemp: score.toString()})
+                        };
+    console.log(set_mode_data)
     //
     console.log("POST method by jQuery");
     jQuery.ajax({
-        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/command",
         type: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
             "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/command",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
         contentType: "application/x-www-form-urlencoded",
-        data: {
-            "device_type": "AC",
-            "device_id": device_id,
-            "status": "OFF",
-        },
+        data: set_mode_data,
     })
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
-
+            Update_Speed_LV1()
+            localStorage.setItem("fan_speed_conference_AC_1_local", "1")
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -365,33 +481,44 @@ function remote1_speedone(device_id) {
             /* ... */
         });
     //
-
 }
+
+function Update_Speed_LV1() {
+    document.getElementById('ac1_lv1').src = "images/remodeair/fanon.png";
+    document.getElementById('ac1_lv2').src = "images/remodeair/fanoff.png";
+    document.getElementById('ac1_lv3').src = "images/remodeair/fanoff.png";
+    document.getElementById('ac1_lv4').src = "images/remodeair/fanoff.png";
+    document.getElementById('ac1_lv5').src = "images/remodeair/fanoff.png";
+}
+
 function remote1_speedtwo(device_id) {
     console.log(device_id + " fan speed level: TWO");
+    console.log("Temp is : " + score)
+    var set_mode_data = {   device_type: "AC",
+                            device_id: device_id, 
+                            command: JSON.stringify({status:"ON",mode:"COLD",FAN:"2",stemp: score.toString()})
+                        };
+    console.log(set_mode_data)
     //
     console.log("POST method by jQuery");
     jQuery.ajax({
-        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/command",
         type: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
             "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/command",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
         contentType: "application/x-www-form-urlencoded",
-        data: {
-            "device_type": "AC",
-            "device_id": device_id,
-            "status": "OFF",
-        },
+        data: set_mode_data,
     })
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
-
+            Update_Speed_LV2()
+            localStorage.setItem("fan_speed_conference_AC_1_local", "2")
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -400,33 +527,44 @@ function remote1_speedtwo(device_id) {
             /* ... */
         });
     //
-
 }
+
+function Update_Speed_LV2() {
+    document.getElementById('ac1_lv1').src = "images/remodeair/fanoff.png";
+    document.getElementById('ac1_lv2').src = "images/remodeair/fanon.png";
+    document.getElementById('ac1_lv3').src = "images/remodeair/fanoff.png";
+    document.getElementById('ac1_lv4').src = "images/remodeair/fanoff.png";
+    document.getElementById('ac1_lv5').src = "images/remodeair/fanoff.png";
+}
+
 function remote1_speedthree(device_id) {
     console.log(device_id + " fan speed level: THREE");
+    console.log("Temp is : " + score)
+    var set_mode_data = {   device_type: "AC",
+                            device_id: device_id, 
+                            command: JSON.stringify({status:"ON",mode:"COLD",FAN:"3",stemp: score.toString()})
+                        };
+    console.log(set_mode_data)
     //
     console.log("POST method by jQuery");
     jQuery.ajax({
-        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/command",
         type: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
             "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/command",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
         contentType: "application/x-www-form-urlencoded",
-        data: {
-            "device_type": "AC",
-            "device_id": device_id,
-            "status": "OFF",
-        },
+        data: set_mode_data,
     })
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
-
+            Update_Speed_LV3()
+            localStorage.setItem("fan_speed_conference_AC_1_local", "3")
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -435,33 +573,44 @@ function remote1_speedthree(device_id) {
             /* ... */
         });
     //
-
 }
+
+function Update_Speed_LV3() {
+    document.getElementById('ac1_lv1').src = "images/remodeair/fanoff.png";
+    document.getElementById('ac1_lv2').src = "images/remodeair/fanoff.png";
+    document.getElementById('ac1_lv3').src = "images/remodeair/fanon.png";
+    document.getElementById('ac1_lv4').src = "images/remodeair/fanoff.png";
+    document.getElementById('ac1_lv5').src = "images/remodeair/fanoff.png";
+}
+
 function remote1_speedfour(device_id) {
     console.log(device_id + " fan speed level: FOUR");
+    console.log("Temp is : " + score)
+    var set_mode_data = {   device_type: "AC",
+                            device_id: device_id, 
+                            command: JSON.stringify({status:"ON",mode:"COLD",FAN:"4",stemp: score.toString()})
+                        };
+    console.log(set_mode_data)
     //
     console.log("POST method by jQuery");
     jQuery.ajax({
-        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/command",
         type: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
             "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/command",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
         contentType: "application/x-www-form-urlencoded",
-        data: {
-            "device_type": "AC",
-            "device_id": device_id,
-            "status": "OFF",
-        },
+        data: set_mode_data,
     })
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
-
+            Update_Speed_LV4()
+            localStorage.setItem("fan_speed_conference_AC_1_local", "4")
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -470,33 +619,44 @@ function remote1_speedfour(device_id) {
             /* ... */
         });
     //
-
 }
+
+function Update_Speed_LV4() {
+    document.getElementById('ac1_lv1').src = "images/remodeair/fanoff.png";
+    document.getElementById('ac1_lv2').src = "images/remodeair/fanoff.png";
+    document.getElementById('ac1_lv3').src = "images/remodeair/fanoff.png";
+    document.getElementById('ac1_lv4').src = "images/remodeair/fanon.png";
+    document.getElementById('ac1_lv5').src = "images/remodeair/fanoff.png";
+}
+
 function remote1_speedfive(device_id) {
     console.log(device_id + " fan speed level: FIVE");
+    console.log("Temp is : " + score)
+    var set_mode_data = {   device_type: "AC",
+                            device_id: device_id, 
+                            command: JSON.stringify({status:"ON",mode:"COLD",FAN:"5",stemp: score.toString()})
+                        };
+    console.log(set_mode_data)
     //
     console.log("POST method by jQuery");
     jQuery.ajax({
-        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/command",
         type: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
             "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/command",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
         contentType: "application/x-www-form-urlencoded",
-        data: {
-            "device_type": "AC",
-            "device_id": device_id,
-            "status": "OFF",
-        },
+        data: set_mode_data,
     })
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
-
+            Update_Speed_LV5()
+            localStorage.setItem("fan_speed_conference_AC_1_local", "5")
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -505,6 +665,12 @@ function remote1_speedfive(device_id) {
             /* ... */
         });
     //
-
 }
 
+function Update_Speed_LV5() {
+    document.getElementById('ac1_lv1').src = "images/remodeair/fanoff.png";
+    document.getElementById('ac1_lv2').src = "images/remodeair/fanoff.png";
+    document.getElementById('ac1_lv3').src = "images/remodeair/fanoff.png";
+    document.getElementById('ac1_lv4').src = "images/remodeair/fanoff.png";
+    document.getElementById('ac1_lv5').src = "images/remodeair/fanon.png";
+}
