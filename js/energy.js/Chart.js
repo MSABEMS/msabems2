@@ -236,7 +236,8 @@ window.onload = function () {
 
     // Data prep:
     function data_prepareation(data) {
-        console.log(data)
+        // console.log(data)
+        // console.log(typeof(data))
         console.log("Call function: data_prepareation()")
         var solar_kW = []
         var load_kW = []
@@ -250,9 +251,7 @@ window.onload = function () {
         console.log("Solar Production: ")
         console.log(solar_kW)
         console.log("Load Consumption: ")
-        console.log(typeof(load_kW))
-        console.log(typeof(load_kW[0]))
-        console.log(load_kW)
+        console.log(Array.from(load_kW))
         console.log("--------------------------")
 
         var solar_kW_dataset = {
