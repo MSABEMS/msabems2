@@ -129,7 +129,7 @@
 																onclick="con_showbatery()" style="padding-right: 10px;"
 																name="scene_control">
 														</div> -->
-														<button class="scbtn" onclick="con_showbatery()">
+														<button id="SC999ALL" class="scbtn" onclick="conference_curtain_open(this.id)">
 															<h5>Show Battery</h5>
 														</button>
 													</div>
@@ -291,7 +291,7 @@
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
-																				<img src="images/remodeair/coolon.png"
+																				<img id="ac1_cool" src="images/remodeair/coolon.png"
 																					alt=""
 																					style="width: 32px; height: 32px;">
 																			</button>
@@ -301,7 +301,7 @@
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
-																				<img src="images/remodeair/dryon.png"
+																				<img id="ac1_dry" src="images/remodeair/dryon.png"
 																					alt=""
 																					style="width: 32px; height: 32px;">
 																			</button>
@@ -311,7 +311,7 @@
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
-																				<img src="images/remodeair/fanon.png"
+																				<img id="ac1_fan" src="images/remodeair/fanon.png"
 																					alt=""
 																					style="width: 32px; height: 32px;">
 																			</button>
@@ -325,7 +325,7 @@
 																			style="margin-top: -6px;">
 																			<button class="device_control_status" id="AC101004"
 																				onclick="remote1_speedone(this.id)">
-																				<img src="images/remodeair/fanoff.png"
+																				<img id="ac1_lv1" src="images/remodeair/fanoff.png"
 																					alt=""
 																					style="width: 18px; height: 18px; margin-top: 8px;">
 																			</button>
@@ -334,7 +334,7 @@
 																			style="margin-top: -6px;">
 																			<button class="device_control_status" id="AC101004"
 																				onclick="remote1_speedtwo(this.id)">
-																				<img src="images/remodeair/fanoff.png"
+																				<img id="ac1_lv2" src="images/remodeair/fanoff.png"
 																					alt=""
 																					style="width: 24px; height: 24px; margin-top: 6px;">
 																			</button>
@@ -343,7 +343,7 @@
 																			style="margin-top: -6px;">
 																			<button class="device_control_status" id="AC101004"
 																				onclick="remote1_speedthree(this.id)">
-																				<img src="images/remodeair/fanoff.png"
+																				<img id="ac1_lv3" src="images/remodeair/fanoff.png"
 																					alt=""
 																					style="width: 30px; height: 30px; margin-top: 4px;">
 																			</button>
@@ -352,7 +352,7 @@
 																			style="margin-top: -6px;">
 																			<button class="device_control_status" id="AC101004"
 																				onclick="remote1_speedfour(this.id)">
-																				<img src="images/remodeair/fanoff.png"
+																				<img id="ac1_lv4" src="images/remodeair/fanoff.png"
 																					alt=""
 																					style="width: 36px; height: 36px; margin-top: 0px;">
 																			</button>
@@ -361,7 +361,7 @@
 																			style="margin-top: -6px;">
 																			<button class="device_control_status" id="AC101004"
 																				onclick="remote1_speedfive (this.id)">
-																				<img src="images/remodeair/fanon.png"
+																				<img id="ac1_lv5" src="images/remodeair/fanon.png"
 																					alt=""
 																					style="width: 36px; height: 36px; margin-top: 0px;">
 																			</button>
@@ -427,7 +427,7 @@
 																	style="text-align: center; ">
 																	<div class="onoffACbutton" style="padding: 5px;">
 																		<div class="OffACbutton">
-																			<button id="" onclick="turn_off_con_ac_2()"
+																			<button id="AC101003" onclick="turn_off_con_ac_2(this.id)"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -442,7 +442,7 @@
 																			</li>
 																		</div>
 																		<div class="OnACbutton">
-																			<button id="" onclick="turn_on_con_ac_2()"
+																			<button id="AC101003" onclick="turn_on_con_ac_2(this.id)"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="display: inline; border: 0px;">
@@ -517,10 +517,10 @@
 																	<div>
 																		<button style="margin-bottom: 10px; background: rgb(108,153,255); background: linear-gradient(135deg, rgba(108,153,255,1) 0%, rgba(213,163,255,1) 100%);
 																		width: 100px; height: 35px; border-radius: 5px; border: 2px; font-family: 'Roboto', sans-serif;"
-																			type="submit" name="login" value="Login"
-																			onclick="summit_air2()"
+																			id="AC101003" type="submit" name="login" value="Login"
+																			onclick="summit_air2(this.id)"
 																			class="modal-login-button-2"
-																			href="/index.html">
+																			>
 																			Submit
 																	</div>
 
@@ -528,31 +528,31 @@
 
 																	<div class="ACModeControl" style="margin: 10px">
 																		<div class="CoolMode">
-																			<button id="" onclick="CoolModeControl_2()"
+																			<button id="AC101003" onclick="CoolModeControl_2(this.id)"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
-																				<img src="images/remodeair/coolon.png"
+																				<img id="ac2_cool" src="images/remodeair/coolon.png"
 																					alt=""
 																					style="width: 32px; height: 32px;">
 																			</button>
 																		</div>
 																		<div class="DryMode">
-																			<button id="" onclick="DryModeControl_2()"
+																			<button id="AC101003" onclick="DryModeControl_2(this.id)"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
-																				<img src="images/remodeair/dryon.png"
+																				<img id="ac2_dry" src="images/remodeair/dryon.png"
 																					alt=""
 																					style="width: 32px; height: 32px;">
 																			</button>
 																		</div>
 																		<div class="FanMode">
-																			<button id="" onclick="FenModeControl_2()"
+																			<button id="AC101003" onclick="FenModeControl_2(this.id)"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
-																				<img src="images/remodeair/fanon.png"
+																				<img id="ac2_fan" src="images/remodeair/fanon.png"
 																					alt=""
 																					style="width: 32px; height: 32px;">
 																			</button>
@@ -564,45 +564,45 @@
 																		style="margin-top: 10px;margin-bottom: 10px">
 																		<div class="FanSpeedIcon"
 																			style="margin-top: -6px;">
-																			<button class="device_control_status"
+																			<button id="AC101003" class="device_control_status"
 																				onclick="remote2_speedone()">
-																				<img src="images/remodeair/fanoff.png"
+																				<img id="ac2_lv1" src="images/remodeair/fanoff.png"
 																					alt=""
 																					style="width: 18px; height: 18px; margin-top: 8px;">
 																			</button>
 																		</div>
 																		<div class="FanSpeedIcon"
 																			style="margin-top: -6px;">
-																			<button class="device_control_status"
+																			<button id="AC101003" class="device_control_status"
 																				onclick="remote2_speedtwo()">
-																				<img src="images/remodeair/fanoff.png"
+																				<img id="ac2_lv2" src="images/remodeair/fanoff.png"
 																					alt=""
 																					style="width: 24px; height: 24px; margin-top: 6px;">
 																			</button>
 																		</div>
 																		<div class="FanSpeedIcon"
 																			style="margin-top: -6px;">
-																			<button class="device_control_status"
+																			<button id="AC101003" class="device_control_status"
 																				onclick="remote2_speedthree()">
-																				<img src="images/remodeair/fanoff.png"
+																				<img id="ac2_lv3" src="images/remodeair/fanoff.png"
 																					alt=""
 																					style="width: 30px; height: 30px; margin-top: 4px;">
 																			</button>
 																		</div>
 																		<div class="FanSpeedIcon"
 																			style="margin-top: -6px;">
-																			<button class="device_control_status"
+																			<button id="AC101003" class="device_control_status"
 																				onclick="remote2_speedfour()">
-																				<img src="images/remodeair/fanoff.png"
+																				<img id="ac2_lv4" src="images/remodeair/fanoff.png"
 																					alt=""
 																					style="width: 36px; height: 36px; margin-top: 0px;">
 																			</button>
 																		</div>
 																		<div class="FanSpeedIcon"
 																			style="margin-top: -6px;">
-																			<button class="device_control_status"
+																			<button id="AC101003" class="device_control_status"
 																				onclick="remote2_speedfive()">
-																				<img src="images/remodeair/fanon.png"
+																				<img id="ac2_lv5" src="images/remodeair/fanon.png"
 																					alt=""
 																					style="width: 36px; height: 36px; margin-top: 0px;">
 																			</button>
@@ -611,7 +611,7 @@
 																	<hr style="margin: 5px;">
 																	<div class="onoffACbutton" style="margin: 10px;">
 																		<div class="OffACbutton">
-																			<button id="" onclick="swingturn_off_con_ac_2()"
+																			<button id="AC101003" onclick="swingturn_off_con_ac_2(this.id)"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -621,7 +621,7 @@
 																			</button>
 																		</div>
 																		<div class="OnACbutton">
-																			<button id="" onclick="swingturn_on_con_ac_2()"
+																			<button id="AC101003" onclick="swingturn_on_con_ac_2(this.id)"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="display: inline; border: 0px;">
@@ -666,7 +666,7 @@
 																	style="text-align: center; ">
 																	<div class="onoffACbutton" style="padding: 5px;">
 																		<div class="OffACbutton">
-																			<button id="" onclick="turn_off_con_ac_3()"
+																			<button id="AC101002" onclick="turn_off_con_ac_3(this.id)"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
@@ -682,7 +682,7 @@
 
 																		</div>
 																		<div class="OnACbutton">
-																			<button id="" onclick="turn_on_con_ac_3()"
+																			<button id="AC101002" onclick="turn_on_con_ac_3(this.id)"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="display: inline; border: 0px;">
@@ -757,10 +757,10 @@
 																	<div>
 																		<button style="margin-bottom: 10px; background: rgb(108,153,255); background: linear-gradient(135deg, rgba(108,153,255,1) 0%, rgba(213,163,255,1) 100%);
 																		width: 100px; height: 35px; border-radius: 5px; border: 2px; font-family: 'Roboto', sans-serif;"
-																			type="submit" name="login" value="Login"
-																			onclick="summit_air3()"
+																			id="AC101002" type="submit" name="login" value="Login"
+																			onclick="summit_air3(this.id)"
 																			class="modal-login-button-2"
-																			href="/index.html">
+																			>
 																			Submit
 																	</div>
 
@@ -768,31 +768,31 @@
 
 																	<div class="ACModeControl" style="margin: 10px">
 																		<div class="CoolMode">
-																			<button id="" onclick="CoolModeControl_3()"
+																			<button id="AC101002" onclick="CoolModeControl_3(this.id)"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
-																				<img src="images/remodeair/coolon.png"
+																				<img id="ac3_cool" src="images/remodeair/coolon.png"
 																					alt=""
 																					style="width: 32px; height: 32px;">
 																			</button>
 																		</div>
 																		<div class="DryMode">
-																			<button id="" onclick="DryModeControl_3()"
+																			<button id="AC101002" onclick="DryModeControl_3(this.id)"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
-																				<img src="images/remodeair/dryon.png"
+																				<img id="ac3_dry" src="images/remodeair/dryon.png"
 																					alt=""
 																					style="width: 32px; height: 32px;">
 																			</button>
 																		</div>
 																		<div class="FanMode">
-																			<button id="" onclick="FenModeControl_3()"
+																			<button id="AC101002" onclick="FenModeControl_3(this.id)"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
-																				<img src="images/remodeair/fanon.png"
+																				<img id="ac3_fan" src="images/remodeair/fanon.png"
 																					alt=""
 																					style="width: 32px; height: 32px;">
 																			</button>
@@ -804,45 +804,45 @@
 																		style="margin-top: 10px;margin-bottom: 10px">
 																		<div class="FanSpeedIcon"
 																			style="margin-top: -6px;">
-																			<button class="device_control_status"
-																				onclick="remote3_speedone()">
-																				<img src="images/remodeair/fanoff.png"
+																			<button id="AC101002" class="device_control_status"
+																				onclick="remote3_speedone(this.id)">
+																				<img id="ac3_lv1" src="images/remodeair/fanoff.png"
 																					alt=""
 																					style="width: 18px; height: 18px; margin-top: 8px;">
 																			</button>
 																		</div>
 																		<div class="FanSpeedIcon"
 																			style="margin-top: -6px;">
-																			<button class="device_control_status"
-																				onclick="remote3_speedtwo()">
-																				<img src="images/remodeair/fanoff.png"
+																			<button id="AC101002" class="device_control_status"
+																				onclick="remote3_speedtwo(this.id)">
+																				<img id="ac3_lv2" src="images/remodeair/fanoff.png"
 																					alt=""
 																					style="width: 24px; height: 24px; margin-top: 6px;">
 																			</button>
 																		</div>
 																		<div class="FanSpeedIcon"
 																			style="margin-top: -6px;">
-																			<button class="device_control_status"
-																				onclick="remote3_speedthree()">
-																				<img src="images/remodeair/fanoff.png"
+																			<button id="AC101002" class="device_control_status"
+																				onclick="remote3_speedthree(this.id)">
+																				<img id="ac3_lv3" src="images/remodeair/fanoff.png"
 																					alt=""
 																					style="width: 30px; height: 30px; margin-top: 4px;">
 																			</button>
 																		</div>
 																		<div class="FanSpeedIcon"
 																			style="margin-top: -6px;">
-																			<button class="device_control_status"
-																				onclick="remote3_speedfour()">
-																				<img src="images/remodeair/fanoff.png"
+																			<button id="AC101002" class="device_control_status"
+																				onclick="remote3_speedfour(this.id)">
+																				<img id="ac3_lv4" src="images/remodeair/fanoff.png"
 																					alt=""
 																					style="width: 36px; height: 36px; margin-top: 0px;">
 																			</button>
 																		</div>
 																		<div class="FanSpeedIcon"
 																			style="margin-top: -6px;">
-																			<button class="device_control_status"
-																				onclick="remote3_speedfive()">
-																				<img src="images/remodeair/fanon.png"
+																			<button id="AC101002" class="device_control_status"
+																				onclick="remote3_speedfive(this.id)">
+																				<img id="ac3_lv5" src="images/remodeair/fanon.png"
 																					alt=""
 																					style="width: 36px; height: 36px; margin-top: 0px;">
 																			</button>
@@ -980,7 +980,7 @@
 																			</button>
 																		</div>
 																		<div class="TempDisplay">
-																			<div id="result4" class="TempMonitoring">25
+																			<div id="result4" class="TempMonitoring">
 																			</div>
 																			<div class="degreeC" style=""> &#8451;</div>
 																		</div>
@@ -1009,31 +1009,31 @@
 
 																	<div class="ACModeControl" style="margin: 10px">
 																		<div class="CoolMode">
-																			<button id="" onclick="CoolModeControl_4()"
+																			<button id="AC101001" onclick="CoolModeControl_4(this.id)"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
-																				<img src="images/remodeair/coolon.png"
+																				<img id="ac4_cool" src="images/remodeair/cooloff.png"
 																					alt=""
 																					style="width: 32px; height: 32px;">
 																			</button>
 																		</div>
 																		<div class="DryMode">
-																			<button id="" onclick="DryModeControl_4()"
+																			<button id="AC101001" onclick="DryModeControl_4(this.id)"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
-																				<img src="images/remodeair/dryon.png"
+																				<img id="ac4_dry" src="images/remodeair/dryoff.png"
 																					alt=""
 																					style="width: 32px; height: 32px;">
 																			</button>
 																		</div>
 																		<div class="FanMode">
-																			<button id="" onclick="FenModeControl_4()"
+																			<button id="AC101001" onclick="FenModeControl_4(this.id)"
 																				type="button" name=""
 																				class="device_control_status"
 																				style="border: 0px;">
-																				<img src="images/remodeair/fanon.png"
+																				<img id="ac4_fan" src="images/remodeair/fanoff.png"
 																					alt=""
 																					style="width: 32px; height: 32px;">
 																			</button>
@@ -1045,45 +1045,45 @@
 																		style="margin-top: 10px;margin-bottom: 10px">
 																		<div class="FanSpeedIcon"
 																			style="margin-top: -6px;">
-																			<button class="device_control_status"
-																				style="remote4_speedone()">
-																				<img src="images/remodeair/fanoff.png"
+																			<button id="AC101001" class="device_control_status"
+																					onclick="remote4_speedone(this.id)">
+																				<img id="ac4_lv1" src="images/remodeair/fanoff.png"
 																					alt=""
 																					style="width: 18px; height: 18px; margin-top: 8px;">
 																			</button>
 																		</div>
 																		<div class="FanSpeedIcon"
 																			style="margin-top: -6px;">
-																			<button class="device_control_status"
-																				onclick="remote4_speedtwo()">
-																				<img src="images/remodeair/fanoff.png"
+																			<button id="AC101001" class="device_control_status"
+																				onclick="remote4_speedtwo(this.id)">
+																				<img id="ac4_lv2" src="images/remodeair/fanoff.png"
 																					alt=""
 																					style="width: 24px; height: 24px; margin-top: 6px;">
 																			</button>
 																		</div>
 																		<div class="FanSpeedIcon"
 																			style="margin-top: -6px;">
-																			<button class="device_control_status"
-																				onclick="remote4_speedthree()">
-																				<img src="images/remodeair/fanoff.png"
+																			<button id="AC101001" class="device_control_status"
+																				onclick="remote4_speedthree(this.id)">
+																				<img id="ac4_lv3" src="images/remodeair/fanoff.png"
 																					alt=""
 																					style="width: 30px; height: 30px; margin-top: 4px;">
 																			</button>
 																		</div>
 																		<div class="FanSpeedIcon"
 																			style="margin-top: -6px;">
-																			<button class="device_control_status"
-																				onclick="remote4_speedfour()">
-																				<img src="images/remodeair/fanoff.png"
+																			<button id="AC101001" class="device_control_status"
+																				onclick="remote4_speedfour(this.id)">
+																				<img id="ac4_lv4" src="images/remodeair/fanoff.png"
 																					alt=""
 																					style="width: 36px; height: 36px; margin-top: 0px;">
 																			</button>
 																		</div>
 																		<div class="FanSpeedIcon"
 																			style="margin-top: -6px;">
-																			<button class="device_control_status"
-																				onclick="remote4_speedfive()">
-																				<img src="images/remodeair/fanon.png"
+																			<button id="AC101001" class="device_control_status"
+																				onclick="remote4_speedfive(this.id)">
+																				<img id="ac4_lv5" src="images/remodeair/fanoff.png"
 																					alt=""
 																					style="width: 36px; height: 36px; margin-top: 0px;">
 																			</button>
@@ -1186,8 +1186,8 @@
 												<div style="padding-left: 0px;">
 													<div>
 														<h4>Row1
-															<button class="device_control_status" style="height: 35%; width: 35%; margin-left: 3px;" 
-															onclick="lightingrow1()"
+															<button id="MT01" class="device_control_status" style="height: 35%; width: 35%; margin-left: 3px;" 
+															onclick="lightingrow1(this.id)"
 															>
 																<img id="Conference_Lighting_row1_Button" class="" src="images/remodeair/switchoff.png" alt="">
 															</button>
@@ -1197,8 +1197,8 @@
 												<div style="padding-left: 0px;padding-top: 10px;">
 													<div>
 														<h4>Row2
-															<button class="device_control_status" style="height: 35%; width: 35%; margin-left: -1px;" 
-															onclick="lightingrow2()"
+															<button id="MT02" class="device_control_status" style="height: 35%; width: 35%; margin-left: -1px;" 
+															onclick="lightingrow2(this.id)"
 															>
 																<img id="Conference_Lighting_row2_Button" class="" src="images/remodeair/switchoff.png" alt="">
 															</button>
@@ -1210,8 +1210,8 @@
 												<div style="padding-left: 0px;">
 													<div>
 														<h4>Row3
-															<button class="device_control_status" style="height: 35%; width: 35%;" 
-															onclick="lightingrow3()"
+															<button id="MT03" class="device_control_status" style="height: 35%; width: 35%;" 
+															onclick="lightingrow3(this.id)"
 															>
 																<img id="Conference_Lighting_row3_Button" class="" src="images/remodeair/switchoff.png" alt="">
 															</button>
@@ -1221,8 +1221,8 @@
 												<div style="padding-left: -5 px; padding-top: 10px">
 													<div>
 														<h4>Row4
-															<button class="device_control_status" style="height: 35%; width: 35%; margin-left: -2px;" 
-															onclick="lightingrow4()"
+															<button id="MT04" class="device_control_status" style="height: 35%; width: 35%; margin-left: -2px;" 
+															onclick="lightingrow4(this.id)"
 															>
 																<img id="Conference_Lighting_row4_Button" class="" src="images/remodeair/switchoff.png" alt="">
 															</button>

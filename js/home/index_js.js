@@ -1,8 +1,22 @@
 // Retrieve data from Firebase -> Outdoor
-var ref_indoor = firebase.database().ref().child("peasbhmsr").child("devicetype").child("weatherstation").child("WT101001");
+var ref_indoor = firebase.database().ref().child("peasbhmsr").child("devicetype").child("weatherstation").child("WS101001");
+var ref_module_temp = ref_indoor.child("MODULETEMP")
+
+
+ref_module_temp.on("value", function(snapshot) {
+  console.log("Get amb_temp from firebase")
+  //  console.log(snapshot.val());
+  var module_temp = snapshot.val();
+  // console.log("Temp is " + temp_server);
+  document.getElementById("temp_module").innerHTML = module_temp;
+});
+
+
+
+var ref_indoor = firebase.database().ref().child("peasbhmsr").child("devicetype").child("weatherstation").child("WS101002");
 var ref_amb_temp = ref_indoor.child("AMBIENTTEMP")
 var ref_irradiance = ref_indoor.child("IRRADIANCE")
-var ref_module_temp = ref_indoor.child("MODULETEMP")
+
 var ref_wind = ref_indoor.child("WINDSPEED")
 
 ref_amb_temp.on("value", function(snapshot) {
@@ -21,14 +35,6 @@ ref_irradiance.on("value", function(snapshot) {
   document.getElementById("radiation_station").innerHTML = irradiance;
 });
 
-ref_module_temp.on("value", function(snapshot) {
-  console.log("Get amb_temp from firebase")
-  //  console.log(snapshot.val());
-  var module_temp = snapshot.val();
-  // console.log("Temp is " + temp_server);
-  document.getElementById("temp_module").innerHTML = module_temp;
-});
-
 ref_wind.on("value", function(snapshot) {
   console.log("Get amb_temp from firebase")
   //  console.log(snapshot.val());
@@ -36,6 +42,25 @@ ref_wind.on("value", function(snapshot) {
   // console.log("Temp is " + temp_server);
   document.getElementById("speed_station").innerHTML = wind;
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Retrieve data from Firebase -> Indoor
 var ref_indoor = firebase.database().ref().child("peasbhmsr").child("devicetype").child("multisensor").child("MS202001");
