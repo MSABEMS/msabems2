@@ -1,25 +1,27 @@
 // Home Start
 function projectorsource_home(device_id) {
-    console.log("projectorsource_home clicked: " + device_id);
-    console.log(device_id)
+    console.log("-----Control_projector----- :" + device_id);
+    var Status_projector_device = "HOME"
+    projector_post = { 
+        device_type: "projector",
+        device_id: device_id, 
+        command: JSON.stringify({status: Status_projector_device})
+      };
+
     //
-    console.log("POST projectorsource_home method by jQuery");
+    console.log("POST method by jQuery");
     jQuery.ajax({
-        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/status",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/projector",
         type: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
             "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/status",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/projector",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
-        contentType: "application/x-www-form-urlencoded",
-        data: {
-            "device_type": "projector",
-            "device_id": device_id,
-            "status": "HOME",
-        },
+        contentType: "application/json",
+        data: projector_post,
     })
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
@@ -31,31 +33,34 @@ function projectorsource_home(device_id) {
         .always(function () {
             /* ... */
         });
+    //
 }
 // Home End
 
 // Source Start
 function projectorsource_source(device_id) {
-    console.log("projectorsource_source clicked: " + device_id);
-    console.log(device_id)
+    console.log("-----Control_projector----- :" + device_id);
+    var Status_projector_device = "SOURCE"
+    projector_post = { 
+        device_type: "projector",
+        device_id: device_id, 
+        command: JSON.stringify({status: Status_projector_device})
+      };
+
     //
-    console.log("POST projectorsource_source method by jQuery");
+    console.log("POST method by jQuery");
     jQuery.ajax({
-        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/status",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/projector",
         type: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
             "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/status",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/projector",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
-        contentType: "application/x-www-form-urlencoded",
-        data: {
-            "device_type": "projector",
-            "device_id": device_id,
-            "status": "HOME",
-        },
+        contentType: "application/json",
+        data: projector_post,
     })
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
@@ -67,31 +72,34 @@ function projectorsource_source(device_id) {
         .always(function () {
             /* ... */
         });
+    //
 }
 // Source End
 
 // setting Start
-function projectorsource_setting() {
-    console.log("projectorsource_setting clicked: " + device_id);
-    console.log(device_id)
+function projectorsource_setting(device_id) {
+    console.log("-----Control_projector----- :" + device_id);
+    var Status_projector_device = "MENU"
+    projector_post = { 
+        device_type: "projector",
+        device_id: device_id, 
+        command: JSON.stringify({status: Status_projector_device})
+      };
+
     //
-    console.log("POST projectorsource_setting method by jQuery");
+    console.log("POST method by jQuery");
     jQuery.ajax({
-        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/status",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/projector",
         type: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
             "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/status",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/projector",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
-        contentType: "application/x-www-form-urlencoded",
-        data: {
-            "device_type": "projector",
-            "device_id": device_id,
-            "status": "MENU",
-        },
+        contentType: "application/json",
+        data: projector_post,
     })
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
@@ -103,31 +111,34 @@ function projectorsource_setting() {
         .always(function () {
             /* ... */
         });
+    //
 }
 // setting End
 
 // Back Start
 function projectorsource_back(device_id) {
-    console.log("projectorsource_back clicked: " + device_id);
-    console.log(device_id)
+    console.log("-----Control_projector----- :" + device_id);
+    var Status_projector_device = "BACK"
+    projector_post = { 
+        device_type: "projector",
+        device_id: device_id, 
+        command: JSON.stringify({status: Status_projector_device})
+      };
+
     //
-    console.log("POST projectorsource_back method by jQuery");
+    console.log("POST method by jQuery");
     jQuery.ajax({
-        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/status",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/projector",
         type: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
             "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/status",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/projector",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
-        contentType: "application/x-www-form-urlencoded",
-        data: {
-            "device_type": "projector",
-            "device_id": device_id,
-            "status": "BACK",
-        },
+        contentType: "application/json",
+        data: projector_post,
     })
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
@@ -139,32 +150,34 @@ function projectorsource_back(device_id) {
         .always(function () {
             /* ... */
         });
-
+    //
 }
 // Back End
 
 // Left Start
 function projectorsource_left(device_id) {
-    console.log("projectorsource_left clicked: " + device_id);
-    console.log(device_id)
+    console.log("-----Control_projector----- :" + device_id);
+    var Status_projector_device = "LEFT"
+    projector_post = { 
+        device_type: "projector",
+        device_id: device_id, 
+        command: JSON.stringify({status: Status_projector_device})
+      };
+
     //
-    console.log("POST projectorsource_left method by jQuery");
+    console.log("POST method by jQuery");
     jQuery.ajax({
-        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/status",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/projector",
         type: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
             "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/status",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/projector",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
-        contentType: "application/x-www-form-urlencoded",
-        data: {
-            "device_type": "projector",
-            "device_id": device_id,
-            "status": "LEFT",
-        },
+        contentType: "application/json",
+        data: projector_post,
     })
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
@@ -176,31 +189,34 @@ function projectorsource_left(device_id) {
         .always(function () {
             /* ... */
         });
+    //
 }
 // Left End
 
 // Up Start
 function projectorsource_up(device_id) {
-    console.log("projectorsource_up clicked: " + device_id);
-    console.log(device_id)
+    console.log("-----Control_projector----- :" + device_id);
+    var Status_projector_device = "UP"
+    projector_post = { 
+        device_type: "projector",
+        device_id: device_id, 
+        command: JSON.stringify({status: Status_projector_device})
+      };
+
     //
-    console.log("POST projectorsource_up method by jQuery");
+    console.log("POST method by jQuery");
     jQuery.ajax({
-        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/status",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/projector",
         type: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
             "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/status",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/projector",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
-        contentType: "application/x-www-form-urlencoded",
-        data: {
-            "device_type": "projector",
-            "device_id": device_id,
-            "status": "UP",
-        },
+        contentType: "application/json",
+        data: projector_post,
     })
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
@@ -212,31 +228,34 @@ function projectorsource_up(device_id) {
         .always(function () {
             /* ... */
         });
+    //
 }
 // Up End
 
 // Enter Start
 function projectorsource_enter(device_id) {
-    console.log("projectorsource_enter clicked: " + device_id);
-    console.log(device_id)
+    console.log("-----Control_projector----- :" + device_id);
+    var Status_projector_device = "ENTER"
+    projector_post = { 
+        device_type: "projector",
+        device_id: device_id, 
+        command: JSON.stringify({status: Status_projector_device})
+      };
+
     //
-    console.log("POST projectorsource_enter method by jQuery");
+    console.log("POST method by jQuery");
     jQuery.ajax({
-        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/status",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/projector",
         type: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
             "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/status",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/projector",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
-        contentType: "application/x-www-form-urlencoded",
-        data: {
-            "device_type": "projector",
-            "device_id": device_id,
-            "status": "ENTER",
-        },
+        contentType: "application/json",
+        data: projector_post,
     })
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
@@ -248,31 +267,34 @@ function projectorsource_enter(device_id) {
         .always(function () {
             /* ... */
         });
+    //
 }
 // Enter End
 
 // Down Start
 function projectorsource_down(device_id) {
-    console.log("projectorsource_down clicked: " + device_id);
-    console.log(device_id)
+    console.log("-----Control_projector----- :" + device_id);
+    var Status_projector_device = "DOWN"
+    projector_post = { 
+        device_type: "projector",
+        device_id: device_id, 
+        command: JSON.stringify({status: Status_projector_device})
+      };
+
     //
-    console.log("POST projectorsource_down method by jQuery");
+    console.log("POST method by jQuery");
     jQuery.ajax({
-        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/status",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/projector",
         type: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
             "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/status",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/projector",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
-        contentType: "application/x-www-form-urlencoded",
-        data: {
-            "device_type": "projector",
-            "device_id": device_id,
-            "status": "DOWN",
-        },
+        contentType: "application/json",
+        data: projector_post,
     })
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
@@ -284,109 +306,38 @@ function projectorsource_down(device_id) {
         .always(function () {
             /* ... */
         });
+    //
 }
 // Down End
 
 // Right Start
 function projectorsource_right(device_id) {
-    console.log("projectorsource_right clicked: " + device_id);
-    console.log(device_id)
-    //
-    console.log("POST projectorsource_right method by jQuery");
-    jQuery.ajax({
-        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/status",
-        type: "POST",
-        headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-            "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/daikin/status",
-            "Access-Control-Allow-Methods": "POST",
-            "Access-Control-Allow-Headers": "Content-Type, Authorization",
-        },
-        contentType: "application/x-www-form-urlencoded",
-        data: {
-            "device_type": "projector",
-            "device_id": device_id,
-            "status": "RIGHT",
-        },
-    })
-        .done(function (data, textStatus, jqXHR) {
-            console.log("HTTP Request Succeeded: " + jqXHR.status);
-            console.log(data);
-        })
-        .fail(function (jqXHR, textStatus, errorThrown) {
-            console.log("HTTP Request Failed");
-        })
-        .always(function () {
-            /* ... */
-        });
-}
-// Right End
+    console.log("-----Control_projector----- :" + device_id);
+    var Status_projector_device = "RIGHT"
+    projector_post = { 
+        device_type: "projector",
+        device_id: device_id, 
+        command: JSON.stringify({status: Status_projector_device})
+      };
 
-// Update projector status with Firebase
-// Retrieve data from Firebase for Checking Device Status
-var ref_devices_data = firebase.database().ref().child("peasbhmsr").child("devicetype").child("projector");
-var ref_projector_device = ref_devices_data.child("xxxxxx");
-
-ref_projector_device.on("value", function(snapshot) {
-    console.log("Get projector status from firebase")
-    var projector_device = snapshot.val();
-    // console.log(smart_plug_1["CURRENT"])
-    document.getElementById("xxx").innerHTML = projector_device["STATUS"];
-    // Recheck Device Status from Firebase // 
-    var Status_projector_device = projector_device["STATUS"];
-    console.log(Status_projector_device);
-    Projector_device_changeImage(Status_projector_device)
-    var Status_projector_device_Local = localStorage.setItem("Status_projector_device_Local", Status_projector_device)
-  });
-
-// Change Image for Smart Plug
-function Projector_device_changeImage(Status_projector_device) {
-    var image = document.getElementById('myImage');
-
-  if (Status_projector_device == "OFF") {
-        image.src = "images/remodeair/switchoff.png";
-    } else {
-        image.src = "images/remodeair/switchon.png";
-      }
-}
-
-//  On/Off Lighting Row 1
-function control_projector(device_id) {
-    console.log("-----Control_projector-----");
-    console.log(device_id)
-    console.log(localStorage.getItem("Status_projector_device_Local"))
-    //
-    var Status_projector_device = localStorage.getItem("Status_projector_device_Local")
-    if (Status_projector_device == "OFF") {
-        Status_projector_device = "ON"
-    } else {
-        Status_projector_device = "OFF"
-    }
     //
     console.log("POST method by jQuery");
     jQuery.ajax({
-        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/projector",
         type: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded",
             "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
-            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/plug",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/projector",
             "Access-Control-Allow-Methods": "POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
         },
-        contentType: "application/x-www-form-urlencoded",
-        data: {
-            "device_type": "projector",
-            "device_id": device_id,
-            "status": Status_projector_device,
-        },
+        contentType: "application/json",
+        data: projector_post,
     })
         .done(function (data, textStatus, jqXHR) {
             console.log("HTTP Request Succeeded: " + jqXHR.status);
             console.log(data);
-            var Status_projector_device_Local = localStorage.setItem("Status_projector_device_Local", Status_projector_device)
-            Projector_device_changeImage(Status_projector_device)
         })
         .fail(function (jqXHR, textStatus, errorThrown) {
             console.log("HTTP Request Failed");
@@ -395,16 +346,45 @@ function control_projector(device_id) {
             /* ... */
         });
     //
-
 }
+// Right End
 
-function changeImage_power() {
-    var image = document.getElementById('myImage');
-    if (image.src.match("images/remodeair/switchon")) {
-        image.src = "images/remodeair/switchoff.png";
-    } else {
-        image.src = "images/remodeair/switchon.png";
-    }
+//  On/Off control_projector
+function control_projector(device_id) {
+    console.log("-----Control_projector----- :" + device_id);
+    var Status_projector_device = "POWER"
+    projector_post = { 
+        device_type: "projector",
+        device_id: device_id, 
+        command: JSON.stringify({status: Status_projector_device})
+      };
+
+    //
+    console.log("POST method by jQuery");
+    jQuery.ajax({
+        url: "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/projector",
+        type: "POST",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+            "Authorization": "Token 2f1c9297dd604396c347e52746baf9703ceb93fd",
+            "Access-Control-Allow-Origin": "https://cors-anywhere.herokuapp.com/https://msr-api.herokuapp.com/api/projector",
+            "Access-Control-Allow-Methods": "POST",
+            "Access-Control-Allow-Headers": "Content-Type, Authorization",
+        },
+        contentType: "application/json",
+        data: projector_post,
+    })
+        .done(function (data, textStatus, jqXHR) {
+            console.log("HTTP Request Succeeded: " + jqXHR.status);
+            console.log(data);
+        })
+        .fail(function (jqXHR, textStatus, errorThrown) {
+            console.log("HTTP Request Failed");
+        })
+        .always(function () {
+            /* ... */
+        });
+    //
 }
 // Power End
 
