@@ -1,7 +1,6 @@
-// Retrieve data from Firebase -> Outdoor
+// Retrieve weather station data from Firebase -> Outdoor
 var ref_indoor = firebase.database().ref().child("peasbhmsr").child("devicetype").child("weatherstation").child("WS101001");
 var ref_module_temp = ref_indoor.child("MODULETEMP")
-
 
 ref_module_temp.on("value", function(snapshot) {
   console.log("Get amb_temp from firebase")
@@ -10,8 +9,6 @@ ref_module_temp.on("value", function(snapshot) {
   // console.log("Temp is " + temp_server);
   document.getElementById("temp_module").innerHTML = module_temp;
 });
-
-
 
 var ref_indoor = firebase.database().ref().child("peasbhmsr").child("devicetype").child("weatherstation").child("WS101002");
 var ref_amb_temp = ref_indoor.child("AMBIENTTEMP")
@@ -44,25 +41,7 @@ ref_wind.on("value", function(snapshot) {
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Retrieve data from Firebase -> Indoor
+// Retrieve temperature data from Firebase -> Indoor
 var ref_indoor = firebase.database().ref().child("peasbhmsr").child("devicetype").child("multisensor").child("MS202001");
 var ref_temp = ref_indoor.child("TEMPERATURE")
 var ref_hum = ref_indoor.child("HUMIDITY")

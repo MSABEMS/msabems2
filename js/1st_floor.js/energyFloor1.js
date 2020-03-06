@@ -37,10 +37,14 @@ ref_kW_Aircon_1.on("value", function(snapshot) {
 
 
 // var cal_kW_Lighting_1_local = document.getElementById("kW_Lighting_1_local");
-var cal_kW_Lighting_1_local= parseFloat(localStorage.getItem("kW_Lighting_1_local"));
-var cal_kW_Outlet_1_local = parseFloat(localStorage.getItem("kW_Outlet_1_local"));
-var cal_kW_Aircon_1_local = parseFloat(localStorage.getItem("kW_Aircon_1_local"));
+var cal_kW_Lighting_1_local= parseFloat(localStorage.getItem("kW_Lighting_1_local"))/1000;
+var cal_kW_Outlet_1_local = parseFloat(localStorage.getItem("kW_Outlet_1_local"))/1000;
+var cal_kW_Aircon_1_local = parseFloat(localStorage.getItem("kW_Aircon_1_local"))/1000;
 var total_load_floor1 = cal_kW_Lighting_1_local + cal_kW_Outlet_1_local + cal_kW_Aircon_1_local
+var total_load_floor11=total_load_floor1.toFixed(3);
 
 
-document.getElementById("Floor1_Total_Load").innerHTML = (total_load_floor1);
+document.getElementById("kW_Lighting_11").innerHTML = (cal_kW_Lighting_1_local);
+document.getElementById("kW_Outlet_11").innerHTML = (cal_kW_Outlet_1_local);
+document.getElementById("kW_Aircon_11").innerHTML = (cal_kW_Aircon_1_local);
+document.getElementById("Floor1_Total_Load").innerHTML = (total_load_floor11);

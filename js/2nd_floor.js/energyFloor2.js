@@ -3,7 +3,7 @@ var ref_indoor = firebase.database().ref().child("peasbhmsr").child("devicetype"
 var ref_kW_Lighting_2 = ref_indoor.child("floor2light")
 var ref_kW_Outlet_2 = ref_indoor.child("floor2plug")
 var ref_kW_Aircon_2 = ref_indoor.child("floor2air")
-var ref_kW_Criticalload = ref_indoor.child("mdb")
+var ref_kW_Criticalload = ref_indoor.child("edb")
 
 ref_kW_Lighting_2.on("value", function(snapshot) {
     console.log("Get kW_Lighting_2 from firebase")
@@ -48,11 +48,15 @@ ref_kW_Criticalload.on("value", function(snapshot) {
 
 
 // var cal_kW_Lighting_1_local = document.getElementById("kW_Lighting_1_local");
-var cal_kW_Lighting_2_local= parseFloat(localStorage.getItem("kW_Lighting_2_local"));
-var cal_kW_Outlet_2_local = parseFloat(localStorage.getItem("kW_Outlet_2_local"));
-var cal_kW_Aircon_2_local = parseFloat(localStorage.getItem("kW_Aircon_2_local"));
-var cal_kW_Criticalload_local = parseFloat(localStorage.getItem("kW_Criticalload_local"));
+var cal_kW_Lighting_2_local= parseFloat(localStorage.getItem("kW_Lighting_2_local"))/1;
+var cal_kW_Outlet_2_local = parseFloat(localStorage.getItem("kW_Outlet_2_local"))/1;
+var cal_kW_Aircon_2_local = parseFloat(localStorage.getItem("kW_Aircon_2_local"))/1;
+var cal_kW_Criticalload_local = parseFloat(localStorage.getItem("kW_Criticalload_local"))/1;
 var total_load_floor2 = cal_kW_Lighting_2_local + cal_kW_Outlet_2_local + cal_kW_Aircon_2_local+cal_kW_Criticalload_local
+var total_load_floor22=total_load_floor2.toFixed(3);
 
-
-document.getElementById("Floor2_Total_Load").innerHTML = (total_load_floor2);
+document.getElementById("Floor2_Total_Load2").innerHTML = (total_load_floor22);
+// document.getElementById("kW_Lighting_22").innerHTML = (cal_kW_Lighting_2_local);
+// document.getElementById("kW_Outlet_22").innerHTML = (cal_kW_Outlet_2_local);
+// document.getElementById("kW_Aircon_22").innerHTML = (cal_kW_Aircon_2_local);
+// document.getElementById("kW_Criticalload1").innerHTML = (cal_kW_Criticalload_local);
