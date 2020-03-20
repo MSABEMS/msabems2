@@ -136,76 +136,6 @@ window.onload = function () {
         chart_1.render();
     }
 
-    // var chart_2 = new CanvasJS.Chart("chartContainer2", {
-    //     animationEnabled: true,
-    //     exportEnabled: true,
-    //     title: {
-    //         // text: "Gold Medals Won in Olympics"
-    //     },
-    //     axisY: {
-    //         title: "Number of Medals"
-    //     },
-    //     toolTip: {
-    //         shared: true
-    //     },
-    //     legend: {
-    //         cursor: "pointer",
-    //         itemclick: toggleDataSeries2
-    //     },
-    //     data: [{
-    //         type: "spline",
-    //         name: "PCS Container",
-    //         showInLegend: true,
-    //         dataPoints: [
-    //             { label: "Atlanta 1996", y: 44 },
-    //             { label: "Sydney 2000", y: 37 },
-    //             { label: "Athens 2004", y: 36 },
-    //             { label: "Beijing 2008", y: 36 },
-    //             { label: "London 2012", y: 46 },
-    //             { label: "Rio 2016", y: 46 }
-    //         ]
-    //     },
-    //     {
-    //         type: "spline",
-    //         name: "Battery Container 01",
-    //         showInLegend: true,
-    //         dataPoints: [
-    //             { label: "Atlanta 1996", y: 26 },
-    //             { label: "Sydney 2000", y: 32 },
-    //             { label: "Athens 2004", y: 28 },
-    //             { label: "Beijing 2008", y: 22 },
-    //             { label: "London 2012", y: 20 },
-    //             { label: "Rio 2016", y: 19 }
-    //         ]
-    //     },
-
-    //     {
-    //         type: "spline",
-    //         name: "Battery Container 02",
-    //         showInLegend: true,
-    //         dataPoints: [
-    //             { label: "Atlanta 1996", y: 20 },
-    //             { label: "Sydney 2000", y: 13 },
-    //             { label: "Athens 2004", y: 13 },
-    //             { label: "Beijing 2008", y: 16 },
-    //             { label: "London 2012", y: 11 },
-    //             { label: "Rio 2016", y: 17 }
-    //         ]
-    //     }]
-    // });
-
-    // chart_2.render();
-
-    // function toggleDataSeries2(e) {
-    //     if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
-    //         e.dataSeries.visible = false;
-    //     }
-    //     else {
-    //         e.dataSeries.visible = true;
-    //     }
-    //     chart_2.render();
-    // }   
-
     // -------------------------- Get data from Heroku Backend------------------------------ //
      jQuery.ajax({
         url: "https://cors-anywhere.herokuapp.com/https://msrdatalog.herokuapp.com/energy/api/getenergy",
@@ -222,7 +152,6 @@ window.onload = function () {
     .done(function(data, textStatus, jqXHR) {
         console.log("HTTP Request Succeeded: " + jqXHR.status);
         data_prepareation(data)        
-        // return (data)
         
     })
     .fail(function(jqXHR, textStatus, errorThrown) {
@@ -232,39 +161,64 @@ window.onload = function () {
         /* ... */
     });
 
-    // -------------------------- Get data from Heroku Backend------------------------------ //
+    // -------------------------- Call function: data_prepareation ------------------------------ //
 
     // Data prep:
     function data_prepareation(data) {
-        // console.log(data)
-        // console.log(typeof(data))
+        console.log(data)
         console.log("Call function: data_prepareation()")
-        var solar_kW = []
-        var load_kW = []
-        var time_stamp = []
+        var labels = []
+        var load_data_test = []
+        var solar_data_test =[]
+        var solar_data_set = []
+        var load_data_set = []
         for (var i = 0; i < data.length; i++) {
-            time_stamp[i] = i
-            solar_kW[i] = data[i]["solar"];
-            load_kW[i] = data[i]["load"];
+            var solar_obj = {label: i, y: data[i]["solar"]}
+            var load_obj = {label: i, y: data[i]["load"]}
+            solar_data_set.push(solar_obj)
+            load_data_set.push(load_obj)
+
+            labels[i] = i
+            load_data_test[i] = data[i]["load"]
+            solar_data_test[i] = data[i]["solar"]
         }
-        console.log(time_stamp)
-        console.log("Solar Production: ")
-        console.log(solar_kW)
-        console.log("Load Consumption: ")
-        console.log(Array.from(load_kW))
-        console.log("--------------------------")
 
-        var solar_kW_dataset = {
-            label: 'Solar Production',
-            borderColor: 'Red',
-            data: [solar_kW],
-        };
+    // -------------------------- ChartJS --------------------------
+    // var ctx = document.getElementById('myChart').getContext('2d');
+    // var myChart = new Chart(ctx, {
+    //     type: 'line',
+    //     data: {
+    //         labels: labels,
+    //         datasets: [{
+    //             label: 'Load Consumption',
+    //             data: load_data_test,
+    //             borderWidth: 1,
+    //             borderColor: 'rgba(75, 192, 192, 1)',
+    //             backgroundColor:  'rgba(75, 192, 192, 0.2)',
+    //         },
+    //         {
+    //             label: 'Solar Production',
+    //             data: solar_data_test,
+    //             borderWidth: 1,
+    //             borderColor: 'rgba(255, 159, 64, 1)',
+    //             backgroundColor:  'rgba(255, 159, 64, 0.2)',
+    //         },            
+    //     ]},
+    //     options: {
+    //         scales: {
+    //             yAxes: [{
+    //                 ticks: {
+    //                     suggestedMin: 0,
+    //                     suggestedMax: 10
+    //                 }
+    //             }]
+    //         }
+    //     }
+    // });
 
-        var load_kW_dataset = {
-            label: 'Load Consumption',
-            borderColor: 'Blue',
-            data: [load_kW],
-        };
+    // -------------------------- END of chart.js --------------------------
+
+    // -------------------------- CANVAS.js --------------------------
 
         var chart_Test = new CanvasJS.Chart("chartContainerTest", {
 
@@ -283,13 +237,44 @@ window.onload = function () {
             cursor: "pointer",
             itemclick: toggleDataSeries
         },
-        data: [dataSeries = [load_kW_dataset, solar_kW_dataset]]
-    });
+
+        data: [
+            {
+                type: "spline",
+                name: "Load Consumption",
+                showInLegend: true,
+                dataPoints: load_data_set,
+                borderColor: "#3e95cd",
+                fill: false
+            },
+            {
+                type: "spline",
+                name: "Solar Production",
+                showInLegend: true,
+                dataPoints: solar_data_set,
+                borderColor: "#8e5ea2",
+                fill: false,
+            },
+            ]
+        }
+    );
+    // -------------------------- END of CANVAS.js --------------------------
             
-        console.log("-------Done!!! Display Chart.js---------")
+        console.log("-------Done!!!---------")
     
         chart_Test.render();
+
+        function toggleDataSeries(e) {
+            if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                e.dataSeries.visible = false;
+            }
+            else {
+                e.dataSeries.visible = true;
+            }
+            chart_Test.render();
+        }
     
+    // -------------------------- End of function: data_prepareation ------------------------------ //
     }
 
 
